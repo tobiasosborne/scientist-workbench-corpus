@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scientist-workbench-corpus/schema/capability.schema.json",
+  "title": "Capability",
+  "description": "One named operation as it appears in a *single* source system (e.g. matlab-v1's `eig`). Cross-system equivalence lives in aliases/, not here.",
+  "type": "object",
+  "required": ["meta", "signature", "description", "category"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["system", "version", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "system": {
+          "type": "string",
+          "description": "Source system identifier. Free-form to allow new systems without schema bumps; conventional values include mathematica, matlab, macsyma, maple, reduce, sympy, maxima, octave, scientist-workbench."
+        },
+        "version": { "type": "string" },
+        "name":    { "type": "string" },
+        "section": { "type": "string", "description": "manual / source section reference, e.g. 'users-guide-1984:p.34'." },
+        "ingested_at": { "type": "string" },
+        "ingested_by": { "type": "string" }
+      }
+    },
+    "signature": {
+      "type": "object",
+      "required": ["input", "output"],
+      "additionalProperties": false,
+      "properties": {
+        "input":  { "type": "string", "description": "Free-form, source-faithful description of input shape." },
+        "output": { "type": "string" },
+        "arity":  { "type": "integer", "minimum": 0 }
+      }
+    },
+    "description": {
+      "type": "object",
+      "required": ["md"],
+      "additionalProperties": false,
+      "properties": {
+        "md": { "type": "string" }
+      }
+    },
+    "category": {
+      "type": "object",
+      "required": ["primary"],
+      "additionalProperties": false,
+      "properties": {
+        "primary":   { "type": "string" },
+        "secondary": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "input_repr", "evidence_kind"],
+        "additionalProperties": false,
+        "properties": {
+          "label":                { "type": "string" },
+          "input_repr":           { "type": "string" },
+          "expected_output_repr": { "type": "string" },
+          "evidence_kind":        { "type": "string", "enum": ["manual_quote", "oracle_run", "both"] },
+          "manual_section":       { "type": "string" },
+          "oracle":               { "type": "string" },
+          "oracle_version":       { "type": "string" },
+          "oracle_invocation":    { "type": "string" }
+        }
+      }
+    },
+    "benchmark": {
+      "description": "Pointer to the tournament-protocol benchmark suite that grades this capability. Optional — capabilities can exist without a graded suite (V0/V1).",
+      "type": "object",
+      "required": ["suite"],
+      "additionalProperties": false,
+      "properties": {
+        "suite":                 { "type": "string", "description": "Path to benchmarks/<name>/manifest.toml, relative to corpus root." },
+        "n_cases":               { "type": "integer", "minimum": 0 },
+        "n_invariants_per_case": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field_path", "value", "source_url", "source_kind"],
+        "additionalProperties": false,
+        "properties": {
+          "field_path":   { "type": "string" },
+          "value":        { "type": "string" },
+          "source_url":   { "type": "string" },
+          "source_kind":  { "type": "string", "enum": ["manual", "blog", "scrape", "paper", "user", "oracle", "code"] },
+          "retrieved_at": { "type": "string" },
+          "local_path":   { "type": "string" },
+          "page":         { "type": "integer", "minimum": 1 },
+          "sha256":       { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "conflict":     { "type": "boolean", "description": "true ⇒ at least one other provenance row disagrees on this field's value; both are kept (QuantumHardware.jl pattern)." }
+        }
+      }
+    },
+    "verification": {
+      "description": "Verification lattice (Integralis-derived). Levels are monotonic; method records what produced the upgrade.",
+      "type": "object",
+      "required": ["level", "method"],
+      "additionalProperties": false,
+      "properties": {
+        "level":  { "type": "integer", "minimum": 0, "maximum": 4 },
+        "method": { "type": "string", "enum": ["raw", "manual_quote", "numerical", "oracle_run", "cross_system_consensus", "formal"] },
+        "oracle":           { "type": "string" },
+        "oracle_version":   { "type": "string" },
+        "last_verified_at": { "type": "string" }
+      }
+    },
+    "mapping": {
+      "description": "Bridge to a downstream implementation. One TOML can carry many mappings (one per target).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["target", "tool", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "target": { "type": "string" },
+          "tool":   { "type": "string" },
+          "status": { "type": "string", "enum": ["unmapped", "planned", "implemented", "partial", "out-of-scope"] },
+          "notes":  { "type": "string" }
+        }
+      }
+    }
+  }
+}

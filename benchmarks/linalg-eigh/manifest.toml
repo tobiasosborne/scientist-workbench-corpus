@@ -1,0 +1,73 @@
+[meta]
+name        = "linalg-eigh"
+domain      = "linalg"
+description = """
+Symmetric eigendecomposition `A = QΛQᵀ` for real `n × n` symmetric `A`.
+Output record: `Q` (orthogonal eigenvectors), `eigenvalues` (real,
+ascending — LAPACK/numpy convention), agent-honest self-report fields
+(`reconstruction_error`, `orthogonality_error`, `condition_number`),
+plus `method` and `warnings`.  Boundary tags for non-symmetric,
+non-finite, and degenerate-shape inputs.
+
+The 46-case battery spans:
+  A. shape edges (8 cases — 1×1, 2×2, identity / zero up to 200×200)
+  B. random symmetric well-conditioned (7 cases, n ∈ [5,200])
+  C. Hilbert SPD (7 cases, κ ranges 10⁴..10¹⁸)
+  D. random symmetric ill-conditioned (4 cases, κ ≈ 10¹⁴)
+  E. Wilkinson / Pei (4 cases — clustered eigenvalues, repeated eigenvalues)
+  F. rank-deficient symmetric (5 cases)
+  H. eigenvalue-spectrum stress (4 cases — clustered, separated, all-same, alternating signs)
+  I. industrial harwell-boeing bcsstk01..05 (5 cases, SPD)
+  J. n=500 stress (1 case, post-ADR-0016 uncapped regime)
+  K. boundary tags (3 cases — non-symmetric, n=0, 1×1 [[0]] success edge)
+"""
+ported_from = "scientist-workbench/bench/linalg-eigh@69dcfb8"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Q is n×n list-of-list of numbers; eigenvalues is length-n list of numbers; required fields present and well-typed."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_entries"
+description      = "Q, eigenvalues, reconstruction_error, orthogonality_error, condition_number contain no NaN and no ±Inf."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "eigenvalues_ascending"
+description      = "λ[i] ≤ λ[i+1] within 100·ε·max(|λ_max|, 1) — LAPACK convention."
+tolerance_source = "Higham 2002 §20.6 + 100× safety"
+
+[[verifier.checks]]
+name             = "Q_orthonormal"
+description      = "‖QᵀQ − I‖_F ≤ 100·ε·n·√n.  Cyclic Jacobi achieves this independent of κ(A) (Demmel-Veselić 1992)."
+tolerance_source = "Higham 2002 §20.6 + 100× safety"
+
+[[verifier.checks]]
+name             = "eigendecomp_residual"
+description      = "‖A·Q − Q·diag(λ)‖_F / ‖A‖_F ≤ 100·ε·n·√n."
+tolerance_source = "Higham 2002 §20.6 + 100× safety"
+
+[[verifier.checks]]
+name             = "self_reported_residual"
+description      = "Candidate's reconstruction_error matches the verifier's recomputation within 1e-6 relative — the candidate is not lying about its own quality."
+tolerance_source = "self-report 1e-6 rel"
+
+[[verifier.checks]]
+name             = "self_reported_orthogonality"
+description      = "Candidate's orthogonality_error matches the verifier's recomputation within 1e-6 relative."
+tolerance_source = "self-report 1e-6 rel"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "d5cf624140839147dd27e5a890dc4942b38d16ed407d441ef8fab97156a9f74e"
+expected         = "golden/expected.json"
+expected_sha256  = "7e6864d8f01f153ee55be7279d43424eb64ec0f9778e470144582ee1b3f0ec71"
+n_cases          = 46
+regenerated_at   = "2026-05-06"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"

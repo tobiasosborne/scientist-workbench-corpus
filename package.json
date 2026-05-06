@@ -1,0 +1,20 @@
+{
+  "name": "scientist-workbench-corpus",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Capability corpus + tournament-protocol benchmark suites + DuckDB-backed grade scoreboard. Sister repo to scientist-workbench. v1-Mathematica/MATLAB/Macsyma capabilities catalogued from public sources, oracle-verified, graded against any candidate implementation.",
+  "scripts": {
+    "corpus": "bun src/cli.ts"
+  },
+  "dependencies": {
+    "@duckdb/node-api": "^1.5.2-r.1",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "smol-toml": "^1.4.2"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.0",
+    "typescript": "^5.7.0"
+  }
+}

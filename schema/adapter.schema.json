@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scientist-workbench-corpus/schema/adapter.schema.json",
+  "title": "Adapter",
+  "description": "Per-implementation bridge from the tournament-protocol wire format to a candidate executable. The candidate reads one JSON object on stdin and writes one JSON value on stdout (tstournament protocol).",
+  "type": "object",
+  "required": ["adapter"],
+  "additionalProperties": false,
+  "properties": {
+    "adapter": {
+      "type": "object",
+      "required": ["target", "capability_id", "cmd", "args"],
+      "additionalProperties": false,
+      "properties": {
+        "target":          { "type": "string", "description": "Implementation being graded, e.g. 'scientist-workbench'." },
+        "capability_id":   { "type": "string", "description": "The benchmark suite this adapter grades — one adapter per (target, suite) pair." },
+        "cmd":             { "type": "string", "description": "Executable; PATH-resolved." },
+        "args":            { "type": "array", "items": { "type": "string" } },
+        "cwd":             { "type": "string", "description": "Working directory for the spawned process. ${WORKBENCH_ROOT} is substituted to the SCIENTIST_WORKBENCH env var." },
+        "env":             { "type": "object", "additionalProperties": { "type": "string" } },
+        "version":         { "type": "string", "description": "Recorded into grade_runs.candidate_version. Not pinned by the corpus; the user updates when re-running." },
+        "platform_pinned": { "type": "boolean", "description": "If true, grade-runs record the platform fingerprint {arch, os, runtime} (ADR-0015 alignment with scientist-workbench numerical tier)." }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+[meta]
+system = "matlab"
+version = "1.0"
+name = "eig"
+section = "users-guide-1984:p.34"
+ingested_at = "2026-05-06"
+ingested_by = "hand-typed (tracer-bullet seed)"
+
+[signature]
+input  = "matrix"
+output = "[eigenvalues vector] OR [eigenvector matrix, eigenvalue diagonal matrix]"
+arity  = 1
+
+[description]
+md = """
+Eigenvalues and eigenvectors of a real square matrix.  In MATLAB v1.0 (1984)
+`eig` was a single-arg function calling EISPACK's `RG`/`RS` routines
+(Smith, Boyle, Dongarra, Garbow, Ikebe, Klema, Moler 1976).  When called as
+`d = eig(A)` it returned the eigenvalue vector; when called as
+`[V,D] = eig(A)` it returned the eigenvector matrix `V` and the diagonal
+matrix of eigenvalues `D`, satisfying `A·V = V·D`.
+
+The original MATLAB v1 `eig` handled both symmetric and non-symmetric `A`.
+This corpus row maps onto scientist-workbench's `linalg-eigh`, which
+restricts to the *symmetric* case (the easy and most common one);
+non-symmetric general `eig` is deferred under the workbench's beads-71f
+epic.  The 56-case benchmark suite at `benchmarks/linalg-eigh/` exercises
+the symmetric path.
+"""
+
+[category]
+primary   = "linalg"
+secondary = ["eigen", "decomposition", "spectral"]
+
+[[examples]]
+label       = "3x3 symmetric tridiagonal"
+input_repr  = "[[2,1,0],[1,2,1],[0,1,2]]"
+evidence_kind  = "manual_quote"
+manual_section = "users-guide-1984:p.34"
+
+[benchmark]
+suite                 = "benchmarks/linalg-eigh/manifest.toml"
+n_cases               = 46
+n_invariants_per_case = 7
+
+[[provenance]]
+field_path   = "meta.name"
+value        = "eig"
+source_url   = "https://blogs.mathworks.com/cleve/2018/03/09/matlab-history-pc-matlab-version-1-0/"
+source_kind  = "blog"
+retrieved_at = "2026-05-06"
+
+[[provenance]]
+field_path   = "signature.output"
+value        = "[eigenvalues vector] OR [eigenvector matrix, eigenvalue diagonal matrix]"
+source_url   = "https://www.mathworks.com/company/technical-articles/the-origins-of-matlab.html"
+source_kind  = "blog"
+retrieved_at = "2026-05-06"
+
+[verification]
+level             = 3
+method            = "oracle_run"
+oracle            = "scipy.linalg.eigh"
+oracle_version    = "1.14.x"
+last_verified_at  = "2026-05-06"
+
+[[mapping]]
+target = "scientist-workbench"
+tool   = "linalg-eigh"
+status = "partial"
+notes  = "matlab v1 eig handles non-symmetric A; linalg-eigh restricts to symmetric. General non-symmetric case deferred under bead 71f."
