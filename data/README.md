@@ -8,7 +8,7 @@ can map manifest rows directly into capability TOMLs.
 
 | sub-directory     | system         | archive                                       | size  | items |
 |-------------------|----------------|-----------------------------------------------|-------|-------|
-| `wolfram-v1/`     | mathematica 1  | reference.wolfram.com/legacy/v1/ (HTML + PDF) | ~50MB | 48 HTML + ~915 PDF |
+| `wolfram-v1/`     | mathematica 1  | reference.wolfram.com/legacy/v1/ (HTML + PDF — 2nd ed. 1991 text) | ~50MB | 48 HTML + 915 PDF |
 | `matlab-v1/`      | matlab 1       | Cleve's Corner posts (Wayback Machine)        | <1MB  | 2 HTML |
 | `macsyma-v9/`     | macsyma 9      | bitsavers MIT Mathlab scan                    | 14MB  | 1 PDF  |
 
@@ -36,8 +36,10 @@ is idempotent (file-exists short-circuit); verifying integrity is
 In: anything redistributable that an ingestor or human reader needs
 as ground truth. The bitsavers PDF is in. The 1988 Mathematica book
 PDF (archive.org borrowable) is **not** — the Wolfram legacy site
-serves the same content as per-function PDFs that *are*
-redistributable, and that's the form actually fed to ingestors.
+serves the 2nd edition (1991) text as per-function PDFs that *are*
+redistributable, and that's the form actually fed to ingestors. The
+function set tracks Mathematica software v1.x either way; the edition
+choice is whichever Wolfram chose to preserve at legacy/v1/.
 
 Not in: copyrighted PDFs that aren't on archive.org / bitsavers /
 publisher pages. If a source can't be fetched from a public URL,

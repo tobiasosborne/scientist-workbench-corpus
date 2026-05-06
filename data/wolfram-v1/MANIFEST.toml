@@ -1,12 +1,18 @@
 # MANIFEST.toml — provenance for wolfram-v1 ground-truth source
 #
 # The Wolfram legacy v1 reference site (reference.wolfram.com/legacy/v1/)
-# is the canonical online form of "Mathematica: A System for Doing
-# Mathematics by Computer" (Wolfram, Addison-Wesley, 1988). Each part
-# of the book has a section HTML page; per-function reference entries
-# (Appendix B.8) are served as one PDF per function (`list1.pdf` =
-# `Abs`, `list2.pdf` = `Accumulate`, etc.). All section pages and
-# every linked PDF are mirrored under `raw/contents/`.
+# documents Mathematica software v1 (1988). The actual document bytes
+# served at this URL are from the **Second Edition** of "Mathematica:
+# A System for Doing Mathematics by Computer" (Wolfram, Addison-Wesley,
+# 1991) — every per-function PDF carries the `1991 Wolfram Research`
+# copyright in its footer. The First Edition (1988) text is not
+# online; the Second Edition is the canonical form Wolfram chose to
+# preserve for the legacy v1 doc surface, and the function set tracks
+# Mathematica software v1.x. Each part of the book has a section HTML
+# page; per-function reference entries (Appendix B.8) are served as
+# one PDF per function (`list1.pdf` = `Abs`, `list2.pdf` =
+# `Accumulate`, etc.). All section pages and every linked PDF are
+# mirrored under `raw/contents/`.
 #
 # The MANIFEST records URL patterns + the SHA-256 of the per-file
 # ledger (raw/sha256.sum) rather than 900+ inline rows. The ledger
@@ -16,7 +22,7 @@
 [meta]
 system        = "mathematica"
 version       = "1"
-description   = "Mathematica 1 (1988) — Stephen Wolfram, 'Mathematica: A System for Doing Mathematics by Computer', Addison-Wesley. The Wolfram legacy reference at reference.wolfram.com/legacy/v1/ serves the book's section prose (HTML) and the Appendix B reference guide (per-function PDFs). 48 section HTMLs + 915 PDFs."
+description   = "Mathematica software v1 (1988) — capability surface as documented in Stephen Wolfram, 'Mathematica: A System for Doing Mathematics by Computer', Second Edition, Addison-Wesley 1991. The Wolfram legacy reference at reference.wolfram.com/legacy/v1/ serves the 2nd-ed text (footer: '1991 Wolfram Research'); the 1st-ed (1988) text is not online. 48 section HTMLs + 915 per-function PDFs."
 retrieved_at  = "2026-05-06"
 retrieved_by  = "scripts/fetch_wolfram_v1.sh"
 
@@ -42,7 +48,7 @@ url_pattern    = "list<N>.pdf"
 local_path     = "raw/contents/"
 source_kind    = "scrape"
 file_count     = 581
-note           = "Per-function reference entries from Appendix B.8 — list1.pdf = Abs, list2.pdf = Accumulate, …, list581.pdf. The numeric N is *not* the alphabetical index (sorted lexicographically as strings: list10.pdf precedes list2.pdf). Each PDF is one printed page from the 1988 book's Reference Guide chapter."
+note           = "Per-function reference entries from Appendix B.8 — list1.pdf = Abs, list2.pdf = Accumulate, …, list581.pdf. The numeric N is *not* the alphabetical index (sorted lexicographically as strings: list10.pdf precedes list2.pdf). Each PDF is one printed page from the 2nd-edition (1991) Reference Guide."
 
 [[sources]]
 url_base       = "https://reference.wolfram.com/legacy/v1/contents/"
