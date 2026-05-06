@@ -1,0 +1,69 @@
+# MANIFEST.toml — provenance for wolfram-v1 ground-truth source
+#
+# The Wolfram legacy v1 reference site (reference.wolfram.com/legacy/v1/)
+# is the canonical online form of "Mathematica: A System for Doing
+# Mathematics by Computer" (Wolfram, Addison-Wesley, 1988). Each part
+# of the book has a section HTML page; per-function reference entries
+# (Appendix B.8) are served as one PDF per function (`list1.pdf` =
+# `Abs`, `list2.pdf` = `Accumulate`, etc.). All section pages and
+# every linked PDF are mirrored under `raw/contents/`.
+#
+# The MANIFEST records URL patterns + the SHA-256 of the per-file
+# ledger (raw/sha256.sum) rather than 900+ inline rows. The ledger
+# itself is the tamper-evidence anchor; flipping any byte in any PDF
+# changes the ledger, and the ledger's SHA-256 changes here.
+
+[meta]
+system        = "mathematica"
+version       = "1"
+description   = "Mathematica 1 (1988) — Stephen Wolfram, 'Mathematica: A System for Doing Mathematics by Computer', Addison-Wesley. The Wolfram legacy reference at reference.wolfram.com/legacy/v1/ serves the book's section prose (HTML) and the Appendix B reference guide (per-function PDFs). 48 section HTMLs + 915 PDFs."
+retrieved_at  = "2026-05-06"
+retrieved_by  = "scripts/fetch_wolfram_v1.sh"
+
+[fetch]
+script               = "scripts/fetch_wolfram_v1.sh"
+sha256_ledger        = "raw/sha256.sum"
+sha256_ledger_sha256 = "f1e55d6d837ed1e75a1236e931cf09a2221b370e2da264c8fe2caaafb3b5d4ad"
+sleep_between_ms     = 200
+total_files          = 963
+total_size_bytes     = 49955082
+
+[[sources]]
+url_base       = "https://reference.wolfram.com/legacy/v1/contents/"
+url_pattern    = "<section>.html"
+local_path     = "raw/contents/"
+source_kind    = "scrape"
+file_count     = 48
+note           = "Section HTML pages: Part 1 (1.0–1.9), Part 2 (2.0–2.8), Part 3 (3.0–3.9), Part 4 (4.0–4.2), Appendix A (A.0–A.6), Appendix B (B.0–B.8). Each page has the section's prose summary plus links to per-section PDFs. B.8.html is the canonical function-name index."
+
+[[sources]]
+url_base       = "https://reference.wolfram.com/legacy/v1/contents/"
+url_pattern    = "list<N>.pdf"
+local_path     = "raw/contents/"
+source_kind    = "scrape"
+file_count     = 581
+note           = "Per-function reference entries from Appendix B.8 — list1.pdf = Abs, list2.pdf = Accumulate, …, list581.pdf. The numeric N is *not* the alphabetical index (sorted lexicographically as strings: list10.pdf precedes list2.pdf). Each PDF is one printed page from the 1988 book's Reference Guide chapter."
+
+[[sources]]
+url_base       = "https://reference.wolfram.com/legacy/v1/contents/"
+url_pattern    = "{1.x.y, 2.x.y, 3.x.y, 4.x.y}.pdf"
+local_path     = "raw/contents/"
+source_kind    = "scrape"
+file_count     = 264
+note           = "Sub-section prose chunks from Parts 1–4 (e.g. 1.4.2.pdf = section 1.4 sub-section 2). The section HTML pages link to these for paginated reading."
+
+[[sources]]
+url_base       = "https://reference.wolfram.com/legacy/v1/contents/"
+url_pattern    = "A.x.y.pdf"
+local_path     = "raw/contents/"
+source_kind    = "scrape"
+file_count     = 20
+note           = "Appendix A (Examples of Mathematica Packages) prose chunks."
+
+[[sources]]
+url_base       = "https://reference.wolfram.com/legacy/v1/contents/"
+url_pattern    = "B.x.y.pdf"
+local_path     = "raw/contents/"
+source_kind    = "scrape"
+file_count     = 50
+note           = "Appendix B (Mathematica Reference Guide) prose chunks. B.8.1.pdf = Introduction, B.8.2.pdf = Conventions in This Listing, etc."

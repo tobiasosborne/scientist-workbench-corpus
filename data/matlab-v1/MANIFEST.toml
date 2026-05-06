@@ -1,0 +1,39 @@
+# MANIFEST.toml — provenance for matlab-v1 ground-truth source
+#
+# The 1984 PC-MATLAB v1.0 release predates redistributable digital media;
+# the surviving canonical record is two posts on Cleve Moler's Cleve's
+# Corner blog. The first post reproduces the complete v1.x HELP listing
+# inline, which is the load-bearing artefact for ingestion. Both posts
+# are fetched via the Wayback Machine to get a stable archive form
+# (the live blog is behind bot-detection and rejects scripted clients).
+
+[meta]
+system        = "matlab"
+version       = "1"
+description   = "PC-MATLAB v1.0 (1984) — first MathWorks commercial MATLAB release, IEEE Conference on Decision and Control debut. Reference HELP listing reproduced in Cleve Moler's 2018 blog post; the original Fortran-MATLAB Users' Guide (1981) discussed in the companion post."
+retrieved_at  = "2026-05-06"
+retrieved_by  = "manual curl via Wayback Machine"
+
+[fetch]
+sha256_ledger        = "raw/sha256.sum"
+sha256_ledger_sha256 = "8317e72985fd00fc25bf137d21f3a74a70ef1cde40f61b2ea781b8400584d78c"
+total_files          = 2
+total_size_bytes     = 611774
+
+[[sources]]
+url          = "https://web.archive.org/web/20241007162827/https://blogs.mathworks.com/cleve/2018/03/09/matlab-history-pc-matlab-version-1-0/"
+canonical    = "https://blogs.mathworks.com/cleve/2018/03/09/matlab-history-pc-matlab-version-1-0/"
+local_path   = "raw/cleve-pc-matlab-v1.0.html"
+source_kind  = "blog"
+sha256       = "358e94bfe7a128271aff2980ef863b4abf5fc00f82e8b042466c4942e5150220"
+size_bytes   = 189868
+note         = "Cleve Moler, 'MATLAB History, PC-MATLAB Version 1.0' (2018-03-09). Contains the inline HELP listing that is the canonical v1 capability surface (eig, qr, svd, expm, etc.)."
+
+[[sources]]
+url          = "https://web.archive.org/web/2024/https://blogs.mathworks.com/cleve/2018/02/05/the-historic-matlab-users-guide/"
+canonical    = "https://blogs.mathworks.com/cleve/2018/02/05/the-historic-matlab-users-guide/"
+local_path   = "raw/cleve-historic-users-guide.html"
+source_kind  = "blog"
+sha256       = "d8ba7837c50926ae86d47240ad1fb9028960ea8694cd73f2b0002261b26eda59"
+size_bytes   = 421906
+note         = "Cleve Moler, 'The Historic MATLAB Users' Guide' (2018-02-05). Companion post discussing the 1981 Fortran-MATLAB users' guide; useful prior-art / context. The PDF that this post refers to is not directly linked from the page."
