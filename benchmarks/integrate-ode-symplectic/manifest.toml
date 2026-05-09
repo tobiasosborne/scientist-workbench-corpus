@@ -1,0 +1,84 @@
+[meta]
+name        = "integrate-ode-symplectic"
+domain      = "ode-numerical"
+description = """
+Velocity-Verlet / Yoshida-4 symplectic integrator for separable Hamiltonians
+H(q,p) = T(p) + V(q).  Velocity Verlet is 2nd-order (p=2); Yoshida-4 is
+4th-order (p=4) via Suzuki triple composition (HLW §VI.3).
+
+Input: symbolic Hamiltonian H as a single expression, position variables
+q_vars, momentum variables p_vars, time variable t_var, initial conditions
+q0 / p0, time span [t0, tf], fixed step count n_steps, optional scheme and
+atol.
+Output: q_trajectory list<list<float64>> [n_steps+1 × n_q],
+p_trajectory list<list<float64>> [n_steps+1 × n_p], t_values, energy trace,
+energy_drift_max (max |H(t)−H(0)| over integration), energy_drift_secular
+(boolean — true iff drift grows with horizon), n_evals, n_steps, converged,
+status, method, warnings.
+Boundary tags: degenerate-tspan, non-separable-hamiltonian,
+non-finite-during-eval.
+
+The 17-case battery spans:
+  A. step-size convergence (3 cases — harmonic oscillator at n=10/100/1000)
+  B. canonical separable Hamiltonians (5 cases — harmonic 1D, pendulum small/large,
+     Kepler circular, coupled pendulums 2D)
+  C. long-time symplecticity (3 cases — Kepler 100 orbits, Hénon-Heiles 100 t.u.,
+     harmonic long; headline energy_drift_not_secular cases)
+  E. boundary cases (4 cases — degenerate tspan, zero n_steps, non-separable H,
+     dimension mismatch)
+  F. step-size pair (2 cases — harmonic at h and h/2 for convergence order check)
+
+Headline invariant: energy_drift_not_secular on tier-C cases.
+A symplectic integrator keeps energy drift bounded at O(h^p) for all time
+(HLW §VI.6 backward-error theorem); a naïve RK45 candidate fails these cases.
+"""
+ported_from = "scientist-workbench/bench/integrate-ode-symplectic@be0e613a3f16eb49bebbb59d45ba2053f3254bac"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "q_trajectory is [n_steps+1 × n_q] and p_trajectory is [n_steps+1 × n_p]; t_values and energy both length n_steps+1; energy_drift_secular is boolean; status in {success, non-finite-during-eval}; all required fields present."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_entries"
+description      = "No NaN/Inf in q_trajectory rows, p_trajectory rows, energy list, or energy_drift_max scalar."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "monotone_t_values"
+description      = "t_values matches uniform grid t0 + i*h (h = (tf-t0)/n_steps) within 1e-10 * max(|t|, 1) per point."
+tolerance_source = "1e-10 relative match tolerance (structural)"
+
+[[verifier.checks]]
+name             = "status_consistency"
+description      = "converged === true iff status === 'success'; output n_steps matches input n_steps; n_evals non-negative."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "trajectory_accuracy"
+description      = "Per-row sup-norm rel-err over both q/p trajectories vs reference: max_i(||[qC-qR]_i||/max(||qR_i||,1), ||[pC-pR]_i||/max(||pR_i||,1)) ≤ traj_tol_factor * h^p. p=2 (velocity-verlet) or p=4 (yoshida-4). traj_tol_factor=1000 (default). HLW §VI.3 global-error bound."
+tolerance_source = "HLW §VI.3 + 1000× safety factor, method-order-scaled"
+
+[[verifier.checks]]
+name             = "energy_drift_bounded"
+description      = "energy_drift_max ≤ 100 * h^p * drift_constant (SAFETY=100). drift_constant is problem-specific (expected.json). HLW §VI.6 backward-error theorem: drift is O(h^p) independent of horizon."
+tolerance_source = "HLW §VI.6 + 100× safety factor (SAFETY constant from verify.py)"
+
+[[verifier.checks]]
+name             = "energy_drift_not_secular"
+description      = "For long_time=true cases (Kepler 100 orbits, Hénon-Heiles, harmonic long): energy_drift_secular must be false. Headline symplecticity test — a non-symplectic RK candidate fails this. Skipped for non-long-time cases."
+tolerance_source = "structural — no tolerance (boolean assertion)"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "3f70b148594d43dd440b30824fbf09d71ba24334fd4541e66a6ec3c8fe7cb33d"
+expected         = "golden/expected.json"
+expected_sha256  = "dcc964d99f8b4e45224ba5fa5e5f93273725f9a218d2c14f71f7f4def2b8f18c"
+n_cases          = 17
+regenerated_at   = "2026-05-06"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"
