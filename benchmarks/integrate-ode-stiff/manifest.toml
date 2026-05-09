@@ -1,0 +1,86 @@
+[meta]
+name        = "integrate-ode-stiff"
+domain      = "ode-numerical"
+description = """
+Radau-IIA(5) implicit Runge-Kutta ODE solver for stiff systems.
+3-stage 5th-order A-stable, L-stable, stiffly-accurate method
+(Hairer-Wanner Vol II §IV.8). SciPy solve_ivp(method='Radau') semantics.
+
+Input: symbolic RHS f(t,y) expressions, state variables, initial condition
+y0, time span [t0, tf], optional solver options (rtol, atol, t_eval,
+max_step, method, jacobian).
+Output: trajectory list<list<float64>> [n_timesteps × n_components], t_values,
+error_estimate, step counters (n_evals, n_steps_accepted, n_steps_rejected),
+Jacobian/LU counters (n_jacobian_evals, n_lu_decompositions), converged flag,
+status, method, warnings.
+Boundary tags: degenerate-tspan, non-finite-during-eval, jacobian-singular,
+method-not-implemented.
+
+The 19-case battery spans:
+  A. shape edges (3 cases — scalar mild, scalar stiff 1000, 2D linear stiff)
+  B. canonical stiff ODEs (3 cases — vdP mu=1, exp decay long, linear decay 2D)
+  C. high-stiffness van der Pol (3 cases — mu=100, mu=1000, mu=10000)
+  D. benchmark stiff problems (3 cases — Robertson, Oregonator, HIRES)
+  E. boundary cases (4 cases — degenerate tspan, BDF method, unknown symbol, dim mismatch)
+  F. tolerance tier Robertson (3 cases — loose/default/tight rtol)
+"""
+ported_from = "scientist-workbench/bench/integrate-ode-stiff@e27eb33769c36c75d2c73a6aba76f66ab2633fbc"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "trajectory is m×n list-of-list (m = len(t_eval) or 2, n = len(y0)); t_values has length m; all required fields present including n_jacobian_evals and n_lu_decompositions; status in {success,max_step_exceeded,tspan_exhausted,newton-divergence}."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_entries"
+description      = "No NaN/Inf in trajectory rows or error_estimate."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "monotone_t_values"
+description      = "t_values ascending iff tf >= t0. If options.t_eval supplied, t_values must match element-wise within 1e-12 * max(|t|, 1)."
+tolerance_source = "1e-12 relative match tolerance (structural)"
+
+[[verifier.checks]]
+name             = "status_consistency"
+description      = "converged === true iff status === 'success'. All five counters (n_evals, n_steps_accepted, n_steps_rejected, n_jacobian_evals, n_lu_decompositions) non-negative. n_evals > 0 when n_steps_accepted > 0."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "trajectory_accuracy"
+description      = "Per-timestep sup-norm ||trajectory[i] - y_ref[i]||_∞ ≤ max(safety*rtol*||y_ref[i]||_∞, safety*atol), where safety=100. NO horizon scaling — Radau-IIA(5) is L-stable and stiffly bounded (Hairer-Wanner Vol II §IV.10). Reference from expected.json (SciPy Radau at rtol=1e-13)."
+tolerance_source = "HNW Vol II §IV.10 + 100× safety factor, no horizon scaling"
+
+[[verifier.checks]]
+name             = "self_reported_error_estimate"
+description      = "error_estimate >= 0. If status=success, error_estimate <= max(1.0, atol*1e6). Structural honesty check."
+tolerance_source = "structural bound: max(1.0, atol*1e6)"
+
+[[verifier.checks]]
+name             = "stiffness_handled"
+description      = "On success path: n_evals > 0 and n_jacobian_evals > 0. Radau is implicit — zero Jacobian evaluations indicates the candidate is not actually doing implicit integration."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "conservation"
+description      = "For problems with a conserved quantity H(y) (encoded in expected.json): max_i |H(y_i) - H(y_0)| / max(|H(y_0)|, atol) <= 100 * rtol * max(|tf-t0|, 1). Skipped if no conservation spec present."
+tolerance_source = "HNW §IV.10 + 100× safety factor"
+
+[[verifier.checks]]
+name             = "jacobian_consumed"
+description      = "If input.options.jacobian is provided, n_jacobian_evals >= 1. The candidate must actually use the user-supplied analytic Jacobian. Skipped when no jacobian option is present."
+tolerance_source = "structural — no tolerance"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "1bf2935d32bd7cf47662c59c8496c063414876ab4dc5e3cf287d0df26227db58"
+expected         = "golden/expected.json"
+expected_sha256  = "44b2e93f819338b12953c1e2b5679d46a9726bf8940a025e889b38a1dc9545ba"
+n_cases          = 19
+regenerated_at   = "2026-05-06"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"
