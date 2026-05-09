@@ -1,0 +1,72 @@
+[meta]
+name        = "linalg-qr"
+domain      = "linalg"
+description = """
+Householder QR factorisation `A = Q · R` for a real `m × n` matrix.
+Output record: `Q` (orthonormal columns), `R` (upper triangular), `mode`
+(echoed), `diagonal_R` (rank-revealing diagonal), agent-honest self-report
+fields (`reconstruction_error`, `orthogonality_error`), plus `method`
+("householder") and `warnings`.  Boundary tags for non-finite and
+degenerate-shape inputs.
+
+The 56-case battery spans:
+  A. shape edges (10 cases — 1×1, 2×1, 1×2, identity/zero, 5×3, 3×5, 100×100, 200×200)
+  B. random well-conditioned (8 cases, n ∈ [5,200])
+  C. Hilbert ill-conditioned (7 cases, κ ∈ [10⁴, 10¹⁸] — Householder discriminator)
+  D. Vandermonde ill-conditioned (4 cases)
+  E. Wilkinson / Pei / Frank structured (5 cases)
+  F. rank-deficient (5 cases — outer product, identity-with-zero-col, near-equal rows, zero, H8+zero-col)
+  G. tall-and-skinny / short-and-fat (6 cases)
+  H. complete-mode (4 cases — Q is m×m, R has bottom m−n rows zero)
+  I. NIST harwell-boeing structural matrices (7 cases — bcsstk01..05 + stress n=500, n=1000)
+"""
+ported_from = "scientist-workbench/bench/linalg-qr@579bae2"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Q and R are correctly-shaped list-of-list; mode, diagonal_R, method, warnings all well-typed; method = 'householder'."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_entries"
+description      = "Q, R, diagonal_R, reconstruction_error, orthogonality_error contain no NaN and no ±Inf."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "R_upper_triangular"
+description      = "Sub-diagonal entries of R are zero within 100·ε·max(m,n)·‖A‖_F; for mode=complete, bottom m−n rows also zero."
+tolerance_source = "Higham 2002 §19.4 + 100× safety"
+
+[[verifier.checks]]
+name             = "Q_orthonormal"
+description      = "‖QᵀQ − I‖_F ≤ 100·ε·m·√k.  Householder achieves this independent of κ(A) (Higham 2002 Thm 19.4)."
+tolerance_source = "Higham 2002 §19.4 + 100× safety"
+
+[[verifier.checks]]
+name             = "factorisation_residual"
+description      = "‖Q·R − A‖_F / ‖A‖_F ≤ 100·ε·max(m,n)·√min(m,n)."
+tolerance_source = "Higham 2002 §19.4 + 100× safety"
+
+[[verifier.checks]]
+name             = "self_reported_residual"
+description      = "Candidate's reconstruction_error matches verifier recomputation within 1e-6 relative — candidate is not lying about its own quality."
+tolerance_source = "self-report 1e-6 rel"
+
+[[verifier.checks]]
+name             = "self_reported_orthogonality"
+description      = "Candidate's orthogonality_error matches verifier recomputation within 1e-6 relative."
+tolerance_source = "self-report 1e-6 rel"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "db5f0909fea5e768089829aa6d3cb5534d899973cb3c96fd689c88ae77749080"
+expected         = "golden/expected.json"
+expected_sha256  = "2379972c66610f58459d285865e258696490a3c7b8cfa0859d108657275fa93b"
+n_cases          = 56
+regenerated_at   = "2026-05-06"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"
