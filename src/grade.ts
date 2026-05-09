@@ -130,7 +130,14 @@ export async function gradeAdapterAgainstSuite(adapter: AdapterDoc, suite: Bench
     const c = cases[i]!;
     const candidateInput = enc.encode(JSON.stringify(c.input));
 
-    const candResp = await spawnPipe(candidateCmd, candidateArgs, candidateInput, candidateCwd, adapter.adapter.env, TIMEOUT_MS);
+    // Merge adapterVars into the candidate's environment so that corpus-
+    // resident scripts (e.g. benchmarks/*/run-candidate.ts) can read
+    // WORKBENCH_ROOT, SUITE_ROOT, and CORPUS_ROOT directly from process.env
+    // instead of relying only on template substitution in args strings.
+    // The adapter's own TOML env overrides these, and process.env (from
+    // spawnPipe) provides the rest of the host environment.
+    const candidateEnv = { ...adapterVars, ...(adapter.adapter.env ?? {}) };
+    const candResp = await spawnPipe(candidateCmd, candidateArgs, candidateInput, candidateCwd, candidateEnv, TIMEOUT_MS);
     if (!candResp.ok) {
       // Synthesise a single-check failure row so the verdict is captured.
       results.push({ run_id: runId, case_id: c.id, check_name: "_candidate_exec", pass: false, detail: `${candResp.reason}: ${candResp.stderr?.slice(0, 500) ?? ""}` });

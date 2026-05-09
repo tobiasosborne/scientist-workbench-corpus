@@ -2,7 +2,7 @@
 target          = "scientist-workbench"
 capability_id   = "linalg-eigh"
 cmd             = "bun"
-args            = ["run", "${WORKBENCH_ROOT}/bench/linalg-eigh/run-candidate.ts"]
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
 cwd             = "${WORKBENCH_ROOT}"
-version         = "git@69dcfb8"
+version         = "git@13c78e1"
 platform_pinned = true

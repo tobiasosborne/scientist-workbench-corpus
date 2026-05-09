@@ -1,0 +1,159 @@
+// =============================================================================
+// benchmarks/linalg-eigh/run-candidate.ts — corpus-resident bench adapter
+// =============================================================================
+//
+// Bridges raw JSON wire format to the tool's canonical Value protocol.
+// This file lives in scientist-workbench-corpus (ADR-0028).
+//
+// The @workbench/* workspace packages live in the workbench repo, not the
+// corpus.  Bun resolves workspace aliases by walking upward from the *file's
+// directory*, so a corpus-resident script cannot use @workbench/compose or
+// @workbench/protocol as bare specifiers.  Instead we import directly from
+// the workbench package source files using the WORKBENCH_ROOT environment
+// variable, which the corpus grader makes available (and which defaults to
+// the conventional side-by-side sibling path).
+//
+// Tagged-boundary outputs are surfaced to the bench as-is (the verifier
+// inspects them via `kind: "tagged"` checks); non-tagged outputs are decoded
+// into the success-shape JSON the verifier expects.
+//
+// Mirrors bench/linalg-{qr,svd}/run-candidate.ts in the workbench.
+// If the tool's wire protocol changes, update this file too (two-repo change).
+
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
+// ─── Resolve workbench root ──────────────────────────────────────────────────
+//
+// The corpus grader inherits WORKBENCH_ROOT from the environment (set by the
+// caller or defaulting to the side-by-side sibling in grade.ts).  We read it
+// here so that dynamic imports below resolve through the workbench package
+// tree, not the corpus tree.
+//
+const WORKBENCH_ROOT: string =
+  process.env["WORKBENCH_ROOT"] ??
+  resolve(import.meta.dir, "..", "..", "..", "..", "scientist-workbench");
+
+// ─── Dynamic imports (file paths, resolved through workbench) ────────────────
+
+const composePath  = resolve(WORKBENCH_ROOT, "packages/compose/src/index.ts");
+const protocolPath = resolve(WORKBENCH_ROOT, "packages/protocol/src/index.ts");
+
+const { loadWorkbench } = await import(composePath);
+const proto = await import(protocolPath);
+
+const float64FromNumber: (n: number) => unknown = proto.float64FromNumber;
+const float64ToNumber: (v: unknown) => number   = proto.float64ToNumber;
+const list: (items: unknown[]) => unknown        = proto.list;
+const record: (fields: Record<string, unknown>) => unknown = proto.record;
+
+// ─── Local structural type (covers all shapes decoded below) ─────────────────
+//
+// We cannot import Value from @workbench/protocol as a workspace alias from
+// the corpus.  This local structural type covers every variant we touch.
+
+type V = {
+  kind: string;
+  items?: V[];
+  fields?: Record<string, V>;
+  value?: unknown;
+  tag?: string;
+  payload?: V;
+};
+
+// ─── raw JSON → canonical Value (input encoding) ─────────────────────────────
+
+function encodeRow(row: readonly number[]): unknown {
+  return list(row.map((x) => float64FromNumber(x)));
+}
+
+function encodeInput(raw: { A: readonly (readonly number[])[] }): unknown {
+  return record({ A: list(raw.A.map(encodeRow)) });
+}
+
+// ─── canonical Value → raw JSON (output decoding) ────────────────────────────
+
+function decodeFloatList(v: V): number[] {
+  if (v.kind !== "list") throw new Error(`expected list, got kind=${v.kind}`);
+  return v.items!.map((it) => {
+    if (it.kind !== "float64") throw new Error(`expected float64, got kind=${it.kind}`);
+    return float64ToNumber(it);
+  });
+}
+
+function decodeFloatMatrix(v: V): number[][] {
+  if (v.kind !== "list") throw new Error(`expected list-of-list, got kind=${v.kind}`);
+  return v.items!.map(decodeFloatList);
+}
+
+function decodeStringList(v: V): string[] {
+  if (v.kind !== "list") throw new Error(`expected list, got kind=${v.kind}`);
+  return v.items!.map((it) => {
+    if (it.kind !== "string") throw new Error(`expected string, got kind=${it.kind}`);
+    return it.value as string;
+  });
+}
+
+function decodeFloat(v: V): number {
+  if (v.kind !== "float64") throw new Error(`expected float64, got kind=${v.kind}`);
+  return float64ToNumber(v);
+}
+
+function decodeString(v: V): string {
+  if (v.kind !== "string") throw new Error(`expected string, got kind=${v.kind}`);
+  return v.value as string;
+}
+
+function decodeAny(v: V): unknown {
+  // Best-effort decode for tagged-boundary payloads.  The bench's verifier
+  // for tagged boundaries only inspects the tag, but we surface the payload
+  // in case future tags carry data the verifier wants.
+  switch (v.kind) {
+    case "string":  return v.value;
+    case "integer": return Number(v.value);
+    case "float64": return float64ToNumber(v);
+    case "boolean": return v.value;
+    case "list":    return v.items!.map(decodeAny);
+    case "record": {
+      const out: Record<string, unknown> = {};
+      for (const [k, val] of Object.entries(v.fields!)) out[k] = decodeAny(val);
+      return out;
+    }
+    case "tagged":  return { kind: "tagged", tag: v.tag, payload: decodeAny(v.payload!) };
+    default:        return null;
+  }
+}
+
+function decodeOutput(v: V): Record<string, unknown> {
+  if (v.kind === "tagged") {
+    // Surface the tagged boundary as-is; bench verifier handles the
+    // category-vs-input check.
+    return { kind: "tagged", tag: v.tag, payload: decodeAny(v.payload!) };
+  }
+  if (v.kind !== "record") {
+    throw new Error(`expected record, got kind=${v.kind}`);
+  }
+  const f = v.fields!;
+  return {
+    Q:                    decodeFloatMatrix(f["Q"]!),
+    eigenvalues:          decodeFloatList(f["eigenvalues"]!),
+    reconstruction_error: decodeFloat(f["reconstruction_error"]!),
+    orthogonality_error:  decodeFloat(f["orthogonality_error"]!),
+    condition_number:     decodeFloat(f["condition_number"]!),
+    method:               decodeString(f["method"]!),
+    warnings:             decodeStringList(f["warnings"]!),
+  };
+}
+
+// ─── main ────────────────────────────────────────────────────────────────────
+
+const raw = JSON.parse(readFileSync(0, "utf8")) as {
+  A: readonly (readonly number[])[];
+};
+const input = encodeInput(raw);
+
+const wb = await loadWorkbench();
+const out = await wb.run("linalg-eigh", input) as V;
+
+const decoded = decodeOutput(out);
+process.stdout.write(JSON.stringify(decoded) + "\n");
