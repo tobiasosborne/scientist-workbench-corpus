@@ -1,0 +1,74 @@
+[meta]
+name        = "integrate-ode-ivp"
+domain      = "ode-numerical"
+description = """
+Dormand-Prince 5(4) adaptive Runge-Kutta ODE solver with FSAL + Gustafsson
+1991 PI step control and 4th-order Hermite continuous extension.
+SciPy solve_ivp(method='RK45') semantics.
+
+Input: symbolic RHS f(t,y) expressions, state variables, initial condition
+y0, time span [t0, tf], optional solver options (rtol, atol, t_eval, max_step).
+Output: trajectory list<list<float64>> [n_timesteps × n_components], t_values,
+error_estimate, step counters, converged flag, status, method, warnings.
+Boundary tags: degenerate-tspan, non-finite-during-eval.
+
+The 29-case battery spans:
+  A. shape edges (4 cases — scalar, 2D, 3D, zero RHS)
+  B. canonical ODEs (6 cases — exp decay/growth, logistic, harmonic, Riccati, vdP mu=1)
+  C. multi-physics (5 cases — Lotka-Volterra, Brusselator, Kepler e=0.5, Lorenz, Kepler circular)
+  D. stress (4 cases — vdP mu=10, long horizon, high-freq forcing, Kepler long)
+  E. boundary cases (4 cases — degenerate tspan, pole in RHS, unknown symbol, dim mismatch)
+  F. tolerance tier (3 cases — loose/default/tight rtol on exp decay)
+  G. reverse integration (1 case — backward exp decay)
+  H. dense output (2 cases — dense smooth RHS, dense Kepler)
+"""
+ported_from = "scientist-workbench/bench/integrate-ode-ivp@0576fd542fd9b87da2ea30d885b2db471aec5787"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "trajectory is m×n list-of-list (m = len(t_eval) or 2, n = len(y0)); t_values has length m; all required fields present with correct types; status in {success,max_step_exceeded,tspan_exhausted,stiffness-detected}."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_entries"
+description      = "No NaN/Inf in trajectory rows or error_estimate. Non-finite trajectory is a correctness failure; the tool must emit non-finite-during-eval instead."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "monotone_t_values"
+description      = "t_values ascending iff tf >= t0, descending iff tf < t0. If options.t_eval supplied, t_values must match element-wise within 1e-12 * max(|t|, 1)."
+tolerance_source = "1e-12 relative match tolerance (structural)"
+
+[[verifier.checks]]
+name             = "status_consistency"
+description      = "converged === true iff status === 'success'. Step counters non-negative; n_evals >= n_steps_accepted (at least 1 eval per accepted step)."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "trajectory_accuracy"
+description      = "Per-timestep sup-norm ||trajectory[i] - y_ref[i]||_∞ ≤ max(safety*rtol*||y_ref[i]||_∞, safety*atol) * horizon_factor, where safety=100, horizon_factor=max(|tf-t0|/10, 1). For chaotic problems (Lorenz), pointwise check up to chaotic_until_t only; attractor stats checked beyond. Reference from expected.json (analytic or DOP853 at rtol=1e-13)."
+tolerance_source = "HNW 1993 §II.10 + 100× safety factor"
+
+[[verifier.checks]]
+name             = "self_reported_error_estimate"
+description      = "error_estimate >= 0. If status=success, error_estimate <= max(1.0, atol*1e6). Structural honesty check — the controller accepted the last step under its own budget."
+tolerance_source = "structural bound: max(1.0, atol*1e6)"
+
+[[verifier.checks]]
+name             = "conservation"
+description      = "For problems with a conserved quantity H(y) (encoded in expected.json): max_i |H(y_i) - H(y_0)| / max(|H(y_0)|, atol) <= 100 * rtol * max(|tf-t0|, 1). Skipped if no conservation spec present. Supported kinds: harmonic_energy, kepler_energy, kepler_angular_momentum, lotka_volterra_h."
+tolerance_source = "HNW 1993 §II.10 + 100× safety factor (DOPRI5 non-symplectic drift is O(rtol*tf))"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "8b59b28ffaf704085d174f05e7b10765dc2caedeef8cbfcbfd0a877ea4693819"
+expected         = "golden/expected.json"
+expected_sha256  = "4b3a9de149e58188bc06e1655e8dd6bb1148b15ebbcdf7bab0f68bdc00053ff0"
+n_cases          = 29
+regenerated_at   = "2026-05-06"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"
