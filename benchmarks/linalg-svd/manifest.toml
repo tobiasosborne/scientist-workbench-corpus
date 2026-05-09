@@ -1,0 +1,80 @@
+[meta]
+name        = "linalg-svd"
+domain      = "linalg"
+description = """
+Singular Value Decomposition `A = U · diag(S) · Vt` for a real `m × n` matrix.
+Output record: `U` (left singular vectors), `S` (singular values, descending),
+`Vt` (right singular vectors, transposed), `mode` (echoed), agent-honest
+self-report fields (`reconstruction_error`, `orthogonality_error_U`,
+`orthogonality_error_Vt`, `condition_number`, `rank_estimate`), plus `method`
+(one of "one-sided-jacobi" for max(m,n) ≤ 500, "golub-reinsch" above) and
+`warnings`.  Dual-algorithm dispatch: both paths validated by the 8-invariant
+battery.
+
+The 56-case battery spans:
+  A. shape edges (10 cases — 1×1, 2×1, 1×2, identity/zero, 3×3, 5×3, 3×5, 100×100, 200×200)
+  B. random well-conditioned (8 cases, n ∈ [5,200])
+  C. Hilbert ill-conditioned (7 cases, κ ∈ [10⁴, 10¹⁸])
+  D. Vandermonde ill-conditioned (4 cases)
+  E. Wilkinson / Pei / Frank structured (5 cases)
+  F. rank-deficient (5 cases — outer product, identity-with-zero-col, near-equal rows, zero, H8+zero-col)
+  G. tall-and-skinny / short-and-fat (6 cases)
+  H. complete-mode (4 cases — U is m×m, Vt is n×n)
+  I. NIST harwell-boeing structural matrices (5 cases — bcsstk01..05)
+  J. large stress cases (2 cases — n=500 Jacobi boundary, n=1000 Golub-Reinsch)
+"""
+ported_from = "scientist-workbench/bench/linalg-svd@6823aa5"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "U, S, Vt are correctly-shaped; mode, rank_estimate, method, warnings all well-typed; method is a string (any algorithm name accepted)."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_entries"
+description      = "U, S, Vt, reconstruction_error, orthogonality_error_U, orthogonality_error_Vt, condition_number contain no NaN and no ±Inf; rank_estimate is a non-negative integer."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "S_nonneg_descending"
+description      = "Singular values are non-negative (S[i] ≥ −tol_struct) and non-increasing (S[i] + tol_struct ≥ S[i+1]) where tol_struct = 100·ε·max(S[0], 1)."
+tolerance_source = "Higham 2002 §20.3 + 100× safety"
+
+[[verifier.checks]]
+name             = "U_orthonormal"
+description      = "‖UᵀU − I_q‖_F ≤ 100·ε·m·√q where q = U.shape[1].  Backward stability: both Jacobi and Golub-Reinsch achieve O(ε) independent of κ(A)."
+tolerance_source = "Higham 2002 §20.3 + 100× safety (Demmel-Kahan 1990; Demmel-Veselić 1992)"
+
+[[verifier.checks]]
+name             = "Vt_orthonormal"
+description      = "‖Vt·Vtᵀ − I_q‖_F ≤ 100·ε·m·√q where q = Vt.shape[0].  Checks row-orthogonality of Vt (equivalently, column-orthogonality of V)."
+tolerance_source = "Higham 2002 §20.3 + 100× safety"
+
+[[verifier.checks]]
+name             = "factorisation_residual"
+description      = "‖U·diag(S)·Vt − A‖_F / ‖A‖_F ≤ 100·ε·max(m,n)·√min(m,n). For A=0, requires exact zero residual."
+tolerance_source = "Higham 2002 §20.3 + 100× safety"
+
+[[verifier.checks]]
+name             = "self_reported_residual"
+description      = "Candidate's reconstruction_error matches verifier recomputation (‖USVt−A‖_F / max(‖A‖_F, 1)) within 1e-6 relative — candidate is not lying about its own quality."
+tolerance_source = "self-report 1e-6 rel"
+
+[[verifier.checks]]
+name             = "self_reported_orthogonality"
+description      = "Both orthogonality_error_U and orthogonality_error_Vt match verifier recomputation within 1e-6 relative."
+tolerance_source = "self-report 1e-6 rel"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "389e0054de36659535522654277d6019f5b897a85493e71a73a0cb29b2bcaa76"
+expected         = "golden/expected.json"
+expected_sha256  = "344026f42b1b8c46bdafb1481a32ae389053ca950945c4aa6a4c9b2b4050186a"
+n_cases          = 56
+regenerated_at   = "2026-05-06"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"

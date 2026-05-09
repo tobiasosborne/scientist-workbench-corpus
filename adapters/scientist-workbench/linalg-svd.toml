@@ -1,0 +1,8 @@
+[adapter]
+target          = "scientist-workbench"
+capability_id   = "linalg-svd"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "git@6823aa5"
+platform_pinned = true
