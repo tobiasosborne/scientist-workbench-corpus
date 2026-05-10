@@ -1,0 +1,8 @@
+[adapter]
+target          = "scientist-workbench"
+capability_id   = "alg-num-arith"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "git@092ca33"
+platform_pinned = false

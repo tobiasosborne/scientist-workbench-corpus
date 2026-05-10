@@ -1,0 +1,2020 @@
+{
+  "cases": [
+    {
+      "id": "A-elem-01-add-sqrt2-sqrt3",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "add"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "A-elem-02-mul-sqrt2-sqrt3",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "mul"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "A-elem-03-mul-sqrt2-sqrt2-rational-degenerate",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "mul"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "A-elem-04-add-1-sqrt2",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "add"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "A-elem-05-sub-sqrt3-sqrt2",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "sub"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "A-elem-06-neg-sqrt2",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "neg"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "A-elem-07-inv-sqrt2-non-monic-canonical",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "inv"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "A-elem-08-div-sqrt6-sqrt2",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-6"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "div"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "A-elem-09-div-sqrt2-sqrt2-yields-1",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "div"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "A-elem-10-add-zero-sqrt2",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "add"
+      },
+      "tier": "A"
+    },
+    {
+      "id": "B-nested-01-add-nested-conjugate-sum",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "3"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "2"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "add"
+      },
+      "tier": "B"
+    },
+    {
+      "id": "B-nested-02-mul-nested-conjugate-product",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "3"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "2"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "mul"
+      },
+      "tier": "B"
+    },
+    {
+      "id": "B-nested-03-sub-nested-difference",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "3"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "2"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "sub"
+      },
+      "tier": "B"
+    },
+    {
+      "id": "B-nested-04-neg-nested",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "3"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "neg"
+      },
+      "tier": "B"
+    },
+    {
+      "id": "B-nested-05-inv-nested",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "3"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "inv"
+      },
+      "tier": "B"
+    },
+    {
+      "id": "C-high-01-add-lehmer-k0-k1",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "add"
+      },
+      "tier": "C"
+    },
+    {
+      "id": "C-high-02-mul-lehmer-k0-k1",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "mul"
+      },
+      "tier": "C"
+    },
+    {
+      "id": "C-high-03-add-lehmer-sqrt2",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "2"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "add"
+      },
+      "tier": "C"
+    },
+    {
+      "id": "C-high-04-mul-lehmer-sqrt3",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "mul"
+      },
+      "tier": "C"
+    },
+    {
+      "id": "C-high-05-neg-lehmer-k0",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "neg"
+      },
+      "tier": "C"
+    },
+    {
+      "id": "D-conj-01-add-sqrt2-conjugates-trace-0",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "add"
+      },
+      "tier": "D"
+    },
+    {
+      "id": "D-conj-02-mul-sqrt2-conjugates-norm",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "mul"
+      },
+      "tier": "D"
+    },
+    {
+      "id": "D-conj-03-add-quartic-conjugates-trace-shape",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "3"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "add"
+      },
+      "tier": "D"
+    },
+    {
+      "id": "D-conj-04-add-lehmer-k0-neg-conjugate",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "add"
+      },
+      "tier": "D"
+    },
+    {
+      "id": "D-conj-05-mul-lehmer-k1-k2",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "-4"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "2"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "mul"
+      },
+      "tier": "D"
+    },
+    {
+      "id": "E-eq-01-reflexive-sqrt2",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "eq"
+      },
+      "tier": "E"
+    },
+    {
+      "id": "E-eq-02-cross-minpoly-sqrt2-sqrt3-false",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-3"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "eq"
+      },
+      "tier": "E"
+    },
+    {
+      "id": "E-eq-03-same-minpoly-different-k-false",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "eq"
+      },
+      "tier": "E"
+    },
+    {
+      "id": "E-eq-04-rational-zero-true",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "eq"
+      },
+      "tier": "E"
+    },
+    {
+      "id": "E-eq-05-rational-one-vs-negone-false",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "1"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "eq"
+      },
+      "tier": "E"
+    },
+    {
+      "id": "F-refuse-01-inv-of-zero",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "inv"
+      },
+      "tier": "F"
+    },
+    {
+      "id": "F-refuse-02-div-by-zero",
+      "input": {
+        "a": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "-2"
+                },
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "1"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "b": {
+          "args": [
+            {
+              "args": [
+                {
+                  "kind": "integer",
+                  "value": "0"
+                },
+                {
+                  "kind": "integer",
+                  "value": "1"
+                }
+              ],
+              "head": "Polynomial",
+              "kind": "expression"
+            },
+            {
+              "kind": "integer",
+              "value": "0"
+            }
+          ],
+          "head": "Root",
+          "kind": "expression"
+        },
+        "op": "div"
+      },
+      "tier": "F"
+    }
+  ]
+}

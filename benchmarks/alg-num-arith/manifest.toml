@@ -1,0 +1,93 @@
+[meta]
+name        = "alg-num-arith"
+domain      = "algebraic-number"
+description = """
+Field arithmetic over named algebraic numbers (Root[poly, k], ADR-0018)
+via Sylvester-Bareiss resultants.
+
+Input: one or two wire-encoded Root[poly, k] expressions (a, and
+optional b), plus an operation op ∈ {add, sub, mul, div, neg, inv, eq}.
+Output: a canonical Root[poly, k] expression for the result (arithmetic
+ops), a boolean (eq), or a tagged boundary refusal (inv-of-zero,
+div-by-zero).
+
+Canonical form invariants per ADR-0018: minpoly is irreducible over ℚ,
+primitive (gcd of integer coefficients = 1), and positive-leading.
+Index k is the 0-based position of the named root in the ascending
+real-root list of the minpoly.
+
+The substrate is @workbench/alg-num v0.1 (worklog 062): real algebraic
+numbers only, Sylvester-Bareiss resultants for arithmetic, canonical-
+form-by-interval-disambiguation for constructor selection.
+
+The 32-case battery spans 6 tiers:
+  A. elementary (10 cases)             — √2, √3, √5, √6 and small
+                                         rational degenerate cases.
+  B. nested (5 cases)                  — deg-4 minpolys from nested
+                                         square roots: √(2±√3).
+  C. high-degree (5 cases)             — Lehmer's L(x) (2cos(2π/11),
+                                         totally real, irreducible
+                                         deg-5); resultants up to deg 25.
+  D. conjugate-distinguishing (5 cases) — same minpoly, different k;
+                                         trace/norm identities tested.
+  E. equality stress (5 cases)          — reflexivity, cross-minpoly,
+                                         same-minpoly index-distinguish,
+                                         round-trip add/neg and mul/inv.
+  F. refusals (2 cases)                 — inv(0) and div(_, 0).
+
+Headline invariants:
+  vanishes_at_op_value   — candidate minpoly vanishes at numerical value
+                           of op(a, b) (tol 1e-12 × max(1, |nv|^deg)).
+  index_matches_real_position — k-th ascending real root of minpoly
+                           matches numerical op result (tol 1e-10 × max(1, |nv|)).
+  canonical_form         — irreducible, primitive, positive-leading.
+
+Oracle: SymPy qqbar-class evaluation (verify.py). TypeScript verifier
+(verify.ts) uses floating-point approximations throughout; adequate for
+all 32 bench cases (minpolys in canonical golden corpus are genuine).
+"""
+ported_from = "scientist-workbench/bench/alg-num-arith@092ca33561a79868a09b0cb4fa1ccde15f9435d6"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "For arithmetic lane: kind==\"expression\", head==\"Root\", args=[Polynomial[c_0,...,c_n], k]. Polynomial args are integer-kind values, k is non-negative integer < deg. For eq lane: kind==\"boolean\", value=true|false. For refusal lane: kind==\"tagged\", tag in alg-num-arith/* namespace, payload is a record with non-empty detail string."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "canonical_form"
+description      = "Arithmetic lane only. Candidate minpoly must be: (1) positive-leading (last element of low-to-high coefficient array > 0); (2) primitive (gcd of |coefficients| == 1); (3) irreducible over ℚ (verified via rational-root theorem + degree-4 quadratic-factor check; best-effort for higher degrees). Catches reducible_minpoly, negative_leading_coef, non_primitive mutations."
+tolerance_source = "exact — BigInt arithmetic for primitive/leading checks; rational-root-theorem proxy for irreducibility"
+
+[[verifier.checks]]
+name             = "vanishes_at_op_value"
+description      = "Arithmetic lane only. Numerically evaluate a and b as floats (k-th ascending real root via Durand-Kerner on their minpolys). Compute nv = op(a_float, b_float). Assert |p(nv)| < 1e-12 * max(1, |nv|^deg) where p is the candidate's minpoly. Matches verify.py's numerical fallback tolerance."
+tolerance_source = "1e-12 * max(1, |nv|^deg) (matches verify.py's `float(abs(val.evalf(50))) < tol` fallback)"
+
+[[verifier.checks]]
+name             = "index_matches_real_position"
+description      = "Arithmetic lane only. Use Durand-Kerner to compute real roots of candidate minpoly ascending. Assert |nv - real_roots[k]| < 1e-10 * max(1, |nv|). Disambiguates conjugates that share a minpoly."
+tolerance_source = "1e-10 * max(1, |nv|) (matches verify.py's `tol = 1e-10 * max(1.0, abs(target_n))`)"
+
+[[verifier.checks]]
+name             = "matches_oracle"
+description      = "Eq lane only. Numerically evaluate a and b as floats; oracle equality = |a_float - b_float| < 1e-10 * max(1, |a_float|). Candidate boolean must match oracle and (when pinned) expected.value."
+tolerance_source = "1e-10 * max(1, |a|) for numerical equality oracle"
+
+[[verifier.checks]]
+name             = "refusal_class_matches"
+description      = "Refusal lane only: cand.tag == expected.tag (when pinned). n/a for arithmetic and eq lanes."
+tolerance_source = "structural — no tolerance"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "d5a70810102a4969fd86206462a4d1a59638bc582832eb9a8860ec2b389e26dd"
+expected         = "golden/expected.json"
+expected_sha256  = "fb7df2de5da017c9826e25746070404292a67f5a75bac46eefd4858a3d753485"
+n_cases          = 32
+regenerated_at   = "2026-05-10"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"

@@ -1,0 +1,203 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-01-add-sqrt2-sqrt3"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-02-mul-sqrt2-sqrt3"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-03-mul-sqrt2-sqrt2-rational-degenerate"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-04-add-1-sqrt2"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-05-sub-sqrt3-sqrt2"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-06-neg-sqrt2"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-07-inv-sqrt2-non-monic-canonical"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-08-div-sqrt6-sqrt2"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-09-div-sqrt2-sqrt2-yields-1"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "A-elem-10-add-zero-sqrt2"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "B-nested-01-add-nested-conjugate-sum"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "B-nested-02-mul-nested-conjugate-product"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "B-nested-03-sub-nested-difference"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "B-nested-04-neg-nested"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "B-nested-05-inv-nested"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "C-high-01-add-lehmer-k0-k1"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "C-high-02-mul-lehmer-k0-k1"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "C-high-03-add-lehmer-sqrt2"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "C-high-04-mul-lehmer-sqrt3"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "C-high-05-neg-lehmer-k0"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "D-conj-01-add-sqrt2-conjugates-trace-0"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "D-conj-02-mul-sqrt2-conjugates-norm"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "D-conj-03-add-quartic-conjugates-trace-shape"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "D-conj-04-add-lehmer-k0-neg-conjugate"
+    },
+    {
+      "expected": {
+        "kind": "ok"
+      },
+      "id": "D-conj-05-mul-lehmer-k1-k2"
+    },
+    {
+      "expected": {
+        "kind": "boolean",
+        "value": true
+      },
+      "id": "E-eq-01-reflexive-sqrt2"
+    },
+    {
+      "expected": {
+        "kind": "boolean",
+        "value": false
+      },
+      "id": "E-eq-02-cross-minpoly-sqrt2-sqrt3-false"
+    },
+    {
+      "expected": {
+        "kind": "boolean",
+        "value": false
+      },
+      "id": "E-eq-03-same-minpoly-different-k-false"
+    },
+    {
+      "expected": {
+        "kind": "boolean",
+        "value": true
+      },
+      "id": "E-eq-04-rational-zero-true"
+    },
+    {
+      "expected": {
+        "kind": "boolean",
+        "value": false
+      },
+      "id": "E-eq-05-rational-one-vs-negone-false"
+    },
+    {
+      "expected": {
+        "kind": "tagged",
+        "tag": "alg-num-arith/inv-of-zero"
+      },
+      "id": "F-refuse-01-inv-of-zero"
+    },
+    {
+      "expected": {
+        "kind": "tagged",
+        "tag": "alg-num-arith/div-by-zero"
+      },
+      "id": "F-refuse-02-div-by-zero"
+    }
+  ]
+}
