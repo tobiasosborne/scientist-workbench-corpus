@@ -1,0 +1,712 @@
+{
+  "version": 1,
+  "seed": 20260507,
+  "live_oracle": false,
+  "summary": {
+    "total": 100,
+    "admitted": 100,
+    "dropped": 0
+  },
+  "entries": [
+    {
+      "id": "v1-linear-2x2-unique",
+      "tier": "v1-bank.handled",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-linear-3x3-unique",
+      "tier": "v1-bank.handled",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-linear-underdet-2x3",
+      "tier": "v1-bank.handled",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-linear-deg1-rational",
+      "tier": "v1-bank.handled",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-univ-quadratic-rational",
+      "tier": "v1-bank.handled",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-univ-quadratic-irrational",
+      "tier": "v1-bank.handled",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-univ-cubic-rational",
+      "tier": "v1-bank.handled",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-univ-cubic-factored",
+      "tier": "v1-bank.handled",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-univ-quartic-biquadratic",
+      "tier": "v1-bank.handled",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-univ-multiplicity",
+      "tier": "v1-bank.handled",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-trans-sin-zero",
+      "tier": "v1-bank.handled",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-trans-cos-half",
+      "tier": "v1-bank.handled",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-trans-exp-five",
+      "tier": "v1-bank.handled",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-trans-tan-zero",
+      "tier": "v1-bank.handled",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-trans-abs-three",
+      "tier": "v1-bank.handled",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-refused-fateman-cos-cos-cos",
+      "tier": "v1-bank.refused",
+      "lane": "refusal",
+      "sympy": "refused:solve/foreign-vocabulary",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-refused-fateman-sin6x-over-sinx",
+      "tier": "v1-bank.refused",
+      "lane": "refusal",
+      "sympy": "refused:solve/foreign-vocabulary",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-refused-bilinear-xy",
+      "tier": "v1-bank.refused",
+      "lane": "refusal",
+      "sympy": "refused:solve/multivariate-non-zero-dim",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-refused-quintic-eisenstein",
+      "tier": "v1-bank.refused",
+      "lane": "refusal",
+      "sympy": "refused:solve/complex-roots-not-yet-named",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "v1-refused-constant-equation",
+      "tier": "v1-bank.refused",
+      "lane": "refusal",
+      "sympy": "refused:solve/constant-equation",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-000",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-001",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-002",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-003",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-004",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-005",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-006",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-007",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-008",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-009",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-010",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-011",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-012",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-013",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-linear-014",
+      "tier": "rand.linear",
+      "lane": "linear",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-000",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-001",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-002",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-003",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-004",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-005",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-006",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-007",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-008",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-009",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-010",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-011",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-012",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-013",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-014",
+      "tier": "rand.univariate-poly",
+      "lane": "refusal",
+      "sympy": "refused:solve/complex-roots-not-yet-named",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-015",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-016",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-017",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-018",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-019",
+      "tier": "rand.univariate-poly",
+      "lane": "refusal",
+      "sympy": "refused:solve/complex-roots-not-yet-named",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-020",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-021",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-022",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-023",
+      "tier": "rand.univariate-poly",
+      "lane": "univariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-univ-024",
+      "tier": "rand.univariate-poly",
+      "lane": "refusal",
+      "sympy": "refused:solve/complex-roots-not-yet-named",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-000",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-001",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-002",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-003",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-004",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-005",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "refusal",
+      "sympy": "refused:solve/shape-lemma-failure",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-006",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-007",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-008",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-009",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-010",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-011",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-012",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-013",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-014",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-015",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "refusal",
+      "sympy": "refused:solve/multivariate-non-zero-dim",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-016",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-017",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-018",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-019",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-020",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-021",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "refusal",
+      "sympy": "refused:solve/complex-roots-not-yet-named",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-022",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "refusal",
+      "sympy": "refused:solve/complex-roots-not-yet-named",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-023",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-mv-024",
+      "tier": "rand.multivariate-zero-dim",
+      "lane": "multivariate-poly",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-000",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-001",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-002",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-003",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-004",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-005",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-006",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-007",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-008",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-009",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-010",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-011",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-012",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-013",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    },
+    {
+      "id": "rand-trans-014",
+      "tier": "rand.transcendental-univariate",
+      "lane": "transcendental",
+      "sympy": "ok",
+      "consensus": "sympy-only (LIVE_ORACLE off)"
+    }
+  ]
+}

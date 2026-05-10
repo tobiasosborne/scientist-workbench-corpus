@@ -1,5 +1,5 @@
 // =============================================================================
-// benchmarks/solve/golden/verify.ts — 4-lane dispatch verifier (TS port).
+// benchmarks/solve/golden/verify.ts — 5-lane dispatch verifier (TS port).
 // =============================================================================
 //
 // stdin:
@@ -7,34 +7,42 @@
 //     candidate: { kind:"ok", vars, solutions, completeness, warnings }
 //               | { kind:"tagged", tag, payload }
 //               | { kind:"tool_error", ... },
-//     expected:  { lane: "linear"|"univariate-poly"|"transcendental"|"refusal",
+//     expected:  { lane: "linear"|"univariate-poly"|"multivariate-poly"|
+//                        "transcendental"|"refusal",
 //                  tag?: string },
 //     id?:       string }
 //
 // stdout:
 //   { pass: bool, reason: str, checks: { <name>: { pass, detail } } }
 //
-// TypeScript port of verify.py per ADR-0028 §4.
-// Tolerances are preserved byte-for-byte with verify.py.
-// Do NOT tighten or loosen during migration.
+// TypeScript port of verify.py per ADR-0028 §4 with the multivariate-poly
+// lane added in lockstep with the workbench's Gröbner substrate (ADR-0029,
+// bead `scientist-workbench-x8d`).  Tolerances are preserved byte-for-byte
+// with verify.py for the four original lanes.
 //
 // The verifier dispatches by expected.lane, NOT by candidate.kind —
 // this is how "lied-about-scope" bugs are caught.
 //
 // ─── Lane dispatch ─────────────────────────────────────────────────────────
-//   lane == "linear"          → 5 checks (shape, exact_satisfaction,
-//                               free_var_basis, rank_consistent,
-//                               completeness_correct)
-//   lane == "univariate-poly" → 4 checks (shape, each_root_satisfies,
-//                               count_with_multiplicity, distinct_roots_match)
-//   lane == "transcendental"  → 3 checks (shape, branched_substitution_cube,
-//                               completeness_grid)
-//   lane == "refusal"         → 2 checks (tag_matches, payload_predicate)
+//   lane == "linear"            → 5 checks (shape, exact_satisfaction,
+//                                 free_var_basis, rank_consistent,
+//                                 completeness_correct)
+//   lane == "univariate-poly"   → 4 checks (shape, each_root_satisfies,
+//                                 count_with_multiplicity, distinct_roots_match)
+//   lane == "multivariate-poly" → 3 checks (shape, each_solution_satisfies,
+//                                 completeness_correct) — substitute-and-evaluate
+//                                 per ADR-0019 §1.
+//   lane == "transcendental"    → 3 checks (shape, branched_substitution_cube,
+//                                 completeness_grid)
+//   lane == "refusal"           → 2 checks (tag_matches, payload_predicate)
 //
 // ─── Tolerance regime ──────────────────────────────────────────────────────
 //   linear             — NONE (exact BigInt rational arithmetic)
 //   univariate-poly    — NONE (float64 eval: roots of deg ≤ 4 polynomials;
 //                        tolerance 1e-10 for substitute-and-simplify check)
+//   multivariate-poly  — 1e-7 absolute (substitute-and-evaluate residue;
+//                        well above float64 noise for the bench's coefficient
+//                        range [-9, 9])
 //   transcendental cube — 1e-12 (relative; numpy modules='numpy' mirror)
 //   transcendental grid — 1e-6 (root position)
 //   refusal            — NONE (exact tag/structural checks)
@@ -71,7 +79,7 @@ type Check = { pass: boolean; detail: string };
 // directly using import.meta.dir, keyed by case id.
 
 type ExpectedEntry = {
-  lane: "linear" | "univariate-poly" | "transcendental" | "refusal";
+  lane: "linear" | "univariate-poly" | "multivariate-poly" | "transcendental" | "refusal";
   tag?: string;
 };
 
@@ -408,7 +416,16 @@ const FLOAT_FUNCS: Record<string, (x: number) => number> = {
   abs: Math.abs, Abs: Math.abs,
   asin: Math.asin, acos: Math.acos, atan: Math.atan,
   arcsin: Math.asin, arccos: Math.acos, arctan: Math.atan,
+  asinh: Math.asinh, acosh: Math.acosh, atanh: Math.atanh,
   sqrt: Math.sqrt,
+  // The workbench emits `neg(x)` (not `-x`) for `expr("*", [int(-1), x])`
+  // when the operand is a non-numeric subexpression — see
+  // benchmarks/solve/run-candidate.ts's `valueToString` n=1 fall-through
+  // for `expr("-", [x])` and the cas-core convention for unary negation
+  // wrapping non-literal subexpressions.  Verify.ts must mirror this
+  // vocabulary to evaluate shape-lemma cubic / quartic Horner expansions
+  // whose intermediate sums fold a `neg(sqrt(...))` term.
+  neg: (x: number) => -x,
 };
 
 const FLOAT_CONSTS: Record<string, number> = {
@@ -440,13 +457,7 @@ function evalFloat(s: string, subst: Map<string, number>): number {
   function eat(): FTok  { return toks[i++]!; }
 
   function parseAddSub(): number {
-    let sign = 1;
-    if (peek().t === "op") {
-      const op = (peek() as { t: "op"; v: string }).v;
-      if (op === "-") { eat(); sign = -1; }
-      else if (op === "+") { eat(); }
-    }
-    let lhs = sign * parseMulDiv();
+    let lhs = parseMulDiv();
     while (peek().t === "op") {
       const op = (peek() as { t: "op"; v: string }).v;
       if (op !== "+" && op !== "-") break;
@@ -458,15 +469,36 @@ function evalFloat(s: string, subst: Map<string, number>): number {
   }
 
   function parseMulDiv(): number {
-    let lhs = parsePow();
+    let lhs = parseUnary();
     while (peek().t === "op") {
       const op = (peek() as { t: "op"; v: string }).v;
       if (op !== "*" && op !== "/") break;
       eat();
-      const rhs = parsePow();
+      const rhs = parseUnary();
       lhs = op === "*" ? lhs * rhs : lhs / rhs;
     }
     return lhs;
+  }
+
+  // Handle leading unary `+`/`-` in any term position.  Without this,
+  // an expression like `(... + -7/2)` (which the workbench emits from
+  // shape-lemma cubic/quartic Horner expansions) tokenises to
+  //   `... op(+) op(-) num(7) op(/) num(2) ...`
+  // and the additive parser, after eating `+`, finds an operator token
+  // where it expects an atom.  Threading a unary layer immediately
+  // above the power-and-atom parser lets every term position absorb
+  // its sign without disturbing left-associativity of `*` and `/`
+  // (parseMulDiv's outer loop is the sole owner of multiplicative
+  // associativity).
+  function parseUnary(): number {
+    let sign = 1;
+    while (peek().t === "op") {
+      const op = (peek() as { t: "op"; v: string }).v;
+      if (op === "-") { eat(); sign = -sign; }
+      else if (op === "+") { eat(); }
+      else break;
+    }
+    return sign * parsePow();
   }
 
   function parsePow(): number {
@@ -704,7 +736,7 @@ interface InputShape {
 }
 
 interface Expected {
-  lane: "linear" | "univariate-poly" | "transcendental" | "refusal";
+  lane: "linear" | "univariate-poly" | "multivariate-poly" | "transcendental" | "refusal";
   tag?: string;
 }
 
@@ -1291,6 +1323,166 @@ function verifyUnivariatePoly(
 }
 
 // =============================================================================
+// Lane: multivariate-poly (3 checks)
+// =============================================================================
+//
+// Checks: shape, each_solution_satisfies, completeness_correct.
+//
+// The lane verifies zero-dim multivariate polynomial systems solved via the
+// workbench's Gröbner+FGLM+shape-lemma stack (ADR-0029, bead `x8d`).  The
+// candidate's solutions are a finite list of `{bindings: [{var, value}]}`
+// with branches=[] and completeness="complete" (zero-dim ⇒ no parameters).
+//
+// Verification is substitute-and-evaluate (ADR-0019 §1):
+//   1. For each candidate Solution, evaluate every binding's `value` string
+//      via the float64 evaluator (handles integers, rationals, sqrt,
+//      Cardano radicals, and CRootOf companion-matrix evaluation for deg ≥ 5
+//      Root[poly,k] outputs).
+//   2. Substitute the resulting numeric values into every input equation
+//      and evaluate the residue.  PASS iff |residue| < 1e-7 absolute tol
+//      (well above float64 rounding noise for the bench's coefficient range
+//      [-9, 9] and target solution magnitudes ≤ ~5).
+//
+// Tolerance regime: 1e-7 absolute.  Conservative — true roots produce
+// residues at ~1e-13 to ~1e-15; mutated solutions produce O(1) residues.
+// We do NOT require exact bindings/value-string match against an oracle:
+// the workbench may emit `Root[poly, k]` where the reference SymPy
+// emits a CRootOf or radical form, and both should evaluate to the same
+// real root within float64 precision.  Verifying via substitution is the
+// only contract-honest check (matches univariate-poly's each_root_satisfies).
+
+const MV_POLY_TOL = 1e-7;
+
+function verifyMultivariatePoly(
+  inp: InputShape,
+  cand: Candidate,
+  _expected: Expected,
+): Record<string, Check> {
+  const checks: Record<string, Check> = {};
+  const SKIP = (k: string) => { checks[k] = fail("skipped: shape failed"); };
+
+  if (cand.kind !== "ok") {
+    checks["shape"] = fail(
+      `candidate.kind=${JSON.stringify(cand.kind)} but lane=multivariate-poly requires kind=ok`,
+    );
+    ["each_solution_satisfies", "completeness_correct"].forEach(SKIP);
+    return checks;
+  }
+
+  const ok = cand as OkCandidate;
+  const varNames = inp.vars;
+  const n = varNames.length;
+
+  // ── shape ─────────────────────────────────────────────────────────────────
+  let shapeFail: string | null = null;
+  if (!Array.isArray(ok.solutions)) {
+    shapeFail = "solutions field missing or not a list";
+  } else if (ok.completeness !== "complete") {
+    shapeFail = `completeness=${JSON.stringify(ok.completeness)}, expected 'complete' (zero-dim ⇒ finite)`;
+  } else if (!Array.isArray(ok.vars) || ok.vars.length !== n) {
+    shapeFail = `|vars|=${ok.vars?.length ?? "?"} != input |vars|=${n}`;
+  } else {
+    for (let i = 0; i < ok.solutions.length && !shapeFail; i++) {
+      const sol = ok.solutions[i]!;
+      if (!sol.bindings || sol.bindings.length !== n) {
+        shapeFail = `solution[${i}] |bindings|=${sol.bindings?.length ?? 0} != |vars|=${n}`;
+        break;
+      }
+      if ((sol.branches ?? []).length !== 0) {
+        shapeFail = `solution[${i}] has non-empty branches (zero-dim ⇒ no parameters)`;
+        break;
+      }
+      for (let j = 0; j < n; j++) {
+        const b = sol.bindings[j]!;
+        if (b.var !== varNames[j]) {
+          shapeFail = `solution[${i}].bindings[${j}].var=${JSON.stringify(b.var)} != ${JSON.stringify(varNames[j])}`;
+          break;
+        }
+        if (typeof b.value !== "string" || !b.value) {
+          shapeFail = `solution[${i}].bindings[${j}].value is not a non-empty string`;
+          break;
+        }
+      }
+    }
+  }
+  if (shapeFail) {
+    checks["shape"] = fail(shapeFail);
+    ["each_solution_satisfies", "completeness_correct"].forEach(SKIP);
+    return checks;
+  }
+  checks["shape"] = pass(`${n} vars; ${ok.solutions.length} solution(s); shape ok`);
+
+  // ── each_solution_satisfies ──────────────────────────────────────────────
+  {
+    let satFail: string | null = null;
+    let evaluated = 0;
+
+    for (let i = 0; i < ok.solutions.length && !satFail; i++) {
+      const sol = ok.solutions[i]!;
+      const sub = new Map<string, number>();
+      let evalOk = true;
+
+      for (let j = 0; j < n; j++) {
+        const valStr = sol.bindings[j]!.value;
+        let v: number;
+        try {
+          v = evalFloat(valStr, new Map<string, number>());
+        } catch (e) {
+          satFail = `solution[${i}] bindings[${j}].value=${JSON.stringify(valStr)} did not evaluate: ${(e as Error).message}`;
+          evalOk = false;
+          break;
+        }
+        if (!isFinite(v)) {
+          satFail = `solution[${i}] bindings[${j}].value=${JSON.stringify(valStr)} evaluates to non-finite (${v})`;
+          evalOk = false;
+          break;
+        }
+        sub.set(varNames[j]!, v);
+      }
+      if (!evalOk) break;
+
+      for (let eqIdx = 0; eqIdx < inp.eqs.length && !satFail; eqIdx++) {
+        const eqStr = inp.eqs[eqIdx]!;
+        let res: number;
+        try { res = evalEq(eqStr, sub); }
+        catch (e) {
+          satFail = `eq[${eqIdx}] eval failed at solution[${i}]: ${(e as Error).message}`;
+          break;
+        }
+        if (!isFinite(res)) {
+          satFail = `eq[${eqIdx}] residue non-finite at solution[${i}]`;
+          break;
+        }
+        if (Math.abs(res) > MV_POLY_TOL) {
+          const subStr = Array.from(sub).map(([k, v]) => `${k}=${v.toFixed(6)}`).join(", ");
+          satFail = `eq[${eqIdx}] residue=${res.toExponential(3)} at solution[${i}] (${subStr}); tol=${MV_POLY_TOL}`;
+          break;
+        }
+      }
+      evaluated++;
+    }
+
+    checks["each_solution_satisfies"] = satFail
+      ? fail(satFail)
+      : pass(`${evaluated} solution(s) substituted into ${inp.eqs.length} equation(s); all residues < ${MV_POLY_TOL}`);
+  }
+
+  // ── completeness_correct ─────────────────────────────────────────────────
+  // Zero-dim ideals always have completeness="complete"; the shape check
+  // above already enforces this, but keep an independent check for the
+  // mutation-prove harness.
+  if (ok.completeness === "complete") {
+    checks["completeness_correct"] = pass("completeness='complete' (zero-dim)");
+  } else {
+    checks["completeness_correct"] = fail(
+      `completeness=${JSON.stringify(ok.completeness)}, expected 'complete'`,
+    );
+  }
+
+  return checks;
+}
+
+// =============================================================================
 // Lane: transcendental (3 checks)
 // =============================================================================
 //
@@ -1403,7 +1595,18 @@ function verifyTranscendental(
     if (cubeXVals.length === 0) {
       checks["completeness_grid"] = pass("no real cube-instantiated values; grid n/a");
     } else {
-      const reach = cubeXVals.reduce((m, v) => Math.max(m, Math.abs(v)), 0);
+      // The grid window must match the cube's *actual* asymmetric reach,
+      // not a symmetric `±max(|cube|)`.  For invertible-head equations
+      // with a non-zero linear coefficient (e.g. `tan(-2x + 2) - (-3)`),
+      // the cube's [t_0 = -3 .. 3] integer range maps to an asymmetric
+      // x-range in the original variable.  A symmetric scan would scan
+      // territory the cube cannot possibly reach (because the periodic
+      // image of t_0 ∈ ℤ over [t_0 = 4, t_0 = 5, ...] lies further along
+      // one direction only) and report the unreached roots as
+      // "unmatched", a false-positive completeness violation.
+      const cubeMin = cubeXVals.reduce((m, v) => Math.min(m, v), cubeXVals[0]!);
+      const cubeMax = cubeXVals.reduce((m, v) => Math.max(m, v), cubeXVals[0]!);
+      const reach = Math.max(Math.abs(cubeMin), Math.abs(cubeMax));
       const win = Math.min(GRID_HI, reach);
       if (win < 0.1) {
         // Pointwise check for finite-reach cases.
@@ -1418,14 +1621,22 @@ function verifyTranscendental(
         }
         checks["completeness_grid"] = gridFail ? fail(gridFail) : pass(`pointwise candidate values all satisfy eq`);
       } else {
-        // Grid scan over [-win, win].
-        const step = 2 * win / GRID_N;
+        // Grid scan over `[cubeMin, cubeMax]` clamped to `[-GRID_HI,
+        // GRID_HI]`.  Critically, the scan does NOT extend beyond the
+        // cube's actual reach: any grid root outside `[cubeMin,
+        // cubeMax]` corresponds to a branch index outside `[-CUBE_HALF,
+        // CUBE_HALF]`, which the cube cannot match by construction —
+        // flagging it as "unmatched" would be a false-positive
+        // completeness violation.
+        const lo = Math.max(-GRID_HI, cubeMin);
+        const hi = Math.min(GRID_HI, cubeMax);
+        const step = (hi - lo) / GRID_N;
         const gridRoots: number[] = [];
-        let prevY = (() => { try { return evalEq(eqStr, new Map([[varName, -win]])); } catch { return NaN; } })();
-        let prevX = -win;
+        let prevY = (() => { try { return evalEq(eqStr, new Map([[varName, lo]])); } catch { return NaN; } })();
+        let prevX = lo;
 
         for (let j = 1; j <= GRID_N; j++) {
-          const x = -win + j * step;
+          const x = lo + j * step;
           let y: number;
           try { y = evalEq(eqStr, new Map([[varName, x]])); }
           catch { y = NaN; }
@@ -1458,7 +1669,7 @@ function verifyTranscendental(
         }
 
         if (gridRoots.length === 0) {
-          checks["completeness_grid"] = pass(`no grid roots in [-${win.toFixed(2)}, ${win.toFixed(2)}]`);
+          checks["completeness_grid"] = pass(`no grid roots in [${lo.toFixed(2)}, ${hi.toFixed(2)}]`);
         } else {
           // Every grid root must match some cube-instantiated x value within GRID_TOL.
           const missed: number[] = [];
@@ -1472,7 +1683,7 @@ function verifyTranscendental(
             );
           } else {
             checks["completeness_grid"] = pass(
-              `${gridRoots.length} grid root(s) all matched within ${GRID_TOL} (window=±${win.toFixed(2)})`,
+              `${gridRoots.length} grid root(s) all matched within ${GRID_TOL} (window=[${lo.toFixed(2)}, ${hi.toFixed(2)}])`,
             );
           }
         }
@@ -1540,6 +1751,9 @@ function verify(
         break;
       case "univariate-poly":
         checks = verifyUnivariatePoly(inp, cand, exp);
+        break;
+      case "multivariate-poly":
+        checks = verifyMultivariatePoly(inp, cand, exp);
         break;
       case "transcendental":
         checks = verifyTranscendental(inp, cand, exp);

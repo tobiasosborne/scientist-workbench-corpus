@@ -38,8 +38,21 @@ ROOT = HERE.parent.parent.parent
 sys.path.insert(0, str(ROOT / "bench" / "_corpus"))
 sys.path.insert(0, str(HERE.parent / "reference"))
 
-from oracle.wolfram import wolfram_query              # noqa: E402
 from solve_reference import solve_reference            # noqa: E402
+
+# The Wolfram oracle module is optional: it lives in the workbench's
+# `bench/_corpus/` tree, which post-ADR-0028 corpus migration is no
+# longer required to be present here.  When `WB_LIVE_ORACLE=0` (the
+# default for corpus-side regeneration) we never call `wolfram_query`,
+# so a missing module is fine.  When `WB_LIVE_ORACLE=1` and the module
+# is genuinely unreachable, fall through to a stub that records the
+# absence in the oracle log; expected.json admission is unaffected
+# because the live-oracle agreement check in `admit()` is non-blocking.
+try:
+    from oracle.wolfram import wolfram_query           # type: ignore # noqa: E402
+except ImportError:
+    def wolfram_query(_code: str, timeout: float = 30.0) -> Dict[str, Any]:    # type: ignore[misc]
+        return {"status": "missing", "reason": "oracle.wolfram module not on sys.path"}
 
 LIVE_ORACLE = os.environ.get("WB_LIVE_ORACLE", "1") != "0"
 SEED = 20260507
@@ -85,7 +98,12 @@ def classify_lane(eqs: List[str], var_names: List[str]) -> str:
         return "linear"
     if len(eqs) == 1 and len(var_names) == 1:
         return "univariate-poly"
-    return "linear"  # multivariate degree>1 already routed to refusal above
+    # Multivariate non-linear: post-x8d (ADR-0029), the workbench dispatches
+    # zero-dim ideals through Buchberger + FGLM + shape lemma, and the
+    # reference mirrors that via `sp.solve`.  Reaching here implies
+    # solve_reference returned "ok" so the system is zero-dim with all-real
+    # roots; lane="multivariate-poly".
+    return "multivariate-poly"
 
 
 # ---------------------------------------------------------------------

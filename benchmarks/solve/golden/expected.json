@@ -23,7 +23,7 @@
     {
       "id": "v1-linear-deg1-rational",
       "expected": {
-        "lane": "univariate-poly"
+        "lane": "linear"
       }
     },
     {
@@ -373,106 +373,92 @@
     {
       "id": "rand-mv-000",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-001",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-002",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-003",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-004",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-005",
       "expected": {
         "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "tag": "solve/shape-lemma-failure"
       }
     },
     {
       "id": "rand-mv-006",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-007",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-008",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-009",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-010",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-011",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-012",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-013",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-014",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
@@ -485,64 +471,57 @@
     {
       "id": "rand-mv-016",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-017",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-018",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-019",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-020",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-021",
       "expected": {
         "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "tag": "solve/complex-roots-not-yet-named"
       }
     },
     {
       "id": "rand-mv-022",
       "expected": {
         "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "tag": "solve/complex-roots-not-yet-named"
       }
     },
     {
       "id": "rand-mv-023",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
       "id": "rand-mv-024",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/multivariate-non-zero-dim"
+        "lane": "multivariate-poly"
       }
     },
     {
@@ -560,8 +539,7 @@
     {
       "id": "rand-trans-002",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/foreign-vocabulary"
+        "lane": "transcendental"
       }
     },
     {
@@ -603,8 +581,7 @@
     {
       "id": "rand-trans-009",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/foreign-vocabulary"
+        "lane": "transcendental"
       }
     },
     {
@@ -616,8 +593,7 @@
     {
       "id": "rand-trans-011",
       "expected": {
-        "lane": "refusal",
-        "tag": "solve/foreign-vocabulary"
+        "lane": "transcendental"
       }
     },
     {
