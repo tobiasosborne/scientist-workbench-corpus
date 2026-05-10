@@ -1,0 +1,301 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "A-linear-rational",
+      "tier": "A",
+      "input": {
+        "f": "2*x - 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-linear-fraction-root",
+      "tier": "A",
+      "input": {
+        "f": "3*x - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-linear-negative",
+      "tier": "A",
+      "input": {
+        "f": "-x + 5",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-quadratic-two-real",
+      "tier": "A",
+      "input": {
+        "f": "x**2 - 2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-quadratic-rational",
+      "tier": "A",
+      "input": {
+        "f": "x**2 - 5*x + 6",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-T3",
+      "tier": "B",
+      "input": {
+        "f": "4*x**3 - 3*x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-T4",
+      "tier": "B",
+      "input": {
+        "f": "8*x**4 - 8*x**2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-T5",
+      "tier": "B",
+      "input": {
+        "f": "16*x**5 - 20*x**3 + 5*x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-T6",
+      "tier": "B",
+      "input": {
+        "f": "32*x**6 - 48*x**4 + 18*x**2 - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-T7",
+      "tier": "B",
+      "input": {
+        "f": "64*x**7 - 112*x**5 + 56*x**3 - 7*x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-P3",
+      "tier": "B",
+      "input": {
+        "f": "5*x**3 - 3*x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-P4",
+      "tier": "B",
+      "input": {
+        "f": "35*x**4 - 30*x**2 + 3",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-P5",
+      "tier": "B",
+      "input": {
+        "f": "63*x**5 - 70*x**3 + 15*x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-mignotte-3-10",
+      "tier": "C",
+      "input": {
+        "f": "x**3 - 2*(10*x - 1)**2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-mignotte-4-10",
+      "tier": "C",
+      "input": {
+        "f": "x**4 - 2*(10*x - 1)**2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-mignotte-5-5",
+      "tier": "C",
+      "input": {
+        "f": "x**5 - 2*(5*x - 1)**2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-three-rational-cluster",
+      "tier": "C",
+      "input": {
+        "f": "(x - 1/100) * (x - 2/100) * (x - 3/100)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-roots-10e-6-apart",
+      "tier": "C",
+      "input": {
+        "f": "(x - 1) * (x - 1000001/1000000)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-wilkinson-20",
+      "tier": "D",
+      "input": {
+        "f": "(x - 1) * (x - 2) * (x - 3) * (x - 4) * (x - 5) * (x - 6) * (x - 7) * (x - 8) * (x - 9) * (x - 10) * (x - 11) * (x - 12) * (x - 13) * (x - 14) * (x - 15) * (x - 16) * (x - 17) * (x - 18) * (x - 19) * (x - 20)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-cheby-T11",
+      "tier": "D",
+      "input": {
+        "f": "1024*x**11 - 2816*x**9 + 2816*x**7 - 1232*x**5 + 220*x**3 - 11*x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-wilkinson-50",
+      "tier": "D",
+      "input": {
+        "f": "(x - 1) * (x - 2) * (x - 3) * (x - 4) * (x - 5) * (x - 6) * (x - 7) * (x - 8) * (x - 9) * (x - 10) * (x - 11) * (x - 12) * (x - 13) * (x - 14) * (x - 15) * (x - 16) * (x - 17) * (x - 18) * (x - 19) * (x - 20) * (x - 21) * (x - 22) * (x - 23) * (x - 24) * (x - 25) * (x - 26) * (x - 27) * (x - 28) * (x - 29) * (x - 30) * (x - 31) * (x - 32) * (x - 33) * (x - 34) * (x - 35) * (x - 36) * (x - 37) * (x - 38) * (x - 39) * (x - 40) * (x - 41) * (x - 42) * (x - 43) * (x - 44) * (x - 45) * (x - 46) * (x - 47) * (x - 48) * (x - 49) * (x - 50)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-cheby-T13",
+      "tier": "D",
+      "input": {
+        "f": "4096*x**13 - 13312*x**11 + 16640*x**9 - 9984*x**7 + 2912*x**5 - 364*x**3 + 13*x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-half-integer-30",
+      "tier": "D",
+      "input": {
+        "f": "(2*x - 1) * (2*x - 2) * (2*x - 3) * (2*x - 4) * (2*x - 5) * (2*x - 6) * (2*x - 7) * (2*x - 8) * (2*x - 9) * (2*x - 10) * (2*x - 11) * (2*x - 12) * (2*x - 13) * (2*x - 14) * (2*x - 15) * (2*x - 16) * (2*x - 17) * (2*x - 18) * (2*x - 19) * (2*x - 20) * (2*x - 21) * (2*x - 22) * (2*x - 23) * (2*x - 24) * (2*x - 25) * (2*x - 26) * (2*x - 27) * (2*x - 28) * (2*x - 29) * (2*x - 30)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-large-coefs-quad",
+      "tier": "E",
+      "input": {
+        "f": "1000*x**2 - 2*x - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-mixed-denoms-cubic",
+      "tier": "E",
+      "input": {
+        "f": "x**3 - x/2 + 1/6",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-tiny-leading-large-root",
+      "tier": "E",
+      "input": {
+        "f": "x/1000 - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-rational-quartic",
+      "tier": "E",
+      "input": {
+        "f": "x**4 - x**3/2 + x**2/3 - x/5 + 1/7",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-spread-roots-quad",
+      "tier": "E",
+      "input": {
+        "f": "x**2 - 10001*x + 10000",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-not-squarefree-double",
+      "tier": "F",
+      "input": {
+        "f": "(x - 1)**2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-not-squarefree-mixed",
+      "tier": "F",
+      "input": {
+        "f": "(x - 1)**2 * (x + 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-multivariate",
+      "tier": "F",
+      "input": {
+        "f": "x*y - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-non-polynomial-sin",
+      "tier": "F",
+      "input": {
+        "f": "sin(x)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-no-real-quadratic",
+      "tier": "G",
+      "input": {
+        "f": "x**2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-no-real-quartic",
+      "tier": "G",
+      "input": {
+        "f": "x**4 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-cyclotomic-Phi12",
+      "tier": "G",
+      "input": {
+        "f": "x**4 - x**2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-cyclotomic-Phi13",
+      "tier": "G",
+      "input": {
+        "f": "x**12 + x**11 + x**10 + x**9 + x**8 + x**7 + x**6 + x**5 + x**4 + x**3 + x**2 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-roots-with-zero",
+      "tier": "G",
+      "input": {
+        "f": "x**3 - x",
+        "var": "x"
+      }
+    }
+  ]
+}

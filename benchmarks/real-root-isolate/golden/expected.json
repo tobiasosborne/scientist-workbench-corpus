@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "A-linear-rational",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "A-linear-fraction-root",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "A-linear-negative",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "A-quadratic-two-real",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "A-quadratic-rational",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-T3",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-T4",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-T5",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-T6",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-T7",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-P3",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-P4",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-P5",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-mignotte-3-10",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-mignotte-4-10",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-mignotte-5-5",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-three-rational-cluster",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-roots-10e-6-apart",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-wilkinson-20",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-cheby-T11",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-wilkinson-50",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-cheby-T13",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-half-integer-30",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-large-coefs-quad",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-mixed-denoms-cubic",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-tiny-leading-large-root",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-rational-quartic",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-spread-roots-quad",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "F-not-squarefree-double",
+      "expected": {
+        "kind": "tagged",
+        "tag": "real-root-isolate/not-squarefree"
+      }
+    },
+    {
+      "id": "F-not-squarefree-mixed",
+      "expected": {
+        "kind": "tagged",
+        "tag": "real-root-isolate/not-squarefree"
+      }
+    },
+    {
+      "id": "F-multivariate",
+      "expected": {
+        "kind": "tagged",
+        "tag": "real-root-isolate/multivariate"
+      }
+    },
+    {
+      "id": "F-non-polynomial-sin",
+      "expected": {
+        "kind": "tagged",
+        "tag": "real-root-isolate/non-polynomial"
+      }
+    },
+    {
+      "id": "G-no-real-quadratic",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "G-no-real-quartic",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "G-cyclotomic-Phi12",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "G-cyclotomic-Phi13",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "G-roots-with-zero",
+      "expected": {
+        "kind": "ok"
+      }
+    }
+  ]
+}

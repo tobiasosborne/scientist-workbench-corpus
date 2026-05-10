@@ -1,0 +1,84 @@
+[meta]
+name        = "real-root-isolate"
+domain      = "polynomial-symbolic"
+description = """
+Vincent-Akritas-Strzebonski (VAS) continued-fraction real-root isolation with
+the Local-Max Quadratic (LMQ) positive-root bound (Akritas-Strzebonski-Vigklas
+2008).
+
+Input: a squarefree univariate polynomial f ∈ ℚ[x] (as a string expression)
+and the variable name var.
+Output: a list of disjoint rational isolating intervals — open (lo, hi) for
+irrational roots, singletons (r, r) for rational roots — covering every real
+root of f exactly once, in ascending order.  Rational endpoints are exact
+(no floats); the "isolating" property is verified against Sturm-sequence
+ground truth.
+
+All arithmetic is exact rational (BigInt); no floating-point at any step.
+This is the workbench's default (symbolic) determinism tier: bit-identical
+cross-platform forever.
+
+Boundary tags: not-squarefree, multivariate, non-polynomial.
+
+The 37-case battery spans 7 tiers:
+  A. trivial (5 cases) — linear and quadratic, rational/irrational roots,
+     no-real-roots quadratic.
+  B. Chebyshev / Legendre (8 cases) — T_3..T_7, P_3, P_4, P_5; exactly
+     deg-n distinct real roots in (−1, 1), all irrational.
+  C. clustered (5 cases) — Mignotte M_{n,a} family (two roots ~1/a apart),
+     three-root rational cluster, pair separated by 1e-6.
+  D. large-degree (5 cases) — Wilkinson 20 and 50, Chebyshev product
+     (deg 11), Chebyshev T_13 (deg 13), half-integer deg 30.
+  E. rational-coefficient stress (5 cases) — large coefficients ×1000,
+     mixed denominators, tiny leading coefficient, dense rational quartic,
+     spread roots.
+  F. refusals (4 cases) — not-squarefree (double), not-squarefree (mixed),
+     multivariate, non-polynomial (sin).
+  G. structural edges (5 cases) — no-real-roots (x²+1, x⁴+1, Φ_12, Φ_13),
+     poly with rational root at zero (x³−x).
+
+Headline invariant: each_interval_contains_one_root (Sturm-sequence ground
+truth per interval).  A candidate that doubles an interval or drops a root
+fails the count check; a candidate that widens a bracket to include two roots
+fails the per-interval check.
+"""
+ported_from = "scientist-workbench/bench/real-root-isolate@7ef98b09de18905a5016b13e7e7e6c782ad5533f"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "kind==\"ok\", intervals is a list of {lo, hi} records with rational-string endpoints parseable as p/q."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "each_interval_contains_one_root"
+description      = "For each entry: if lo==hi, then f(lo)==0 (singleton at rational root). If lo<hi, open root count = count_roots(lo,hi) − [f(lo)=0] − [f(hi)=0] == 1. Computed via BigInt rational Sturm sequence."
+tolerance_source = "exact — rational comparison and integer Sturm count"
+
+[[verifier.checks]]
+name             = "intervals_disjoint_and_ordered"
+description      = "For each adjacent pair: intervals[i].hi <= intervals[i+1].lo. Equality permitted (shared non-root separator under SymPy's open+singleton convention)."
+tolerance_source = "exact — rational comparison"
+
+[[verifier.checks]]
+name             = "count_matches_total_real_roots"
+description      = "len(intervals) == total real root count of f computed via Sturm sequence over (−∞, +∞). Catches dropped, doubled, or missing-singleton bugs."
+tolerance_source = "exact — integer equality (Sturm ground truth)"
+
+[[verifier.checks]]
+name             = "refusal_class_matches"
+description      = "For tagged outputs: cand.tag == expected.tag (when pinned); cand.payload.detail is a non-empty string. n/a for happy-path cases."
+tolerance_source = "structural — no tolerance"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "08cdd3db2f9692bf7ccceaaf43065abb4ff1da8693166b9113309a07a8245879"
+expected         = "golden/expected.json"
+expected_sha256  = "00619068d4ebffca193688d4a8f6b48900d99fa419650bb969798a4c910ef708"
+n_cases          = 37
+regenerated_at   = "2026-05-07"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"
