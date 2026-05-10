@@ -1,0 +1,2809 @@
+{
+  "version": 1,
+  "problem": "meijer-g",
+  "cases": [
+    {
+      "id": "t0-G1001-b0-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 0 | 2) = e^{-2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-b0-z5",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "5",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 0 | 5) = e^{-5}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-b0-zhalf",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 0 | 1/2) = e^{-1/2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-b1-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 1 | 2) = 2 e^{-2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-bm1-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "-1",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; -1 | 2) = e^{-2}/2",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-bhalf-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 1/2 | 2) = sqrt(2)\u00b7e^{-2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-bmhalf-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "-1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; -1/2 | 2) = e^{-2}/sqrt(2)",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-b2-z3",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 2 | 3) = 9 e^{-3}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-b3half-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 3/2 | 2) = 2 sqrt(2)\u00b7e^{-2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G0110-a0-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{0,1}_{1,0}(0; _ | 2) = e^{-1/2}/2",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G0110-a1-z3",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{0,1}_{1,0}(1; _ | 3) = e^{-1/3}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G0110-a2-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{0,1}_{1,0}(2; _ | 2) = 2 e^{-1/2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G0110-ahalf-z4",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{0,1}_{1,0}(1/2; _ | 4) = e^{-1/4}/2",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1111-ahalf-b0-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,1}_{1,1}(1/2; 0 | 2) = \u0393(1/2)/\u221a3 = \u221a\u03c0 / \u221a3",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1111-athird-b0-z1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,1}_{1,1}(1/3; 0 | 1) = \u0393(2/3) \u00b7 2^{-2/3}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1111-a0-bhalf-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,1}_{1,1}(0; 1/2 | 2) = \u0393(3/2) \u00b7 \u221a2 \u00b7 3^{-3/2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1002-b0-bhalf-zquart",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,2}(_; 0, 1/2 | 1/4) = (1/\u221a\u03c0) cos(1)",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "t0-G1002-bhalf-b0-zquart",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,2}(_; 1/2, 0 | 1/4) = (1/\u221a\u03c0) sin(1)",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "t0-G1002-bessel-J1-z1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "-1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,2}(_; 1/2, -1/2 | 1) = J_1(2)",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "t0-G1002-bessel-J0-zquart",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,2}(_; 0, 0 | 1/4) = J_0(1)",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "t0-G2002-bessel-K0-z1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 0, 0 | 1) = 2 K_0(2)",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "t0-G2002-bessel-K1-z1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "-1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 1/2, -1/2 | 1) = 2 K_1(2)",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "t0-G1112-erf-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,1}_{1,2}(1; 1/2, 0 | 2) = \u221a\u03c0 \u00b7 erf(\u221a2)",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1222-log-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,2}_{2,2}({1,1}; {1,0} | 2) = log(3)",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1222-log-zhalf",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,2}_{2,2}({1,1}; {1,0} | 1/2) = log(3/2)",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1222-arctan-z3",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,2}_{2,2}(1/2,1; 1/2,0 | 3) = 2\u00b7arctan(\u221a3) = 2\u03c0/3",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1111-genfree-1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/4",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,1}_{1,1}(1/3; 1/4 | 1) = \u0393(11/12) \u00b7 2^{-11/12}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-b0-z10",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "10",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 0 | 10) = e^{-10}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-b0-zsmall",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/10",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 0 | 1/10) = e^{-1/10}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1111-1-half-z4",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,1}_{1,1}(1; 1/2 | 4) = \u0393(3/2) \u00b7 2 \u00b7 5^{-3/2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-bhalf-z3",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 1/2 | 3) = \u221a3\u00b7e^{-3}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-b3-z1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 3 | 1) = 1\u00b7e^{-1} = 1/e",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-bm2-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "-2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; -2 | 2) = e^{-2}/4",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G1001-bone-third-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 1/3 | 2) = 2^{1/3}\u00b7e^{-2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G0110-a3-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{0,1}_{1,0}(3; _ | 2) = 4 e^{-1/2}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "t0-G0110-am1-z2",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "an": [
+          {
+            "re": "-1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "G^{0,1}_{1,0}(-1; _ | 2) = e^{-1/2}/4",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tA-sym-exp-z3",
+      "tier": "A",
+      "category": "elementary-symbolic",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: G^{1,0}_{0,1}(_; 0 | 3) \u27f6 Bateman 5-6-8",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tA-sym-zexp-z2",
+      "tier": "A",
+      "category": "elementary-symbolic",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: G^{1,0}_{0,1}(_; 1 | 2) \u27f6 Bateman 5-6-21",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tA-sym-G1001-bm2",
+      "tier": "A",
+      "category": "elementary-symbolic",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "-2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: G^{1,0}_{0,1}(_; -2 | 3) \u27f6 Bateman 5-6-35-nm2",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tA-sym-recip-exp",
+      "tier": "A",
+      "category": "elementary-symbolic",
+      "input": {
+        "an": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: G^{0,1}_{1,0}(0; _ | 3) \u27f6 Bateman 5-6-31",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tA-sym-G1001-bm1",
+      "tier": "A",
+      "category": "elementary-symbolic",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "-1",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: G^{1,0}_{0,1}(_; -1 | 3) \u27f6 Bateman 5-6-20",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tA-sym-G1001-b2",
+      "tier": "A",
+      "category": "elementary-symbolic",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: G^{1,0}_{0,1}(_; 2 | 4) \u27f6 Bateman 5-6-35",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tA-sym-log-z3",
+      "tier": "A",
+      "category": "elementary-symbolic",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: log(1 + z) at z=3 \u27f6 log(4)",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tA-sym-log-z2",
+      "tier": "A",
+      "category": "elementary-symbolic",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: log(1 + z) at z=2 \u27f6 log(3)",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tA-sym-G0110-a3",
+      "tier": "A",
+      "category": "elementary-symbolic",
+      "input": {
+        "an": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: G^{0,1}_{1,0}(3; _ | 4) = 16 e^{-1/4}",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tB-besselK0-z2",
+      "tier": "B",
+      "category": "special-fn-numerical",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "2 K_0(4)",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tB-besselK1-z2",
+      "tier": "B",
+      "category": "special-fn-numerical",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "-1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "2 K_1(4)",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tB-besselK-half-z3",
+      "tier": "B",
+      "category": "special-fn-numerical",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/4",
+            "im": "0"
+          },
+          {
+            "re": "-1/4",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "2 K_{1/2}(2\u221a3) = \u221a(\u03c0/(2\u00b72\u221a3))\u00b7e^{-2\u221a3}",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tB-besselJ0-z1",
+      "tier": "B",
+      "category": "special-fn-numerical",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "-1",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "J_0(2) at z = -1 (i.e. -z\u00b2/4 = -1, so z=2)",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tB-erfc-z3",
+      "tier": "B",
+      "category": "special-fn-numerical",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "erfc(\u221a3)/\u221a\u03c0",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tB-erfc-zhalf",
+      "tier": "B",
+      "category": "special-fn-numerical",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "erfc(\u221a(1/2))/\u221a\u03c0",
+      "request_mode": "auto",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tB-bateman3-1",
+      "tier": "B",
+      "category": "special-fn-numerical",
+      "input": {
+        "an": [
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/4",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "\u0393(1+1/4-1/3)\u00b73^{1/4}\u00b74^{1/3-1/4-1}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tB-bateman3-2",
+      "tier": "B",
+      "category": "special-fn-numerical",
+      "input": {
+        "an": [
+          {
+            "re": "2/5",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "3/7",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "auto"
+      },
+      "rule": "\u0393(1 + 3/7 \u2212 2/5)\u00b72^{3/7}\u00b73^{2/5\u22123/7\u22121}",
+      "request_mode": "auto",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tC-G1002-frac-bz",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/3",
+            "im": "0"
+          },
+          {
+            "re": "2/3",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{1,0}_{0,2}(_; 1/3, 2/3 | 1/2)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G1002-mixed-bz1",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/4",
+            "im": "0"
+          },
+          {
+            "re": "3/4",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{1,0}_{0,2}(_; 1/4, 3/4 | 3/2)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G2002-bz1",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 0, 1/3 | 2)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G2002-bz2",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/4",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 1/4, 1/2 | 3)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G1012-bz1",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,1}_{1,2}({1/2}; {0, 1/3} | 1/2)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G1012-bz2",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/4",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,1}_{1,2}({1/3}; {0, 1/4} | 1/3)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G1122-bz1",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "ap": [
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "1/4",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{1,1}_{2,2} mid-sample",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G1122-bz2",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [
+          {
+            "re": "2/3",
+            "im": "0"
+          }
+        ],
+        "ap": [
+          {
+            "re": "3/4",
+            "im": "0"
+          }
+        ],
+        "bm": [
+          {
+            "re": "1/5",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "2/3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{1,1}_{2,2} another mid-sample",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G2002-zlarger",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "4",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "2 K_0(4) \u2248 tier-C generic-Slater regime",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G2002-zlarger2",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 0, 1/2 | 3/2)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G2003-bz1",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/3",
+            "im": "0"
+          },
+          {
+            "re": "2/3",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,3} three-slot",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G3003-bz1",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/3",
+            "im": "0"
+          },
+          {
+            "re": "2/3",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{3,0}_{0,3}({};{0, 1/3, 2/3} | 2)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G1002-cmplx-1",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "1/2"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{1,0}_{0,2}(_; 0, 1/2 | 0.5 + 0.5i)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G2002-cmplx-1",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1",
+          "im": "1/2"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 0, 0 | 1 + 0.5i) \u2014 2 K_0(2\u221a(1+0.5i))",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tC-G1002-neg-1",
+      "tier": "C",
+      "category": "generic-slater",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "-1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{1,0}_{0,2}(_; 0, 1/2 | -1/2)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tD-G1122-near-z095",
+      "tier": "D",
+      "category": "anti-stokes",
+      "input": {
+        "an": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "ap": [
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "1/4",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "19/20",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{1,1}_{2,2} just inside |z|=0.95 boundary",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tD-G2002-zlarge-1",
+      "tier": "D",
+      "category": "anti-stokes",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "10",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "2 K_0(2\u221a10) \u2014 modest |z| asymptotic regime",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tD-G2002-zlarge-2",
+      "tier": "D",
+      "category": "anti-stokes",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "-1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "16",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "2 K_1(2\u221a16) = 2 K_1(8) \u2014 Slater Series-2 at moderate-large |z|",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tD-asymp-far-1",
+      "tier": "D",
+      "category": "anti-stokes",
+      "input": {
+        "an": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "100",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{0,1}_{1,0}(1/2; _ | 100) = e^{-1/100}/10",
+      "request_mode": "numerical-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tD-cmplx-large",
+      "tier": "D",
+      "category": "anti-stokes",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "5",
+          "im": "5"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "2 K_0 with complex argument",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tD-G2002-z105",
+      "tier": "D",
+      "category": "anti-stokes",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "21/20",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2} just past |z|=1 (no quarantine; m+n=2\u2260p=0)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tD-G3003-near1",
+      "tier": "D",
+      "category": "anti-stokes",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/3",
+            "im": "0"
+          },
+          {
+            "re": "2/3",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "9/10",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{3,0}_{0,3} just inside |z|=1 (p=0, no quarantine)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tD-G3003-z105",
+      "tier": "D",
+      "category": "anti-stokes",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/3",
+            "im": "0"
+          },
+          {
+            "re": "2/3",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "21/20",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{3,0}_{0,3} just past |z|=1",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tE-G2002-coalesce-01",
+      "tier": "E",
+      "category": "coalescence",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 0, 1 | 1/2) \u2014 integer-spaced \u0393-poles",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tE-G2002-coalesce-02",
+      "tier": "E",
+      "category": "coalescence",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 0, 2 | 1/2)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tE-besselK-ord1",
+      "tier": "E",
+      "category": "coalescence",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 1/2, 3/2 | 3/2)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tE-besselK-ord2",
+      "tier": "E",
+      "category": "coalescence",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 1, 2 | 3)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tE-near-coalesce-2",
+      "tier": "E",
+      "category": "coalescence",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "11/10",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 0, 11/10 | 1/2) \u2014 mild near-coalescence",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tE-G3003-coalesce-012",
+      "tier": "E",
+      "category": "coalescence",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{3,0}_{0,3}(_; 0, 1, 2 | 1/2) \u2014 3-pole integer-spaced coalescence; the v0.1 odd-coefficient perturbation cannot absorb the cluster's super-quadratic cancellation, and the closed-form Slater 1966 \u00a75 higher-order residue (digamma/polygamma) is required.  Expected: out-of-region structured refusal in <5s.",
+      "request_mode": "numerical-required",
+      "expected_method": "tagged"
+    },
+    {
+      "id": "tE-an-coalesce-1",
+      "tier": "E",
+      "category": "coalescence",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "2",
+            "im": "0"
+          },
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [],
+        "bq": [],
+        "z": {
+          "re": "3",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{0,3}_{3,0}(1, 2, 3; _ | 3) \u2014 3-pole integer-spaced an-coalescence; series-2 mirror of the 3-pole bm case.  Expected: out-of-region structured refusal in <5s.",
+      "request_mode": "numerical-required",
+      "expected_method": "tagged"
+    },
+    {
+      "id": "tE-mixed-1",
+      "tier": "E",
+      "category": "coalescence",
+      "input": {
+        "an": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,2}_{2,2}({0,1};_;{1,2};_ | 1/2) \u2014 simultaneous an and bm 2-pole coalescence; the empirical estimator catches the L'H\u00f4pital + cancellation noise; reported precision honest <50 dps.",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tE-near-coalesce-1",
+      "tier": "E",
+      "category": "coalescence",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1001/1000",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{2,0}_{0,2}(_; 0, 1001/1000 | 1/2) \u2014 sharp near-coalescence (offset 1/1000 from integer).  No perturbation needed; full 50 dps achievable.",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tF-bessel-K0-near-neg-real",
+      "tier": "F",
+      "category": "branch-cut",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "-1",
+          "im": "1/100"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "2 K_0(2\u221az) on z = -1 + 0.01i (just above branch cut)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tF-bessel-K0-below-neg-real",
+      "tier": "F",
+      "category": "branch-cut",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "-1",
+          "im": "-1/100"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "2 K_0(2\u221az) on z = -1 - 0.01i (just below branch cut)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tF-bessel-K0-cmplx-far",
+      "tier": "F",
+      "category": "branch-cut",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "0",
+          "im": "2"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "2 K_0(2\u221a(2i)) \u2014 pure imaginary z",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tF-G1001-above-cut",
+      "tier": "F",
+      "category": "branch-cut",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "-2",
+          "im": "1/1000000"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{1,0}_{0,1}(_; 1/2 | -2 + \u03b5 i) = \u221a(-2+\u03b5i)\u00b7e^{-(-2+\u03b5i)} (principal branch)",
+      "request_mode": "numerical-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tF-schwarz-1",
+      "tier": "F",
+      "category": "branch-cut",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1",
+          "im": "2"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "2 K_0(2\u221a(1+2i)) \u2014 Schwarz reflection probe; complex z",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tF-schwarz-2-conj",
+      "tier": "F",
+      "category": "branch-cut",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "1",
+          "im": "-2"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "2 K_0(2\u221a(1-2i)) \u2014 conjugate of tF-schwarz-1",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tF-onCut-G1002",
+      "tier": "F",
+      "category": "branch-cut",
+      "input": {
+        "an": [],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bq": [],
+        "z": {
+          "re": "-1",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "G^{1,0}_{0,2}(_; 0, 1/2 | -1) \u2014 on branch cut (Re<0, Im=0)",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tG-degen-mn-zero",
+      "tier": "G",
+      "category": "refusal",
+      "input": {
+        "an": [],
+        "ap": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "bm": [],
+        "bq": [
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required"
+      },
+      "rule": "m+n=0: degenerate shape; no \u0393-poles to close around",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    },
+    {
+      "id": "tG-sym-required-nomatch",
+      "tier": "G",
+      "category": "refusal",
+      "input": {
+        "an": [
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "ap": [
+          {
+            "re": "2/3",
+            "im": "0"
+          }
+        ],
+        "bm": [
+          {
+            "re": "1/4",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "3/4",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "symbolic-required"
+      },
+      "rule": "symbolic-required: 2x2 generic free parameters; no rule match",
+      "request_mode": "symbolic-required",
+      "expected_method": "symbolic"
+    },
+    {
+      "id": "tG-force-asymp-zerov",
+      "tier": "G",
+      "category": "refusal",
+      "input": {
+        "an": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "ap": [],
+        "bm": [
+          {
+            "re": "0",
+            "im": "0"
+          }
+        ],
+        "bq": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "0",
+          "im": "0"
+        },
+        "precision": 50,
+        "request_mode": "numerical-required",
+        "force_method": "asymptotic"
+      },
+      "rule": "force-method=asymptotic with |z|=0 \u27f9 small-z refusal",
+      "request_mode": "numerical-required",
+      "expected_method": "numerical"
+    }
+  ]
+}

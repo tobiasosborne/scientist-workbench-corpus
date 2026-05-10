@@ -1,0 +1,127 @@
+[meta]
+name        = "meijer-g"
+domain      = "special-functions-arbprec"
+description = """
+Arbitrary-precision evaluation of the Meijer G-function.
+
+    G^{m,n}_{p,q}(a₁,…,aₚ; b₁,…,b_q | z)
+
+Second arbprec-tier tool in scientist-workbench (ADR-0020).  Composes four
+algorithmic layers into a cost-ascending dispatcher (ADR-0027): symbolic
+dispatch → Slater residue summation → Mellin–Barnes contour quadrature →
+Braaksma asymptotic.  Uses @workbench/bigfloat (BigInt-substrate,
+bit-identical cross-platform forever).  The --precision=<int> flag (decimal
+digits, default 50) is the standard ADR-0020 knob; different precisions cache
+to different output hashes.
+
+Input: { an: BigComplex[], ap: BigComplex[], bm: BigComplex[], bq: BigComplex[],
+         z: BigComplex, request_mode?: "auto"|"symbolic-required"|"numerical-required" }.
+Output — three honest shapes (ADR-0003 / ADR-0027 §4):
+  symbolic: { kind:"symbolic", rule, source, note, method:"symbolic-dispatch",
+              expr:<AST> }
+  numerical: { kind:"numerical", value:{re,im}, achieved_precision, method,
+               working_precision, warnings, diagnostics }
+  refusal:   tagged "meijer-g/<class>" with reason + ruled_out_methods
+
+Refusal classes: out-of-region, non-finite-input, degenerate-shape,
+symbolic-required-no-match, forced-method-refused, input-error.
+
+The 95-case battery spans nine tiers:
+  0  — 36 closed-form anchors (elementary RHS at 200 dps — oracle-immune).
+  A  —  9 symbolic-required cases (integer-only parameters; rational-real
+          BigComplex symbolic limitation documented as open bead dzbj).
+  B  —  8 special-function numerical: Bessel-K, erfc, Γ-product reductions.
+           Two cases (tB-erfc-z3, tB-erfc-zhalf) have truth=null because both
+           oracles failed; verifier skips value_accuracy for these.
+  C  — 15 generic Slater: middle of parameter space, |z| away from coalescence.
+  D  —  8 anti-Stokes / asymptotic crossover: |z| ∈ [0.95, 1.05] and
+           moderate-|z| multi-lane cases.
+  E  —  9 coalescence: integer-spaced poles in bm or an; Johansson hmag
+           perturbation; ≥3-pole cluster refusals (bead fwsz).
+  F  —  7 branch-cut: z near/on the negative real axis; Schwarz reflection.
+  G  —  3 refusal: degenerate-shape, symbolic-required-no-match,
+           forced-method-refused envelope assertions.
+  H  — cross-cutting: Tier H re-runs C/D/E/F cases with elapsed_ms ≤ 1500 ms
+           assertion (listed in golden/tier-h.json). Speed gate is gated by
+           env var MEIJERG_BENCH_CHECK_SPEED=1; default is OFF (bead rp05
+           documents 4 known speed-gate failures at v0.1).
+
+Verifier: TypeScript, self-contained — uses @workbench/bigfloat for the
+value-accuracy relative-error comparison at 128 dps; no Python/mpmath at
+grading time.
+
+Oracle: mpmath at 110 dps cross-validated against Wolfram at 110 dps.
+Tier-0 anchors use the elementary closed-form RHS at 200 dps directly.
+Tolerances are per-case in expected.json::tolerance_rel, pinned by tier:
+  Tier 0/A — 1e-(p-4)    elementary/symbolic, lowest noise floor.
+  Tier B   — 1e-(p-6) to 1e-(p-8)    pFq inner cancellation eats 6-8 dps.
+  Tier C   — 1e-(p-8) to 1e-(p-10)   generic Slater + cancellation budget.
+  Tier D   — 1e-(p-8) to 1e-(p-10)   anti-Stokes / asymptotic crossover.
+  Tier E   — 1e-(p-8) to 1e-(p-12)   hmag perturbation cost.
+  Tier F   — 1e-(p-8) to 1e-(p-18)   branch-cut principal-branch sensitivity.
+  Tier G   — N/A (structural refusal envelope check only).
+
+Known open issues (informational, not migration concerns):
+  scientist-workbench-rp05 (P2): 4 speed-gate failures at Tier H.
+    Affects: t0-G1222-arctan-z3, tB-erfc-z3, tB-erfc-zhalf, tD-G2002-zlarge-2.
+    Speed gate is off by default; value-accuracy/shape pass at default settings.
+  scientist-workbench-qlld (P2): precision ceiling on tD-G2002-zlarge-2
+    (Slater Series-2 at |z|=16). Expected behaviour encoded in expected.json.
+  scientist-workbench-dzbj (P2): symbolic-required path does not admit
+    rational-real BigComplex parameters. Tier-A cases use integer-only params.
+"""
+ported_from = "scientist-workbench/bench/meijer-g@fa29dab12f770e4ed2480b251d035f93d092a457"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "no_tool_error"
+description      = "A {kind:'tool_error', ...} candidate is never admissible. Tool errors fire on schema-validation failure or unrecoverable runtime exception; no case in this bench expects either condition."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Output kind is in {symbolic, numerical} for value-expected cases. Symbolic: required fields {rule, source, note, method, expr} all present as strings (except expr which is an opaque AST blob). Numerical: required fields {value:{re:string,im:string}, achieved_precision:int, method:string, working_precision:int, warnings:list[string], diagnostics:record} all present with correct types. A tagged refusal on a value-expected case fails this check."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_value"
+description      = "Numerical candidates only: value.re and value.im parse as BigFloat (arbitrary-precision) values and are finite. BigFloat has no ±∞ representation, so any successful parse is finite."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "method_admissible"
+description      = "Numerical: method ∈ {'slater-series-1', 'slater-series-2', 'mellin-barnes', 'braaksma-algebraic'}. Symbolic: method == 'symbolic-dispatch'. Any other value fails."
+tolerance_source = "structural — exact string match"
+
+[[verifier.checks]]
+name             = "self_reported_precision"
+description      = "Numerical candidates only: 0 ≤ achieved_precision ≤ requested_precision. Under-reporting is permitted (graceful degradation); over-reporting is not. The bench's value_accuracy check is the authoritative gate; this check catches only negative or over-reported values."
+tolerance_source = "structural — integer inequality"
+
+[[verifier.checks]]
+name             = "value_accuracy"
+description      = "Numerical candidates only, when expected.truth is non-null: rel_err = |candidate - truth| / |truth| ≤ tolerance_rel (per-case, pinned in expected.json). Skipped for the two ORACLE-FAILED cases (tB-erfc-z3, tB-erfc-zhalf) whose truth=null. truth is the mpmath/Wolfram consensus or elementary-RHS value. Comparison computed at 128 dps using @workbench/bigfloat BigInt arithmetic — no mpmath at grading time."
+tolerance_source = "per-case tolerance_rel in expected.json (1e-46 down to 1e-32; see DESCRIPTION.md)"
+
+[[verifier.checks]]
+name             = "symbolic_rule_present"
+description      = "Symbolic candidates only: the 'rule' field must be a non-empty string. A symbolic match without a named rule is inadmissible. Stronger check (multi-point AST evaluation) is deferred to a follow-up bead."
+tolerance_source = "structural — non-empty string"
+
+[[verifier.checks]]
+name             = "boundary_envelope"
+description      = "Refusal-path only: candidate must be {kind:'tagged', tag:'meijer-g/<class>', payload:{...}}. tag must match expected.tag exactly. Refusal classes: out-of-region, degenerate-shape, symbolic-required-no-match, forced-method-refused."
+tolerance_source = "structural — exact tag match"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "e0a39135f5aa3dd3ae512f9764bb8814c78ecab24dd8acecd033288ca643a52f"
+expected         = "golden/expected.json"
+expected_sha256  = "720193992fa697a3e149e35dbcd5df670ded99dd265bded240aaad7c8fddc3fd"
+n_cases          = 95
+regenerated_at   = "2026-05-10"
+generate_cmd     = "python3 ${SUITE_ROOT}/reference/generate-truth.py"

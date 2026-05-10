@@ -1,0 +1,8 @@
+[adapter]
+target          = "scientist-workbench"
+capability_id   = "meijer-g"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "git@fa29dab"
+platform_pinned = false
