@@ -1,0 +1,1424 @@
+{
+  "version": 1,
+  "problem": "hypergeometric-pfq",
+  "cases": [
+    {
+      "id": "t0-0F0-exp-z1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [],
+        "b": [],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "0F0(;;z) = exp(z)  \u2192  exp(1)"
+    },
+    {
+      "id": "t0-0F0-exp-z5",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [],
+        "b": [],
+        "z": {
+          "re": "5",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "0F0(;;z) = exp(z)  \u2192  exp(5)"
+    },
+    {
+      "id": "t0-0F0-exp-zneg5",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [],
+        "b": [],
+        "z": {
+          "re": "-5",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "0F0(;;z) = exp(z)  \u2192  exp(-5)"
+    },
+    {
+      "id": "t0-1F0-half-z-third",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "b": [],
+        "z": {
+          "re": "1/3",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F0(a;;z) = (1-z)^{-a}  \u2192  (2/3)^{-1/2} = \u221a(3/2)"
+    },
+    {
+      "id": "t0-1F0-2-z-half",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "b": [],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F0(2;;1/2) = (1/2)^{-2} = 4"
+    },
+    {
+      "id": "t0-2F1-log-z-third",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/3",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1,1;2;z) = -log(1-z)/z  \u2192  -3 log(2/3)"
+    },
+    {
+      "id": "t0-2F1-log-zneg-half",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "-1/2",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1,1;2;-1/2) = -log(3/2)/(-1/2) = 2 log(3/2)"
+    },
+    {
+      "id": "t0-1F1-expminus1-z1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F1(1; 2; z) = (e^z \u2212 1)/z  \u2192  e \u2212 1"
+    },
+    {
+      "id": "t0-1F1-expminus1-z5",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "5",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F1(1; 2; z) = (e^z \u2212 1)/z  \u2192  (e^5 \u2212 1)/5"
+    },
+    {
+      "id": "t0-0F1-cos-z1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [],
+        "b": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "-1/4",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "0F1(; 1/2; \u2212z\u00b2/4) = cos(z)  \u2192  cos(1)"
+    },
+    {
+      "id": "t0-0F1-sinc-z1",
+      "tier": "0",
+      "category": "closed-form",
+      "input": {
+        "a": [],
+        "b": [
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "-1/4",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "0F1(; 3/2; \u2212z\u00b2/4) = sin(z)/z  \u2192  sin(1)"
+    },
+    {
+      "id": "tA-2F1-mid-real",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "1/3",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "3/10",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1/2, 1/3; 1; 0.3) \u2014 Pearson-Olver-Porter happy-path probe"
+    },
+    {
+      "id": "tA-2F1-mid-real-neg",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "-2/5",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1/2, 3/2; 2; -0.4) \u2014 moderate-magnitude negative real z"
+    },
+    {
+      "id": "tA-2F1-mid-complex",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "3/10",
+          "im": "2/5"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1, 2; 3; 0.3 + 0.4i) \u2014 complex z away from singularity"
+    },
+    {
+      "id": "tA-1F1-mid-real",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "5/2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F1(3/2; 5/2; 1) \u2014 classic Kummer at z=1, well inside the convergent region"
+    },
+    {
+      "id": "tA-1F1-mid-complex",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/2",
+          "im": "1/2"
+        },
+        "precision": 50
+      },
+      "rule": "1F1(1/2; 3/2; 0.5 + 0.5i) \u2014 complex argument, related to erf"
+    },
+    {
+      "id": "tA-0F1-mid-real",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [],
+        "b": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "0F1(;3;2) \u2014 Bessel-related, infinite radius of convergence"
+    },
+    {
+      "id": "tA-0F1-mid-real-neg",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "-3",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "0F1(;2;-3) \u2014 Bessel-J shape, oscillatory negative argument"
+    },
+    {
+      "id": "tA-2F1-half-real",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/2",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1/2, 1/2; 1; 1/2) = 4 K(1/\u221a2)/\u03c0 (complete elliptic K)"
+    },
+    {
+      "id": "tA-3F2-mid",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          },
+          {
+            "re": "5/2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/4",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "3F2(1/2, 1, 3/2; 2, 5/2; 1/4) \u2014 cancellation-light, well inside |z|=1"
+    },
+    {
+      "id": "tA-3F2-mid-real-neg",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "2",
+            "im": "0"
+          },
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "4",
+            "im": "0"
+          },
+          {
+            "re": "5",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "-1/3",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "3F2 with negative real z \u2014 standard probe"
+    },
+    {
+      "id": "tA-1F1-fresnel-like",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "1/4",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "5/4",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "0",
+          "im": "1"
+        },
+        "precision": 50
+      },
+      "rule": "1F1(1/4; 5/4; i) \u2014 Fresnel-shape, pure-imaginary z"
+    },
+    {
+      "id": "tA-2F1-low-z",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "2",
+            "im": "0"
+          },
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "4",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/10",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1 with |z|=0.1 \u2014 dead-centre happy path"
+    },
+    {
+      "id": "tA-0F1-imag",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [],
+        "b": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "0",
+          "im": "1"
+        },
+        "precision": 50
+      },
+      "rule": "0F1(;1;i) \u2014 Bessel I_0(2\u221ai) shape; oscillatory in complex plane"
+    },
+    {
+      "id": "tA-2F1-real-3-4",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "3",
+            "im": "0"
+          },
+          {
+            "re": "4",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "5",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/4",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(3, 4; 5; 1/4) \u2014 integer parameters, mid-range |z|"
+    },
+    {
+      "id": "tA-pfq-precision100",
+      "tier": "A",
+      "category": "happy-path",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/3",
+          "im": "0"
+        },
+        "precision": 100
+      },
+      "rule": "1F1(1/2; 3/2; 1/3) at 100 dps \u2014 precision-flag exercise"
+    },
+    {
+      "id": "tB-2F1-large-int-a",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [
+          {
+            "re": "20",
+            "im": "0"
+          },
+          {
+            "re": "30",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "40",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/4",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(20, 30; 40; 0.25) \u2014 tens of cancellation bits"
+    },
+    {
+      "id": "tB-2F1-large-half-int",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [
+          {
+            "re": "21/2",
+            "im": "0"
+          },
+          {
+            "re": "33/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "17",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "3/10",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(10.5, 16.5; 17; 0.3) \u2014 half-integer large params"
+    },
+    {
+      "id": "tB-1F1-large-a",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [
+          {
+            "re": "50",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "75",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "2",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F1(50; 75; 2) \u2014 confluent with mid-large parameters"
+    },
+    {
+      "id": "tB-1F1-large-50-100",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [
+          {
+            "re": "50",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "100",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "5",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F1(50; 100; 5) \u2014 Pochhammer ratios growing then shrinking"
+    },
+    {
+      "id": "tB-2F1-100-50",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [
+          {
+            "re": "10",
+            "im": "0"
+          },
+          {
+            "re": "100",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "50",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/3",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(10, 100; 50; 1/3) \u2014 large b/large-a difference probe"
+    },
+    {
+      "id": "tB-3F2-large",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [
+          {
+            "re": "10",
+            "im": "0"
+          },
+          {
+            "re": "20",
+            "im": "0"
+          },
+          {
+            "re": "30",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "40",
+            "im": "0"
+          },
+          {
+            "re": "50",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/5",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "3F2 with all params in [10, 50]"
+    },
+    {
+      "id": "tB-2F1-largeneg-z",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [
+          {
+            "re": "20",
+            "im": "0"
+          },
+          {
+            "re": "30",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "25",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "-1/2",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(20, 30; 25; -0.5) \u2014 alternating-sign cancellation hot spot"
+    },
+    {
+      "id": "tB-0F1-large-b",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [],
+        "b": [
+          {
+            "re": "50",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "10",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "0F1(;50;10) \u2014 large-b Bessel regime"
+    },
+    {
+      "id": "tB-1F1-large-z",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "4",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "20",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F1(3; 4; 20) \u2014 moderate params, large |z| forces many series terms"
+    },
+    {
+      "id": "tB-2F1-large-near-int-coalesce",
+      "tier": "B",
+      "category": "large-params",
+      "input": {
+        "a": [
+          {
+            "re": "21/2",
+            "im": "0"
+          },
+          {
+            "re": "23/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "12",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/4",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1 large half-integer params probe"
+    },
+    {
+      "id": "tC-2F1-z-085",
+      "tier": "C",
+      "category": "near-unit",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "17/20",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1/2, 1/2; 1; 0.85) \u2014 slow-convergence regime"
+    },
+    {
+      "id": "tC-2F1-z-090",
+      "tier": "C",
+      "category": "near-unit",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "9/10",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1, 1; 3; 0.9) \u2014 slow direct-series convergence"
+    },
+    {
+      "id": "tC-2F1-z-095",
+      "tier": "C",
+      "category": "near-unit",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "19/20",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1 at |z|=0.95 \u2014 boundary just inside admitted region"
+    },
+    {
+      "id": "tC-2F1-z-097",
+      "tier": "C",
+      "category": "near-unit",
+      "input": {
+        "a": [
+          {
+            "re": "3/2",
+            "im": "0"
+          },
+          {
+            "re": "5/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "97/100",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1 at |z|=0.97 \u2014 high-cost case (many terms)"
+    },
+    {
+      "id": "tC-2F1-z-098",
+      "tier": "C",
+      "category": "near-unit",
+      "input": {
+        "a": [
+          {
+            "re": "3/4",
+            "im": "0"
+          },
+          {
+            "re": "5/4",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "49/50",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1 at |z|=0.98 \u2014 tightest admitted slow-converger"
+    },
+    {
+      "id": "tC-2F1-complex-085",
+      "tier": "C",
+      "category": "near-unit",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "5/2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/2",
+          "im": "17/25"
+        },
+        "precision": 50
+      },
+      "rule": "2F1 with |z|=0.85 in the complex plane (z = 0.5 + 0.68i)"
+    },
+    {
+      "id": "tC-3F2-z-090",
+      "tier": "C",
+      "category": "near-unit",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          },
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "9/10",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "3F2 at |z|=0.9 \u2014 bigger-p slow converger"
+    },
+    {
+      "id": "tC-2F1-neg-095",
+      "tier": "C",
+      "category": "near-unit",
+      "input": {
+        "a": [
+          {
+            "re": "1/2",
+            "im": "0"
+          },
+          {
+            "re": "1/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "-19/20",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1 at z=-0.95 \u2014 alternating-sign cancellation hot spot"
+    },
+    {
+      "id": "tD-2F1-coalesce-a-eq-c",
+      "tier": "D",
+      "category": "coalescence",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "3/2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "3/10",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1, 3/2; 3/2; 0.3) \u2014 a\u2082 = b\u2081 (Pochhammer cancellation in the limit)"
+    },
+    {
+      "id": "tD-2F1-near-coalesce",
+      "tier": "D",
+      "category": "coalescence",
+      "input": {
+        "a": [
+          {
+            "re": "2",
+            "im": "0"
+          },
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "301/100",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "2/5",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(2, 3; 3.01; 0.4) \u2014 b near a\u2082; near-coalescence cancellation"
+    },
+    {
+      "id": "tD-1F1-coalesce-int",
+      "tier": "D",
+      "category": "coalescence",
+      "input": {
+        "a": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F1(3; 3; 1) = e\u00b9 (Kummer's a=b case)"
+    },
+    {
+      "id": "tD-2F1-int-spaced",
+      "tier": "D",
+      "category": "coalescence",
+      "input": {
+        "a": [
+          {
+            "re": "2",
+            "im": "0"
+          },
+          {
+            "re": "4",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/3",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(2, 4; 3; 1/3) \u2014 integer-spaced numerator/denominator parameters"
+    },
+    {
+      "id": "tD-3F2-coalesce",
+      "tier": "D",
+      "category": "coalescence",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "2",
+            "im": "0"
+          },
+          {
+            "re": "5/2",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "5/2",
+            "im": "0"
+          },
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1/4",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "3F2 with a\u2083 = b\u2081 \u2014 limit-of-Pochhammer cancellation"
+    },
+    {
+      "id": "tE-3F1-asymptotic",
+      "tier": "E",
+      "category": "refusal",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "2",
+            "im": "0"
+          },
+          {
+            "re": "3",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "4",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "3F1 with p > q+1 (asymptotic only)"
+    },
+    {
+      "id": "tE-2F1-z-099",
+      "tier": "E",
+      "category": "refusal",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "99/100",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1 with |z|=0.99 \u2014 too close to radius of convergence"
+    },
+    {
+      "id": "tE-1F0-z1-singular",
+      "tier": "E",
+      "category": "refusal",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "b": [],
+        "z": {
+          "re": "1",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "1F0(1;;1) \u2014 closed-form (1-z)^{-a} singular at z=1"
+    },
+    {
+      "id": "tE-2F1-z-neg1-boundary",
+      "tier": "E",
+      "category": "refusal",
+      "input": {
+        "a": [
+          {
+            "re": "1",
+            "im": "0"
+          },
+          {
+            "re": "1",
+            "im": "0"
+          }
+        ],
+        "b": [
+          {
+            "re": "2",
+            "im": "0"
+          }
+        ],
+        "z": {
+          "re": "-1",
+          "im": "0"
+        },
+        "precision": 50
+      },
+      "rule": "2F1(1,1;2;-1) = log(2) is a famous Abel-summation identity at the boundary of the unit disc; the tool conservatively refuses with non-convergent rather than emit a value whose cancellation budget the direct-series cannot meet"
+    }
+  ]
+}

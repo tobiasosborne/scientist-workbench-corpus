@@ -1,0 +1,1348 @@
+{
+  "version": 1,
+  "problem": "hypergeometric-pfq",
+  "cases": [
+    {
+      "id": "t0-0F0-exp-z1",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "2.718281828459045235360287471352662497757247093699959574967",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "2.718281828459045235360287471352662497757247093699959574967",
+          "0.0"
+        ],
+        "rel_disagreement": 7.012598986760924e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "2.718281828459045235360287471352662497757247093699959574967",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::exp(1) at 60 dps"
+      }
+    },
+    {
+      "id": "t0-0F0-exp-z5",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "148.4131591025766034211155800405522796234876675938789890468",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "148.4131591025766034211155800405522796234876675938789890468",
+          "0.0"
+        ],
+        "rel_disagreement": 7.078865380240312e-84
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "148.4131591025766034211155800405522796234876675938789890468",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::exp(5) at 60 dps"
+      }
+    },
+    {
+      "id": "t0-0F0-exp-zneg5",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.006737946999085467096636048423148424248849585027355085430306",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "0.006737946999085467096636048423148424248849585027355085430306",
+          "0.0"
+        ],
+        "rel_disagreement": 2.4742873272286725e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.006737946999085467096636048423148424248849585027355085430306",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::exp(-5) at 60 dps"
+      }
+    },
+    {
+      "id": "t0-1F0-half-z-third",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.224744871391589049098642037352945695982973740328335064216",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.224744871391589049098642037352945695982973740328335064216",
+          "0.0"
+        ],
+        "rel_disagreement": 7.781356581708838e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.224744871391589049098642037352945695982973740328335064216",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::sqrt(3/2)"
+      }
+    },
+    {
+      "id": "t0-1F0-2-z-half",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "4.000000000000000000000000000000000000000000000000000000000",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "4.000000000000000000000000000000000000000000000000000000000",
+          "0.0"
+        ],
+        "rel_disagreement": 0.0
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "4.000000000000000000000000000000000000000000000000000000000",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "exact arithmetic"
+      }
+    },
+    {
+      "id": "t0-2F1-log-z-third",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.216395324324493145934039346393047409715971270387482592842",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.216395324324493145934039346393047409715971270387482592842",
+          "0.0"
+        ],
+        "rel_disagreement": 3.088878662894252e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.216395324324493145934039346393047409715971270387482592842",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::log(2/3)"
+      }
+    },
+    {
+      "id": "t0-2F1-log-zneg-half",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.8109302162163287639560262309286982731439808469249883952280",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "0.8109302162163287639560262309286982731439808469249883952280",
+          "0.0"
+        ],
+        "rel_disagreement": 3.088878662894252e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.8109302162163287639560262309286982731439808469249883952280",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::2*log(3/2)"
+      }
+    },
+    {
+      "id": "t0-1F1-expminus1-z1",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.718281828459045235360287471352662497757247093699959574967",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.718281828459045235360287471352662497757247093699959574967",
+          "0.0"
+        ],
+        "rel_disagreement": 1.1766741018688866e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.718281828459045235360287471352662497757247093699959574967",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::exp(1) \u2212 1"
+      }
+    },
+    {
+      "id": "t0-1F1-expminus1-z5",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "29.48263182051532068422311600811045592469753351877579780935",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "29.48263182051532068422311600811045592469753351877579780935",
+          "0.0"
+        ],
+        "rel_disagreement": 2.2171993900253504e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "29.48263182051532068422311600811045592469753351877579780935",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::(exp(5) \u2212 1)/5"
+      }
+    },
+    {
+      "id": "t0-0F1-cos-z1",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.5403023058681397174009366074429766037323104206179222276701",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "0.5403023058681397174009366074429766037323104206179222276701",
+          "0.0"
+        ],
+        "rel_disagreement": 3.0892048139823465e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.5403023058681397174009366074429766037323104206179222276701",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::cos(1)"
+      }
+    },
+    {
+      "id": "t0-0F1-sinc-z1",
+      "tier": "0",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.8414709848078965066525023216302989996225630607983710656728",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "0.8414709848078965066525023216302989996225630607983710656728",
+          "0.0"
+        ],
+        "rel_disagreement": 6.031674572231535e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.8414709848078965066525023216302989996225630607983710656728",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": "bigfloat::sin(1)"
+      }
+    },
+    {
+      "id": "tA-2F1-mid-real",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.059376448768529185381229887328855847014281125473995749320",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.059376448768529185381229887328855847014281125473995749320",
+          "0.0"
+        ],
+        "rel_disagreement": 1.4876823013165753e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.059376448768529185381229887328855847014281125473995749320",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-2F1-mid-real-neg",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.8791583283022997648961951877480847124030196137933756107283",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "0.8791583283022997648961951877480847124030196137933756107283",
+          "0.0"
+        ],
+        "rel_disagreement": 2.3079506087922726e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.8791583283022997648961951877480847124030196137933756107283",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-2F1-mid-complex",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.104565291389747501337225164244019552380960547357224042477",
+          "0.3829063062927642396860754330237352519249961810673883470486"
+        ],
+        "wolfram_value": [
+          "1.104565291389747501337225164244019552380960547357224042477",
+          "0.3829063062927642396860754330237352519249961810673883470486"
+        ],
+        "rel_disagreement": 1.1725013321625877e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.104565291389747501337225164244019552380960547357224042477",
+          "im": "0.3829063062927642396860754330237352519249961810673883470486"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-1F1-mid-real",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.883445123827795439834358326743511513954565496224830583960",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.883445123827795439834358326743511513954565496224830583960",
+          "0.0"
+        ],
+        "rel_disagreement": 4.83040073348568e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.883445123827795439834358326743511513954565496224830583960",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-1F1-mid-complex",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.159463103753147874679856739310223279170781000913303268650",
+          "0.2225101741884216456280012518043954303790687008348854951665"
+        ],
+        "wolfram_value": [
+          "1.159463103753147874679856739310223279170781000913303268650",
+          "0.2225101741884216456280012518043954303790687008348854951665"
+        ],
+        "rel_disagreement": 1.0320145133132048e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.159463103753147874679856739310223279170781000913303268650",
+          "im": "0.2225101741884216456280012518043954303790687008348854951665"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-0F1-mid-real",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.857517780229219108770598187653137150139049091135705091721",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.857517780229219108770598187653137150139049091135705091721",
+          "0.0"
+        ],
+        "rel_disagreement": 3.9544756424672955e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.857517780229219108770598187653137150139049091135705091721",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-0F1-mid-real-neg",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.08800306461253316452000610153219778897181895126949419452737",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "0.08800306461253316452000610153219778897181895126949419452737",
+          "0.0"
+        ],
+        "rel_disagreement": 2.8684447133799886e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.08800306461253316452000610153219778897181895126949419452737",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-2F1-half-real",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.180340599016096226045337940558488587233716634881447299516",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.180340599016096226045337940558488587233716634881447299516",
+          "0.0"
+        ],
+        "rel_disagreement": 5.217852979269403e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.180340599016096226045337940558488587233716634881447299516",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-3F2-mid",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.041324540227563284984748417846754261554490879637292947765",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.041324540227563284984748417846754261554490879637292947765",
+          "0.0"
+        ],
+        "rel_disagreement": 9.365990161355847e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.041324540227563284984748417846754261554490879637292947765",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-3F2-mid-real-neg",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.9115339027164937381434932763650283150274954372531860956495",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "0.9115339027164937381434932763650283150274954372531860956495",
+          "0.0"
+        ],
+        "rel_disagreement": 1.8762023050396565e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.9115339027164937381434932763650283150274954372531860956495",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-1F1-fresnel-like",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.9468406141654050617063423864995198961947551726373522946917",
+          "0.1875695446846710703473920734384483321667844332817514779976"
+        ],
+        "wolfram_value": [
+          "0.9468406141654050617063423864995198961947551726373522946917",
+          "0.1875695446846710703473920734384483321667844332817514779976"
+        ],
+        "rel_disagreement": 4.184482909507264e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.9468406141654050617063423864995198961947551726373522946917",
+          "im": "0.1875695446846710703473920734384483321667844332817514779976"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-2F1-low-z",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.170239386375525968327448297456543496611095433688897949698",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.170239386375525968327448297456543496611095433688897949698",
+          "0.0"
+        ],
+        "rel_disagreement": 1.0639941140764116e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.170239386375525968327448297456543496611095433688897949698",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-0F1-imag",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.7517341827138082285509989012307465759595865766072920027388",
+          "0.9722916273066612061040322202263559585658425538127881718589"
+        ],
+        "wolfram_value": [
+          "0.7517341827138082285509989012307465759595865766072920027388",
+          "0.9722916273066612061040322202263559585658425538127881718589"
+        ],
+        "rel_disagreement": 4.420859173689947e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.7517341827138082285509989012307465759595865766072920027388",
+          "im": "0.9722916273066612061040322202263559585658425538127881718589"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-2F1-real-3-4",
+      "tier": "A",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.981548794093231315503008635260091801004054100144187810699",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.981548794093231315503008635260091801004054100144187810699",
+          "0.0"
+        ],
+        "rel_disagreement": 3.9349030452374436e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.981548794093231315503008635260091801004054100144187810699",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tA-pfq-precision100",
+      "tier": "A",
+      "tolerance_rel": "1e-98",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.12316448278630278663309808030828290539528996990185638084476456687367422517019940753177941985781551150899267",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.12316448278630278663309808030828290539528996990185638084476456687367422517019940753177941985781551150899267",
+          "0.0"
+        ],
+        "rel_disagreement": 4.248639361464406e-133
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.12316448278630278663309808030828290539528996990185638084476456687367422517019940753177941985781551150899267",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-2F1-large-int-a",
+      "tier": "B",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "69.38317947345836669367094404621902109942974085718782275695",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "69.38317947345836669367094404621902109942974085718782275695",
+          "0.0"
+        ],
+        "rel_disagreement": 1.3017868621417854e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "69.38317947345836669367094404621902109942974085718782275695",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-2F1-large-half-int",
+      "tier": "B",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "37.64641190604685879416252924969739373364877629919476593963",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "37.64641190604685879416252924969739373364877629919476593963",
+          "0.0"
+        ],
+        "rel_disagreement": 1.5468859639464914e-81
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "37.64641190604685879416252924969739373364877629919476593963",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-1F1-large-a",
+      "tier": "B",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "3.815788461857101936107917528973937156797088572358772817319",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "3.815788461857101936107917528973937156797088572358772817319",
+          "0.0"
+        ],
+        "rel_disagreement": 4.892534363576808e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "3.815788461857101936107917528973937156797088572358772817319",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-1F1-large-50-100",
+      "tier": "B",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "12.56520275031152593466769077014242410929102007541805905309",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "12.56520275031152593466769077014242410929102007541805905309",
+          "0.0"
+        ],
+        "rel_disagreement": 5.293605391157572e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "12.56520275031152593466769077014242410929102007541805905309",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-2F1-100-50",
+      "tier": "B",
+      "tolerance_rel": "1e-44",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "16647.59570339780003374339936103329555875937014226884032701",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "16647.59570339780003374339936103329555875937014226884032701",
+          "0.0"
+        ],
+        "rel_disagreement": 8.568782674313758e-81
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "16647.59570339780003374339936103329555875937014226884032701",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-3F2-large",
+      "tier": "B",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.872612730313144538467136086053381850683433315599399325317",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.872612730313144538467136086053381850683433315599399325317",
+          "0.0"
+        ],
+        "rel_disagreement": 3.974380959497067e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.872612730313144538467136086053381850683433315599399325317",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-2F1-largeneg-z",
+      "tier": "B",
+      "tolerance_rel": "1e-44",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.00006460863093189418225552876958574929828572194394255538585818",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "0.00006460863093189418225552876958574929828572194394255538585818",
+          "0.0"
+        ],
+        "rel_disagreement": 7.582036902685905e-83
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.00006460863093189418225552876958574929828572194394255538585818",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-0F1-large-b",
+      "tier": "B",
+      "tolerance_rel": "1e-48",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.220926308650560471368152826202655079028011753091234387772",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.220926308650560471368152826202655079028011753091234387772",
+          "0.0"
+        ],
+        "rel_disagreement": 6.478130475473629e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.220926308650560471368152826202655079028011753091234387772",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-1F1-large-z",
+      "tier": "B",
+      "tolerance_rel": "1e-44",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "65861175.27612903023430625224601413084143974274926301477850",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "65861175.27612903023430625224601413084143974274926301477850",
+          "0.0"
+        ],
+        "rel_disagreement": 5.755477261168462e-84
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "65861175.27612903023430625224601413084143974274926301477850",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tB-2F1-large-near-int-coalesce",
+      "tier": "B",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "18.04575401838706991522896149963712258376576849142769224899",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "18.04575401838706991522896149963712258376576849142769224899",
+          "0.0"
+        ],
+        "rel_disagreement": 4.6377026436794795e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "18.04575401838706991522896149963712258376576849142769224899",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tC-2F1-z-085",
+      "tier": "C",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.520895131706989785265585357180785292577555282365086745968",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.520895131706989785265585357180785292577555282365086745968",
+          "0.0"
+        ],
+        "rel_disagreement": 1.174349967697126e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.520895131706989785265585357180785292577555282365086745968",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tC-2F1-z-090",
+      "tier": "C",
+      "tolerance_rel": "1e-44",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.653682693087889954563458900077934763555283583054623956535",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.653682693087889954563458900077934763555283583054623956535",
+          "0.0"
+        ],
+        "rel_disagreement": 1.2505167467464785e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.653682693087889954563458900077934763555283583054623956535",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tC-2F1-z-095",
+      "tier": "C",
+      "tolerance_rel": "1e-44",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "2.476603060843284511979561863107625958006284488608128454705",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "2.476603060843284511979561863107625958006284488608128454705",
+          "0.0"
+        ],
+        "rel_disagreement": 1.22475135612007e-81
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "2.476603060843284511979561863107625958006284488608128454705",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tC-2F1-z-097",
+      "tier": "C",
+      "tolerance_rel": "1e-42",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "53.03354588774091393176430789937811592083717549097903304463",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "53.03354588774091393176430789937811592083717549097903304463",
+          "0.0"
+        ],
+        "rel_disagreement": 1.3739844574872775e-80
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "53.03354588774091393176430789937811592083717549097903304463",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tC-2F1-z-098",
+      "tier": "C",
+      "tolerance_rel": "1e-40",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "3.732902798254368278609967712706467749225310000445476584805",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "3.732902798254368278609967712706467749225310000445476584805",
+          "0.0"
+        ],
+        "rel_disagreement": 3.105726260040183e-81
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "3.732902798254368278609967712706467749225310000445476584805",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tC-2F1-complex-085",
+      "tier": "C",
+      "tolerance_rel": "1e-44",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.9889708848979321904708220635459337533044116272692328166275",
+          "0.6005624103115910606203264837869187535385064851413259972141"
+        ],
+        "wolfram_value": [
+          "0.9889708848979321904708220635459337533044116272692328166275",
+          "0.6005624103115910606203264837869187535385064851413259972141"
+        ],
+        "rel_disagreement": 3.125401369589884e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.9889708848979321904708220635459337533044116272692328166275",
+          "im": "0.6005624103115910606203264837869187535385064851413259972141"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tC-3F2-z-090",
+      "tier": "C",
+      "tolerance_rel": "1e-44",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.170803013111729863540827528516003980848797981807590014572",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.170803013111729863540827528516003980848797981807590014572",
+          "0.0"
+        ],
+        "rel_disagreement": 5.2649155018065816e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.170803013111729863540827528516003980848797981807590014572",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tC-2F1-neg-095",
+      "tier": "C",
+      "tolerance_rel": "1e-44",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "0.8403759529933937226875382338952946433818760245058063550805",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "0.8403759529933937226875382338952946433818760245058063550805",
+          "0.0"
+        ],
+        "rel_disagreement": 5.142086415278534e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "0.8403759529933937226875382338952946433818760245058063550805",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tD-2F1-coalesce-a-eq-c",
+      "tier": "D",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.428571428571428571428571428571428571428571428571428571429",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.428571428571428571428571428571428571428571428571428571429",
+          "0.0"
+        ],
+        "rel_disagreement": 2.1084395886461007e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.428571428571428571428571428571428571428571428571428571429",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tD-2F1-near-coalesce",
+      "tier": "D",
+      "tolerance_rel": "1e-44",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "2.767785609982901103355469973245561637378599954886592646678",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "2.767785609982901103355469973245561637378599954886592646678",
+          "0.0"
+        ],
+        "rel_disagreement": 1.0805581245247477e-81
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "2.767785609982901103355469973245561637378599954886592646678",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tD-1F1-coalesce-int",
+      "tier": "D",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "2.718281828459045235360287471352662497757247093699959574967",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "2.718281828459045235360287471352662497757247093699959574967",
+          "0.0"
+        ],
+        "rel_disagreement": 7.012598986760924e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "2.718281828459045235360287471352662497757247093699959574967",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tD-2F1-int-spaced",
+      "tier": "D",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "3.000000000000000000000000000000000000000000000000000000000",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "3.000000000000000000000000000000000000000000000000000000000",
+          "0.0"
+        ],
+        "rel_disagreement": 1.4056263924307364e-81
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "3.000000000000000000000000000000000000000000000000000000000",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tD-3F2-coalesce",
+      "tier": "D",
+      "tolerance_rel": "1e-46",
+      "consensus": {
+        "consensus": "mpmath+wolfram-agree",
+        "mpmath_value": [
+          "1.205826318456989678055008191802477808112310748728353808213",
+          "0.0"
+        ],
+        "wolfram_value": [
+          "1.205826318456989678055008191802477808112310748728353808213",
+          "0.0"
+        ],
+        "rel_disagreement": 3.082784777745178e-82
+      },
+      "expected": {
+        "kind": "value",
+        "truth": {
+          "re": "1.205826318456989678055008191802477808112310748728353808213",
+          "im": "0.0"
+        },
+        "truth_method": "mpmath.hyper@80dps",
+        "truth_xref_method": ""
+      }
+    },
+    {
+      "id": "tE-3F1-asymptotic",
+      "tier": "E",
+      "tolerance_rel": "0",
+      "consensus": {
+        "consensus": "structural-refusal",
+        "mpmath_skipped": true,
+        "wolfram_skipped": true
+      },
+      "expected": {
+        "kind": "tagged",
+        "tag": "hypergeometric-pfq/non-convergent",
+        "payload_predicate": {
+          "reason_substr": "asymptotic"
+        }
+      }
+    },
+    {
+      "id": "tE-2F1-z-099",
+      "tier": "E",
+      "tolerance_rel": "0",
+      "consensus": {
+        "consensus": "structural-refusal",
+        "mpmath_skipped": true,
+        "wolfram_skipped": true
+      },
+      "expected": {
+        "kind": "tagged",
+        "tag": "hypergeometric-pfq/non-convergent",
+        "payload_predicate": {
+          "reason_substr": "too close"
+        }
+      }
+    },
+    {
+      "id": "tE-1F0-z1-singular",
+      "tier": "E",
+      "tolerance_rel": "0",
+      "consensus": {
+        "consensus": "structural-refusal",
+        "mpmath_skipped": true,
+        "wolfram_skipped": true
+      },
+      "expected": {
+        "kind": "tagged",
+        "tag": "hypergeometric-pfq/non-convergent",
+        "payload_predicate": {
+          "reason_substr": "singular"
+        }
+      }
+    },
+    {
+      "id": "tE-2F1-z-neg1-boundary",
+      "tier": "E",
+      "tolerance_rel": "0",
+      "consensus": {
+        "consensus": "structural-refusal",
+        "mpmath_skipped": true,
+        "wolfram_skipped": true
+      },
+      "expected": {
+        "kind": "tagged",
+        "tag": "hypergeometric-pfq/non-convergent",
+        "payload_predicate": {
+          "reason_substr": "too close"
+        }
+      }
+    }
+  ]
+}

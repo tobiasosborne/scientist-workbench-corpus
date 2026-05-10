@@ -1,0 +1,103 @@
+[meta]
+name        = "hypergeometric-pfq"
+domain      = "special-functions-arbprec"
+description = """
+Arbitrary-precision evaluation of the generalised hypergeometric series pFq.
+
+    pFq(a₁,…,aₚ; b₁,…,b_q; z) = Σ_{k≥0} (z^k / k!) · ∏_j (a_j)_k / ∏_j (b_j)_k
+
+First arbprec-tier tool in scientist-workbench (ADR-0020).  Uses
+@workbench/bigfloat (BigInt-substrate, bit-identical cross-platform forever).
+The --precision=<int> flag (decimal digits, default 50) is the standard
+ADR-0020 knob; different precisions cache to different output hashes.
+
+Input: { a: BigComplex[], b: BigComplex[], z: BigComplex }.
+Output (success): { value: BigComplex, achieved_precision, method, n_terms,
+                    working_precision, warnings }.
+Refusals: tagged "hypergeometric-pfq/non-convergent" (p > q+1;
+|z| ≥ 0.99 with p = q+1; cancellation budget exhausted) or
+tagged "hypergeometric-pfq/parameter-pole" (b_j is a non-positive integer).
+
+The 53-case battery spans six tiers:
+  0 — 11 closed-form anchors (0F0=exp, 1F0=(1-z)^{-a}, log, sinc, cos).
+  A — 15 generic happy-path cases: 0F1, 1F1, 2F1, 3F2 at mid-range
+         parameters; includes one precision=100 case to exercise the
+         --precision flag end-to-end.
+  B — 10 large-parameter cases (a,b ∈ [10,100]); the cancellation-driven
+         precision-bump retry is the discriminator.
+  C —  8 near-unit-circle cases (|z| ∈ [0.85, 0.98]); slow-convergence
+         regime; thousands of summands; cancellation across alternating signs.
+  D —  5 parameter-coalescence cases; integer-spaced numerator/denominator
+         parameters; bumped-precision retry must surmount.
+  E —  4 refusal cases: p > q+1 (asymptotic-only), |z| ≥ 0.99 with p=q+1,
+         1F0(a;;1) singular, 2F1(1,1;2;-1)=log2 boundary (conservative
+         v0.1 refusal; analytic-continuation deferred to v0.2).
+
+Verifier: TypeScript, self-contained — uses @workbench/bigfloat for the
+value-accuracy relative-error comparison at 128 dps; no Python/mpmath at
+grading time.
+
+Oracle: mpmath at max(80, precision+30) dps, cross-validated against Wolfram
+(0 disagreements at cmp_dps threshold across 49 numerical cases; 4 are
+structural-refusal).  Tolerances are per-case in expected.json::tolerance_rel,
+pinned by tier:
+  Tier 0/A — 1e-(p-2)    well-conditioned, 2 dps mpmath roundoff.
+  Tier B   — 1e-(p-6)    large-parameter cancellation eats 4-6 dps.
+  Tier C   — 1e-(p-10)   slow-convergence summand noise (up to 10 dps lost).
+  Tier D   — 1e-(p-6)    coalescence cancellation bounded by retry margin.
+  Tier E   — N/A         structural-refusal envelope check only.
+
+Known open issues (informational, not migration concerns):
+  scientist-workbench-7p3 (P2): analytic continuation at |z| ≥ 0.99.
+  scientist-workbench-{0az,4x1,y7z} (P3): tier extensions / adjudication.
+"""
+ported_from = "scientist-workbench/bench/hypergeometric-pfq@b765d1877dd8ed52e604a6c4b19276c6ea73c621"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "no_tool_error"
+description      = "A {kind: 'tool_error', ...} candidate is never admissible. Tool errors fire on schema-validation failure or unrecoverable runtime exception; no case in this bench expects either condition."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Success-path structural check: required fields {value, achieved_precision, method, n_terms, working_precision, warnings} all present with correct types. value must be {re: string, im: string}; achieved_precision/n_terms/working_precision must be integers; method must be a string; warnings must be list[string]."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_value"
+description      = "value.re and value.im parse as BigFloat (arbitrary-precision) values and are finite (no ±∞; BigFloat has no infinity representation, so any successful parse is finite)."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "method_admissible"
+description      = "method ∈ {'closed-form-0F0', 'closed-form-1F0', 'direct-series'}. Any other value fails. Future builds may add 'asymptotic-borel' / 'connection-z-near-1' / 'kummer-transform'; the verifier is updated in lockstep."
+tolerance_source = "structural — exact string match"
+
+[[verifier.checks]]
+name             = "self_reported_precision"
+description      = "0 ≤ achieved_precision ≤ requested_precision. The tool may under-report (graceful degradation, ADR-0007); it may not over-report. The bench's value_accuracy check is the authoritative gate; this check catches only negative or over-reported values."
+tolerance_source = "structural — integer inequality"
+
+[[verifier.checks]]
+name             = "value_accuracy"
+description      = "rel_err = |candidate - truth| / |truth| ≤ tolerance_rel (per-case, pinned in expected.json). truth is the mpmath@80dps value cross-validated with Wolfram. Comparison computed at 128 dps using @workbench/bigfloat BigInt arithmetic — no mpmath at grading time. If truth=0 (no case in corpus), falls back to absolute error."
+tolerance_source = "per-case tolerance_rel in expected.json (1e-48 down to 1e-40; see DESCRIPTION.md)"
+
+[[verifier.checks]]
+name             = "boundary_envelope"
+description      = "Refusal-path only: candidate must be {kind:'tagged', tag:expected.tag, payload:{...}}. tag must match exactly. If expected.payload_predicate.reason_substr is set, payload.reason must contain that substring (loose predicate; stricter per-class payload validation deferred to future follow-up)."
+tolerance_source = "structural — exact tag match, substring payload predicate"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "375e0ac031c696b47d997c51abb9d47e9b45bfcac89e4162b39848c5c240d5d8"
+expected         = "golden/expected.json"
+expected_sha256  = "538b0e26d25df15fc3cb2fe57aec7093a91f9ce094e4032e2374dd1098ff8e55"
+n_cases          = 53
+regenerated_at   = "2026-05-10"
+generate_cmd     = "python3 ${SUITE_ROOT}/reference/generate-mpmath-truth.py"
