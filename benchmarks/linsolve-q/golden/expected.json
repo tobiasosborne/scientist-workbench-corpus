@@ -1,0 +1,1017 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 1,
+        "warnings": [
+          "max intermediate bit length: 0"
+        ],
+        "x": [
+          "2"
+        ]
+      },
+      "id": "A1-1x1-unique"
+    },
+    {
+      "expected": {
+        "free_vars": [
+          "t_0"
+        ],
+        "kind": "under-determined",
+        "method": "bareiss-one-step",
+        "rank": 1,
+        "warnings": [
+          "max intermediate bit length: 0"
+        ],
+        "x": [
+          "5 - 2*t_0",
+          "t_0"
+        ]
+      },
+      "id": "A2-1x2-underdetermined"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 1,
+        "warnings": [
+          "max intermediate bit length: 1"
+        ],
+        "x": [
+          "3"
+        ]
+      },
+      "id": "A3-2x1-overdetermined-consistent"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 2,
+        "warnings": [
+          "max intermediate bit length: 0"
+        ],
+        "x": [
+          "7",
+          "-3"
+        ]
+      },
+      "id": "A4-2x2-identity"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 3,
+        "warnings": [
+          "max intermediate bit length: 0"
+        ],
+        "x": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "id": "A5-3x3-identity"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 3,
+        "warnings": [
+          "max intermediate bit length: 4"
+        ],
+        "x": [
+          "3",
+          "-1",
+          "2"
+        ]
+      },
+      "id": "B-randwell-n3"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 5,
+        "warnings": [
+          "max intermediate bit length: 6"
+        ],
+        "x": [
+          "-2",
+          "-3",
+          "-4",
+          "-3",
+          "-2"
+        ]
+      },
+      "id": "B-randwell-n5"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 8,
+        "warnings": [
+          "max intermediate bit length: 12"
+        ],
+        "x": [
+          "1",
+          "-3",
+          "-2",
+          "2",
+          "-5",
+          "-1",
+          "2",
+          "1"
+        ]
+      },
+      "id": "B-randwell-n8"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 12,
+        "warnings": [
+          "max intermediate bit length: 12"
+        ],
+        "x": [
+          "1",
+          "5",
+          "3",
+          "2",
+          "-2",
+          "-3",
+          "5",
+          "-3",
+          "2",
+          "-2",
+          "-4",
+          "-2"
+        ]
+      },
+      "id": "B-randwell-n12"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 20,
+        "warnings": [
+          "max intermediate bit length: 20"
+        ],
+        "x": [
+          "1",
+          "2",
+          "1",
+          "-5",
+          "2",
+          "5",
+          "-3",
+          "-1",
+          "2",
+          "-2",
+          "-4",
+          "-4",
+          "3",
+          "-4",
+          "0",
+          "-2",
+          "-1",
+          "1",
+          "-1",
+          "-1"
+        ]
+      },
+      "id": "B-randwell-n20"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 30,
+        "warnings": [
+          "max intermediate bit length: 19"
+        ],
+        "x": [
+          "-3",
+          "2",
+          "4",
+          "-5",
+          "2",
+          "2",
+          "1",
+          "-4",
+          "-4",
+          "2",
+          "5",
+          "5",
+          "-1",
+          "2",
+          "-2",
+          "3",
+          "3",
+          "5",
+          "-3",
+          "1",
+          "-1",
+          "-5",
+          "-4",
+          "-5",
+          "5",
+          "1",
+          "-4",
+          "-3",
+          "2",
+          "-4"
+        ]
+      },
+      "id": "B-randwell-n30"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 3,
+        "warnings": [
+          "max intermediate bit length: 14"
+        ],
+        "x": [
+          "-1/4",
+          "-1",
+          "3"
+        ]
+      },
+      "id": "C-hilbert-n3"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 5,
+        "warnings": [
+          "max intermediate bit length: 39"
+        ],
+        "x": [
+          "1",
+          "1",
+          "1/2",
+          "0",
+          "-3/2"
+        ]
+      },
+      "id": "C-hilbert-n5"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 8,
+        "warnings": [
+          "max intermediate bit length: 110"
+        ],
+        "x": [
+          "-2",
+          "1/2",
+          "1",
+          "-3/2",
+          "-1/2",
+          "2",
+          "3/4",
+          "-1/3"
+        ]
+      },
+      "id": "C-hilbert-n8"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 10,
+        "warnings": [
+          "max intermediate bit length: 177"
+        ],
+        "x": [
+          "3/2",
+          "1/4",
+          "-2",
+          "-2/3",
+          "1/2",
+          "-1",
+          "-1",
+          "0",
+          "3/4",
+          "1"
+        ]
+      },
+      "id": "C-hilbert-n10"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 6,
+        "warnings": [
+          "max intermediate bit length: 9"
+        ],
+        "x": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "id": "C-pascal-n6"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 5,
+        "warnings": [
+          "max intermediate bit length: 11"
+        ],
+        "x": [
+          "-2",
+          "-1",
+          "1",
+          "0",
+          "2"
+        ]
+      },
+      "id": "C-vandermonde-n5"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 10,
+        "warnings": [
+          "max intermediate bit length: 71"
+        ],
+        "x": [
+          "-2",
+          "0",
+          "-2",
+          "-3",
+          "-4",
+          "-1",
+          "3",
+          "-2",
+          "-3",
+          "-5"
+        ]
+      },
+      "id": "D-dense-n10"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 15,
+        "warnings": [
+          "max intermediate bit length: 109"
+        ],
+        "x": [
+          "-1",
+          "-2",
+          "0",
+          "5",
+          "-3",
+          "-1",
+          "1",
+          "-3",
+          "-2",
+          "-3",
+          "2",
+          "-2",
+          "5",
+          "0",
+          "-5"
+        ]
+      },
+      "id": "D-dense-n15"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 30,
+        "warnings": [
+          "max intermediate bit length: 30"
+        ],
+        "x": [
+          "-2",
+          "-1",
+          "3",
+          "-3",
+          "-1",
+          "-3",
+          "1",
+          "-3",
+          "-1",
+          "2",
+          "1",
+          "3",
+          "-3",
+          "3",
+          "-2",
+          "3",
+          "1",
+          "1",
+          "-3",
+          "-2",
+          "3",
+          "1",
+          "1",
+          "-2",
+          "1",
+          "0",
+          "1",
+          "1",
+          "1",
+          "-1"
+        ]
+      },
+      "id": "D-tridiag-n30"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 20,
+        "warnings": [
+          "max intermediate bit length: 25"
+        ],
+        "x": [
+          "-1",
+          "-1",
+          "1",
+          "-1",
+          "-1",
+          "0",
+          "-1",
+          "-1",
+          "1",
+          "0",
+          "-2",
+          "1",
+          "-1",
+          "-1",
+          "-1",
+          "1",
+          "0",
+          "-2",
+          "2",
+          "2"
+        ]
+      },
+      "id": "D-arrowhead-n20"
+    },
+    {
+      "expected": {
+        "free_vars": [
+          "t_0"
+        ],
+        "kind": "under-determined",
+        "method": "bareiss-one-step",
+        "rank": 1,
+        "warnings": [
+          "max intermediate bit length: 0"
+        ],
+        "x": [
+          "7/2 - 3/2*t_0",
+          "t_0"
+        ]
+      },
+      "id": "E-1x2"
+    },
+    {
+      "expected": {
+        "free_vars": [
+          "t_0"
+        ],
+        "kind": "under-determined",
+        "method": "bareiss-one-step",
+        "rank": 2,
+        "warnings": [
+          "max intermediate bit length: 3"
+        ],
+        "x": [
+          "-6 + 6*t_0",
+          "5 - 3*t_0",
+          "t_0"
+        ]
+      },
+      "id": "E-2x3"
+    },
+    {
+      "expected": {
+        "free_vars": [
+          "t_0",
+          "t_1"
+        ],
+        "kind": "under-determined",
+        "method": "bareiss-one-step",
+        "rank": 3,
+        "warnings": [
+          "max intermediate bit length: 0"
+        ],
+        "x": [
+          "3 - 2*t_0 - t_1",
+          "t_0 - 3*t_1",
+          "7 - 4*t_0 + 2*t_1",
+          "t_0",
+          "t_1"
+        ]
+      },
+      "id": "E-3x5"
+    },
+    {
+      "expected": {
+        "free_vars": [
+          "t_0"
+        ],
+        "kind": "under-determined",
+        "method": "bareiss-one-step",
+        "rank": 2,
+        "warnings": [
+          "max intermediate bit length: 2"
+        ],
+        "x": [
+          "2 - 3*t_0",
+          "2",
+          "t_0"
+        ]
+      },
+      "id": "E-3x3-rank2-consistent"
+    },
+    {
+      "expected": {
+        "free_vars": [
+          "t_0",
+          "t_1"
+        ],
+        "kind": "under-determined",
+        "method": "bareiss-one-step",
+        "rank": 2,
+        "warnings": [
+          "max intermediate bit length: 1"
+        ],
+        "x": [
+          "5 - t_0",
+          "2 - t_1",
+          "t_0",
+          "t_1"
+        ]
+      },
+      "id": "E-4x4-rank2-consistent"
+    },
+    {
+      "expected": {
+        "free_vars": [
+          "t_0",
+          "t_1"
+        ],
+        "kind": "under-determined",
+        "method": "bareiss-one-step",
+        "rank": 1,
+        "warnings": [
+          "max intermediate bit length: 1"
+        ],
+        "x": [
+          "1 - 2*t_0 - 3*t_1",
+          "t_0",
+          "t_1"
+        ]
+      },
+      "id": "E-3x3-rank1-consistent"
+    },
+    {
+      "expected": {
+        "free_vars": [
+          "t_0"
+        ],
+        "kind": "under-determined",
+        "method": "bareiss-one-step",
+        "rank": 3,
+        "warnings": [
+          "max intermediate bit length: 1"
+        ],
+        "x": [
+          "1",
+          "t_0",
+          "1",
+          "5"
+        ]
+      },
+      "id": "E-3x4-mid-free"
+    },
+    {
+      "expected": {
+        "free_vars": [
+          "t_0",
+          "t_1",
+          "t_2",
+          "t_3",
+          "t_4",
+          "t_5",
+          "t_6"
+        ],
+        "kind": "under-determined",
+        "method": "bareiss-one-step",
+        "rank": 1,
+        "warnings": [
+          "max intermediate bit length: 1"
+        ],
+        "x": [
+          "1 - t_0 - t_1 - t_2 - t_3 - t_4 - t_5 - t_6",
+          "t_0",
+          "t_1",
+          "t_2",
+          "t_3",
+          "t_4",
+          "t_5",
+          "t_6"
+        ]
+      },
+      "id": "E-8x8-rank1-consistent"
+    },
+    {
+      "expected": {
+        "augmented_rank": 2,
+        "kind": "inconsistent",
+        "method": "bareiss-one-step",
+        "rank": 1,
+        "warnings": [
+          "max intermediate bit length: 1"
+        ]
+      },
+      "id": "F-2x1-overdet-incons"
+    },
+    {
+      "expected": {
+        "augmented_rank": 3,
+        "kind": "inconsistent",
+        "method": "bareiss-one-step",
+        "rank": 2,
+        "warnings": [
+          "max intermediate bit length: 3"
+        ]
+      },
+      "id": "F-3x2-overdet-incons"
+    },
+    {
+      "expected": {
+        "augmented_rank": 4,
+        "kind": "inconsistent",
+        "method": "bareiss-one-step",
+        "rank": 3,
+        "warnings": [
+          "max intermediate bit length: 3"
+        ]
+      },
+      "id": "F-4x3-overdet-incons"
+    },
+    {
+      "expected": {
+        "augmented_rank": 3,
+        "kind": "inconsistent",
+        "method": "bareiss-one-step",
+        "rank": 2,
+        "warnings": [
+          "max intermediate bit length: 2"
+        ]
+      },
+      "id": "F-3x3-rank2-incons"
+    },
+    {
+      "expected": {
+        "augmented_rank": 2,
+        "kind": "inconsistent",
+        "method": "bareiss-one-step",
+        "rank": 1,
+        "warnings": [
+          "max intermediate bit length: 1"
+        ]
+      },
+      "id": "F-3x3-rank1-incons"
+    },
+    {
+      "expected": {
+        "augmented_rank": 3,
+        "kind": "inconsistent",
+        "method": "bareiss-one-step",
+        "rank": 2,
+        "warnings": [
+          "max intermediate bit length: 1"
+        ]
+      },
+      "id": "F-4x4-rank2-incons"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 20,
+        "warnings": [
+          "max intermediate bit length: 466"
+        ],
+        "x": [
+          "1",
+          "3",
+          "-3",
+          "-1",
+          "-3",
+          "-3",
+          "2",
+          "3",
+          "0",
+          "-1",
+          "1",
+          "-3",
+          "-1",
+          "-3",
+          "0",
+          "0",
+          "0",
+          "1",
+          "-2",
+          "3"
+        ]
+      },
+      "id": "G-blockdiag-n20"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 10,
+        "warnings": [
+          "max intermediate bit length: 44"
+        ],
+        "x": [
+          "1",
+          "1/2",
+          "1/3",
+          "1/4",
+          "1/5",
+          "1/6",
+          "1/7",
+          "1/8",
+          "1/9",
+          "1/10"
+        ]
+      },
+      "id": "G-mod7-pascal-n10"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 15,
+        "warnings": [
+          "max intermediate bit length: 58"
+        ],
+        "x": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "id": "G-bordered-banded-n15"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 20,
+        "warnings": [
+          "max intermediate bit length: 108"
+        ],
+        "x": [
+          "3",
+          "-2",
+          "0",
+          "2",
+          "0",
+          "1",
+          "-1",
+          "3",
+          "3",
+          "2",
+          "0",
+          "3",
+          "0",
+          "3",
+          "-3",
+          "2",
+          "-3",
+          "-2",
+          "3",
+          "0"
+        ]
+      },
+      "id": "G-spd-n20"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 6,
+        "warnings": [
+          "max intermediate bit length: 11"
+        ],
+        "x": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "id": "H-rand3-n6"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 8,
+        "warnings": [
+          "max intermediate bit length: 15"
+        ],
+        "x": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "id": "H-rand3-n8"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 10,
+        "warnings": [
+          "max intermediate bit length: 18"
+        ],
+        "x": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "id": "H-rand3-n10"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 10,
+        "warnings": [
+          "max intermediate bit length: 19"
+        ],
+        "x": [
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2",
+          "1/2"
+        ]
+      },
+      "id": "H-checkerboard-n10"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 4,
+        "warnings": [
+          "max intermediate bit length: 11"
+        ],
+        "x": [
+          "1",
+          "2",
+          "-1",
+          "3"
+        ]
+      },
+      "id": "H-bareiss-paper-style-4x4"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 8,
+        "warnings": [
+          "max intermediate bit length: 12"
+        ],
+        "x": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "id": "H-fibonacci-n8"
+    },
+    {
+      "expected": {
+        "free_vars": [],
+        "kind": "unique",
+        "method": "bareiss-one-step",
+        "rank": 10,
+        "warnings": [
+          "max intermediate bit length: 43"
+        ],
+        "x": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "id": "H-mod13-n10"
+    }
+  ],
+  "seed": 20260506,
+  "version": 1
+}

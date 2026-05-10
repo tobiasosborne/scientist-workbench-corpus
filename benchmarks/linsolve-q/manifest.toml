@@ -1,0 +1,113 @@
+[meta]
+name        = "linsolve-q"
+domain      = "linear-algebra-symbolic"
+description = """
+Exact linear system solver over ℚ via Bareiss fraction-free Gaussian elimination.
+
+Input: a rational matrix A ∈ ℚ^{m×n} and vector b ∈ ℚ^m, with coefficients given
+as canonical rational strings (e.g. "3/2", "-1", "0").  Output distinguishes three
+cases:
+
+  kind=unique          — full column rank, consistent; returns x ∈ ℚ^n with A·x = b
+                         exactly, as rational-string entries.
+  kind=under-determined — rank < n, consistent; returns a parametric form with
+                         free variables t_0, t_1, … encoded as affine strings
+                         (e.g. "5 + (-2)*t_0 + 1/3*t_1"), plus rank and free_vars list.
+  kind=inconsistent    — no solution; tagged "linsolve-q/inconsistent" with payload
+                         { rank, augmented_rank } (Rouché-Capelli witness).
+
+Algorithm: Bareiss one-step fraction-free Gaussian elimination (Bareiss 1968,
+Math. Comp. 22(103) §II.A.2 Eq. 8).  The integer-preserving property keeps
+intermediate values bounded by Hadamard's bound, avoiding the exponential bit-growth
+of naive ℚ-Gaussian elimination.  Substrate: packages/cas-core bareissSolve()
+on Rat-typed matrix/vector representations.
+
+The 46-case battery spans eight tiers:
+  A. shape edges (6 cases)                  — 1×1, 1×2 (under), 2×1 (over), identity
+                                              matrices, n×0 degenerate.
+  B. random well-conditioned (8 cases)      — n ∈ {3,5,8,12,20,30,50,100}, full-rank,
+                                              unique solution, small rational entries.
+  C. classical structural (6 cases)         — Hilbert H_n for n ∈ {3,5,8,10}; Pascal
+                                              n=6; Vandermonde n=5.  Ill-conditioned
+                                              over ℝ but exact over ℚ.
+  D. integer-coefficient stress (4 cases)   — dense n=20,30 with entries from {-100..100};
+                                              sparse banded n=50; arrowhead n=20.
+  E. structural rank-deficient (8 cases)    — m < n underdetermined; square rank-deficient
+                                              with consistent rhs; structurally rank-1.
+  F. inconsistent (6 cases)                 — overdetermined contradictory; square
+                                              rank-deficient with inconsistent rhs.
+  G. industrial / literature (4 cases)      — block tests at n ∈ {25,50}; cyclotomic
+                                              coefficients n=10; bordered banded n=15.
+  H. integer-preserving stress (8 cases)    — inputs whose naive ℚ-Gaussian exhibits
+                                              exponential bit growth without Bareiss;
+                                              verifier checks max intermediate bit length
+                                              against the expected_max_bit_length budget.
+
+Headline invariants (8 checks):
+  shape                          — structural field presence, rational parse, kind, rank bounds.
+  kind_rank_consistent           — kind ↔ rank structural relation (unique ⇒ rank=n, etc.).
+  exact_satisfaction_unique      — A·x ≡ b exactly in ℚ (zero residual, no tolerance).
+  free_var_basis_underdetermined — 10 deterministic rational substitutions all satisfy A·x ≡ b.
+  rank_consistent                — candidate.rank matches rank(A) by independent BigInt GE.
+  inconsistency_witness          — augmented_rank > rank(A) (Rouché-Capelli, exact).
+  free_var_count_correct         — |free_vars| = n − rank (rank-nullity theorem).
+  bit_budget                     — Tier H only: max intermediate bit length ≤ expected budget.
+
+Oracle: SymPy Matrix.rank() + linsolve (verify.py).  TypeScript verifier (verify.ts)
+uses BigInt rational arithmetic for all checks; exact and CAS-free.
+"""
+ported_from = "scientist-workbench/bench/linsolve-q@3105029068ac657d85b80bbcf4ab0f236ce573da"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Structural check: A is list-of-lists of rational strings (all rows same length); b is list of rational strings with |b|=|A|; every coefficient string parses as '-?\\d+(/\\d+)?'; kind ∈ {unique, under-determined, inconsistent}; rank is integer with 0 ≤ rank ≤ min(m,n); for kind ∈ {unique, under-determined}: x is list of length n, free_vars is list of 't_<int>' strings; for kind=inconsistent: augmented_rank is an integer."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "kind_rank_consistent"
+description      = "kind ↔ rank structural invariant: unique ⇒ rank = n (full column rank); under-determined ⇒ rank < n; inconsistent ⇒ augmented_rank > rank. Catches misclassification bugs where a rank-deficient system is reported as unique."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "exact_satisfaction_unique"
+description      = "Only when kind=unique: compute r_i = (∑_j Fraction(A[i][j]) * Fraction(x[j])) - Fraction(b[i]) for all rows i. PASS iff every r_i == 0 exactly. No tolerance — exact BigInt rational arithmetic. Catches wrong solution, sign error, off-by-one in back-substitution."
+tolerance_source = "exact — BigInt rational arithmetic (zero tolerance)"
+
+[[verifier.checks]]
+name             = "free_var_basis_underdetermined"
+description      = "Only when kind=under-determined: parse each x[j] as an affine expression in the declared free variables. Generate 10 deterministic rational substitutions from the pool {-3, -1, 0, 1, 2, 5/3, -7/4, 11, -19/4, 6/7} (trial t uses pool[(t+i) % 10] for free var i). For each substitution, evaluate x to a concrete rational vector and verify A·x = b exactly. PASS iff all 10 trials satisfy A·x ≡ b exactly. Catches wrong constant terms, missing free-variable contributions."
+tolerance_source = "exact — BigInt rational arithmetic (zero tolerance)"
+
+[[verifier.checks]]
+name             = "rank_consistent"
+description      = "Always: compute rank(A) independently via exact BigInt Gaussian elimination over ℚ (Bareiss-style fraction-free GE, matching SymPy's Matrix.rank()). PASS iff candidate.rank == computed_rank. Catches wrong rank report for any input tier."
+tolerance_source = "exact — BigInt rational arithmetic (no tolerance)"
+
+[[verifier.checks]]
+name             = "inconsistency_witness"
+description      = "Only when kind=inconsistent: compute rank(A) and rank([A|b]) via BigInt GE. PASS iff rank([A|b]) > rank(A) (Rouché-Capelli: necessary and sufficient for inconsistency) AND candidate.augmented_rank == rank([A|b]). Catches false-inconsistent reports and wrong augmented_rank values."
+tolerance_source = "exact — BigInt rational arithmetic (no tolerance)"
+
+[[verifier.checks]]
+name             = "free_var_count_correct"
+description      = "Only when kind=under-determined: PASS iff len(free_vars) == n - candidate.rank. Forced by the rank-nullity theorem; misreporting is a structural bug. Catches under-parametrised or over-parametrised free-variable sets."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "bit_budget"
+description      = "Tier H only (input has expected_max_bit_length field): the candidate's warnings list must contain a string matching 'max intermediate bit length: <int>'. PASS iff that integer ≤ expected_max_bit_length. Catches implementations that naively compute ℚ-Gaussian elimination and accumulate exponentially growing intermediate values, in contrast to Bareiss's integer-preserving bound (Hadamard). n/a for Tiers A-G."
+tolerance_source = "exact — integer comparison (no tolerance)"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "53b950eb3c5aa9f05e79f8364eff2850baa0a0c693ce3da7db0af4aad471aa9a"
+expected         = "golden/expected.json"
+expected_sha256  = "c2c099480168b28b92b6d0115633db774c939a055eb6281cfd678632a740d58f"
+n_cases          = 46
+regenerated_at   = "2026-05-10"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"
