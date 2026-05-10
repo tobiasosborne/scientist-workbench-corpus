@@ -1,0 +1,8 @@
+[adapter]
+target          = "scientist-workbench"
+capability_id   = "solve"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "git@d55a72e"
+platform_pinned = false

@@ -1,0 +1,642 @@
+{
+  "version": 1,
+  "seed": 20260507,
+  "cases": [
+    {
+      "id": "v1-linear-2x2-unique",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "v1-linear-3x3-unique",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "v1-linear-underdet-2x3",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "v1-linear-deg1-rational",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "v1-univ-quadratic-rational",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "v1-univ-quadratic-irrational",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "v1-univ-cubic-rational",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "v1-univ-cubic-factored",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "v1-univ-quartic-biquadratic",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "v1-univ-multiplicity",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "v1-trans-sin-zero",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "v1-trans-cos-half",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "v1-trans-exp-five",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "v1-trans-tan-zero",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "v1-trans-abs-three",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "v1-refused-fateman-cos-cos-cos",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/foreign-vocabulary"
+      }
+    },
+    {
+      "id": "v1-refused-fateman-sin6x-over-sinx",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/foreign-vocabulary"
+      }
+    },
+    {
+      "id": "v1-refused-bilinear-xy",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "v1-refused-quintic-eisenstein",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/complex-roots-not-yet-named"
+      }
+    },
+    {
+      "id": "v1-refused-constant-equation",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/constant-equation"
+      }
+    },
+    {
+      "id": "rand-linear-000",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-001",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-002",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-003",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-004",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-005",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-006",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-007",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-008",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-009",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-010",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-011",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-012",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-013",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-linear-014",
+      "expected": {
+        "lane": "linear"
+      }
+    },
+    {
+      "id": "rand-univ-000",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-001",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-002",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-003",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-004",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-005",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-006",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-007",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-008",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-009",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-010",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-011",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-012",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-013",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-014",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/complex-roots-not-yet-named"
+      }
+    },
+    {
+      "id": "rand-univ-015",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-016",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-017",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-018",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-019",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/complex-roots-not-yet-named"
+      }
+    },
+    {
+      "id": "rand-univ-020",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-021",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-022",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-023",
+      "expected": {
+        "lane": "univariate-poly"
+      }
+    },
+    {
+      "id": "rand-univ-024",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/complex-roots-not-yet-named"
+      }
+    },
+    {
+      "id": "rand-mv-000",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-001",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-002",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-003",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-004",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-005",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-006",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-007",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-008",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-009",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-010",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-011",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-012",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-013",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-014",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-015",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-016",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-017",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-018",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-019",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-020",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-021",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-022",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-023",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-mv-024",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/multivariate-non-zero-dim"
+      }
+    },
+    {
+      "id": "rand-trans-000",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-001",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-002",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/foreign-vocabulary"
+      }
+    },
+    {
+      "id": "rand-trans-003",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-004",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-005",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-006",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-007",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-008",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-009",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/foreign-vocabulary"
+      }
+    },
+    {
+      "id": "rand-trans-010",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-011",
+      "expected": {
+        "lane": "refusal",
+        "tag": "solve/foreign-vocabulary"
+      }
+    },
+    {
+      "id": "rand-trans-012",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-013",
+      "expected": {
+        "lane": "transcendental"
+      }
+    },
+    {
+      "id": "rand-trans-014",
+      "expected": {
+        "lane": "transcendental"
+      }
+    }
+  ]
+}

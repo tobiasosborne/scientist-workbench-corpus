@@ -1,0 +1,149 @@
+[meta]
+name        = "solve"
+domain      = "symbolic-algebra"
+description = """
+Mathematica `Solve[]`-class dispatcher: given equations and unknowns, returns
+the solution set per ADR-0017 (solution-set value-protocol shape).
+
+Four dispatch lanes (v0.1):
+
+  linear               — total degree ≤ 1 in vars, no cross-variable products;
+                         solved via Bareiss fraction-free Gaussian elimination
+                         (same substrate as linsolve-q).  Outputs record {vars,
+                         solutions, completeness, warnings} with 0 or 1 Solution;
+                         under-determined cases parametrised by branch symbols t_0, t_1, …
+
+  univariate-poly      — single equation, single variable, degree ≥ 1 over ℚ;
+                         factor into ℚ-irreducibles, then Cardano/Ferrari radicals
+                         for deg 2–4, Root[poly, k] for all-real deg ≥ 5.
+                         Multiplicity preserved as repetition (ADR-0017).
+
+  transcendental       — single equation, single variable, of the form
+                         head(a·x + b) = c for head in {sin, cos, tan, exp, log,
+                         sinh, cosh, tanh, abs}.  Branched inverses emit t_0,
+                         t_1, … with completeness = finite-rep-of-infinite.
+
+  refusal              — multivariate non-zero-dim, parametric, foreign-vocabulary,
+                         deg ≥ 5 with complex roots.  Emits tagged "solve/<class>".
+
+The 100-case battery spans six tiers:
+  v1-bank.handled (15)          — hand-curated Mathematica-v1 cases, all lanes.
+  v1-bank.refused (5)           — honest refusals: Fateman 1991 mixed-trig,
+                                  bilinear xy=1, quintic Eisenstein, constant eqn.
+  rand.linear (15)              — stratified random linear m×n systems.
+  rand.univariate-poly (25)     — stratified random degree 2–10 polynomials.
+  rand.multivariate-zero-dim (25) — v0.1 refusal class; regenerates to happy-path
+                                  when Gröbner stack ships.
+  rand.transcendental-univariate (15) — random head(a·x + b) = c cases.
+
+Verifier checks per lane:
+  linear:           shape, exact_satisfaction, free_var_basis,
+                    rank_consistent, completeness_correct (5 checks)
+  univariate-poly:  shape, each_root_satisfies, count_with_multiplicity,
+                    distinct_roots_match (4 checks)
+  transcendental:   shape, branched_substitution_cube, completeness_grid (3 checks)
+  refusal:          tag_matches, payload_predicate (2 checks)
+
+Oracle: SymPy reference (verify.py).  TypeScript verifier (verify.ts)
+uses BigInt rational arithmetic for the linear lane; float64 for poly
+and transcendental lanes.
+
+Known failures (94/100 cases pass at migration; 6 pre-existing bench/tool
+drifts in the rand.transcendental-univariate tier, faithful in both
+verify.py and verify.ts):
+
+  rand-trans-002 (tan(-2x+2) + 3 = 0)        bench: refusal/foreign-vocabulary,
+                                              tool: ok — tan support added post-bench.
+  rand-trans-009 (sin(-4x+1) + 1/3 = 0)      bench: refusal/foreign-vocabulary,
+                                              tool: ok — sin support added post-bench.
+  rand-trans-004 (log(-3x-3) - 2 = 0)        bench: transcendental/ok,
+                                              tool: tagged — log lane never shipped.
+  rand-trans-006 (cosh(4x-3) - 3 = 0)        bench: transcendental/ok,
+                                              tool: tagged — cosh lane never shipped.
+  rand-trans-008 (|-3x-1| - 0 = 0)           bench: transcendental/ok,
+                                              tool: tagged — Abs lane never shipped.
+  rand-trans-013 (log(-3x-1) - 1 = 0)        bench: transcendental/ok,
+                                              tool: tagged — log lane never shipped.
+
+The bench was authored ahead of the tool's transcendental scope close-out
+(bead scientist-workbench-b55).  Closure on those 6 cases is tracked by
+bead scientist-workbench-3g9x, which b55 depends on; when the 6 cases grade
+100/100, b55's transcendental scope is done.  This is exactly the
+cross-implementation drift surface the corpus is built to record (corpus
+README §"Cross-implementation invariant divergence is itself a finding").
+"""
+ported_from = "scientist-workbench/bench/solve@d55a72e2bdda7ec2d3324ab193df39a9f0570965"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Lane-specific structural check: for linear — solutions has 0 or 1 entry, completeness ∈ {complete, finite-rep-of-infinite}, each binding has var + parseable value, branches are t_<int> symbols. For univariate-poly — each Solution has 1 binding with no branches, completeness=complete. For transcendental — solutions non-empty, each binding parses with branch symbols ⊆ branches, all branches match t_<int>. For refusal — kind=tagged, tag starts with solve/."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "exact_satisfaction"
+description      = "Linear lane only: substitute candidate bindings (with branch symbols free) into every input equation; each residue must evaluate to 0 (float64 tolerance 1e-8 for free-variable basis; exact for 0-branch unique and inconsistent cases via rank comparison). n/a for other lanes."
+tolerance_source = "exact (0-branch), float64 1e-8 (free-var basis)"
+
+[[verifier.checks]]
+name             = "free_var_basis"
+description      = "Linear lane, under-determined only: 10 deterministic rational substitutions from pool {-3,-1,0,1,2,5/3,-7/4,11,-19/4,6/7} (trial t uses pool[(t+i)%10] for branch i). For each substitution evaluate all bindings and verify all equations are satisfied. n/a when no branches."
+tolerance_source = "float64 1e-8 per equation residue"
+
+[[verifier.checks]]
+name             = "rank_consistent"
+description      = "Linear lane only: compute rank(A) via BigInt Bareiss GE on the coefficient matrix extracted from equation strings. PASS iff |branches| == n_vars - rank(A). Catches under/over-parametrised free-variable sets. n/a for other lanes."
+tolerance_source = "exact — BigInt rational arithmetic"
+
+[[verifier.checks]]
+name             = "completeness_correct"
+description      = "Linear lane only: completeness='complete' iff solutions=[] (inconsistent) or solutions has exactly 1 entry with 0 branches (unique); completeness='finite-rep-of-infinite' iff solutions has 1 entry with ≥1 branches (under-determined). n/a for other lanes."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "each_root_satisfies"
+description      = "Univariate-poly lane only: for each candidate Solution, numerically evaluate the input polynomial at the candidate root (via float64 expression evaluator). PASS iff |p(root)| < 1e-8 * max(1, scale). Catches wrong roots, sign errors, wrong radical forms. n/a for other lanes."
+tolerance_source = "float64 1e-8 relative tolerance"
+
+[[verifier.checks]]
+name             = "count_with_multiplicity"
+description      = "Univariate-poly lane only: |solutions| must equal the total degree of the input polynomial (= Σ deg(f_i)·e_i over ℚ-irreducible factors). Estimated via high-value sampling of the polynomial. Catches dropped-multiplicity bugs e.g. (x-1)^2 returning only 1 binding instead of 2. n/a for other lanes."
+tolerance_source = "structural — integer comparison"
+
+[[verifier.checks]]
+name             = "distinct_roots_match"
+description      = "Univariate-poly lane only: numerically find all real roots of the input polynomial via grid scan + bisection on [-100, 100]. Every grid root must be within 1e-6 of some candidate root. Catches missing roots, wrong values, extra spurious roots. n/a for other lanes."
+tolerance_source = "float64 1e-6 root-position tolerance"
+
+[[verifier.checks]]
+name             = "branched_substitution_cube"
+description      = "Transcendental lane only: for each Solution with n branch parameters, instantiate every integer tuple in [-3,3]^n (7^n tuples). Substitute into the binding's value, then evaluate the equation. PASS iff |residue| < 1e-12. Catches wrong period, wrong inverse, sign errors in the transcendental table. n/a for other lanes."
+tolerance_source = "float64 1e-12 residue tolerance"
+
+[[verifier.checks]]
+name             = "completeness_grid"
+description      = "Transcendental lane only: sample the input equation on 2000 uniform grid points over [-win, win] where win = min(50, max |candidate_value(tuple)| over cube). Identify sign changes (real grid roots). Every grid root within the window must match some cube-instantiated candidate value within 1e-6. Catches missing branches (e.g. reporting only arcsin branch, omitting π-arcsin branch for sin). n/a for other lanes."
+tolerance_source = "float64 1e-6 root-position tolerance"
+
+[[verifier.checks]]
+name             = "tag_matches"
+description      = "Refusal lane only: candidate.tag must start with 'solve/' and (when expected.tag is present) must equal expected.tag exactly. Catches lied-about-scope bugs and wrong refusal class. n/a for other lanes."
+tolerance_source = "structural — exact string match"
+
+[[verifier.checks]]
+name             = "payload_predicate"
+description      = "Refusal lane only: candidate.payload must be a record with a non-empty payload.detail string. Loose predicate — strict per-class payload validation deferred to future follow-up. n/a for other lanes."
+tolerance_source = "structural — no tolerance"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "035438ecdde5e115a5177f9209324749ab4fc2e58cbf6bf878f835c73b1d65ec"
+expected         = "golden/expected.json"
+expected_sha256  = "4f92b892928f1ee6ec04a5b8b2dd53462c197469be9a324dc52c72b1cae882a4"
+n_cases          = 100
+regenerated_at   = "2026-05-10"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"
