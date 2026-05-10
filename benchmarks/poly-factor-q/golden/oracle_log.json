@@ -1,0 +1,394 @@
+[
+  {
+    "id": "A-deg-1-x",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "A-deg-1-shifted",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "A-deg-1-with-content",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "A-deg-2-irreducible",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "A-deg-2-splits",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "A-deg-2-perfect-square",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg2-1",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg2-2",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg3-1",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg3-2",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg4-1",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg4-2",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg5-1",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg5-2",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg7-1",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg7-2",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg10-1",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "B-random-deg10-2",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "C-cyclotomic-phi-3",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "C-cyclotomic-phi-5",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "C-cyclotomic-phi-7",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "C-cyclotomic-phi-8",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "C-cyclotomic-phi-12",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "C-cyclotomic-phi-15",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "C-cyclotomic-phi-24",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "C-cyclotomic-phi-30",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "D-swinnerton-dyer-2-3",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "D-swinnerton-dyer-2-5",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "D-swinnerton-dyer-3-5",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "D-swinnerton-dyer-2-3-5",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "D-swinnerton-dyer-2-3-7",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "D-swinnerton-dyer-2-3-5-7",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "E-x-minus-1-squared",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "E-x-minus-1-cubed",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "E-x-minus-1-fifth",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "E-x-minus-1-seventh",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "E-x2plus1-cubed-times-x-minus-2-squared",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "E-mixed-quadratic-irreducible",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "E-deg-15-mixed-multiplicities",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "E-nested-squares-of-squares",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "F-product-of-8-distinct-linears",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "F-product-of-12-distinct-linears",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "F-product-of-15-distinct-linears",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "F-mignotte-large-leading",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "F-mignotte-irreducible-large",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "F-mignotte-random-deg-10-coefs-200",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "G-int-content-7",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "G-rational-content-2-3",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "G-negative-content",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "G-large-content-1024",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "G-content-with-multiplicities",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "G-rational-content-multi-factor",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "agreed",
+    "consensus": "sympy + wolfram"
+  },
+  {
+    "id": "H-non-polynomial-sin",
+    "status": "admitted",
+    "sympy": "agrees: refusal",
+    "wolfram": "skipped (refusal)",
+    "consensus": "sympy + bench-design (no Wolfram needed)"
+  },
+  {
+    "id": "H-non-polynomial-1-over-x",
+    "status": "admitted",
+    "sympy": "agrees: refusal",
+    "wolfram": "skipped (refusal)",
+    "consensus": "sympy + bench-design (no Wolfram needed)"
+  },
+  {
+    "id": "H-non-polynomial-sqrt",
+    "status": "admitted",
+    "sympy": "agrees: refusal",
+    "wolfram": "skipped (refusal)",
+    "consensus": "sympy + bench-design (no Wolfram needed)"
+  },
+  {
+    "id": "H-multivariate",
+    "status": "admitted",
+    "sympy": "agrees: refusal",
+    "wolfram": "skipped (refusal)",
+    "consensus": "sympy + bench-design (no Wolfram needed)"
+  }
+]

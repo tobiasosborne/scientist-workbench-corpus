@@ -1,0 +1,91 @@
+[meta]
+name        = "poly-factor-q"
+domain      = "polynomial-symbolic"
+description = """
+Exact univariate polynomial factorisation over ℚ (Berlekamp-Zassenhaus pipeline).
+
+Input: a polynomial f ∈ ℚ[var] expressed as an ASCII expression string, plus
+the variable name.  Output: a canonical factorisation f = content · ∏ p_i(var)^e_i
+where content ∈ ℚ is the rational scalar, each p_i ∈ ℤ[var] is irreducible over ℚ,
+primitive (gcd of integer coefficients = 1), and positive-leading, and each e_i ≥ 1
+is the multiplicity.
+
+Algorithm: content/primitive split, square-free decomposition (Yun 1976),
+Berlekamp modular factorisation over a lucky prime, Zassenhaus quadratic Hensel lift
+to mod p^k > 2·M(f) (Mignotte coefficient bound), Berlekamp-Zassenhaus subset-sum
+recombination.  Substrate: packages/poly-factor on packages/cas-core.
+
+The 56-case battery spans eight tiers:
+  A. shape edges (6 cases)            — deg-1 irreducible, deg-1 with content,
+                                        deg-2 irreducible, deg-2 splits, perfect square.
+  B. random low-degree primitive (12) — deg 2..10, mixed reducible/irreducible.
+  C. cyclotomic Φ_n (8 cases)         — Φ_3, Φ_5, Φ_7, Φ_8, Φ_12, Φ_15, Φ_24, Φ_30.
+                                        All irreducible over ℚ; catches over-factoring.
+  D. Swinnerton-Dyer (6 cases)        — minimal poly of √p_1+√p_2+…+√p_n for n=2,3;
+                                        irreducible over ℚ but splits into 2^n pieces
+                                        mod every prime.  Tests recombination correctness.
+  E. square-laden / multiplicities (8) — (x−1)^k for k=2,3,5,7; mixed-multiplicity
+                                         products.  Tests square-free decomposition.
+  F. large coefficients (6 cases)     — deg-8,12,15 products of distinct linears;
+                                        Mignotte-bound-touching cases.
+  G. content / scaling (6 cases)      — integer content, rational content, negative
+                                        content, large content 1024, combined.
+  H. refusals (4 cases)               — sin(x), 1/x, sqrt(x), x*y
+                                        → tagged "poly-factor-q/non-polynomial".
+
+Headline invariants:
+  product_equals_input — content × ∏ factor_i^mult_i == f exactly (BigInt rational).
+  each_factor_irreducible — every factor is irreducible over ℚ (rational-root proxy
+                             + degree-4 quadratic-factor check).
+  factors_primitive — gcd of |integer coefficients| == 1 (exact BigInt).
+  factors_positive_leading — leading coefficient > 0 (exact BigInt).
+
+Oracle: SymPy Poly.factor_list over QQ (verify.py). TypeScript verifier (verify.ts)
+uses pure BigInt rational arithmetic for reconstruction and exact GCD checks;
+adequate for all 56 bench cases.
+"""
+ported_from = "scientist-workbench/bench/poly-factor-q@89b4bcd5c3c6708439355ad819abdf86817fdf95"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "For ok lane: candidate.kind==\"ok\"; content parses as a rational string (e.g. \"1\", \"2/3\", \"-5\"); factors is a list of {factor: string, multiplicity: positive_integer} records; each factor parses as a polynomial in var over ℤ of degree ≥ 1 (integer coefficients, no rational denominators); each multiplicity is a positive integer. For tagged lane: tag in poly-factor-q/* namespace; payload is a record. For ok lane fails early if shapes are wrong."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "product_equals_input"
+description      = "content × ∏ factor_i^multiplicity_i == f exactly as polynomials in ℚ[var]. Computed via pure BigInt rational polynomial arithmetic (no floating-point). Coefficient-vector exact equality. Catches wrong_factor, wrong_content, missing_factor, extra_factor, wrong_multiplicity mutations."
+tolerance_source = "exact — BigInt rational arithmetic (no tolerance)"
+
+[[verifier.checks]]
+name             = "each_factor_irreducible"
+description      = "Every factor is irreducible over ℚ. Verified via: (1) rational-root theorem (try ±p/q for p | |constant|, q | |leading|, BigInt evaluation); (2) degree-4 quadratic-factor search for small integer b,c,d,e. Degree ≤ 2: complete (rational-root theorem is sufficient). Higher degrees: best-effort proxy — adequate for the bench's canonical golden corpus (all factors genuinely irreducible). Matches verify.py's sp.Poly.is_irreducible delegation in intent."
+tolerance_source = "exact — BigInt arithmetic (rational-root theorem is exact; quadratic-factor search is exact for small integer coefficients)"
+
+[[verifier.checks]]
+name             = "factors_primitive"
+description      = "Every factor has integer coefficients with gcd(|coefficients|) == 1. Computed via BigInt Euclidean GCD. Catches non_primitive mutation (coefficients scaled by an integer factor)."
+tolerance_source = "exact — BigInt GCD (no tolerance)"
+
+[[verifier.checks]]
+name             = "factors_positive_leading"
+description      = "Every factor's leading coefficient (highest-degree term in var) is strictly positive. Computed via BigInt comparison. Catches negative_leading_coef mutation."
+tolerance_source = "exact — BigInt comparison (no tolerance)"
+
+[[verifier.checks]]
+name             = "refusal_class_matches"
+description      = "Tagged lane only: cand.tag matches expected.tag when pinned. n/a for ok lane. The bench uses tag namespace \"poly-factor-q/\" (remapped by run-candidate.ts from the tool's \"poly-factor/\" namespace). The payload_predicate \"detail-non-empty\" is checked when present in expected.json."
+tolerance_source = "structural — no tolerance"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "77505959ac5c39d916b778700fdd5e0208ba1c1311ab231aa61d5b2935c95718"
+expected         = "golden/expected.json"
+expected_sha256  = "368d179a11c850608c526486306f7182e3de4c2d72d5dc0614332eeb857db28b"
+n_cases          = 56
+regenerated_at   = "2026-05-10"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"

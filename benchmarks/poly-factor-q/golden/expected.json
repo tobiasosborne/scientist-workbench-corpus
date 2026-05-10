@@ -1,0 +1,905 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "A-deg-1-x",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "A-deg-1-shifted",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 3",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "A-deg-1-with-content",
+      "expected": {
+        "kind": "ok",
+        "content": "2",
+        "factors": [
+          {
+            "factor": "x + 2",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "A-deg-2-irreducible",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**2 + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "A-deg-2-splits",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 2",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 2",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "A-deg-2-perfect-square",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 2",
+            "multiplicity": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg2-1",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 1
+          },
+          {
+            "factor": "9*x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg2-2",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 2",
+            "multiplicity": 1
+          },
+          {
+            "factor": "2*x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg3-1",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "6*x**3 + 9*x**2 - x + 4",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg3-2",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "3*x**3 + 7*x**2 - x + 4",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg4-1",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x",
+            "multiplicity": 1
+          },
+          {
+            "factor": "2*x**3 + 2*x**2 + 2*x + 9",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg4-2",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x + 1",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x**3 - 3*x**2 - x - 3",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg5-1",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "3*x**5 + 5*x**4 + 3*x**3 - 9*x**2 - 4*x + 5",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg5-2",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "3*x**5 - 7*x**4 - 8*x**3 + 2*x**2 - 2*x + 8",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg7-1",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**7 + 5*x**6 + 9*x**5 - 8*x**4 + 5*x**3 - 5*x**2 + 9*x + 6",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg7-2",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "9*x**7 - 6*x**6 - 7*x**5 + x**4 + 5*x**3 - 8*x**2 - 7",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg10-1",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "3*x**10 + 9*x**9 - 8*x**8 - 2*x**7 + 6*x**6 + 4*x**5 + 9*x**4 + 7*x**3 + 5*x**2 + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "B-random-deg10-2",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "4*x**10 - 7*x**9 + 8*x**8 - 2*x**7 + 6*x**6 + 4*x**5 - 5*x**4 - 7*x**3 + 9*x**2 - 4*x + 4",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-3",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**2 + x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-5",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**4 + x**3 + x**2 + x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-7",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**6 + x**5 + x**4 + x**3 + x**2 + x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-8",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**4 + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-12",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**4 - x**2 + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-15",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**8 - x**7 + x**5 - x**4 + x**3 - x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-24",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**8 - x**4 + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-30",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**8 + x**7 - x**5 - x**4 - x**3 + x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-3",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**4 - 10*x**2 + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-5",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**4 - 14*x**2 + 9",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-3-5",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**4 - 16*x**2 + 4",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-3-5",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**8 - 40*x**6 + 352*x**4 - 960*x**2 + 576",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-3-7",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**8 - 48*x**6 + 536*x**4 - 1728*x**2 + 400",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-3-5-7",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**16 - 136*x**14 + 6476*x**12 - 141912*x**10 + 1513334*x**8 - 7453176*x**6 + 13950764*x**4 - 5596840*x**2 + 46225",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "E-x-minus-1-squared",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "E-x-minus-1-cubed",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "E-x-minus-1-fifth",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "E-x-minus-1-seventh",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "E-x2plus1-cubed-times-x-minus-2-squared",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 2",
+            "multiplicity": 2
+          },
+          {
+            "factor": "x**2 + 1",
+            "multiplicity": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "E-mixed-quadratic-irreducible",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 2
+          },
+          {
+            "factor": "x + 1",
+            "multiplicity": 2
+          },
+          {
+            "factor": "x**2 + x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "E-deg-15-mixed-multiplicities",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 5",
+            "multiplicity": 2
+          },
+          {
+            "factor": "x - 2",
+            "multiplicity": 3
+          },
+          {
+            "factor": "x + 1",
+            "multiplicity": 4
+          },
+          {
+            "factor": "x**2 + x + 1",
+            "multiplicity": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "E-nested-squares-of-squares",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 4
+          },
+          {
+            "factor": "x + 1",
+            "multiplicity": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "F-product-of-8-distinct-linears",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 35",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 25",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 9",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 5",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 10",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 19",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 26",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 39",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "F-product-of-12-distinct-linears",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 49",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 48",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 37",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 12",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 1",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 9",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 13",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 16",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 17",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 32",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 41",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 47",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "F-product-of-15-distinct-linears",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x - 49",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 48",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 47",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 46",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 30",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 17",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 14",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 11",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 7",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x - 3",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 16",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 19",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 23",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 36",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "F-mignotte-large-leading",
+      "expected": {
+        "kind": "ok",
+        "content": "100",
+        "factors": [
+          {
+            "factor": "x**4 + 2*x**3 - 3*x**2 - 4*x + 5",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "F-mignotte-irreducible-large",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "x**4 + 90*x**3 + 80*x**2 + 70*x + 60",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "F-mignotte-random-deg-10-coefs-200",
+      "expected": {
+        "kind": "ok",
+        "content": "1",
+        "factors": [
+          {
+            "factor": "49*x**10 + 191*x**9 + 8*x**8 - 19*x**7 + 30*x**6 + 35*x**5 + 113*x**4 - 37*x**3 - 32*x**2 - 126*x + 68",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "G-int-content-7",
+      "expected": {
+        "kind": "ok",
+        "content": "7",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "G-rational-content-2-3",
+      "expected": {
+        "kind": "ok",
+        "content": "2/3",
+        "factors": [
+          {
+            "factor": "x**2 + x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "G-negative-content",
+      "expected": {
+        "kind": "ok",
+        "content": "-5",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x**2 + x + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "G-large-content-1024",
+      "expected": {
+        "kind": "ok",
+        "content": "1024",
+        "factors": [
+          {
+            "factor": "x**2 + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "G-content-with-multiplicities",
+      "expected": {
+        "kind": "ok",
+        "content": "-18",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 3
+          },
+          {
+            "factor": "x**2 + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "G-rational-content-multi-factor",
+      "expected": {
+        "kind": "ok",
+        "content": "3/2",
+        "factors": [
+          {
+            "factor": "x - 1",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x + 2",
+            "multiplicity": 1
+          },
+          {
+            "factor": "x**2 + 1",
+            "multiplicity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "H-non-polynomial-sin",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-factor-q/non-polynomial",
+        "payload_predicate": "detail-non-empty"
+      }
+    },
+    {
+      "id": "H-non-polynomial-1-over-x",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-factor-q/non-polynomial",
+        "payload_predicate": "detail-non-empty"
+      }
+    },
+    {
+      "id": "H-non-polynomial-sqrt",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-factor-q/non-polynomial",
+        "payload_predicate": "detail-non-empty"
+      }
+    },
+    {
+      "id": "H-multivariate",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-factor-q/non-polynomial",
+        "payload_predicate": "detail-non-empty"
+      }
+    }
+  ]
+}

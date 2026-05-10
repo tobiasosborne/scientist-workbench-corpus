@@ -1,0 +1,460 @@
+{
+  "version": 1,
+  "seed": 20260507,
+  "cases": [
+    {
+      "id": "A-deg-1-x",
+      "tier": "A",
+      "input": {
+        "f": "x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-deg-1-shifted",
+      "tier": "A",
+      "input": {
+        "f": "x - 3",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-deg-1-with-content",
+      "tier": "A",
+      "input": {
+        "f": "2*x + 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-deg-2-irreducible",
+      "tier": "A",
+      "input": {
+        "f": "x^2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-deg-2-splits",
+      "tier": "A",
+      "input": {
+        "f": "x^2 - 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-deg-2-perfect-square",
+      "tier": "A",
+      "input": {
+        "f": "x^2 - 4*x + 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg2-1",
+      "tier": "B",
+      "input": {
+        "f": "9*x**2 - 8*x - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg2-2",
+      "tier": "B",
+      "input": {
+        "f": "2*x**2 - 3*x - 2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg3-1",
+      "tier": "B",
+      "input": {
+        "f": "6*x**3 + 9*x**2 - x + 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg3-2",
+      "tier": "B",
+      "input": {
+        "f": "3*x**3 + 7*x**2 - x + 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg4-1",
+      "tier": "B",
+      "input": {
+        "f": "2*x**4 + 2*x**3 + 2*x**2 + 9*x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg4-2",
+      "tier": "B",
+      "input": {
+        "f": "x**4 - 2*x**3 - 4*x**2 - 4*x - 3",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg5-1",
+      "tier": "B",
+      "input": {
+        "f": "3*x**5 + 5*x**4 + 3*x**3 - 9*x**2 - 4*x + 5",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg5-2",
+      "tier": "B",
+      "input": {
+        "f": "3*x**5 - 7*x**4 - 8*x**3 + 2*x**2 - 2*x + 8",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg7-1",
+      "tier": "B",
+      "input": {
+        "f": "x**7 + 5*x**6 + 9*x**5 - 8*x**4 + 5*x**3 - 5*x**2 + 9*x + 6",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg7-2",
+      "tier": "B",
+      "input": {
+        "f": "9*x**7 - 6*x**6 - 7*x**5 + x**4 + 5*x**3 - 8*x**2 - 7",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg10-1",
+      "tier": "B",
+      "input": {
+        "f": "3*x**10 + 9*x**9 - 8*x**8 - 2*x**7 + 6*x**6 + 4*x**5 + 9*x**4 + 7*x**3 + 5*x**2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-random-deg10-2",
+      "tier": "B",
+      "input": {
+        "f": "4*x**10 - 7*x**9 + 8*x**8 - 2*x**7 + 6*x**6 + 4*x**5 - 5*x**4 - 7*x**3 + 9*x**2 - 4*x + 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-3",
+      "tier": "C",
+      "input": {
+        "f": "x**2 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-5",
+      "tier": "C",
+      "input": {
+        "f": "x**4 + x**3 + x**2 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-7",
+      "tier": "C",
+      "input": {
+        "f": "x**6 + x**5 + x**4 + x**3 + x**2 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-8",
+      "tier": "C",
+      "input": {
+        "f": "x**4 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-12",
+      "tier": "C",
+      "input": {
+        "f": "x**4 - x**2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-15",
+      "tier": "C",
+      "input": {
+        "f": "x**8 - x**7 + x**5 - x**4 + x**3 - x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-24",
+      "tier": "C",
+      "input": {
+        "f": "x**8 - x**4 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cyclotomic-phi-30",
+      "tier": "C",
+      "input": {
+        "f": "x**8 + x**7 - x**5 - x**4 - x**3 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-3",
+      "tier": "D",
+      "input": {
+        "f": "x**4 - 10*x**2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-5",
+      "tier": "D",
+      "input": {
+        "f": "x**4 - 14*x**2 + 9",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-3-5",
+      "tier": "D",
+      "input": {
+        "f": "x**4 - 16*x**2 + 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-3-5",
+      "tier": "D",
+      "input": {
+        "f": "x**8 - 40*x**6 + 352*x**4 - 960*x**2 + 576",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-3-7",
+      "tier": "D",
+      "input": {
+        "f": "x**8 - 48*x**6 + 536*x**4 - 1728*x**2 + 400",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-swinnerton-dyer-2-3-5-7",
+      "tier": "D",
+      "input": {
+        "f": "x**16 - 136*x**14 + 6476*x**12 - 141912*x**10 + 1513334*x**8 - 7453176*x**6 + 13950764*x**4 - 5596840*x**2 + 46225",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-x-minus-1-squared",
+      "tier": "E",
+      "input": {
+        "f": "(x - 1)^2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-x-minus-1-cubed",
+      "tier": "E",
+      "input": {
+        "f": "(x - 1)^3",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-x-minus-1-fifth",
+      "tier": "E",
+      "input": {
+        "f": "(x - 1)^5",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-x-minus-1-seventh",
+      "tier": "E",
+      "input": {
+        "f": "(x - 1)^7",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-x2plus1-cubed-times-x-minus-2-squared",
+      "tier": "E",
+      "input": {
+        "f": "(x^2 + 1)^3 * (x - 2)^2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-mixed-quadratic-irreducible",
+      "tier": "E",
+      "input": {
+        "f": "(x - 1)^2 * (x + 1)^2 * (x^2 + x + 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-deg-15-mixed-multiplicities",
+      "tier": "E",
+      "input": {
+        "f": "(x + 1)^4 * (x - 2)^3 * (x^2 + x + 1)^2 * (x - 5)^2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-nested-squares-of-squares",
+      "tier": "E",
+      "input": {
+        "f": "((x - 1)^2 * (x + 1)^2)^2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-product-of-8-distinct-linears",
+      "tier": "F",
+      "input": {
+        "f": "x**8 + 20*x**7 - 2107*x**6 - 36340*x**5 + 1173431*x**4 + 16754420*x**3 - 163541225*x**2 - 1236124500*x + 7585987500",
+        "var": "x",
+        "expected_max_coef_log2": 6
+      }
+    },
+    {
+      "id": "F-product-of-12-distinct-linears",
+      "tier": "F",
+      "input": {
+        "f": "x**12 + 28*x**11 - 5572*x**10 - 184392*x**9 + 9406150*x**8 + 395244464*x**7 - 3169101636*x**6 - 285012315896*x**5 - 2827279073983*x**4 + 22473222043508*x**3 + 461557934078208*x**2 + 1568389591692288*x - 2049305691783168",
+        "var": "x",
+        "expected_max_coef_log2": 6
+      }
+    },
+    {
+      "id": "F-product-of-15-distinct-linears",
+      "tier": "F",
+      "input": {
+        "f": "x**15 - 178*x**14 + 9324*x**13 + 88252*x**12 - 22576702*x**11 + 487333632*x**10 + 11499021992*x**9 - 505053268244*x**8 + 1054564234581*x**7 + 154359907954610*x**6 - 1684810383487436*x**5 - 9588587605213608*x**4 + 247535747350204320*x**3 - 1326936476275006464*x**2 + 2111091801164881920*x",
+        "var": "x",
+        "expected_max_coef_log2": 6
+      }
+    },
+    {
+      "id": "F-mignotte-large-leading",
+      "tier": "F",
+      "input": {
+        "f": "100*x^4 + 200*x^3 - 300*x^2 - 400*x + 500",
+        "var": "x",
+        "expected_max_coef_log2": 3
+      }
+    },
+    {
+      "id": "F-mignotte-irreducible-large",
+      "tier": "F",
+      "input": {
+        "f": "x^4 + 90*x^3 + 80*x^2 + 70*x + 60",
+        "var": "x",
+        "expected_max_coef_log2": 7
+      }
+    },
+    {
+      "id": "F-mignotte-random-deg-10-coefs-200",
+      "tier": "F",
+      "input": {
+        "f": "49*x**10 + 191*x**9 + 8*x**8 - 19*x**7 + 30*x**6 + 35*x**5 + 113*x**4 - 37*x**3 - 32*x**2 - 126*x + 68",
+        "var": "x",
+        "expected_max_coef_log2": 8
+      }
+    },
+    {
+      "id": "G-int-content-7",
+      "tier": "G",
+      "input": {
+        "f": "7*(x - 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-rational-content-2-3",
+      "tier": "G",
+      "input": {
+        "f": "(2/3)*(x^2 + x + 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-negative-content",
+      "tier": "G",
+      "input": {
+        "f": "-5*(x^3 - 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-large-content-1024",
+      "tier": "G",
+      "input": {
+        "f": "1024*(x^2 + 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-content-with-multiplicities",
+      "tier": "G",
+      "input": {
+        "f": "-18*(x - 1)^3 * (x^2 + 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-rational-content-multi-factor",
+      "tier": "G",
+      "input": {
+        "f": "(3/2)*(x - 1)*(x + 2)*(x^2 + 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "H-non-polynomial-sin",
+      "tier": "H",
+      "input": {
+        "f": "sin(x)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "H-non-polynomial-1-over-x",
+      "tier": "H",
+      "input": {
+        "f": "1/x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "H-non-polynomial-sqrt",
+      "tier": "H",
+      "input": {
+        "f": "sqrt(x) + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "H-multivariate",
+      "tier": "H",
+      "input": {
+        "f": "x*y + 1",
+        "var": "x"
+      }
+    }
+  ]
+}
