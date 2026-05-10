@@ -1,0 +1,138 @@
+[meta]
+name        = "groebner-basis"
+domain      = "polynomial-symbolic"
+description = """
+Multivariate Gröbner-basis computation over ℚ[x_1, …, x_n] for `lex` and
+`degrevlex` monomial orders.
+
+Input: a finite set of polynomials F = {f_1, …, f_m} ⊂ ℚ[x_1, …, x_n] (as
+expression strings), the variable order, and the monomial order. Output: a
+Gröbner basis of the ideal ⟨F⟩ under the requested order, expressed in the
+same closed `+ − * / ^` vocabulary the input uses.
+
+Algorithmic substrate (Phase 3): Buchberger 1965 with sugar pair selection
+(Giovini-Mora-Niesi-Robbiano-Traverso 1991), Buchberger Criterion 1
+(coprime LMs) and Criterion 2 (Gebauer-Möller chain criterion), full
+inter-reduction to the unique reduced GB. Reference research note:
+docs/ground-truth/groebner/RESEARCH-NOTE-x8d.md (Phase 1 of bead x8d).
+
+The 80-case battery spans five tiers:
+
+  hand-curated (15)        — Cox-Little-O'Shea Ch.2 §6-§8 worked examples
+                             + Buchberger 1979 illustrative cases + the
+                             classic (x²+y, xy+1) bilinear example.
+
+  classical-hard (5)       — cyclic-3 / cyclic-4 / cyclic-5 (degrevlex
+                             only — lex >15s on this device, skipped) +
+                             Katsura-3 (lex). Each carries a wall-clock
+                             baseline measured on this device at generate
+                             time.
+
+  stratified-random (40)   — three sub-tiers (n_vars=2,3,4-5) with an
+                             adversarial-mix generation: 30%
+                             random-uniform, 30% near-coprime LMs (Crit 1
+                             stress), 20% multiplicity-induced (lex GB
+                             does not have shape form), 10% coefficient-
+                             swell-prone, 10% large-but-structured.
+                             Seeded generation: SEED=20260510.
+
+  monomial-degenerate (10) — single-generator ideals, monomial ideals,
+                             pure-power ideals, trivial ideal {1}
+                             (inconsistent), already-reduced bases.
+                             Both `lex` and `degrevlex`.
+
+  refusal-envelope (10)    — non-polynomial / parametric / empty-input /
+                             empty-vars boundary cases. Verifier asserts
+                             kind=tagged with the correct class.
+
+Headline invariants — the four-invariant Buchberger correctness certificate
+(CLO Ch.2 §6 Theorem 6 p.85):
+
+  shape — kind/basis/order/vars structural check; each basis element
+          parses as a polynomial in the declared vars over ℚ; for tagged
+          lane, tag is in the groebner-basis/ namespace.
+
+  ideal_containment_input_to_candidate — every input polynomial reduces
+          to 0 modulo the candidate basis. Failure: candidate is missing
+          polynomials.
+
+  ideal_containment_candidate_to_input — every candidate polynomial
+          reduces to 0 modulo a Gröbner basis of the input. Failure:
+          candidate has spurious elements not in <input>. Together with
+          (2), proves <input> = <candidate>.
+
+  s_pair_reduces_to_zero — every S-polynomial of pairs in the candidate
+          basis reduces to 0 modulo the candidate. By Buchberger's
+          theorem, this IS the GB property. All pairs checked when
+          |basis| ≤ 20; deterministic seeded sample of 50 pairs above
+          threshold (case-id-keyed RNG).
+
+  tag_matches — refusal-lane only: candidate.tag matches expected.tag
+          exactly when expected is pinned. Catches refusal-class confusion
+          mutations.
+
+Tolerance regime: NONE. All arithmetic is exact rational (BigInt over ℚ
+via SymPy's QQ domain). Default determinism tier (ADR-0015 symbolic):
+bit-identical cross-platform forever.
+
+Oracles (dual-witness, agreement enforced at generate-time):
+  - Wolfram `GroebnerBasis[F, vars, MonomialOrder -> ...]`
+  - SymPy `groebner(F, *vars, order=...)`
+Both reduce-to-canonical-form (monic, sorted by leading monomial) and are
+byte-compared via the canonicaliser in `golden/generate.py`. Disagreement
+HALTS generation with a flagged log entry. All 80 admitted cases passed
+oracle agreement at generation.
+
+Lockstep TypeScript verifier (`golden/verify.ts`): senior-grade BigInt
+rational + multivariate polynomial reduction, mirroring `verify.py`'s
+invariants 1, 2, 4 line-by-line. Invariant 3 is delegated to verify.py
+(requires computing a reference GB — out of scope for the lockstep
+verifier; that's the job of the Phase 3 tool). `generate.py` runs the
+lockstep check on every committed case and halts on any pass/fail
+mismatch.
+
+Phase 3 implementation note: this bench is the SPEC for Phase 3 (bead
+scientist-workbench-x8d). The tool tools/groebner-basis/tool.ts does NOT
+yet exist; run-candidate.ts is written against the expected wire format
+declared in PROMPT.md. Phase 3 implements to this contract.
+"""
+ported_from = "scientist-workbench/docs/ground-truth/groebner/RESEARCH-NOTE-x8d.md (Phase 1, bead x8d)"
+
+[verifier]
+kind = "python3"
+cmd  = "python3"
+args = ["${SUITE_ROOT}/golden/verify.py"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Structural validation. For ok lane: candidate.kind=='ok'; basis is a list of strings each parsing as a polynomial in input.vars over ℚ; order ∈ {lex, degrevlex} and equals input.order; vars equals input.vars (same order). For tagged lane: tag in groebner-basis/ namespace and equals one of {empty-input, empty-vars, parametric, non-polynomial}; payload is a record. Catches lied-about-scope (kind mismatch with expected) and foreign-symbol leaks."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "ideal_containment_input_to_candidate"
+description      = "Every input polynomial reduces to 0 modulo the candidate basis under the requested monomial order. Computed via sympy.polys.rings.PolyElement.div (multivariate polynomial division — CLO Ch.2 §3 Theorem 3 p.64-66). Catches missing-basis-element mutations (the candidate fails to span the input ideal). Tolerance: exact BigInt rational arithmetic via SymPy QQ domain."
+tolerance_source = "exact — BigInt rational arithmetic (CLO Ch.2 §3 division algorithm)"
+
+[[verifier.checks]]
+name             = "ideal_containment_candidate_to_input"
+description      = "Every candidate polynomial reduces to 0 modulo sp.groebner(input.polys, vars, order=input.order). Catches spurious-element mutations (the candidate has polynomials NOT in the input ideal). Together with the previous check, proves <input> = <candidate>. SymPy's groebner is the trusted oracle for the reference GB; we don't independently verify SymPy here, only use it as the canonical ground-truth reference (per the dual-witness Wolfram + SymPy oracle protocol enforced at generate-time)."
+tolerance_source = "exact — BigInt rational arithmetic (SymPy QQ domain)"
+
+[[verifier.checks]]
+name             = "s_pair_reduces_to_zero"
+description      = "For every pair (g_i, g_j) in the candidate basis with i<j, the S-polynomial S(g_i, g_j) = (lcm/LM(g_i))/LC(g_i)·g_i − (lcm/LM(g_j))/LM(g_j)·g_j reduces to 0 modulo the candidate. By Buchberger's theorem (CLO Ch.2 §6 Theorem 6 p.85), this IS the Gröbner basis property — a basis G is a GB iff every S-pair reduces to 0 mod G. Checks ALL pairs when |basis| ≤ 20; samples 50 pairs (deterministic case-id-keyed RNG via SHA-256-prefixed seed) above threshold. The check's detail field records the regime."
+tolerance_source = "exact — BigInt rational arithmetic; Buchberger 1965 §3 / CLO Ch.2 §6"
+
+[[verifier.checks]]
+name             = "tag_matches"
+description      = "Refusal lane only: candidate.tag must (a) be in the groebner-basis/ namespace, (b) equal one of {empty-input, empty-vars, parametric, non-polynomial}, and (c) when expected.tag is pinned, exactly match expected.tag. Catches refusal-class-confusion mutations (e.g., emitting empty-input instead of non-polynomial). n/a for kind=ok."
+tolerance_source = "structural — exact string match"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "99fdb66b3cd65100bcce129de614cfbcb2f0e879a19cc60a508e9b07b95487cd"
+expected         = "golden/expected.json"
+expected_sha256  = "a14b4aa53f8350ad5d60378d8cb0296320c2991436bb0b1b3e7f325cf65d6e3d"
+n_cases          = 80
+regenerated_at   = "2026-05-10"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"

@@ -1,0 +1,1278 @@
+{
+  "version": 1,
+  "seed": 20260510,
+  "cases": [
+    {
+      "id": "hand-001",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x**2 + y",
+          "x*y + 1"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-002",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x**2 + y",
+          "x*y + 1"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "hand-003",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "y - x**2",
+          "z - x**3"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-004",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x**2 + y**2 + z**2 - 1",
+          "x**2 + z**2 - y",
+          "x - z"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "hand-005",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x + y - 3",
+          "x - y - 1"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-006",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x**2 - 2"
+        ],
+        "vars": [
+          "x"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-007",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x**2 + y**2 - 1",
+          "(x-1)**2 + y**2 - 1"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-008",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x**2 + 4*y**2 - 4",
+          "x + 2*y - 2"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "hand-009",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x + y + z - 6",
+          "x*y + y*z + z*x - 11",
+          "x*y*z - 6"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-010",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x - y**2",
+          "y**3 + 1"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-011",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x**2 + y**2 + z**2 - 4",
+          "x*y + y*z + z*x - 1",
+          "x + y + z - 2"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "hand-012",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x**2 + y**2 - 1",
+          "x**3 - y"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-013",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "2*x + 3*y - 7",
+          "x - y - 1"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-014",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x + y - 3",
+          "x**2 + y**2 - 5"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "hand-015",
+      "tier": "hand-curated",
+      "input": {
+        "polys": [
+          "x**2 - y",
+          "x*y - z",
+          "y**2 - x*z"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "classical-001",
+      "tier": "classical-hard",
+      "input": {
+        "polys": [
+          "x + y + z",
+          "x*y + y*z + z*x",
+          "x*y*z - 1"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "classical-002",
+      "tier": "classical-hard",
+      "input": {
+        "polys": [
+          "x + y + z",
+          "x*y + y*z + z*x",
+          "x*y*z - 1"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "classical-003",
+      "tier": "classical-hard",
+      "input": {
+        "polys": [
+          "x1 + x2 + x3 + x4",
+          "x1*x2 + x2*x3 + x3*x4 + x4*x1",
+          "x1*x2*x3 + x2*x3*x4 + x3*x4*x1 + x4*x1*x2",
+          "x1*x2*x3*x4 - 1"
+        ],
+        "vars": [
+          "x1",
+          "x2",
+          "x3",
+          "x4"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "classical-004",
+      "tier": "classical-hard",
+      "input": {
+        "polys": [
+          "x0 + 2*x1 + 2*x2 + 2*x3 - 1",
+          "x0**2 + 2*x1**2 + 2*x2**2 + 2*x3**2 - x0",
+          "2*x0*x1 + 2*x1*x2 + 2*x2*x3 - x1",
+          "2*x0*x2 + x1**2 + 2*x1*x3 - x2"
+        ],
+        "vars": [
+          "x0",
+          "x1",
+          "x2",
+          "x3"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "classical-005",
+      "tier": "classical-hard",
+      "input": {
+        "polys": [
+          "x1 + x2 + x3 + x4 + x5",
+          "x1*x2 + x2*x3 + x3*x4 + x4*x5 + x5*x1",
+          "x1*x2*x3 + x2*x3*x4 + x3*x4*x5 + x4*x5*x1 + x5*x1*x2",
+          "x1*x2*x3*x4 + x2*x3*x4*x5 + x3*x4*x5*x1 + x4*x5*x1*x2 + x5*x1*x2*x3",
+          "x1*x2*x3*x4*x5 - 1"
+        ],
+        "vars": [
+          "x1",
+          "x2",
+          "x3",
+          "x4",
+          "x5"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-A-001",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(-5)*x**2 + (-1) + (1/5)*y**2",
+          "(-3/5)*x**3 + (-6)*x*y**2 + (1)"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-A-002",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(-6/7)*x**3 + (-8/5)*y**3 + (2/3)",
+          "(-8/7) + (4/5)*x + (-2)*y**3 + 6*x**2"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-A-003",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(1/7)*x*y**2 + (-8)*x**2*y",
+          "(2/5)*y**2 + (-1/7) + 1*x**2*y",
+          "(-5)*x**2*y + 1*y"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-A-004",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(-2)*y**2 + (2/7)",
+          "(-5)*x*y**2 + (-4)*y**2 + (-6)*y + (-1/3)",
+          "1*x**3 + (1/2)*x*y + (-3/2)*x**2"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-A-005",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "7*y + (3/2)*x**3 + 8*x**2*y",
+          "1*y + (3/5)*x**3",
+          "(-6/7) + 3*y**2 + (4/7)*x"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-A-006",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**3 + (-4)*x**2 + (7/5)*y",
+          "1*y**2 + 6*x**2 + (1/2)"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-A-007",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x + (-4/3)*y**2 + 5*x",
+          "1*y**2 + 3*x**2 + (-5/2)*x*y"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-A-008",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x + (-6)*y**2 + 1*y",
+          "1*y**3 + (-3)*y + (-2)*y**2"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-A-009",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**2 + (-3)*x*y + 1*y**2",
+          "1*y + 6*y + (-6)*x*y"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-A-010",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x + (-9)*x**2 + (6/5)*x*y",
+          "1*y**3 + 2*y**2 + (5/3)*x**2"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-A-011",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "((x) - (-3))**2",
+          "((x) - (-3))*((y) - (3))"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-A-012",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "((x) - (-2))**2",
+          "((x) - (-2))*((y) - (1))"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-A-013",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "((x) - (2))**2",
+          "((x) - (2))*((y) - (-3))"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-A-014",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "11*x**3*y + (-9)*y + 3*x**2",
+          "3*x**3*y + (-6/7)*y + (-2/5)*x",
+          "2*x**3*y + (-5/2)*x**2 + (-3)*y"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-A-015",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**3 + (-6)*y**2 + 3*x",
+          "1*y**3 + (7/2)*x**2 + (7)",
+          "1*x**3 + 1*y**2 + (6/5)*y",
+          "1*y**3 + (7/5)*x**2 + (2/5)"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-001",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(4/3)*x**2*z**2 + (1/7)*y**4",
+          "(9/7)*y**3*z + (7/3)*x*y + (-9)*y**2*z"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-002",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(-7)*x**3*z + (-4/3)*y**3 + (3/5)*x**3",
+          "(-8/7)*x**2*y*z + (-8/3)*y*z + (-1/7)*y**4"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-003",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(7/5)*x**2*y*z + (4/3)*x*z + 4*x**2*z + (-1)*x",
+          "(-1)*x**3*y + (-7)*x*y + (4/5)*x**2*z",
+          "(-2/7)*y*z + 2*x*z"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-B-004",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(8/5)*x*y + 1*x*y**2*z + 1*z**3 + (-7/2)*y**3",
+          "(-2/5)*y**2*z + (-9/5)*x*z**2 + 9*x*y**2",
+          "(-4/7)*x*y**2 + (-7/2)*x*y*z"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-B-005",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x*y*z**2 + (-3)*x*y",
+          "2*y**3*z + (1/2)*x*y**2*z + (-4)*z + (-2)*x**2*y*z",
+          "1*y**4 + (4/5)"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-B-006",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**4 + 2*x*z + 6*x**2*y",
+          "1*y**4*z**3 + (7/5)*x**2 + (1/5)*y"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-007",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**3 + (-9)*x*y*z + 1*y**2*z",
+          "1*y**2*z + (-1)*z**2 + (-7)*z**3"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-008",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**3 + (-1)*z + (-1/5)*x*z",
+          "1*y**4*z + (7/2)*x**2 + 7*y**2*z"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-009",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**2 + (-4)*x**2*z + 7*y**2*z",
+          "1*y**4*z**2 + 9*x**2 + (-8)*x*y**2"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-B-010",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**2 + (-7)*y + (3/2)",
+          "1*y**2*z**2 + 4*x**2 + 1*z**3"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "rand-B-011",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "((x) - (1))**2",
+          "((x) - (1))*((y) - (2))",
+          "(z) - (1)"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-012",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "((x) - (0))**2",
+          "((x) - (0))*((y) - (2))",
+          "(z) - (-3)"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-013",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "((x) - (0))**2",
+          "((x) - (0))*((y) - (-2))",
+          "(z) - (-1)"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-014",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "11*x**4*y + (-1)*y*z + (-1)*y**2*z",
+          "3*x**4*y + (-2)*z**2 + (6/5)*y*z**2",
+          "2*x**4*y + (-5/3)*y**2 + (-2)*x**2*z"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-B-015",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**4 + (9/2)*y + 8*y*z**2",
+          "1*y**4 + (-5/2)*x*z + (-4/3)*x*y**2",
+          "1*z**4 + (-1)*x**2*z + (-1/7)*x*y",
+          "1*x**4 + (-8)*x*y + (3)"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-001",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x*z*u + (7/2)*z*u",
+          "(-6)*x*y*u + 1*x*u",
+          "(-5/7)*u + (-2)*u**3 + (-4/5)*x*y*z"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-002",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(-3)*x*y**2 + 5*z*u + 4*x*u**2",
+          "(-4/7)*y**3 + (2/3)*z**2*u",
+          "(7/2)*u**3 + 4*z*u**2 + (1/5)*y**2"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-003",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "(-9/5)*z + (-8)*x**2*y + (-3)*u**2*v + (-1)*x*z**2",
+          "(-9)*x*u**2 + 1*u*v**2",
+          "2*u**2 + (1/7)*x*y*u + 8*x*y"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u",
+          "v"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-004",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x*y + (-5)*z**2 + 2*x**2",
+          "1*z**3*u**2 + (5/2)*x**2 + (-6/7)*u**2",
+          "2*y*u + (9/7)*x*z**2 + 7*z**2*u"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-005",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**3*y**2 + (-1)*u + (9/5)*y*z",
+          "1*z**2*u + (8) + (-7)*x",
+          "(-3)*x**2*y + (-8/7)*z*u + (7/5)*u"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-006",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x*y**2 + (-1/5)*z*u + (-3)*z**2",
+          "1*z*u**2*v + (-1)*x*z + (4/7)*x*v",
+          "(6/5)*y*u**2 + 6*y + (-2)*x**2*u"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u",
+          "v"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-007",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "((x) - (-1))**2",
+          "((x) - (-1))*((y) - (-3))",
+          "(z) - (-2)",
+          "(u) - (2)"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-008",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "((x) - (-2))**2",
+          "((x) - (-2))*((y) - (2))",
+          "(z) - (3)",
+          "(u) - (-1)"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-009",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "5*x**3*y + 4*y*u + (9/7)*x",
+          "3*x**3*y + (-1/3)*y*u + (-8)*u**2",
+          "2*x**3*y + (-9/2)*y*u + (2/3)*x"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "rand-C-010",
+      "tier": "stratified-random",
+      "input": {
+        "polys": [
+          "1*x**3 + (-3)*u**2 + (-7/3)*y",
+          "1*y**3 + (-5)*x**2 + (-7/2)*x*y",
+          "1*z**3 + (1/2)*x*z + (-6/7)*u",
+          "1*u**3 + (-4/5)*u + (-9/7)"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z",
+          "u"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "mono-001",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "x**2 - 4"
+        ],
+        "vars": [
+          "x"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "mono-002",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "x**2 + y**2 - 1"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "mono-003",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "x**2",
+          "x*y",
+          "y**2"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "mono-004",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "x**3",
+          "y**2"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "mono-005",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "x**3",
+          "y**4",
+          "z**2"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "mono-006",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "1"
+        ],
+        "vars": [
+          "x"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "mono-007",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "x",
+          "x - 1"
+        ],
+        "vars": [
+          "x"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "mono-008",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "x**2",
+          "y**3"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "mono-009",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "x**2 - 1",
+          "y - 2"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "mono-010",
+      "tier": "monomial-degenerate",
+      "input": {
+        "polys": [
+          "x*y",
+          "y*z",
+          "z*x"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "ref-001",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [
+          "sin(x) + y"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "ref-002",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [
+          "log(x) + 1"
+        ],
+        "vars": [
+          "x"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "ref-003",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [
+          "exp(x) - y"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "ref-004",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [
+          "x + a"
+        ],
+        "vars": [
+          "x"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "ref-005",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [
+          "x*z + y",
+          "x - 1"
+        ],
+        "vars": [
+          "x",
+          "y"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "ref-006",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [
+          "x + y - k",
+          "y - z"
+        ],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "ref-007",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [],
+        "vars": [
+          "x"
+        ],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "ref-008",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [],
+        "vars": [
+          "x",
+          "y",
+          "z"
+        ],
+        "order": "degrevlex"
+      }
+    },
+    {
+      "id": "ref-009",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [
+          "1"
+        ],
+        "vars": [],
+        "order": "lex"
+      }
+    },
+    {
+      "id": "ref-010",
+      "tier": "refusal-envelope",
+      "input": {
+        "polys": [
+          "sqrt(x) + 1"
+        ],
+        "vars": [
+          "x"
+        ],
+        "order": "lex"
+      }
+    }
+  ]
+}

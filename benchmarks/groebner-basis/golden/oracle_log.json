@@ -1,0 +1,632 @@
+[
+  {
+    "id": "hand-001",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0215
+  },
+  {
+    "id": "hand-002",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0049
+  },
+  {
+    "id": "hand-003",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0066
+  },
+  {
+    "id": "hand-004",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0066
+  },
+  {
+    "id": "hand-005",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0028
+  },
+  {
+    "id": "hand-006",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0024
+  },
+  {
+    "id": "hand-007",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0047
+  },
+  {
+    "id": "hand-008",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0036
+  },
+  {
+    "id": "hand-009",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0071
+  },
+  {
+    "id": "hand-010",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0025
+  },
+  {
+    "id": "hand-011",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0032
+  },
+  {
+    "id": "hand-012",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.005
+  },
+  {
+    "id": "hand-013",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0027
+  },
+  {
+    "id": "hand-014",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.003
+  },
+  {
+    "id": "hand-015",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0039
+  },
+  {
+    "id": "classical-001",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0046
+  },
+  {
+    "id": "classical-002",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0037
+  },
+  {
+    "id": "classical-003",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0299
+  },
+  {
+    "id": "classical-004",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0472
+  },
+  {
+    "id": "classical-005",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.5076
+  },
+  {
+    "id": "rand-A-001",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0077
+  },
+  {
+    "id": "rand-A-002",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0078
+  },
+  {
+    "id": "rand-A-003",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0053
+  },
+  {
+    "id": "rand-A-004",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0043
+  },
+  {
+    "id": "rand-A-005",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.005
+  },
+  {
+    "id": "rand-A-006",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.009
+  },
+  {
+    "id": "rand-A-007",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0056
+  },
+  {
+    "id": "rand-A-008",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0037
+  },
+  {
+    "id": "rand-A-009",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0077
+  },
+  {
+    "id": "rand-A-010",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.007
+  },
+  {
+    "id": "rand-A-011",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.005
+  },
+  {
+    "id": "rand-A-012",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0046
+  },
+  {
+    "id": "rand-A-013",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0042
+  },
+  {
+    "id": "rand-A-014",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0056
+  },
+  {
+    "id": "rand-A-015",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0047
+  },
+  {
+    "id": "rand-B-001",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0123
+  },
+  {
+    "id": "rand-B-002",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0085
+  },
+  {
+    "id": "rand-B-003",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0241
+  },
+  {
+    "id": "rand-B-004",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0318
+  },
+  {
+    "id": "rand-B-005",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0094
+  },
+  {
+    "id": "rand-B-006",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0065
+  },
+  {
+    "id": "rand-B-007",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0054
+  },
+  {
+    "id": "rand-B-008",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0059
+  },
+  {
+    "id": "rand-B-009",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0221
+  },
+  {
+    "id": "rand-B-010",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0042
+  },
+  {
+    "id": "rand-B-011",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0054
+  },
+  {
+    "id": "rand-B-012",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.004
+  },
+  {
+    "id": "rand-B-013",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0039
+  },
+  {
+    "id": "rand-B-014",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0437
+  },
+  {
+    "id": "rand-B-015",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0959
+  },
+  {
+    "id": "rand-C-001",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.014
+  },
+  {
+    "id": "rand-C-002",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0451
+  },
+  {
+    "id": "rand-C-003",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0592
+  },
+  {
+    "id": "rand-C-004",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0709
+  },
+  {
+    "id": "rand-C-005",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.1228
+  },
+  {
+    "id": "rand-C-006",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.05
+  },
+  {
+    "id": "rand-C-007",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0064
+  },
+  {
+    "id": "rand-C-008",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0062
+  },
+  {
+    "id": "rand-C-009",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0138
+  },
+  {
+    "id": "rand-C-010",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0103
+  },
+  {
+    "id": "mono-001",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0017
+  },
+  {
+    "id": "mono-002",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0018
+  },
+  {
+    "id": "mono-003",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0031
+  },
+  {
+    "id": "mono-004",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0021
+  },
+  {
+    "id": "mono-005",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0031
+  },
+  {
+    "id": "mono-006",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0013
+  },
+  {
+    "id": "mono-007",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0017
+  },
+  {
+    "id": "mono-008",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0021
+  },
+  {
+    "id": "mono-009",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0025
+  },
+  {
+    "id": "mono-010",
+    "status": "admitted",
+    "sympy": "ok",
+    "wolfram": "ok",
+    "consensus": "sympy + wolfram",
+    "sympy_time_seconds": 0.0032
+  },
+  {
+    "id": "ref-001",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/non-polynomial",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  },
+  {
+    "id": "ref-002",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/non-polynomial",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  },
+  {
+    "id": "ref-003",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/non-polynomial",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  },
+  {
+    "id": "ref-004",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/parametric",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  },
+  {
+    "id": "ref-005",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/parametric",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  },
+  {
+    "id": "ref-006",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/parametric",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  },
+  {
+    "id": "ref-007",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/empty-input",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  },
+  {
+    "id": "ref-008",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/empty-input",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  },
+  {
+    "id": "ref-009",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/empty-vars",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  },
+  {
+    "id": "ref-010",
+    "status": "admitted",
+    "sympy": "refused: groebner-basis/non-polynomial",
+    "wolfram": "skipped (refusal tier)",
+    "consensus": "sympy + bench-design"
+  }
+]
