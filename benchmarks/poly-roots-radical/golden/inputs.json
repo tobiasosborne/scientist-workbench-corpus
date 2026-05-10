@@ -1,0 +1,406 @@
+{
+  "version": 1,
+  "seed": 20260507,
+  "cases": [
+    {
+      "id": "A-bare-x",
+      "tier": "A",
+      "input": {
+        "f": "x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-shifted-x-3",
+      "tier": "A",
+      "input": {
+        "f": "x - 3",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-with-content-2x4",
+      "tier": "A",
+      "input": {
+        "f": "2*x + 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-rational-3x1",
+      "tier": "A",
+      "input": {
+        "f": "3*x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-rational-coeff",
+      "tier": "A",
+      "input": {
+        "f": "x/2 - 1/3",
+        "var": "x"
+      }
+    },
+    {
+      "id": "A-negative-leading",
+      "tier": "A",
+      "input": {
+        "f": "-x + 5",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-rational-roots-23",
+      "tier": "B",
+      "input": {
+        "f": "x**2 - 5*x + 6",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-irrational-roots-pm-sqrt2",
+      "tier": "B",
+      "input": {
+        "f": "x**2 - 2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-irrational-golden",
+      "tier": "B",
+      "input": {
+        "f": "x**2 - x - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-complex-roots-i",
+      "tier": "B",
+      "input": {
+        "f": "x**2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-complex-roots-omega",
+      "tier": "B",
+      "input": {
+        "f": "x**2 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-double-root",
+      "tier": "B",
+      "input": {
+        "f": "x**2 - 2*x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-zero-at-origin-double",
+      "tier": "B",
+      "input": {
+        "f": "x**2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "B-sum-of-squares-shifted",
+      "tier": "B",
+      "input": {
+        "f": "x**2 + 4*x + 5",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-rational-three-roots",
+      "tier": "C",
+      "input": {
+        "f": "x**3 - x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cyclotomic-x3-minus-1",
+      "tier": "C",
+      "input": {
+        "f": "x**3 - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-depressed-real",
+      "tier": "C",
+      "input": {
+        "f": "x**3 + 3*x - 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-casus-irreducibilis",
+      "tier": "C",
+      "input": {
+        "f": "x**3 - 3*x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-casus-irreducibilis-2",
+      "tier": "C",
+      "input": {
+        "f": "x**3 - 7*x + 6",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-one-real-two-complex",
+      "tier": "C",
+      "input": {
+        "f": "x**3 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-triple-root",
+      "tier": "C",
+      "input": {
+        "f": "x**3 - 3*x**2 + 3*x - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "C-cubic-with-content",
+      "tier": "C",
+      "input": {
+        "f": "2*x**3 - 6*x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-biquadratic",
+      "tier": "D",
+      "input": {
+        "f": "x**4 - 5*x**2 + 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-biquadratic-no-real",
+      "tier": "D",
+      "input": {
+        "f": "x**4 + 5*x**2 + 4",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-depressed-ferrari",
+      "tier": "D",
+      "input": {
+        "f": "x**4 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-cyclotomic-x4-1",
+      "tier": "D",
+      "input": {
+        "f": "x**4 - 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-quadruple-root",
+      "tier": "D",
+      "input": {
+        "f": "x**4 - 4*x**3 + 6*x**2 - 4*x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-two-double-roots",
+      "tier": "D",
+      "input": {
+        "f": "(x - 1)**2 * (x + 1)**2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-perfect-square-quadratic",
+      "tier": "D",
+      "input": {
+        "f": "x**4 - 2*x**2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "D-ferrari-resolvent-stress",
+      "tier": "D",
+      "input": {
+        "f": "x**4 - 10*x**2 + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-linear-times-quadratic",
+      "tier": "E",
+      "input": {
+        "f": "(x - 1) * (x**2 + 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-two-irreducible-quads",
+      "tier": "E",
+      "input": {
+        "f": "(x**2 + 1) * (x**2 + 4)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-quad-times-cubic",
+      "tier": "E",
+      "input": {
+        "f": "(x**2 - 2) * (x**3 - 3*x + 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-three-linear",
+      "tier": "E",
+      "input": {
+        "f": "(x - 1) * (x - 2) * (x - 3)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-mixed-multiplicity",
+      "tier": "E",
+      "input": {
+        "f": "(x - 1)**2 * (x + 1)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "E-difference-of-squares",
+      "tier": "E",
+      "input": {
+        "f": "x**4 - 16",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-large-coeffs",
+      "tier": "F",
+      "input": {
+        "f": "x**2 - 1000*x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-tiny-rational-coeffs",
+      "tier": "F",
+      "input": {
+        "f": "x**2 - x/100 + 1/10000",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-large-rational",
+      "tier": "F",
+      "input": {
+        "f": "100*x**2 - 200*x - 99",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-near-zero-disc",
+      "tier": "F",
+      "input": {
+        "f": "x**2 - 2*x + 99/100",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-cubic-large",
+      "tier": "F",
+      "input": {
+        "f": "x**3 - 30*x**2 + 300*x - 1000",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-biquadratic-spread",
+      "tier": "F",
+      "input": {
+        "f": "x**4 - 10001*x**2 + 10000",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-content-12",
+      "tier": "F",
+      "input": {
+        "f": "12*x**2 - 36*x + 24",
+        "var": "x"
+      }
+    },
+    {
+      "id": "F-mixed-denoms",
+      "tier": "F",
+      "input": {
+        "f": "x**3 - x/2 + 1/6",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-deg5-eisenstein",
+      "tier": "G",
+      "input": {
+        "f": "x**5 + 2*x + 2",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-deg6-irreducible",
+      "tier": "G",
+      "input": {
+        "f": "x**6 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-deg7-cyclotomic",
+      "tier": "G",
+      "input": {
+        "f": "x**6 + x**5 + x**4 + x**3 + x**2 + x + 1",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-non-polynomial-sin",
+      "tier": "G",
+      "input": {
+        "f": "sin(x)",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-non-polynomial-rational",
+      "tier": "G",
+      "input": {
+        "f": "1/x + x",
+        "var": "x"
+      }
+    },
+    {
+      "id": "G-multivariate",
+      "tier": "G",
+      "input": {
+        "f": "x*y - 1",
+        "var": "x"
+      }
+    }
+  ]
+}

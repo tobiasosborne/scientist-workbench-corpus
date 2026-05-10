@@ -1,0 +1,312 @@
+{
+  "version": 1,
+  "seed": 20260507,
+  "cases": [
+    {
+      "id": "A-bare-x",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "A-shifted-x-3",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "A-with-content-2x4",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "A-rational-3x1",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "A-rational-coeff",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "A-negative-leading",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-rational-roots-23",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-irrational-roots-pm-sqrt2",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-irrational-golden",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-complex-roots-i",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-complex-roots-omega",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-double-root",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-zero-at-origin-double",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "B-sum-of-squares-shifted",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-rational-three-roots",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-cyclotomic-x3-minus-1",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-depressed-real",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-casus-irreducibilis",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-casus-irreducibilis-2",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-one-real-two-complex",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-triple-root",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "C-cubic-with-content",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-biquadratic",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-biquadratic-no-real",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-depressed-ferrari",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-cyclotomic-x4-1",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-quadruple-root",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-two-double-roots",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-perfect-square-quadratic",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "D-ferrari-resolvent-stress",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-linear-times-quadratic",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-two-irreducible-quads",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-quad-times-cubic",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-three-linear",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-mixed-multiplicity",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "E-difference-of-squares",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "F-large-coeffs",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "F-tiny-rational-coeffs",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "F-large-rational",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "F-near-zero-disc",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "F-cubic-large",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "F-biquadratic-spread",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "F-content-12",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "F-mixed-denoms",
+      "expected": {
+        "kind": "ok"
+      }
+    },
+    {
+      "id": "G-deg5-eisenstein",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-roots/complex-roots-not-yet-named"
+      }
+    },
+    {
+      "id": "G-deg6-irreducible",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-roots/complex-roots-not-yet-named"
+      }
+    },
+    {
+      "id": "G-deg7-cyclotomic",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-roots/complex-roots-not-yet-named"
+      }
+    },
+    {
+      "id": "G-non-polynomial-sin",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-roots/non-polynomial"
+      }
+    },
+    {
+      "id": "G-non-polynomial-rational",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-roots/non-polynomial"
+      }
+    },
+    {
+      "id": "G-multivariate",
+      "expected": {
+        "kind": "tagged",
+        "tag": "poly-roots/multivariate"
+      }
+    }
+  ]
+}

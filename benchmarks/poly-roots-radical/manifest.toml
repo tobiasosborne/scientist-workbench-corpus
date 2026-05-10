@@ -1,0 +1,79 @@
+[meta]
+name        = "poly-roots-radical"
+domain      = "polynomial-symbolic"
+description = """
+Symbolic radical root-finder for univariate polynomials over ℚ of degree ≤ 4.
+Uses a factor-then-dispatch pipeline: poly-factor decomposes the input into
+ℚ-irreducibles, then each factor is resolved by the appropriate closed-form
+formula (linear, quadratic, Cardano 1545 cubic, Ferrari 1540 quartic) or by
+Root[poly, k] algebraic-number naming (ADR-0018) for irreducible factors of
+degree ≥ 5 with all real roots.  Mixed-real-complex deg-≥5 factors refuse
+with tagged "poly-roots/complex-roots-not-yet-named" (alg-num v0.1 limit).
+
+Output roots are exact expressions in the closed numerical vocabulary
+(+, −, *, /, ^, neg, sqrt).  The casus-irreducibilis cubic (three real
+roots, discriminant < 0) emits the faithful complex-radical Cardano form
+rather than the trigonometric formula — per ADR-1yu, the trigonometric heads
+(cos, acos) are outside the closed vocabulary.
+
+The 50-case battery covers seven tiers:
+  A. linear (6 cases)             — deg 1; exact rational root.
+  B. quadratic (8 cases)          — discriminant formula; rational roots,
+                                    irrational √D roots, complex roots, double.
+  C. cubic (8 cases)              — Cardano; including two casus-irreducibilis
+                                    cases (x³−3x+1, x³−7x+6) where the faithful
+                                    complex-radical form is verified numerically.
+  D. quartic Ferrari (8 cases)    — Ferrari + biquadratic fast path;
+                                    cyclotomic x⁴−1, quadruple root, double pairs.
+  E. reducible (6 cases)          — multi-factor inputs; multiplicity inheritance.
+  F. numeric stress (8 cases)     — large/tiny/mixed-denominator coefficients;
+                                    near-zero discriminant.
+  G. refusals (6 cases)           — deg-5 Eisenstein (1 real, 4 complex),
+                                    deg-6 irreducible (0 real), Φ₇ cyclotomic
+                                    (0 real), sin(x), 1/x+x, multivariate x·y.
+                                    All G-cases refuse honestly.
+
+Headline invariant: each_root_satisfies (|f(root)| < 1e-9 after numerical
+evaluation of the radical expression).  count_with_multiplicity checks
+Σ mult_i = deg(f).  distinct_roots_match uses a companion-matrix oracle.
+"""
+ported_from = "scientist-workbench/bench/poly-roots-radical@4f4178125615c0f9e9560869f9fadb9c5f2d9e76"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "kind==\"ok\", roots is a list of {root: string, multiplicity: positive_integer} records. Each root string is parseable as a complex numerical expression."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "each_root_satisfies"
+description      = "For each root entry: evaluate f at root numerically (complex float64); |f(root)| < 1e-9. Matches verify.py's evalf fallback for casus-irreducibilis radicals."
+tolerance_source = "1e-9 numerical tolerance (matches verify.py's `abs(complex(residue.evalf())) < 1e-9`)"
+
+[[verifier.checks]]
+name             = "count_with_multiplicity"
+description      = "sum(multiplicity_i) == total_degree(f). Parsed via BigInt rational polynomial arithmetic. Catches dropped-root, wrong-multiplicity, and duplicated-root mutations."
+tolerance_source = "exact — integer equality (BigInt)"
+
+[[verifier.checks]]
+name             = "distinct_roots_match"
+description      = "Candidate roots are pairwise distinct (|r_i - r_j| >= 1e-3). Each candidate root matches a Durand-Kerner oracle root with matching multiplicity count (|r_i - oracle_j| < 1e-3). Durand-Kerner replaces SymPy's all_roots() oracle; 1e-3 tolerance accommodates slow convergence for repeated roots."
+tolerance_source = "1e-3 numerical tolerance (Durand-Kerner convergence floor for repeated roots; minimum distinct-root separation in bench >= 0.1)"
+
+[[verifier.checks]]
+name             = "refusal_class_matches"
+description      = "For tagged outputs: cand.tag == expected.tag (when pinned); cand.payload.detail is a non-empty string. n/a for happy-path cases."
+tolerance_source = "structural — no tolerance"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "2d207924ff5c9030b288a32b1bb1c5fefcca07aee95bd92504c701028ee1d927"
+expected         = "golden/expected.json"
+expected_sha256  = "1e44278cd0c7e0dd8626ccfdcb936ae4d675bf819ca21e76712597209d915328"
+n_cases          = 50
+regenerated_at   = "2026-05-10"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"
