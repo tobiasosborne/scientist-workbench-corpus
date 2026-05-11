@@ -29,11 +29,32 @@ pathology — not in the cone structure. (Mixed cones land in
 
 ## Source
 
-The NETLIB LP collection — 114 problems, public domain since 1985,
-the canonical LP test set for four decades. Original source:
-`netlib.org/lp/`. Distributed as MPS-format files; this suite ingests
-them once via Gurobi's MPS reader and stores them in canonical
-workbench wire form under `golden/inputs.json`.
+The NETLIB LP collection — public domain since 1985, the canonical LP
+test set for four decades. Original source: `netlib.org/lp/`. The
+collection contains 114 problems; this suite ships the **21-problem
+small subset** (cases with canonical-form `n_canonical × m_canonical
+≤ 100,000` entries) and downloads all 114 to `data/lp-netlib/raw/`
+for local re-ingestion when the wire format extends to sparse in v0.2
+(ADR-0030 §"Open questions #5").
+
+### Why the 100k entries gate
+
+The canonical wire format encodes A as dense `list<list<float64>>` JSON
+— each number takes ~16 ASCII chars including separators, so a 200K-entry
+matrix is ~3 MB JSON, and the largest NETLIB problems (pds-20: 9.8B
+entries; ken-18: 80B entries) are physically impossible to encode this
+way.  The 100k gate keeps `inputs.json` under 20 MB committable to git
+while preserving every classical-tractable NETLIB problem.  Cases
+above the gate are *skipped entirely* — they are not stored sparsely
+because the wire format does not (yet) support sparse.
+
+### The 21 problems shipped
+
+Famous tractable NETLIB classics: `afiro`, `adlittle`, `sc50a`, `sc50b`,
+`sc105`, `sc205`, `scsd1`, `share1b`, `share2b`, `blend`, `beaconfd`,
+`israel`, `lotfi`, `recipe`, `brandy`, `bore3d`, `boeing2`, `forplan`,
+`kb2`, `scagr7`, `stocfor1`.  Sizes range from `afiro` (n_canonical=51,
+m_canonical=27) to `forplan` (n_canonical=514, m_canonical=183).
 
 Per-problem provenance (original NETLIB filename, SHA-256 of the
 original MPS bytes, conversion notes) lives in the per-case `meta`
@@ -163,24 +184,28 @@ generation snapshot. The cost is per-grade-run latency, acceptable
 for a Phase 0 infrastructure piece. See `adapters/gurobi/lp-netlib.toml`
 and `adapters/mosek/lp-netlib.toml`.
 
-## Case taxonomy (114 problems)
+## Case taxonomy (21 problems in v0.1; 114 NETLIB ultimately)
 
-The NETLIB collection is the canonical set, taken whole. Per-problem
-dimensions are recorded in `meta` and surfaced via the build-time
-DuckDB view. Indicative slice:
+The 21 v0.1 problems are the small-subset slice of NETLIB
+(canonical-form `n*m ≤ 100,000`). Per-problem dimensions recorded
+in `meta`:
 
-- **Tiny (n ≤ 50):** afiro, sc50a, sc50b — 3 problems.
-- **Small (50 < n ≤ 500):** sc105, share2b, share1b, beaconfd, blend,
-  recipe, bore3d, adlittle, … — ~20 problems.
-- **Medium (500 < n ≤ 5000):** brandy, e226, finnis, israel, sctap1,
-  scsd1, scsd6, … — ~50 problems.
-- **Large (n > 5000):** fit2p, 80bau3b, dfl001 (if included), … —
-  ~40 problems.
+- **Tiny (n_can ≤ 100):** afiro (51×27), sc50a (78×50), sc50b (78×50),
+  kb2 (77×52) — 4 problems.
+- **Small (100 < n_can ≤ 300):** adlittle (138×56), sc105 (163×105),
+  share2b (162×96), share1b (253×117), stocfor1 (165×117), scagr7
+  (185×129), beaconfd (295×173), blend (114×74), recipe (299×186) —
+  9 problems.
+- **Medium (300 < n_can ≤ 800):** sc205 (317×205), israel (316×174),
+  lotfi (366×153), bore3d (346×245), brandy (303×220), boeing2 (378×239),
+  forplan (514×183), scsd1 (760×77) — 8 problems.
 
-The grading gate from the epic (`eg9j`) is binary on the suite as a
-whole: `cone-solve ≥ 98/114`, `lp-solve ≥ 110/114`. Size buckets are
-informational and let the grading dashboard show where a candidate's
-failures concentrate.
+The grading gate from the epic (`eg9j`) was originally
+`cone-solve ≥ 98/114` / `lp-solve ≥ 110/114` against the full
+collection.  For the v0.1 small-subset suite, **the gate is reframed**:
+`cone-solve` and `lp-solve` must hit 21/21 on `lp-netlib` v0.1.  The
+full battery becomes a v0.2 gate once the sparse wire format lands
+and the remaining 88 NETLIB problems join this suite.
 
 ## Boundary tags
 

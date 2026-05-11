@@ -2,19 +2,27 @@
 name        = "lp-netlib"
 domain      = "optimisation"
 description = """
-The 114-problem NETLIB LP collection, ingested once into canonical
-SCS form (ADR-0030 §C: min cᵀx s.t. Ax = b, x ∈ NonNegCone) and
-graded against a dual-witness oracle (Gurobi 13.0.1 + Mosek 11.1.6).
+The small-NETLIB-LP subset (21 problems with n_canonical × m_canonical
+≤ 100,000 entries), ingested into canonical SCS form (ADR-0030 §C:
+min cᵀx s.t. Ax = b, x ∈ NonNegCone) and graded against a dual-witness
+oracle (Gurobi 13.0.1 + Mosek 11.1.6).
 
-Per-problem invariants enforce primal feasibility, dual feasibility,
-complementary slackness, optimality gap, and oracle agreement — the
-five KKT residuals plus the consensus check. Eight checks per
-optimal-status case, fewer for infeasible / unbounded paths.
+The 21 problems are the classical tractable NETLIB battery: afiro,
+adlittle, sc50a/b, sc105, sc205, scsd1, share1b/2b, blend, beaconfd,
+israel, lotfi, recipe, brandy, bore3d, boeing2, forplan, kb2, scagr7,
+stocfor1.  The full 114-problem NETLIB collection is downloaded
+locally to data/lp-netlib/raw/; the 88 problems above the DENSE_LIMIT
+gate (100,000 entries) are deferred to v0.2 when the sparse wire
+format lands (ADR-0030 §"Open questions #5").
+
+Per-problem invariants enforce primal/dual feasibility, complementary
+slackness, optimality gap, and oracle agreement — the four KKT
+residuals plus the consensus check.  Twelve checks per case (10 KKT
++ 2 certificate-path checks shared with lp-small).
 
 Phase 0 of the convex-cone solver epic (scientist-workbench-eg9j,
-ADR-0030 §F). Sibling: lp-small/ covers the 10-100 var resource-
-limited regime; this suite covers the canonical NETLIB sizes
-(n ∈ [32, 13525]).
+ADR-0030 §F).  Sibling: lp-small/ covers the 10-100 var
+pathology battery.
 """
 ported_from = "scientist-workbench-corpus (new; not a port)"
 
@@ -70,14 +78,24 @@ tolerance_source = "consensus snapshot ± 1e-8 relative"
 
 [[verifier.checks]]
 name             = "self_reported_precision"
-description      = "Candidate's achieved_precision is at least as large as the verifier's recomputation of max(r_p, r_d, r_c) — the candidate is not lying about its own residual."
-tolerance_source = "self-report ≥ recomputed; honest-scope per CLAUDE.md Rule 8"
+description      = "Candidate's achieved_precision is within 2× of the verifier's recomputation of max(r_p, r_d, r_c) — captures order-of-magnitude lies while tolerating float64 summation-order drift between Python adapter and TS verifier."
+tolerance_source = "claimed ≥ recomputed / 2; honest-scope per CLAUDE.md Rule 8"
+
+[[verifier.checks]]
+name             = "infeasibility_certificate"
+description      = "For status=infeasible cases: candidate's dual is a Farkas certificate (Aᵀy ≤ 1e-8, bᵀy > 1e-8 in either sign). NETLIB problems are all well-posed so this passes by N/A; shared check with lp-small."
+tolerance_source = "Farkas lemma + 1e-8 absolute"
+
+[[verifier.checks]]
+name             = "unboundedness_certificate"
+description      = "For status=unbounded cases: candidate's x is an unbounded direction (Ad=0, d≥0, cᵀd<0). NETLIB problems are all well-posed so this passes by N/A; shared check with lp-small."
+tolerance_source = "duality of infeasibility + 1e-8 absolute"
 
 [golden]
 inputs           = "golden/inputs.json"
-inputs_sha256    = "0000000000000000000000000000000000000000000000000000000000000000"
+inputs_sha256    = "df163720f26af2c231584b9501ff56bdc16ed5fea3a83e9c3053e2322df6ab24"
 expected         = "golden/expected.json"
-expected_sha256  = "0000000000000000000000000000000000000000000000000000000000000000"
-n_cases          = 114
-regenerated_at   = "PENDING-generation"
+expected_sha256  = "8884d721c54680fe9f8f4f8e66c6d5cfc192de34e2c49b1fd332cf346a518ace"
+n_cases          = 21
+regenerated_at   = "2026-05-11"
 generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"

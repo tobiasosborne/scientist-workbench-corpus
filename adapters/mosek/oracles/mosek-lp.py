@@ -118,6 +118,21 @@ def solve_lp(c, A, b, nonneg_indices: set[int], precision: float) -> dict:
             task.putconbound(i, mosek.boundkey.fx, b[i], b[i])
 
         task.putobjsense(mosek.objsense.minimize)
+
+        # Tighten Mosek's simplex feasibility tolerances to match the
+        # verifier's 1e-8 thresholds with one decade of margin.
+        #
+        # basis_tol_s — dual-variable feasibility (s ≥ 0 check in verifier):
+        #   Mosek default ~1e-7; verifier threshold 1e-8; set 1e-9.
+        # basis_tol_x — primal-variable feasibility (x ≥ 0 check in verifier):
+        #   Mosek default ~1e-8; can be loose enough to allow x < -1e-8;
+        #   tighten to 1e-9 so the primal_nonneg check also passes.
+        #
+        # Both tolerances govern the simplex basis acceptance criterion only;
+        # they do not affect the interior-point fallback path.
+        task.putdouparam(mosek.dparam.basis_tol_s, 1e-9)
+        task.putdouparam(mosek.dparam.basis_tol_x, 1e-9)
+
         task.optimize()
 
         soltype = mosek.soltype.bas      # prefer basic solution; fall back to interior

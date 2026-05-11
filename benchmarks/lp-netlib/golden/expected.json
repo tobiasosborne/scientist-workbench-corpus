@@ -1,0 +1,298 @@
+{
+  "cases": [
+    {
+      "id": "adlittle",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 225494.96316238024,
+          "objective_mosek": 225494.96316238036,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 5.162657302598081e-16
+        },
+        "objective": 225494.9631623803
+      }
+    },
+    {
+      "id": "afiro",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -464.75314285714285,
+          "objective_mosek": -464.7531428571428,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.2230884230573284e-16
+        },
+        "objective": -464.75314285714285
+      }
+    },
+    {
+      "id": "beaconfd",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 33592.48580719999,
+          "objective_mosek": 33592.48580719999,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": 33592.48580719999
+      }
+    },
+    {
+      "id": "blend",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -30.81214984582825,
+          "objective_mosek": -30.812149845828245,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 2.3060472551099927e-16
+        },
+        "objective": -30.812149845828248
+      }
+    },
+    {
+      "id": "boeing2",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -324.8436280152028,
+          "objective_mosek": -324.84362801520285,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.749870213189089e-16
+        },
+        "objective": -324.84362801520285
+      }
+    },
+    {
+      "id": "bore3d",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 730.0388779884922,
+          "objective_mosek": 730.0388779884927,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 6.229084020010673e-16
+        },
+        "objective": 730.0388779884925
+      }
+    },
+    {
+      "id": "brandy",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 1518.5098964881277,
+          "objective_mosek": 1518.509896488128,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 2.99469468021356e-16
+        },
+        "objective": 1518.5098964881279
+      }
+    },
+    {
+      "id": "forplan",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -1163.9157686858052,
+          "objective_mosek": -1163.9157686858098,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 3.907046911134509e-15
+        },
+        "objective": -1163.9157686858075
+      }
+    },
+    {
+      "id": "israel",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -896644.8218630459,
+          "objective_mosek": -896644.8218630457,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 2.5966875397785134e-16
+        },
+        "objective": -896644.8218630458
+      }
+    },
+    {
+      "id": "kb2",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -1749.9001299062058,
+          "objective_mosek": -1749.900129906206,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.299352297638947e-16
+        },
+        "objective": -1749.900129906206
+      }
+    },
+    {
+      "id": "lotfi",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -25.264706061880005,
+          "objective_mosek": -25.264706061880005,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": -25.264706061880005
+      }
+    },
+    {
+      "id": "recipe",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -266.29199999999963,
+          "objective_mosek": -266.29200000000003,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.4942391511035107e-15
+        },
+        "objective": -266.2919999999998
+      }
+    },
+    {
+      "id": "sc105",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -52.202061211707246,
+          "objective_mosek": -52.20206121170723,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 2.7222784666623406e-16
+        },
+        "objective": -52.20206121170724
+      }
+    },
+    {
+      "id": "sc205",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -52.202061211707225,
+          "objective_mosek": -52.20206121170723,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.3611392333311705e-16
+        },
+        "objective": -52.20206121170723
+      }
+    },
+    {
+      "id": "sc50a",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -64.57507705856449,
+          "objective_mosek": -64.5750770585645,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 2.2006717393947326e-16
+        },
+        "objective": -64.57507705856449
+      }
+    },
+    {
+      "id": "sc50b",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -70.0,
+          "objective_mosek": -70.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": -70.0
+      }
+    },
+    {
+      "id": "scagr7",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -2331389.824330984,
+          "objective_mosek": -2331389.824330984,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": -2331389.824330984
+      }
+    },
+    {
+      "id": "scsd1",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 8.666666674333367,
+          "objective_mosek": 8.666666674333365,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 2.0496425051871357e-16
+        },
+        "objective": 8.666666674333367
+      }
+    },
+    {
+      "id": "share1b",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -76589.3185791857,
+          "objective_mosek": -76589.31857918581,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.5199942235622952e-15
+        },
+        "objective": -76589.31857918575
+      }
+    },
+    {
+      "id": "share2b",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -415.73224074141933,
+          "objective_mosek": -415.732240741419,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 8.203850453277301e-16
+        },
+        "objective": -415.73224074141916
+      }
+    },
+    {
+      "id": "stocfor1",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -41131.9762194364,
+          "objective_mosek": -41131.97621943641,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.768929743459606e-16
+        },
+        "objective": -41131.9762194364
+      }
+    }
+  ]
+}

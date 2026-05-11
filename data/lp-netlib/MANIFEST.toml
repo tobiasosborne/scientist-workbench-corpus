@@ -1,0 +1,35 @@
+# MANIFEST.toml — provenance for lp-netlib raw data
+#
+# NETLIB LP collection: netlib.org/lp/data/
+# Compressed MPS format decoded by David M. Gay's emps program (AT&T Bell Labs).
+# Each problem: downloaded once, sha256-verified, decoded to standard MPS.
+# Per-file sha256 values in raw/sha256.sum; this MANIFEST records the
+# ledger sha256 as the tamper-evidence anchor.
+
+[meta]
+collection    = "NETLIB LP"
+description   = "The NETLIB LP collection (netlib.org/lp/data/). Public domain since 1985; the canonical LP benchmark battery for four decades. Decoded from NETLIB emps-compressed format via the emps C program (Gay, AT&T Bell Labs)."
+retrieved_at  = "2026-05-11"
+retrieved_by  = "benchmarks/lp-netlib/golden/generate.py"
+
+[fetch]
+emps_decoder_url     = "https://netlib.org/lp/data/emps.c"
+sha256_ledger        = "raw/sha256.sum"
+sha256_ledger_sha256 = "3b23b3ddefbb47251c5a14289280d4dbb3a78f4438c64ce5f739fbfad9f75b98"
+total_problems       = 109
+
+[[sources]]
+url_base    = "https://netlib.org/lp/data/"
+url_pattern = "<problem-name>"
+local_path  = "raw/"
+source_kind = "download"
+file_count  = 93
+note        = "Direct NETLIB problems plus dot-name variants (pilot.ja, pilot.we, vtp.base). emps-compressed binary format."
+
+[[sources]]
+url_base    = "https://netlib.org/lp/data/kennington/"
+url_pattern = "<problem-name>.gz"
+local_path  = "raw/kennington/"
+source_kind = "download"
+file_count  = 16
+note        = "Kennington subproblems (Kennington 1990): network LP and multi-commodity flow. Gzip-compressed emps format."

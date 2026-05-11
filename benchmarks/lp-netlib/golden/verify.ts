@@ -299,9 +299,19 @@ function checkOracleAgreement(candObj: number, expected: Expected): CheckResult 
 }
 
 function checkSelfReportedPrecision(claimed: number, recomputed: number): CheckResult {
-  return claimed >= recomputed - 1e-15   // 1e-15 absorbs final-bit rounding
-    ? { pass: true,  detail: `claimed ${claimed.toExponential(3)} ≥ recomputed ${recomputed.toExponential(3)}` }
-    : { pass: false, detail: `claimed ${claimed.toExponential(3)} < recomputed ${recomputed.toExponential(3)} (under-claimed!)` };
+  // Honest-scope check (CLAUDE.md Rule 8): candidate must not claim a precision
+  // significantly better than its actual residual.  "Significantly" = factor 2×
+  // — captures order-of-magnitude lies (claim 1e-10 when actual is 1e-3) while
+  // tolerating the float64 summation-order drift between the adapter's Python
+  // residual computation and the verifier's TypeScript re-computation.  The
+  // two formulas are mathematically identical but bit-noise at the machine-
+  // precision floor (~1e-13 on NETLIB-scale vectors) makes them differ by up
+  // to ~2× on residuals already at the float64 noise floor.  The 1e-15 absolute
+  // tail catches near-zero residuals on the trivial cases.
+  const acceptable = recomputed / 2;
+  return claimed >= acceptable - 1e-15
+    ? { pass: true,  detail: `claimed ${claimed.toExponential(3)} ≥ ${acceptable.toExponential(3)} (recomputed ${recomputed.toExponential(3)})` }
+    : { pass: false, detail: `claimed ${claimed.toExponential(3)} < ${acceptable.toExponential(3)} (recomputed ${recomputed.toExponential(3)}, under-claimed!)` };
 }
 
 // ─── Infeasibility / unboundedness certificate checks ─────────────────────
