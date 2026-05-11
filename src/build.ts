@@ -17,7 +17,9 @@ const BUILD_DIR  = join(ROOT, "build");
 const RUNS_DIR   = join(BUILD_DIR, "grade-runs");
 const DB_PATH    = join(BUILD_DIR, "corpus.duckdb");
 
-const SCHEMA_VERSION = 1;
+// 1 → 2: grade_results gains 5 reserved columns (runtime_sec, iter_count,
+// iter_{5,25,final}_residual) for the convex-cone tier (ADR-0030 §F).
+const SCHEMA_VERSION = 2;
 
 const DDL = `
 CREATE TABLE _metadata (
@@ -118,11 +120,21 @@ CREATE TABLE grade_runs (
 );
 
 CREATE TABLE grade_results (
-  run_id      VARCHAR,
-  case_id     VARCHAR,
-  check_name  VARCHAR,
-  pass        BOOLEAN,
-  detail      VARCHAR
+  run_id              VARCHAR,
+  case_id             VARCHAR,
+  check_name          VARCHAR,
+  pass                BOOLEAN,
+  detail              VARCHAR,
+  -- Trajectory checkpoints reserved per ADR-0030 §F (convex-cone tier).
+  -- v0.1 populates only runtime_sec measured by grade.ts around the
+  -- candidate spawn -- iter_* fields remain null until a candidate
+  -- starts emitting a trajectory record.  Per bead 1few -- v0.1 only
+  -- consumes the final answer, trajectory unlocks for free later.
+  runtime_sec         DOUBLE,
+  iter_count          INTEGER,
+  iter_5_residual     DOUBLE,
+  iter_25_residual    DOUBLE,
+  iter_final_residual DOUBLE
 );
 `;
 
@@ -231,8 +243,15 @@ export async function build(): Promise<{ db: string; counts: Record<string, numb
   }
   for (const gr of results) {
     await conn.run(
-      `INSERT INTO grade_results VALUES (?, ?, ?, ?, ?)`,
-      [gr.run_id, gr.case_id, gr.check_name, gr.pass, gr.detail],
+      `INSERT INTO grade_results VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        gr.run_id, gr.case_id, gr.check_name, gr.pass, gr.detail,
+        gr.runtime_sec         ?? null,
+        gr.iter_count          ?? null,
+        gr.iter_5_residual     ?? null,
+        gr.iter_25_residual    ?? null,
+        gr.iter_final_residual ?? null,
+      ],
     );
   }
 

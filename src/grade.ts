@@ -47,6 +47,17 @@ export interface GradeResult {
   check_name: string;
   pass: boolean;
   detail: string;
+  // Trajectory checkpoints reserved per ADR-0030 §F / bead 1few.  v0.1
+  // populates only `runtime_sec` (measured in the runner around the
+  // candidate spawn); iter_* fields are reserved for future trajectory-
+  // emitting candidates and remain null until then.  All five are
+  // per-(run, case): every check row for the same case carries identical
+  // values (denormalisation matches the bead's literal placement).
+  runtime_sec?:         number | null;
+  iter_count?:          number | null;
+  iter_5_residual?:     number | null;
+  iter_25_residual?:    number | null;
+  iter_final_residual?: number | null;
 }
 
 interface SpawnOk  { ok: true; stdout: string }
@@ -137,10 +148,12 @@ export async function gradeAdapterAgainstSuite(adapter: AdapterDoc, suite: Bench
     // The adapter's own TOML env overrides these, and process.env (from
     // spawnPipe) provides the rest of the host environment.
     const candidateEnv = { ...adapterVars, ...(adapter.adapter.env ?? {}) };
+    const t0 = performance.now();
     const candResp = await spawnPipe(candidateCmd, candidateArgs, candidateInput, candidateCwd, candidateEnv, TIMEOUT_MS);
+    const runtimeSec = (performance.now() - t0) / 1000;
     if (!candResp.ok) {
       // Synthesise a single-check failure row so the verdict is captured.
-      results.push({ run_id: runId, case_id: c.id, check_name: "_candidate_exec", pass: false, detail: `${candResp.reason}: ${candResp.stderr?.slice(0, 500) ?? ""}` });
+      results.push({ run_id: runId, case_id: c.id, check_name: "_candidate_exec", pass: false, detail: `${candResp.reason}: ${candResp.stderr?.slice(0, 500) ?? ""}`, runtime_sec: runtimeSec });
       invariantsTotal += 1;
       process.stderr.write(`  FAIL  ${c.id}: ${candResp.reason}\n`);
       continue;
@@ -149,7 +162,7 @@ export async function gradeAdapterAgainstSuite(adapter: AdapterDoc, suite: Bench
     let candidateValue: unknown;
     try { candidateValue = JSON.parse(candResp.stdout); }
     catch (e) {
-      results.push({ run_id: runId, case_id: c.id, check_name: "_candidate_json", pass: false, detail: `candidate stdout not JSON: ${(e as Error).message}` });
+      results.push({ run_id: runId, case_id: c.id, check_name: "_candidate_json", pass: false, detail: `candidate stdout not JSON: ${(e as Error).message}`, runtime_sec: runtimeSec });
       invariantsTotal += 1;
       process.stderr.write(`  FAIL  ${c.id}: candidate stdout not JSON\n`);
       continue;
@@ -158,7 +171,7 @@ export async function gradeAdapterAgainstSuite(adapter: AdapterDoc, suite: Bench
     const verifierPayload = enc.encode(JSON.stringify({ input: c.input, candidate: candidateValue, id: c.id }));
     const vResp = await spawnPipe(verifierCmd, verifierArgs, verifierPayload, verifierCwd, suite.verifier.env, TIMEOUT_MS);
     if (!vResp.ok) {
-      results.push({ run_id: runId, case_id: c.id, check_name: "_verifier_exec", pass: false, detail: `${vResp.reason}: ${vResp.stderr?.slice(0, 500) ?? ""}` });
+      results.push({ run_id: runId, case_id: c.id, check_name: "_verifier_exec", pass: false, detail: `${vResp.reason}: ${vResp.stderr?.slice(0, 500) ?? ""}`, runtime_sec: runtimeSec });
       invariantsTotal += 1;
       process.stderr.write(`  FAIL  ${c.id}: verifier crashed (${vResp.reason})\n`);
       continue;
@@ -167,14 +180,24 @@ export async function gradeAdapterAgainstSuite(adapter: AdapterDoc, suite: Bench
     let verdict: VerifierVerdict;
     try { verdict = JSON.parse(vResp.stdout) as VerifierVerdict; }
     catch (e) {
-      results.push({ run_id: runId, case_id: c.id, check_name: "_verifier_json", pass: false, detail: `verifier stdout not JSON: ${(e as Error).message}` });
+      results.push({ run_id: runId, case_id: c.id, check_name: "_verifier_json", pass: false, detail: `verifier stdout not JSON: ${(e as Error).message}`, runtime_sec: runtimeSec });
       invariantsTotal += 1;
       process.stderr.write(`  FAIL  ${c.id}: verifier stdout not JSON\n`);
       continue;
     }
 
+    // Optional trajectory fields are read off the candidate's response if
+    // present.  Today no candidate emits them; reserved per ADR-0030 §F.
+    const traj = (candidateValue as { trajectory?: Record<string, number> } | null)?.trajectory ?? {};
+    const trajFields = {
+      runtime_sec:         runtimeSec,
+      iter_count:          traj.iter_count          ?? null,
+      iter_5_residual:     traj.iter_5_residual     ?? null,
+      iter_25_residual:    traj.iter_25_residual    ?? null,
+      iter_final_residual: traj.iter_final_residual ?? null,
+    };
     for (const [name, ck] of Object.entries(verdict.checks)) {
-      results.push({ run_id: runId, case_id: c.id, check_name: name, pass: ck.pass, detail: ck.detail });
+      results.push({ run_id: runId, case_id: c.id, check_name: name, pass: ck.pass, detail: ck.detail, ...trajFields });
       invariantsTotal += 1;
       if (ck.pass) invariantsPassed += 1;
     }
