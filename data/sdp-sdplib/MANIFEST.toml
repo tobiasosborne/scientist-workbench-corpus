@@ -1,0 +1,22 @@
+# MANIFEST.toml — provenance for sdp-sdplib raw data
+#
+# SDPLIB 1.2 (Borchers 1999): data/sdp-sdplib/raw/<problem>.dat-s
+# Sourced from the vsdp/SDPLIB GitHub mirror; per-file SHA-256 ledger
+# in raw/sha256.sum (committed alongside the .dat-s files).
+
+[meta]
+collection    = "SDPLIB 1.2"
+description   = "Borchers (1999) Library of Semidefinite Programming Test Problems. Public SDP benchmark battery; 92 problems originally, this suite ships the 6-problem v0.1 pure-PSD subset (control1/2/3, hinf2, theta1, mcp100). Sourced as SDPA-sparse `.dat-s` files."
+retrieved_at  = "2026-05-11"
+retrieved_by  = "benchmarks/sdp-sdplib/golden/generate.py (initial download via curl)"
+
+[fetch]
+sha256_ledger = "raw/sha256.sum"
+
+[[sources]]
+url_base    = "https://raw.githubusercontent.com/vsdp/SDPLIB/master/data/"
+url_pattern = "<problem-name>.dat-s"
+local_path  = "raw/"
+source_kind = "download"
+file_count  = 10
+note        = "10 SDPLIB problems downloaded for v0.1 evaluation; 6 currently used (pure PSD, fits 600k entry dense gate). arch0 has LP block — deferred to v0.2 (bead 67nj). maxG11, qpG11, theta2 exceed dense gate — deferred to v0.2 sparse wire."

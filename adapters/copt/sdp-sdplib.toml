@@ -1,0 +1,13 @@
+# COPT runs in non-commercial size-limited mode (no license file in
+# the COPT search path; fallback is automatic). The n ≤ 2000 PSD
+# dimension cap comfortably covers the v0.1 SDPLIB set (max block
+# size 100 in mcp100). License-banner output is redirected from fd 1
+# to fd 2 by copt-sdp.py via os.dup2 so the JSON response is clean.
+
+[adapter]
+target          = "copt"
+capability_id   = "sdp-sdplib"
+cmd             = "${CORPUS_ROOT}/adapters/copt/oracles/run-copt.sh"
+args            = ["${CORPUS_ROOT}/adapters/copt/oracles/copt-sdp.py"]
+version         = "8.0.4 (free / size-limited)"
+platform_pinned = true

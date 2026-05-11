@@ -1,0 +1,95 @@
+[meta]
+name        = "sdp-sdplib"
+domain      = "optimisation"
+description = """
+SDPLIB (Borchers 1999), the canonical SDP test set, ingested into
+canonical cone-solver wire form (ADR-0030 §C with PSDCone) and graded
+against a dual-witness oracle (Mosek 11.x + COPT 8.x; Gurobi excluded
+because Gurobi does not support SDP).
+
+The v0.1 set ships 6 pure-PSD SDPLIB classics — control1/2/3 (linear
+matrix inequality / Lyapunov), hinf2 (H-infinity control), theta1
+(Lovász theta function), mcp100 (MAXCUT relaxation). SDPLIB problems
+with LP blocks (truss-*, hinf1, several control-* variants) are
+deferred to v0.2 of tools/sdp-solve (workbench bead 67nj), which will
+reformulate NonNegCone as a diagonal SDP block.
+
+Per-problem invariants (10 checks per case): shape, finite_entries,
+status_consistency, primal_feasibility, primal_psd, dual_feasibility,
+dual_psd, complementary_slackness, optimality_gap, oracle_agreement,
+self_reported_precision. PSD-ness verified by Cholesky factorisation
+with tolerance jitter (M ⪰ 0 iff chol(M + tol·I) succeeds).
+
+Phase 0 of the convex-cone solver epic (workbench bead eg9j,
+ADR-0030 §F). Sibling: lp-netlib + lp-small for LP.
+"""
+ported_from = "scientist-workbench-corpus (new; not a port)"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Candidate record has the seven required fields with correct types; tagged envelopes carry a known tag and a payload record."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_entries"
+description      = "x, dual, slack, objective, achieved_precision contain no NaN and no ±Inf. (A correctly refused case skips this check.)"
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "status_consistency"
+description      = "Candidate status ∈ {optimal, infeasible, unbounded, iter-cap, numerical-breakdown} and agrees with the consensus status from expected.json."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "primal_feasibility"
+description      = "‖A·x − b‖_∞ ≤ 1e-7 · max(1, ‖b‖_∞). Wright 1997 §2.4 KKT residual r_p, computed in svec wire space."
+tolerance_source = "Wright 1997 §2.4 + 1e-7 relative (SDP precision floor)"
+
+[[verifier.checks]]
+name             = "primal_psd"
+description      = "Every PSDCone block X_b ⪰ 0 within numerical tolerance (Cholesky on X_b + 1e-7·I succeeds)."
+tolerance_source = "1e-7 jitter on Cholesky pivot"
+
+[[verifier.checks]]
+name             = "dual_feasibility"
+description      = "‖Aᵀ·y + s − c‖_∞ ≤ 1e-7 · max(1, ‖c‖_∞). Wright 1997 §2.4 KKT residual r_d."
+tolerance_source = "Wright 1997 §2.4 + 1e-7 relative"
+
+[[verifier.checks]]
+name             = "dual_psd"
+description      = "Every PSDCone block S_b ⪰ 0 within numerical tolerance (Cholesky on S_b + 1e-7·I succeeds)."
+tolerance_source = "1e-7 jitter on Cholesky pivot"
+
+[[verifier.checks]]
+name             = "complementary_slackness"
+description      = "|<X, S>_F| ≤ 1e-7 · max(1, |cᵀx|). Wright 1997 §2.4 KKT residual r_c. Computed in svec wire form: <X, S>_F = svec(X)ᵀ svec(S) by Mosek-format design."
+tolerance_source = "Wright 1997 §2.4 + 1e-7 relative"
+
+[[verifier.checks]]
+name             = "optimality_gap"
+description      = "|cᵀ·x − bᵀ·y| ≤ 1e-7 · max(1, |cᵀ·x|). Duality gap derived from the candidate's own (x, y)."
+tolerance_source = "1e-7 relative"
+
+[[verifier.checks]]
+name             = "oracle_agreement"
+description      = "|candidate.objective − consensus.objective| ≤ 1e-5 · max(1, |consensus.objective|). Looser than LP's 1e-8 because SDP IPMs reach 1e-7 in feasibility but objective agreement between Mosek and COPT routinely drifts at 1e-5 to 1e-6 (Tütüncü-Toh-Todd 2003, Borchers 1999 Table 2). When Mosek and COPT themselves disagreed at generation, the case is flagged oracle_disagreement and dropped from gating."
+tolerance_source = "consensus snapshot ± 1e-5 relative (SDP precision floor)"
+
+[[verifier.checks]]
+name             = "self_reported_precision"
+description      = "Candidate's achieved_precision is within 2× of the verifier's recomputation of max(r_p, r_d, r_c) — captures order-of-magnitude lies while tolerating float64 summation-order drift between candidate and verifier formulas."
+tolerance_source = "claimed ≥ recomputed / 2; honest-scope per CLAUDE.md Rule 8"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "a1fd8eb4284b3ef707ede6cb6e880ee64cf12067e4abbed65c0c9fa8f90b7df4"
+expected         = "golden/expected.json"
+expected_sha256  = "320a1653a54661e040a4181ea751f426f4b0bfcc0a41a554e7b26d610ac946ac"
+n_cases          = 6
+regenerated_at   = "2026-05-11"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"

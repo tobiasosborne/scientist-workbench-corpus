@@ -1,0 +1,7 @@
+[adapter]
+target          = "mosek"
+capability_id   = "sdp-sdplib"
+cmd             = "python3"
+args            = ["${CORPUS_ROOT}/adapters/mosek/oracles/mosek-sdp.py"]
+version         = "11.x"
+platform_pinned = true

@@ -1,0 +1,11 @@
+# Bridges raw JSON ↔ canonical Value protocol and invokes
+# wb.run(CANDIDATE_TOOL, …). Defaults to CANDIDATE_TOOL=sdp-solve;
+# override via env to A/B against tools/cone-solve when it ships.
+
+[adapter]
+target          = "scientist-workbench"
+capability_id   = "sdp-sdplib"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+version         = "0.1.0"
+platform_pinned = true
