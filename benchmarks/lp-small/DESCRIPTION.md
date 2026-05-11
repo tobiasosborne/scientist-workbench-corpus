@@ -61,19 +61,21 @@ bit-identically — `rng_seed`, `dimensions`, `parameters`. The
 suite's `golden/generate.py` is reproducible from `meta.generator`
 alone; the generated outputs are pinned by sha256.
 
-## Case taxonomy (~40 problems)
+## Case taxonomy (29 problems)
 
 Eight families. Counts are the v0.1 floor; the suite expands
 additively as new pathologies surface in real candidate-debugging
 sessions.
 
-### Family A — Random dense, well-conditioned (16 problems)
+### Family A — Random dense, well-conditioned (10 problems)
 
-Seeded `random_dense`, sizes (m, n) ∈ {10, 25, 50, 100}², with the
-m ≤ n constraint (more variables than equality constraints → bounded
-non-empty feasible polytope generically). Eigenvalue spread of `Aᵀ A`
-bounded in [1, 10] by construction. The "easy baseline" family —
-any reasonable solver passes all of these.
+Seeded `random_dense`, sizes (m, n) drawn from {10, 25, 50, 100}²
+with the `m ≤ n` constraint (more variables than equality constraints
+⟹ bounded non-empty feasible polytope generically). The constraint
+admits 10 of the 16 grid points: (10,10), (10,25), (10,50), (10,100),
+(25,25), (25,50), (25,100), (50,50), (50,100), (100,100).
+Eigenvalue spread of `Aᵀ A` bounded in [1, 10] by construction.
+The "easy baseline" family — any reasonable solver passes all of these.
 
 ### Family B — Klee-Minty cubes (4 problems)
 

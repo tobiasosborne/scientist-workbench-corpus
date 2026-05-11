@@ -1,7 +1,301 @@
 {
   "cases": [
     {
-      "id": "A_minimal_optimal",
+      "id": "A_dense_10x10_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 27.138538483783634,
+          "objective_mosek": 27.138538483783638,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.3091028026153248e-16
+        },
+        "objective": 27.138538483783634
+      }
+    },
+    {
+      "id": "A_dense_10x25_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 12.505898251013438,
+          "objective_mosek": 12.505898251013443,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 4.261245702817787e-16
+        },
+        "objective": 12.505898251013441
+      }
+    },
+    {
+      "id": "A_dense_10x50_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 9.267069702508026,
+          "objective_mosek": 9.267069702508023,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 3.8336969428847607e-16
+        },
+        "objective": 9.267069702508024
+      }
+    },
+    {
+      "id": "A_dense_10x100_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 4.4669876205196255,
+          "objective_mosek": 4.466987620519626,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.9883162774397998e-16
+        },
+        "objective": 4.466987620519626
+      }
+    },
+    {
+      "id": "A_dense_25x25_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -34.162661986637815,
+          "objective_mosek": -34.16266198663781,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 2.0798810585604183e-16
+        },
+        "objective": -34.162661986637815
+      }
+    },
+    {
+      "id": "A_dense_25x50_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -26.47730436255636,
+          "objective_mosek": -26.477304362556353,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 2.6835916754612473e-16
+        },
+        "objective": -26.477304362556357
+      }
+    },
+    {
+      "id": "A_dense_25x100_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 14.076647854726646,
+          "objective_mosek": 14.07664785472665,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 2.523835017729432e-16
+        },
+        "objective": 14.076647854726648
+      }
+    },
+    {
+      "id": "A_dense_50x50_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -2.0646608182823876,
+          "objective_mosek": -2.0646608182823805,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 3.441450186240314e-15
+        },
+        "objective": -2.064660818282384
+      }
+    },
+    {
+      "id": "A_dense_50x100_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 12.686288409953402,
+          "objective_mosek": 12.686288409953423,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 1.680261506279382e-15
+        },
+        "objective": 12.686288409953413
+      }
+    },
+    {
+      "id": "A_dense_100x100_s001",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -19.934862963241716,
+          "objective_mosek": -19.934862963241734,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 8.910805369847328e-16
+        },
+        "objective": -19.934862963241727
+      }
+    },
+    {
+      "id": "B_klee_minty_n3",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -1000.0,
+          "objective_mosek": -1000.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": -1000.0
+      }
+    },
+    {
+      "id": "B_klee_minty_n5",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -100000.0,
+          "objective_mosek": -100000.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": -100000.0
+      }
+    },
+    {
+      "id": "B_klee_minty_n8",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -100000000.0,
+          "objective_mosek": -100000000.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": -100000000.0
+      }
+    },
+    {
+      "id": "B_klee_minty_n10",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -10000000000.0,
+          "objective_mosek": -10000000000.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": -10000000000.0
+      }
+    },
+    {
+      "id": "C_beale_1955",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": -0.05,
+          "objective_mosek": -0.05,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": -0.05
+      }
+    },
+    {
+      "id": "D_transport_3x4",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 384.0,
+          "objective_mosek": 384.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": 384.0
+      }
+    },
+    {
+      "id": "D_transport_5x8",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 365.0,
+          "objective_mosek": 365.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": 365.0
+      }
+    },
+    {
+      "id": "D_assign_4job",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 8.0,
+          "objective_mosek": 8.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": 8.0
+      }
+    },
+    {
+      "id": "D_assign_6job",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 24.0,
+          "objective_mosek": 24.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": 24.0
+      }
+    },
+    {
+      "id": "E_multiple_optima_zero_obj",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 0.0,
+          "objective_mosek": 0.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": 0.0
+      }
+    },
+    {
+      "id": "E_multiple_optima_flat_face_2d",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 1.0,
+          "objective_mosek": 1.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": 1.0
+      }
+    },
+    {
+      "id": "E_multiple_optima_simplex_3d",
       "expected": {
         "status": "optimal",
         "consensus": {
@@ -26,6 +320,17 @@
       }
     },
     {
+      "id": "F_infeasible_3var_sum",
+      "expected": {
+        "status": "infeasible",
+        "consensus": {
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rationale": "status-only consensus (infeasible)"
+        }
+      }
+    },
+    {
       "id": "G_unbounded_simple",
       "expected": {
         "status": "unbounded",
@@ -33,6 +338,53 @@
           "agreement": true,
           "agreement_tol": 1e-08,
           "rationale": "status-only consensus (unbounded)"
+        }
+      }
+    },
+    {
+      "id": "G_unbounded_ray_x1_eq_x2",
+      "expected": {
+        "status": "unbounded",
+        "consensus": {
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rationale": "status-only consensus (unbounded)"
+        }
+      }
+    },
+    {
+      "id": "H_empty_problem",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 0.0,
+          "objective_mosek": 0.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": 0.0
+      }
+    },
+    {
+      "id": "H_malformed_cone",
+      "expected": {
+        "status": "numerical-breakdown",
+        "consensus": {
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rationale": "status-only consensus (numerical-breakdown)"
+        }
+      }
+    },
+    {
+      "id": "H_non_finite_input",
+      "expected": {
+        "status": "numerical-breakdown",
+        "consensus": {
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rationale": "status-only consensus (numerical-breakdown)"
         }
       }
     }

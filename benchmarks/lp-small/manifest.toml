@@ -88,9 +88,9 @@ tolerance_source = "duality of infeasibility + 1e-8 absolute"
 
 [golden]
 inputs           = "golden/inputs.json"
-inputs_sha256    = "0000000000000000000000000000000000000000000000000000000000000000"
+inputs_sha256    = "0d3205048798df5d643a3e929d01be2e2b2e62e47f58e89f6ec180fe1951b31f"
 expected         = "golden/expected.json"
-expected_sha256  = "0000000000000000000000000000000000000000000000000000000000000000"
-n_cases          = 40
-regenerated_at   = "PENDING-generation"
+expected_sha256  = "4b1abec32575beec041f332e01cb69b7118d8dbf942c58112ea6816859050bf5"
+n_cases          = 29
+regenerated_at   = "2026-05-11"
 generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"
