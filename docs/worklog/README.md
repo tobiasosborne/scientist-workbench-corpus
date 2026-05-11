@@ -14,3 +14,5 @@ Acceptance → Pointers**.
 | 001 | [Tracer-bullet end-to-end](001-tracer-bullet.md)                     | 2026-05-06 |
 | 002 | [Ground-truth source archives](002-ground-truth-archives.md)         | 2026-05-06 |
 | 003 | [wolfram-v1 ingestor end-to-end](003-wolfram-v1-ingestor.md)         | 2026-05-06 |
+| 004 | [lp-netlib + lp-small tracer-bullet](004-lp-suites-tracer.md)        | 2026-05-11 |
+| 005 | [LP suites Phase 0 close-out](005-lp-phase-0-close.md)               | 2026-05-11 |
