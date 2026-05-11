@@ -1,0 +1,96 @@
+[meta]
+name        = "lp-small"
+domain      = "optimisation"
+description = """
+Small linear programs (n ≤ 100) for the resource-limited regime.
+Companion suite to lp-netlib, covering algorithmic pathologies
+(Klee-Minty cycling, Beale degeneracy, multiple optima),
+status-taxonomy edges (infeasible / unbounded / numerical-breakdown),
+and the boundary-tag refusal envelope that NETLIB does not exercise.
+
+Eight families totalling ~40 problems: random dense well-conditioned,
+Klee-Minty cubes, Beale's cycling LP, transportation/assignment,
+degenerate/multi-optimum, near-infeasible, unbounded, boundary tags.
+
+Same wire format and verifier protocol as lp-netlib (ADR-0030 §C).
+Same dual-witness oracle pattern (Gurobi + Mosek; COPT additive).
+"""
+ported_from = "scientist-workbench-corpus (new; not a port)"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+# Checks are identical to lp-netlib — same verifier definitions,
+# same tolerances. The verifier.ts may be a symlink or a thin
+# re-export; see golden/verifier_protocol.md for shared semantics.
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Candidate record has the seven required fields with correct types; tagged envelopes carry a known tag and a payload record."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_entries"
+description      = "x, dual, slack, objective, achieved_precision contain no NaN and no ±Inf. (A correctly refused case skips this check.)"
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "status_consistency"
+description      = "Candidate status agrees with the consensus status from expected.json; tagged refusal acceptable only on known-pathological cases."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "primal_feasibility"
+description      = "‖A·x − b‖_∞ ≤ 1e-8 · max(1, ‖b‖_∞).  Wright 1997 §2.4 KKT residual r_p."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 relative"
+
+[[verifier.checks]]
+name             = "primal_nonneg"
+description      = "x_i ≥ −1e-8 for every i in any NonNegCone slice."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 absolute"
+
+[[verifier.checks]]
+name             = "dual_feasibility"
+description      = "‖Aᵀ·y + s − c‖_∞ ≤ 1e-8 · max(1, ‖c‖_∞) and s_i ≥ −1e-8."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 relative"
+
+[[verifier.checks]]
+name             = "complementary_slackness"
+description      = "|xᵀ·s| ≤ 1e-8 · max(1, |cᵀ·x|)."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 relative"
+
+[[verifier.checks]]
+name             = "optimality_gap"
+description      = "|cᵀ·x − bᵀ·y| ≤ 1e-8 · max(1, |cᵀ·x|).  Duality gap from candidate's own (x, y)."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 relative"
+
+[[verifier.checks]]
+name             = "oracle_agreement"
+description      = "|candidate.objective − consensus.objective| ≤ 1e-8 · max(1, |consensus.objective|) when oracles agreed at generation time."
+tolerance_source = "consensus snapshot ± 1e-8 relative"
+
+[[verifier.checks]]
+name             = "self_reported_precision"
+description      = "Candidate's achieved_precision is at least as large as the verifier's recomputation of max(r_p, r_d, r_c)."
+tolerance_source = "self-report ≥ recomputed; honest-scope per CLAUDE.md Rule 8"
+
+[[verifier.checks]]
+name             = "infeasibility_certificate"
+description      = "For status=infeasible cases: candidate supplies a Farkas certificate y with Aᵀy ≤ 1e-8, bᵀy ≥ 1.  Surfaced via candidate.dual on infeasible-status records."
+tolerance_source = "Farkas lemma + 1e-8 absolute"
+
+[[verifier.checks]]
+name             = "unboundedness_certificate"
+description      = "For status=unbounded cases: candidate supplies an unbounded-direction d ≥ −1e-8 with ‖A·d‖_∞ ≤ 1e-8 · max(1, ‖d‖_∞) and cᵀd ≤ −1.  Surfaced via candidate.x on unbounded-status records (the ray)."
+tolerance_source = "duality of infeasibility + 1e-8 absolute"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "0000000000000000000000000000000000000000000000000000000000000000"
+expected         = "golden/expected.json"
+expected_sha256  = "0000000000000000000000000000000000000000000000000000000000000000"
+n_cases          = 40
+regenerated_at   = "PENDING-generation"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"

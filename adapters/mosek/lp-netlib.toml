@@ -1,0 +1,7 @@
+[adapter]
+target          = "mosek"
+capability_id   = "lp-netlib"
+cmd             = "python3"
+args            = ["${CORPUS_ROOT}/adapters/mosek/oracles/mosek-lp.py"]
+version         = "11.1.6"
+platform_pinned = true

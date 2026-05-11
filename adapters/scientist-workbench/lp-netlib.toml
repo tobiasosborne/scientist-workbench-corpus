@@ -1,0 +1,17 @@
+[adapter]
+# INERT adapter — points at tools that do not yet exist.  Filed early per
+# ADR-0030 §F so that the bench is structurally complete before the
+# candidate solver lands (epic scientist-workbench-eg9j: bench before tool).
+# Activate by either:
+#   1. Building tools/cone-solve (bead scientist-workbench-2ivi).
+#   2. Building tools/lp-solve   (bead scientist-workbench-wx3m).
+#      Then update the args= line below to point at the candidate
+#      tool's run-candidate.ts in the workbench bench/<tool>/.
+
+target          = "scientist-workbench"
+capability_id   = "lp-netlib"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "PENDING-tools/lp-solve"
+platform_pinned = true

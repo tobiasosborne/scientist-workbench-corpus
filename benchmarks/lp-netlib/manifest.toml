@@ -1,0 +1,83 @@
+[meta]
+name        = "lp-netlib"
+domain      = "optimisation"
+description = """
+The 114-problem NETLIB LP collection, ingested once into canonical
+SCS form (ADR-0030 §C: min cᵀx s.t. Ax = b, x ∈ NonNegCone) and
+graded against a dual-witness oracle (Gurobi 13.0.1 + Mosek 11.1.6).
+
+Per-problem invariants enforce primal feasibility, dual feasibility,
+complementary slackness, optimality gap, and oracle agreement — the
+five KKT residuals plus the consensus check. Eight checks per
+optimal-status case, fewer for infeasible / unbounded paths.
+
+Phase 0 of the convex-cone solver epic (scientist-workbench-eg9j,
+ADR-0030 §F). Sibling: lp-small/ covers the 10-100 var resource-
+limited regime; this suite covers the canonical NETLIB sizes
+(n ∈ [32, 13525]).
+"""
+ported_from = "scientist-workbench-corpus (new; not a port)"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name             = "shape"
+description      = "Candidate record has the seven required fields with correct types; tagged envelopes carry a known tag and a payload record."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "finite_entries"
+description      = "x, dual, slack, objective, achieved_precision contain no NaN and no ±Inf. (A correctly refused case skips this check.)"
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "status_consistency"
+description      = "Candidate status ∈ {optimal, infeasible, unbounded, iter-cap, numerical-breakdown} and agrees with the consensus status from expected.json."
+tolerance_source = "structural — no tolerance"
+
+[[verifier.checks]]
+name             = "primal_feasibility"
+description      = "‖A·x − b‖_∞ ≤ 1e-8 · max(1, ‖b‖_∞).  Wright 1997 §2.4 KKT residual r_p."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 relative"
+
+[[verifier.checks]]
+name             = "primal_nonneg"
+description      = "x_i ≥ −1e-8 for every i in any NonNegCone slice.  The −ε allowance absorbs round-off; truly negative entries indicate a contract violation."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 absolute"
+
+[[verifier.checks]]
+name             = "dual_feasibility"
+description      = "‖Aᵀ·y + s − c‖_∞ ≤ 1e-8 · max(1, ‖c‖_∞) and s_i ≥ −1e-8.  Wright 1997 §2.4 KKT residual r_d."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 relative"
+
+[[verifier.checks]]
+name             = "complementary_slackness"
+description      = "|xᵀ·s| ≤ 1e-8 · max(1, |cᵀ·x|).  Wright 1997 §2.4 KKT residual r_c."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 relative"
+
+[[verifier.checks]]
+name             = "optimality_gap"
+description      = "|cᵀ·x − bᵀ·y| ≤ 1e-8 · max(1, |cᵀ·x|).  The duality gap derived from the candidate's own (x, y)."
+tolerance_source = "Wright 1997 §2.4 + 1e-8 relative"
+
+[[verifier.checks]]
+name             = "oracle_agreement"
+description      = "|candidate.objective − consensus.objective| ≤ 1e-8 · max(1, |consensus.objective|).  Only checked when expected.consensus.agreement is true.  When Gurobi and Mosek themselves disagreed, the case is flagged oracle_disagreement and dropped from the gating set."
+tolerance_source = "consensus snapshot ± 1e-8 relative"
+
+[[verifier.checks]]
+name             = "self_reported_precision"
+description      = "Candidate's achieved_precision is at least as large as the verifier's recomputation of max(r_p, r_d, r_c) — the candidate is not lying about its own residual."
+tolerance_source = "self-report ≥ recomputed; honest-scope per CLAUDE.md Rule 8"
+
+[golden]
+inputs           = "golden/inputs.json"
+inputs_sha256    = "0000000000000000000000000000000000000000000000000000000000000000"
+expected         = "golden/expected.json"
+expected_sha256  = "0000000000000000000000000000000000000000000000000000000000000000"
+n_cases          = 114
+regenerated_at   = "PENDING-generation"
+generate_cmd     = "python3 ${SUITE_ROOT}/golden/generate.py"

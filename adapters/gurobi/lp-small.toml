@@ -1,0 +1,7 @@
+[adapter]
+target          = "gurobi"
+capability_id   = "lp-small"
+cmd             = "python3"
+args            = ["${CORPUS_ROOT}/adapters/gurobi/oracles/gurobi-lp.py"]
+version         = "13.0.1"
+platform_pinned = true

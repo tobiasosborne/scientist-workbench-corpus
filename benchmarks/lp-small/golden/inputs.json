@@ -1,0 +1,112 @@
+{
+  "encoding_version": 1,
+  "seed": 20260511,
+  "problem": "lp-small \u2014 small linear programs (n \u2264 100) for the resource-limited regime",
+  "cases": [
+    {
+      "id": "A_minimal_optimal",
+      "input": {
+        "minimize": {
+          "c": [
+            1.0,
+            2.0
+          ]
+        },
+        "subjectTo": {
+          "Ax_eq_b": {
+            "A": [
+              [
+                1.0,
+                1.0
+              ]
+            ],
+            "b": [
+              1.0
+            ]
+          },
+          "cones": [
+            {
+              "head": "NonNegCone",
+              "indices": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        "precision": 1e-08
+      },
+      "meta": {
+        "family": "A_random_dense",
+        "expected_status": "optimal",
+        "comment": "tracer \u2014 minimal LP for closing the validate\u2192grade loop"
+      }
+    },
+    {
+      "id": "F_infeasible_simple",
+      "input": {
+        "minimize": {
+          "c": [
+            0.0
+          ]
+        },
+        "subjectTo": {
+          "Ax_eq_b": {
+            "A": [
+              [
+                1.0
+              ],
+              [
+                1.0
+              ]
+            ],
+            "b": [
+              1.0,
+              2.0
+            ]
+          },
+          "cones": [
+            {
+              "head": "NonNegCone",
+              "indices": [
+                0
+              ]
+            }
+          ]
+        },
+        "precision": 1e-08
+      },
+      "meta": {
+        "family": "F_near_infeasible",
+        "expected_status": "infeasible",
+        "comment": "tracer \u2014 exactly-infeasible LP (two contradicting equalities)"
+      }
+    },
+    {
+      "id": "G_unbounded_simple",
+      "input": {
+        "minimize": {
+          "c": [
+            -1.0
+          ]
+        },
+        "subjectTo": {
+          "cones": [
+            {
+              "head": "NonNegCone",
+              "indices": [
+                0
+              ]
+            }
+          ]
+        },
+        "precision": 1e-08
+      },
+      "meta": {
+        "family": "G_unbounded",
+        "expected_status": "unbounded",
+        "comment": "tracer \u2014 primal-unbounded LP (no equality constraints)"
+      }
+    }
+  ]
+}

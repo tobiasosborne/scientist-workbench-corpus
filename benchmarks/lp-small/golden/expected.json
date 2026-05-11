@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "id": "A_minimal_optimal",
+      "expected": {
+        "status": "optimal",
+        "consensus": {
+          "objective_gurobi": 1.0,
+          "objective_mosek": 1.0,
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rel_diff": 0.0
+        },
+        "objective": 1.0
+      }
+    },
+    {
+      "id": "F_infeasible_simple",
+      "expected": {
+        "status": "infeasible",
+        "consensus": {
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rationale": "status-only consensus (infeasible)"
+        }
+      }
+    },
+    {
+      "id": "G_unbounded_simple",
+      "expected": {
+        "status": "unbounded",
+        "consensus": {
+          "agreement": true,
+          "agreement_tol": 1e-08,
+          "rationale": "status-only consensus (unbounded)"
+        }
+      }
+    }
+  ]
+}
