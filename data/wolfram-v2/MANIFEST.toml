@@ -1,4 +1,9 @@
-# MANIFEST.toml — provenance for wolfram-v1 ground-truth source
+# MANIFEST.toml — provenance for wolfram-v2 ground-truth source
+#
+# Naming note: Wolfram's legacy public URL labels these PDFs
+# "v1 documentation"; the content is 2nd-edition (1991), hence
+# wolfram-v2 in this corpus. This single line preserves the
+# v1-URL string for source-traceability grep.
 #
 # The Wolfram legacy v1 reference site (reference.wolfram.com/legacy/v1/)
 # documents Mathematica software v1 (1988). The actual document bytes
@@ -21,13 +26,13 @@
 
 [meta]
 system        = "mathematica"
-version       = "1"
-description   = "Mathematica software v1 (1988) — capability surface as documented in Stephen Wolfram, 'Mathematica: A System for Doing Mathematics by Computer', Second Edition, Addison-Wesley 1991. The Wolfram legacy reference at reference.wolfram.com/legacy/v1/ serves the 2nd-ed text (footer: '1991 Wolfram Research'); the 1st-ed (1988) text is not online. 48 section HTMLs + 915 per-function PDFs."
+version       = "2"
+description   = "Mathematica capability surface as documented in Stephen Wolfram, 'Mathematica: A System for Doing Mathematics by Computer', Second Edition, Addison-Wesley 1991. Wolfram's legacy public reference at reference.wolfram.com/legacy/v1/ labels this 'v1 documentation' but serves the 2nd-ed text (footer: '1991 Wolfram Research'); the 1st-ed (1988) text is not online, so wolfram-v2 in this corpus reflects the actual documentation edition. 48 section HTMLs + 915 per-function PDFs."
 retrieved_at  = "2026-05-06"
-retrieved_by  = "scripts/fetch_wolfram_v1.sh"
+retrieved_by  = "scripts/fetch_wolfram_v2.sh"
 
 [fetch]
-script               = "scripts/fetch_wolfram_v1.sh"
+script               = "scripts/fetch_wolfram_v2.sh"
 sha256_ledger        = "raw/sha256.sum"
 sha256_ledger_sha256 = "f1e55d6d837ed1e75a1236e931cf09a2221b370e2da264c8fe2caaafb3b5d4ad"
 sleep_between_ms     = 200

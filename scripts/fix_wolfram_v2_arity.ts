@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 // =============================================================================
-// scripts/fix_wolfram_v1_arity.ts — surgical arity correction.
+// scripts/fix_wolfram_v2_arity.ts — surgical arity correction.
 // =============================================================================
 //
 // Targeted fix for bead scientist-workbench-corpus-3pu: the wolfram-v1
@@ -30,7 +30,7 @@ import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const ROOT = join(import.meta.dir, "..");
-const CAPS = join(ROOT, "capabilities/wolfram-v1");
+const CAPS = join(ROOT, "capabilities/wolfram-v2");
 
 // (name, true_arity). Bessel family — all four are Bessel<X>[n, z], arity 2.
 const TARGETS: Array<[string, number]> = [

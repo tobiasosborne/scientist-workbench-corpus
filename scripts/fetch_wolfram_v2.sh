@@ -2,9 +2,9 @@
 # Fetches the complete Mathematica v1 (1988) legacy reference from
 # reference.wolfram.com/legacy/v1/. Two artefacts:
 #
-#   data/wolfram-v1/raw/contents/<section>.html  — TOC + section pages
+#   data/wolfram-v2/raw/contents/<section>.html  — TOC + section pages
 #                                                  (1.0..4.2, A.0..A.6, B.0..B.8)
-#   data/wolfram-v1/raw/contents/<file>.pdf      — per-function reference PDFs
+#   data/wolfram-v2/raw/contents/<file>.pdf      — per-function reference PDFs
 #                                                  (list1.pdf .. list581.pdf,
 #                                                  plus B.x.<n>.pdf prose chunks)
 #
@@ -12,14 +12,14 @@
 # Polite: 200ms sleep between requests, custom UA.
 #
 # Usage:
-#   scripts/fetch_wolfram_v1.sh
+#   scripts/fetch_wolfram_v2.sh
 #
 # Re-run is safe; only missing files are fetched.
 
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-RAW="${ROOT}/data/wolfram-v1/raw"
+RAW="${ROOT}/data/wolfram-v2/raw"
 DEST="${RAW}/contents"
 BASE="https://reference.wolfram.com/legacy/v1/contents"
 UA="Mozilla/5.0 (X11; Linux x86_64) Gecko/20100101 Firefox/126.0"
