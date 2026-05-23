@@ -1,0 +1,23 @@
+# =============================================================================
+# erf-anchor — scipy replay adapter (bronze tier, float64)
+# =============================================================================
+#
+# Grades SciPy's `scipy.special.{erf,erfc,erfcx,erfi,erfinv,erfcinv}`
+# outputs at float64 (committed snapshot, bead scientist-workbench-1f8r,
+# 2026-05-16) against the gold-tier consensus.  Pre-computed-oracle
+# pattern (see wolfram/erf-anchor.toml).
+#
+# scipy refused 0/271 cases — Cephes returns a float64 answer for every
+# input (NaN ⇒ NaN, ±Inf ⇒ saturation, etc).  At the bronze tier, scipy's
+# float64 values will not meet the gold-tier 1e-48/1e-46/1e-44 tolerances;
+# this adapter is included to record the bronze oracle's snapshot and
+# future-proof a per-tier rescoring layer (ADR-0040 §Decision 8 — bronze
+# tier compared via ≤ 4 ULP, not relative tolerance).
+
+[adapter]
+target          = "scipy"
+capability_id   = "erf-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/scipy/oracles/erf-anchor-replay.ts"]
+version         = "scipy 1.17.0 / numpy 1.26.4 / python 3.12.3 (snapshot 2026-05-16)"
+platform_pinned = false

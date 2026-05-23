@@ -1,0 +1,3903 @@
+{
+  "manifest_version": 1,
+  "generated_at": "2026-05-16T21:15:51.698Z",
+  "bead": "scientist-workbench-ufgd",
+  "adr": "0040",
+  "oracle_id": "wolfram",
+  "oracle_tier": "gold",
+  "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+  "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+  "method": "wolfram-N-at-60-decimal",
+  "achieved_precision": 60,
+  "notes": [
+    "Erfcx is computed as Erfc[z] * Exp[z^2] (Wolfram 14.3's Erfcx N[] is partial).",
+    "Decimal inputs are always wrapped as Rational[num,den] to dodge the MachinePrecision input-trap (R5 §3.1).",
+    "Refusal records (refusal.class = 'wolfram/symbolic-unevaluated') mark inputs Wolfram declined to evaluate numerically."
+  ],
+  "total_inputs": 271,
+  "total_elapsed_ms": 10043,
+  "results": [
+    {
+      "input_id": "T1-erf-001",
+      "head": "Erf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T1-erf-002",
+      "head": "Erf",
+      "z": "0.001000000000000000020816681711721685132943093776702880859375",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.00112837879096923640343756413937148964182349907688256527384063117900939235056"
+    },
+    {
+      "input_id": "T1-erf-003",
+      "head": "Erf",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.11246291601828489840471225101430406172339251850581620222199052887325924142896"
+    },
+    {
+      "input_id": "T1-erf-004",
+      "head": "Erf",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.52049987781304653768274665389196452873645157575796370005880572564282273040212"
+    },
+    {
+      "input_id": "T1-erf-005",
+      "head": "Erf",
+      "z": "0.839999999999999968913755310495616868138313293457031250000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.76514271145499451734205899925462769938977084264432878146448833047593455133173"
+    },
+    {
+      "input_id": "T1-erf-006",
+      "head": "Erf",
+      "z": "0.348249030852806285007972064704517833888530731201171875000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.37763301971155578582454829844143610118880806260047322637754834635870137883263"
+    },
+    {
+      "input_id": "T1-erf-007",
+      "head": "Erf",
+      "z": "0.248968295813057682863700392772443592548370361328125000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.27523248741905915962725156916045478194009761981566837551128710398797217834638"
+    },
+    {
+      "input_id": "T1-erf-008",
+      "head": "Erf",
+      "z": "0.068607192108690359666489655410259729251265525817871093750000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.07729363496503425132464461727363324414887053782122861930400830192943285764577"
+    },
+    {
+      "input_id": "T1-erf-009",
+      "head": "Erf",
+      "z": "0.457770278592486978830322641442762687802314758300781250000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.48261715737057560543878025363521484844063311564356520137206303993781522906827"
+    },
+    {
+      "input_id": "T1-erf-010",
+      "head": "Erf",
+      "z": "0.829117937939762073007443632377544417977333068847656250000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.75902362267113477806467985617730859985541913530831649218939158885996953203456"
+    },
+    {
+      "input_id": "T1-erf-011",
+      "head": "Erf",
+      "z": "0.551982290256760155244819543440826237201690673828125000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.56497446963742094171385423168220958335615491831397086175870883395436021604199"
+    },
+    {
+      "input_id": "T1-erf-012",
+      "head": "Erf",
+      "z": "0.777132984072497534633328086783876642584800720214843750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.7282458942811533727686718278184057759395845930931424619758757179927197558079"
+    },
+    {
+      "input_id": "T1-erf-013",
+      "head": "Erf",
+      "z": "0.266274163530335783445224251408944837749004364013671875000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.29350572410701276469869562658986561633518718647745153591288737490300816696477"
+    },
+    {
+      "input_id": "T1-erf-014",
+      "head": "Erf",
+      "z": "0.480147772841224340645283064077375456690788269042968750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.50288209186652915497199710336673951325838872187714785983069621277614664539087"
+    },
+    {
+      "input_id": "T1-erf-015",
+      "head": "Erf",
+      "z": "0.773142818740169879276891151675954461097717285156250000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.7257769851501034979493281847584402211293806552476234764566120944966386630842"
+    },
+    {
+      "input_id": "T1-erfc-016",
+      "head": "Erfc",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T1-erfc-017",
+      "head": "Erfc",
+      "z": "0.001000000000000000020816681711721685132943093776702880859375",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99887162120903076359656243586062851035817650092311743472615936882099060764944"
+    },
+    {
+      "input_id": "T1-erfc-018",
+      "head": "Erfc",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.88753708398171510159528774898569593827660748149418379777800947112676306735783"
+    },
+    {
+      "input_id": "T1-erfc-019",
+      "head": "Erfc",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.47950012218695346231725334610803547126354842424203629994119427435717726959787"
+    },
+    {
+      "input_id": "T1-erfc-020",
+      "head": "Erfc",
+      "z": "0.839999999999999968913755310495616868138313293457031250000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.23485728854500548265794100074537230061022915735567121853551166944554799750737"
+    },
+    {
+      "input_id": "T1-erfc-021",
+      "head": "Erfc",
+      "z": "0.017003406741192290257957964172419451642781496047973632812500",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.98081555892333959785102696551089928553030079227235445341629875945458987879574"
+    },
+    {
+      "input_id": "T1-erfc-022",
+      "head": "Erfc",
+      "z": "0.091446804092939384944749292571941623464226722717285156250000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.89710024465372043629072893541938174504235193408166625984235554134301666682784"
+    },
+    {
+      "input_id": "T1-erfc-023",
+      "head": "Erfc",
+      "z": "0.028680370277110657506458579746322357095777988433837890625000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.96764653884476478512191654298846707530181020528300527110471227558173615644479"
+    },
+    {
+      "input_id": "T1-erfc-024",
+      "head": "Erfc",
+      "z": "0.110153646408651786914312253884418169036507606506347656250000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.87620582044354762113434254836891890294023192090851625784346207269541680674546"
+    },
+    {
+      "input_id": "T1-erfc-025",
+      "head": "Erfc",
+      "z": "0.026665792030592348760276166785843088291585445404052734375000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.96991800604648837129870113198707159138909314064397361210262858626140767793386"
+    },
+    {
+      "input_id": "T1-erfc-026",
+      "head": "Erfc",
+      "z": "0.304447108723431392185432287078583613038063049316406250000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.66679325439240538091388600870046900314177328318781591538482704160456096413075"
+    },
+    {
+      "input_id": "T1-erfc-027",
+      "head": "Erfc",
+      "z": "0.166385188757621316213430873176548629999160766601562500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.81397264286330259690481293054756655044242616814637906459847862251969127840682"
+    },
+    {
+      "input_id": "T1-erfc-028",
+      "head": "Erfc",
+      "z": "0.339446519138033753204553022442269138991832733154296875000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.63119193188497472880397587380288813137291869669324438620076498592204042153762"
+    },
+    {
+      "input_id": "T1-erfc-029",
+      "head": "Erfc",
+      "z": "0.382925312026834718803769419537275098264217376708984375000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.58813669610914988637977716944240780603342298383545570080040306362141355179894"
+    },
+    {
+      "input_id": "T1-erfc-030",
+      "head": "Erfc",
+      "z": "0.827736847339075376694950136879924684762954711914062500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.2417609342355766473718624158081268105049482994600561502190403808266886870785"
+    },
+    {
+      "input_id": "T2-erf-001",
+      "head": "Erf",
+      "z": "0.843750000000999977878279878495959565043449401855468750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.76722566123289532144842676330850300479541209658716952337081686041869945765576"
+    },
+    {
+      "input_id": "T2-erf-002",
+      "head": "Erf",
+      "z": "1.250000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.92290012825645823013652348119728114042360143870222832979366848746226462266069"
+    },
+    {
+      "input_id": "T2-erf-003",
+      "head": "Erf",
+      "z": "2.857142857142857206298458550008945167064666748046875000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99994668768861167720572933415473599781389429550280498519031871198418784044933"
+    },
+    {
+      "input_id": "T2-erf-004",
+      "head": "Erf",
+      "z": "4.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99999998458274209971998114784032651311595142785474641080883165709500559275055"
+    },
+    {
+      "input_id": "T2-erf-005",
+      "head": "Erf",
+      "z": "6.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99999999999999997848026328750108688340664960081261536952248593831145789947211"
+    },
+    {
+      "input_id": "T2-erf-006",
+      "head": "Erf",
+      "z": "2.347198556283115689069518339238129556179046630859375000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99909801824750791010710598925771997682720935771746549117433582902755690767418"
+    },
+    {
+      "input_id": "T2-erf-007",
+      "head": "Erf",
+      "z": "3.981510342276426861474192264722660183906555175781250000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99999998205264860404047155712092877555022897817660380676863317377271821444343"
+    },
+    {
+      "input_id": "T2-erf-008",
+      "head": "Erf",
+      "z": "2.605732025413649122214110320783220231533050537109375000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99977135263992785497371709726829245864067695280007731517365308984177934306827"
+    },
+    {
+      "input_id": "T2-erf-009",
+      "head": "Erf",
+      "z": "1.610598742259013782529564196011051535606384277343750000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.97725736568818449691374830390301745666872184088743999116911504232330485981133"
+    },
+    {
+      "input_id": "T2-erf-010",
+      "head": "Erf",
+      "z": "5.131887584855727268973168975207954645156860351562500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99999999999960593770731832461435661292040806211107663054708676791790321628257"
+    },
+    {
+      "input_id": "T2-erf-011",
+      "head": "Erf",
+      "z": "5.705608570829783232625231903512030839920043945312500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99999999999999929094138951160519097992616608307183727917234855672548162201711"
+    },
+    {
+      "input_id": "T2-erf-012",
+      "head": "Erf",
+      "z": "0.911322524450403848028656739188591018319129943847656250000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.80253399922096864575988737350778280827647446862079260476080036890507418478997"
+    },
+    {
+      "input_id": "T2-erf-013",
+      "head": "Erf",
+      "z": "1.929577745445807401836191274924203753471374511718750000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.99364415064720801010218508176338363236637671804789373339240799103483139806889"
+    },
+    {
+      "input_id": "T2-erfc-014",
+      "head": "Erfc",
+      "z": "0.843750000000999977878279878495959565043449401855468750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.23277433876710467855157323669149699520458790341283047662918313946427962175559"
+    },
+    {
+      "input_id": "T2-erfc-015",
+      "head": "Erfc",
+      "z": "1.250000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.07709987174354176986347651880271885957639856129777167020633151241137206957564"
+    },
+    {
+      "input_id": "T2-erfc-016",
+      "head": "Erfc",
+      "z": "2.857142857142857206298458550008945167064666748046875000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.0000533123113883227942706658452640021861057044971950148096812875100176751287"
+    },
+    {
+      "input_id": "T2-erfc-017",
+      "head": "Erfc",
+      "z": "4.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.5417257900280018852159673486884048572145253589191168342904994213041027115904090081163861e-8"
+    },
+    {
+      "input_id": "T2-erfc-018",
+      "head": "Erfc",
+      "z": "6.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "2.1519736712498913116593350399187384630477514061688542100527892038740379399945823e-17"
+    },
+    {
+      "input_id": "T2-erfc-019",
+      "head": "Erfc",
+      "z": "5.127350414566393510540365241467952728271484375000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "4.1319127085340234950227099031156229135007171684178568329149240776517730296531888191e-13"
+    },
+    {
+      "input_id": "T2-erfc-020",
+      "head": "Erfc",
+      "z": "3.411861534366319670397160734864883124828338623046875000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.3993243909586530569294592454193875196563851690136352918895151616682387e-6"
+    },
+    {
+      "input_id": "T2-erfc-021",
+      "head": "Erfc",
+      "z": "2.728125396616815301342739985557273030281066894531250000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.00011424762200385426354553322513240298816002362279929245157094739538655260276"
+    },
+    {
+      "input_id": "T2-erfc-022",
+      "head": "Erfc",
+      "z": "1.461020090291751616362603272136766463518142700195312500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.03881012490892022597845062345999827640543611167764394713536425272031736934577"
+    },
+    {
+      "input_id": "T2-erfc-023",
+      "head": "Erfc",
+      "z": "3.660778473141034439208851836156100034713745117187500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "2.253341911287146714994384391868984358705776332841342101658903856897785e-7"
+    },
+    {
+      "input_id": "T2-erfc-024",
+      "head": "Erfc",
+      "z": "5.717676990869304809450568427564576268196105957031250000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "6.16479165983139781709615167196142973761653064366120818924611018306726445634959732e-16"
+    },
+    {
+      "input_id": "T2-erfc-025",
+      "head": "Erfc",
+      "z": "5.546026252203633433168761257547885179519653320312500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "4.389783378314546420258722209366271047659086091019118549182056028944517003159015466e-15"
+    },
+    {
+      "input_id": "T2-erfc-026",
+      "head": "Erfc",
+      "z": "1.593220121577950232349962789157871156930923461914062500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.02424947192408122870804391706789330550293432453571777331398482846763091600246"
+    },
+    {
+      "input_id": "T2-erfcx-027",
+      "head": "Erfcx",
+      "z": "0.843750000000999977878279878495959565043449401855468750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.47436807202658139215991433861290235550539552455248757561744745278722650652547"
+    },
+    {
+      "input_id": "T2-erfcx-028",
+      "head": "Erfcx",
+      "z": "1.250000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.36782291645236109292601110020402468241658478225577658500019353919082485882593"
+    },
+    {
+      "input_id": "T2-erfcx-029",
+      "head": "Erfcx",
+      "z": "2.857142857142857206298458550008945167064666748046875000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.18710637671147069124870042290338535814412174618289081399979000208824389680738"
+    },
+    {
+      "input_id": "T2-erfcx-030",
+      "head": "Erfcx",
+      "z": "4.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.1369994576250613898894451713998054823302492355480653627115098493582397032744"
+    },
+    {
+      "input_id": "T2-erfcx-031",
+      "head": "Erfcx",
+      "z": "6.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.09277656780053835438948670532472992481448699505136245821506569377917398592211"
+    },
+    {
+      "input_id": "T2-erfcx-032",
+      "head": "Erfcx",
+      "z": "2.168488689236570454710317790159024298191070556640625000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.23851859392583850833470409181790815880741377365213947691347870364854486556954"
+    },
+    {
+      "input_id": "T2-erfcx-033",
+      "head": "Erfcx",
+      "z": "4.997518138493187045412469160510227084159851074218750000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.11075760766350897876380194427995386960186675646615959209068700956906656783803"
+    },
+    {
+      "input_id": "T2-erfcx-034",
+      "head": "Erfcx",
+      "z": "5.678063204622857185199791274499148130416870117187500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.09788872890822222683331020131970961266317753025189348671915492618985320187526"
+    },
+    {
+      "input_id": "T2-erfcx-035",
+      "head": "Erfcx",
+      "z": "2.548950349925528602312851944589056074619293212890625000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.20722586571440849633352556828631004184609814679082668461516447315708715689418"
+    },
+    {
+      "input_id": "T2-erfcx-036",
+      "head": "Erfcx",
+      "z": "5.822341255183490105196142394561320543289184570312500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.09553058345911624032751667768226274721965638080341159294981964856752658488057"
+    },
+    {
+      "input_id": "T2-erfcx-037",
+      "head": "Erfcx",
+      "z": "0.994728962273676353689211282471660524606704711914062500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.42902798765941514807911066091795269263470442492786140547230279327255381382327"
+    },
+    {
+      "input_id": "T2-erfcx-038",
+      "head": "Erfcx",
+      "z": "3.241737912633333884571129601681604981422424316406250000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.16672619908063747602092590077147810671613876181510350938286194580702575112492"
+    },
+    {
+      "input_id": "T2-erfcx-039",
+      "head": "Erfcx",
+      "z": "5.410780723677380166236616787500679492950439453125000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.10257484090996036118102180688527819373772057759210095850305643915805363253264"
+    },
+    {
+      "input_id": "T3-erfc-001",
+      "head": "Erfc",
+      "z": "6.000001000000000139777966978726908564567565917968750000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "2.1519474983945326155732834622905788759291031534056923105543177668092990698401161e-17"
+    },
+    {
+      "input_id": "T3-erfc-002",
+      "head": "Erfc",
+      "z": "10.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "2.0884875837625447570007862949577886115608181193211637270122137139261042e-45"
+    },
+    {
+      "input_id": "T3-erfc-003",
+      "head": "Erfc",
+      "z": "11.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.440866137943694680339809702856082753964395230973580405075797246262250447009439576e-54"
+    },
+    {
+      "input_id": "T3-erfc-004",
+      "head": "Erfc",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "5.39586561160790092893499916790534560408827267092360528347010378491070334494e-176"
+    },
+    {
+      "input_id": "T3-erfc-005",
+      "head": "Erfc",
+      "z": "28.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "6.563215840328784152380910481606274774134162689948282618021777806342324947819264318e-343"
+    },
+    {
+      "input_id": "T3-erfc-006",
+      "head": "Erfc",
+      "z": "28.680523864310480064432340441271662712097167968750000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.134746299183397008616944200951438703901919452822414770075554801112778678030054155273e-359"
+    },
+    {
+      "input_id": "T3-erfc-007",
+      "head": "Erfc",
+      "z": "9.567454131118697802094175131060183048248291015625000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.03426239490600841673637505115585152179247427991341663563896072814118664182e-41"
+    },
+    {
+      "input_id": "T3-erfc-008",
+      "head": "Erfc",
+      "z": "10.578363230721262056022169417701661586761474609375000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.3389570585578300243823183248866882849634736577155162724440464699856943172402037735782e-50"
+    },
+    {
+      "input_id": "T3-erfc-009",
+      "head": "Erfc",
+      "z": "16.171510146079356218251632526516914367675781250000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "9.2498886711980371980337267303163986176913275975365208479413366470947587048337e-116"
+    },
+    {
+      "input_id": "T3-erfc-010",
+      "head": "Erfc",
+      "z": "26.966261396634514824199868598952889442443847656250000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "3.23868699889321088894040072375005561037915865542519987385349964230230117692403338496724e-318"
+    },
+    {
+      "input_id": "T3-erfc-011",
+      "head": "Erfc",
+      "z": "12.403876944633143608598402352072298526763916015625000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "6.8799427865552217085984689752628971286037365407749736045083230212385650941634670412095e-69"
+    },
+    {
+      "input_id": "T3-erfc-012",
+      "head": "Erfc",
+      "z": "7.543994386468080293184357287827879190444946289062500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.4242479798334702967189742704020533934631219016574244347012613622709982e-26"
+    },
+    {
+      "input_id": "T3-erfc-013",
+      "head": "Erfc",
+      "z": "16.153029200692209599310444900766015052795410156250000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.68295907047303077758417487558598889837426789854919828472403800565466957949018e-115"
+    },
+    {
+      "input_id": "T3-erfc-014",
+      "head": "Erfc",
+      "z": "22.872546613622709799074073089286684989929199218750000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.5454914294674209784721428434788234818863175704549530027844093391745453690548635e-229"
+    },
+    {
+      "input_id": "T3-erfc-015",
+      "head": "Erfc",
+      "z": "20.697586181898408597135130548849701881408691406250000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "2.440927096179373915371272455372225309768010028138237273497917558643154420166612005e-188"
+    },
+    {
+      "input_id": "T3-erfcx-016",
+      "head": "Erfcx",
+      "z": "6.000001000000000139777966978726908564567565917968750000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.09277655274018727767854434159083302206965493000853907802248524829836591752842"
+    },
+    {
+      "input_id": "T3-erfcx-017",
+      "head": "Erfcx",
+      "z": "10.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.05614099274382258585751738722046831156515725665507548351903492024871073646867"
+    },
+    {
+      "input_id": "T3-erfcx-018",
+      "head": "Erfcx",
+      "z": "11.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.05108059475808844370998558301402977200031441462396825283402806716279851834122"
+    },
+    {
+      "input_id": "T3-erfcx-019",
+      "head": "Erfcx",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.02817434874105131931864915453447075835251573225296480740389798765787922682492"
+    },
+    {
+      "input_id": "T3-erfcx-020",
+      "head": "Erfcx",
+      "z": "28.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.02013680196421427677651010336272497534715104732691224344910154185151449325975"
+    },
+    {
+      "input_id": "T3-erfcx-021",
+      "head": "Erfcx",
+      "z": "9.182586418084142110274115111678838729858398437500000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.06108321199434431055239056956605507846656911037179010648277595123105945422646"
+    },
+    {
+      "input_id": "T3-erfcx-022",
+      "head": "Erfcx",
+      "z": "8.628987339618143792563387250993400812149047851562500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.0649525678254717370459279867226725436262431614293816172856517640700372487768"
+    },
+    {
+      "input_id": "T3-erfcx-023",
+      "head": "Erfcx",
+      "z": "21.847870707441060744713468011468648910522460937500000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.02579658462325387494849399199875172537002123353791617228017274183858352687409"
+    },
+    {
+      "input_id": "T3-erfcx-024",
+      "head": "Erfcx",
+      "z": "22.566918887461962839324769447557628154754638671875000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.02497626217809734010308448770239197166302802978278552788822422942508652651743"
+    },
+    {
+      "input_id": "T3-erfcx-025",
+      "head": "Erfcx",
+      "z": "27.741616676441214650594702106900513172149658203125000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.02032411281823424127342149870956411292348495559793064643304280847854009151276"
+    },
+    {
+      "input_id": "T3-erfcx-026",
+      "head": "Erfcx",
+      "z": "23.578588493903442468990760971792042255401611328125000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.02390658525205341696338006082116276399779378289590808794540318837503813791322"
+    },
+    {
+      "input_id": "T3-erfcx-027",
+      "head": "Erfcx",
+      "z": "22.045189213028731245458402554504573345184326171875000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.0255661635310405873043115156448575404925454004528471691358807660864597598641"
+    },
+    {
+      "input_id": "T3-erfcx-028",
+      "head": "Erfcx",
+      "z": "19.328502109892902183219121070578694343566894531250000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.02915060370846120374614648036266863618391059558377739721528813073142119850355"
+    },
+    {
+      "input_id": "T3-erfcx-029",
+      "head": "Erfcx",
+      "z": "18.125346640183288116077164886519312858581542968750000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.03107994695751295203729839397820837172179880046172578218471066319155425452743"
+    },
+    {
+      "input_id": "T3-erfcx-030",
+      "head": "Erfcx",
+      "z": "20.607668287403726026241201907396316528320312500000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.02734553222412106547762550856800369056289915095227912415598851626703222534928"
+    },
+    {
+      "input_id": "T4-erfi-001",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "0.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0"
+      }
+    },
+    {
+      "input_id": "T4-erfi-002",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "0.500000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0.5204998778130465376827466538919645287364515757579637000588057256428227304033"
+      }
+    },
+    {
+      "input_id": "T4-erfi-003",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "1.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0.84270079294971486934122063508260925929606699796630290845993789783298575368144"
+      }
+    },
+    {
+      "input_id": "T4-erfi-004",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "3.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0.99997790950300141455862722387041767962015229291260075034276104515704733991417"
+      }
+    },
+    {
+      "input_id": "T4-erfi-005",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "10.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0.99999999999999999999999999999999999999999999791151241623745524299921370504221"
+      }
+    },
+    {
+      "input_id": "T4-erfi-006",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1"
+      }
+    },
+    {
+      "input_id": "T4-erfi-007",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "8.444876581637597467988598509691655635833740234375000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0.999999999999999999999999999999992925119924146707973350713382095618027253347"
+      }
+    },
+    {
+      "input_id": "T4-erfi-008",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "2.637472228443935584607515920652076601982116699218750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0.9998084814645273927209406304047179833789679474612693246154747121422635921618"
+      }
+    },
+    {
+      "input_id": "T4-erfi-009",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "23.421939217216305451074731536209583282470703125000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1"
+      }
+    },
+    {
+      "input_id": "T4-erfi-010",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "20.427954248351955612861274858005344867706298828125000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1"
+      }
+    },
+    {
+      "input_id": "T4-erfi-011",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "7.779522197218389223394297005143016576766967773437500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0.99999999999999999999999999962586010780031977142527406243937799551642441994173"
+      }
+    },
+    {
+      "input_id": "T4-erfi-012",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "15.315981928871934769631479866802692413330078125000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1"
+      }
+    },
+    {
+      "input_id": "T4-erfi-013",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "27.763688577229011400504532502964138984680175781250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1"
+      }
+    },
+    {
+      "input_id": "T4-erfi-014",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "21.011311421641757135603256756439805030822753906250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1"
+      }
+    },
+    {
+      "input_id": "T4-erfi-015",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "27.013634069363416045916892471723258495330810546875000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1"
+      }
+    },
+    {
+      "input_id": "T4-erf-016",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "0.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0"
+      }
+    },
+    {
+      "input_id": "T4-erf-017",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "0.500000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "0.61495209469651098083968118562364139305134561789540357232663869349516012809452"
+      }
+    },
+    {
+      "input_id": "T4-erf-018",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "1.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1.65042575879754287602533772956136244389567987487402287760025799629699912983661"
+      }
+    },
+    {
+      "input_id": "T4-erf-019",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "3.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1629.99462260156565106164795207627416277888991091525998864798215069561772468606858"
+      }
+    },
+    {
+      "input_id": "T4-erf-020",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "10.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1.52430742270866969936054661472654406246381207469885731055720131122970071427176121e42"
+      }
+    },
+    {
+      "input_id": "T4-erf-021",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1.379047205635398320143951493011934592102794303811758758732511651393839606187587755e389"
+      }
+    },
+    {
+      "input_id": "T4-erf-022",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "25.130162241463622763149032834917306900024414062500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "4.1631356187361846719142127302555973407143791765979192825666653535379831445672783e272"
+      }
+    },
+    {
+      "input_id": "T4-erf-023",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "8.061557690641636853001728013623505830764770507812500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1.1820978750444131909317598135971696147574219215824569789324317478404584436843126148147e27"
+      }
+    },
+    {
+      "input_id": "T4-erf-024",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "9.451284962450753113216705969534814357757568359375000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "3.737068041955038081708709080478801021351521698492703026081874469406655538418e37"
+      }
+    },
+    {
+      "input_id": "T4-erf-025",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "12.976422460273106196382286725565791130065917968750000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "5.87961322298994859524293696530265475099675702152577040917611228471637012e71"
+      }
+    },
+    {
+      "input_id": "T4-erf-026",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "14.888579843048276529771101195365190505981445312500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "7.071835492540703754492431097043952483971671377756318806316444149601646832235e94"
+      }
+    },
+    {
+      "input_id": "T4-erf-027",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "6.637603783345596752951678354293107986450195312500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1.1709632842722818903066206963089282419619500455261856721239664641044333242426e18"
+      }
+    },
+    {
+      "input_id": "T4-erf-028",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "3.772225875301391972982401057379320263862609863281250000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "235303.94831751106622309300055823914833860262767915441893587466362628964062010041737"
+      }
+    },
+    {
+      "input_id": "T4-erf-029",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "19.115226673481625851991339004598557949066162109375000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "1.43987185073385221541812215349310850865441655182648372357991158042248595183450456e157"
+      }
+    },
+    {
+      "input_id": "T4-erf-030",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "1.106755631559880104219928398379124701023101806640625000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0",
+        "im": "2.01692187345880600563277008383632615760593922491815699261388120148341740464006"
+      }
+    },
+    {
+      "input_id": "T5-erf-001",
+      "head": "Erf",
+      "z": {
+        "re": "-7.851839275436685028353167581371963024139404296875000000000000",
+        "im": "9.232550844718449667425375082530081272125244140625000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.9147383234837536747919031937021921888080557755960663159847344406441494923207548058625e8",
+        "im": "7.9489568867605123962356760843519524373990607158355571468991784343079174284916468757632e8"
+      }
+    },
+    {
+      "input_id": "T5-erf-002",
+      "head": "Erf",
+      "z": {
+        "re": "1.275923508578724163697870608302764594554901123046875000000000",
+        "im": "-0.612304617197235723224935100006405264139175415039062500000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.03184802676336419679832162852595773692744548679106662423134196557919889466033",
+        "im": "-0.09356459905184640803547398637177248214366228968619091718786246954052932684178"
+      }
+    },
+    {
+      "input_id": "T5-erf-003",
+      "head": "Erf",
+      "z": {
+        "re": "-8.403959658884156525004982540849596261978149414062500000000000",
+        "im": "-2.173107637621093601865140954032540321350097656250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-0.99999999999999999999999999999906939699648116084484162321124828216487286776257",
+        "im": "1.23176456830841320184011244878600485230457988055e-30"
+      }
+    },
+    {
+      "input_id": "T5-erf-004",
+      "head": "Erf",
+      "z": {
+        "re": "4.074195069381045364309557044180110096931457519531250000000000",
+        "im": "-6.143515550319897045028483262285590171813964843750000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-8.387773897965507143207422086634261626892367013078140403154737714434168806935782630082e7",
+        "im": "-8.147593519823328448826467884406506493592800144077265843094237853448852270053201863368e7"
+      }
+    },
+    {
+      "input_id": "T5-erf-005",
+      "head": "Erf",
+      "z": {
+        "re": "-3.055190079782074796810320549411699175834655761718750000000000",
+        "im": "-14.567855321744650254345287976320832967758178710937500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-3.68037889909451532072050965429326645625173435603724193858748978311992837118870854359129e86",
+        "im": "-3.27972982243641886002260941194760960689027389721007112830679428476600633782244325175735e86"
+      }
+    },
+    {
+      "input_id": "T5-erf-006",
+      "head": "Erf",
+      "z": {
+        "re": "0.506056080836508881404256499081384390592575073242187500000000",
+        "im": "1.006316682651557492533811455359682440757751464843750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.22539014912670242214624898479376305942834388973666058431729030507974462426453",
+        "im": "1.02017693625304684921253086316715980604874621858535412887592830696201826967323"
+      }
+    },
+    {
+      "input_id": "T5-erf-007",
+      "head": "Erf",
+      "z": {
+        "re": "1.113920417149336428153105771343689411878585815429687500000000",
+        "im": "-0.047150007756499537348027217831258894875645637512207031250000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.88562583337116392158492407159078331927592037207193165298017716390741381880476",
+        "im": "-0.01536662903703376951278740643687803385306406670173660058844677762540518893888"
+      }
+    },
+    {
+      "input_id": "T5-erf-008",
+      "head": "Erf",
+      "z": {
+        "re": "0.180729026979794288321201634062163066118955612182617187500000",
+        "im": "-0.072541729612063968191115748140873620286583900451660156250000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.20277346554578736390744475324679713078064627292763842330495923718509796407719",
+        "im": "-0.0793542347657650807464740775818537851695022377083626097724095966598834009749"
+      }
+    },
+    {
+      "input_id": "T5-erf-009",
+      "head": "Erf",
+      "z": {
+        "re": "8.617799281317092052745465480256825685501098632812500000000000",
+        "im": "0.445000938914520693945320317652658559381961822509765625000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.99999999999999999999999999999999994134459198297621032769078235162113846610752",
+        "im": "4.3774163957441703882587513968851402973157068e-34"
+      }
+    },
+    {
+      "input_id": "T5-erf-010",
+      "head": "Erf",
+      "z": {
+        "re": "1.159456122686420620482294907560572028160095214843750000000000",
+        "im": "-5.278341927225585372696059494046494364738464355468750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1.820408322121195046689669746572548537402246620823411767630786609173686558904234081447158e10",
+        "im": "-2.966573309088093437706227280766666492008335478155408717256572707950416214019140623664806e10"
+      }
+    },
+    {
+      "input_id": "T5-erf-011",
+      "head": "Erf",
+      "z": {
+        "re": "-5.432131882360100583184703282313421368598937988281250000000000",
+        "im": "3.908052864480444643646706026629544794559478759765625000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-0.99999996615855114616271688784084503220893661024688639879782021392740203765316",
+        "im": "-4.361542472534053503308319810069602360632572116057496458559479275513993e-8"
+      }
+    },
+    {
+      "input_id": "T5-erf-012",
+      "head": "Erf",
+      "z": {
+        "re": "1.730253208574005219233526986499782651662826538085937500000000",
+        "im": "3.772281659479553184155520284548401832580566406250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "351.44675875900519534353212886259867992075356913324176664929225099882765225278239",
+        "im": "10494.10805713762457440038007772872079578416237967794155741095681323242739715656292"
+      }
+    },
+    {
+      "input_id": "T5-erf-013",
+      "head": "Erf",
+      "z": {
+        "re": "10.066871973281310559400480997283011674880981445312500000000000",
+        "im": "-9.005720313086236217259283876046538352966308593750000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.99999999993316101096425705009565076601462159174648777990318573762239083395512",
+        "im": "1.122638584961030318158509268514211388385023090610508935767353119659e-11"
+      }
+    },
+    {
+      "input_id": "T5-erf-014",
+      "head": "Erf",
+      "z": {
+        "re": "1.733963543468865831087555307021830230951309204101562500000000",
+        "im": "0.879697056300190571853647725220071151852607727050781250000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.02746406912531100824968273690144395541766719108354959304747702023345964115292",
+        "im": "-0.00856570469200855308082367671931973209037939477702674984468031423408808723331"
+      }
+    },
+    {
+      "input_id": "T5-erf-015",
+      "head": "Erf",
+      "z": {
+        "re": "12.786024342509874074380604724865406751632690429687500000000000",
+        "im": "-6.012664493588976810656276938971132040023803710937500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.00000000000000000000000000000000000000000000000000000000193825160474814191194",
+        "im": "5.0683386499039944835e-58"
+      }
+    },
+    {
+      "input_id": "T5-erfc-016",
+      "head": "Erfc",
+      "z": {
+        "re": "-2.569153002386743267493329767603427171707153320312500000000000",
+        "im": "14.612352469233950813531919266097247600555419921875000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1.3130985808400943175779189417728677081287070334665865556381761018970617060666110377918646e88",
+        "im": "-2.4599686282229456993746725018624804423062515130182742634762976140143029048613909058593802e88"
+      }
+    },
+    {
+      "input_id": "T5-erfc-017",
+      "head": "Erfc",
+      "z": {
+        "re": "-1.278772830706849994442109164083376526832580566406250000000000",
+        "im": "12.521121251750313874140374537091702222824096679687500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "5.192634512424705848706821135336686841088947449046782069861166628113312129070224639609e65",
+        "im": "-9.393379646737163513305319016419219556353226404511372815360919360999948936853516757992e65"
+      }
+    },
+    {
+      "input_id": "T5-erfc-018",
+      "head": "Erfc",
+      "z": {
+        "re": "-1.704395908510633050880755945399869233369827270507812500000000",
+        "im": "9.695950149388867345123799168504774570465087890625000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "2.1121007927379473674524376671721700384890401568129810170984149301332312360387e38",
+        "im": "-2.355337782103428236965922258770443515118545677461089344191304034385488342196e37"
+      }
+    },
+    {
+      "input_id": "T5-erfc-019",
+      "head": "Erfc",
+      "z": {
+        "re": "-6.606905982163075563562415482010692358016967773437500000000000",
+        "im": "5.432362292504515188795721769565716385841369628906250000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "2.0000000465672214360955434631083652160654945869652276043308047894033206590544",
+        "im": "9.7829716106977594637390519151487608280040236270691504267778244838946e-9"
+      }
+    },
+    {
+      "input_id": "T5-erfc-020",
+      "head": "Erfc",
+      "z": {
+        "re": "-8.712963645000579404609197808895260095596313476562500000000000",
+        "im": "7.555280970554501429603533324552699923515319824218750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.99999999970474143402568736477123543877673122947988725168536961605811568110131",
+        "im": "-1.3239662203137168205416639090696566534566144629072487353139546256788e-10"
+      }
+    },
+    {
+      "input_id": "T5-erfc-021",
+      "head": "Erfc",
+      "z": {
+        "re": "-3.212980125222964833398009432130493223667144775390625000000000",
+        "im": "5.360684892216101005146811075974255800247192382812500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "5.5391566703676803474804555680387351370305303083197430369810361161294699233612493286e6",
+        "im": "7.1144039675535631573254554314365357971629588472341511459231541806027690136169621344e6"
+      }
+    },
+    {
+      "input_id": "T5-erfc-022",
+      "head": "Erfc",
+      "z": {
+        "re": "13.858718917643004786555138707626610994338989257812500000000000",
+        "im": "-2.887753170092968169058167404728010296821594238281250000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "8.661718918908252422611747834061629330235776533921202012955372520528144e-83",
+        "im": "-6.37934023442720251850354430903978060878572535142439156905234560228708071e-82"
+      }
+    },
+    {
+      "input_id": "T5-erfc-023",
+      "head": "Erfc",
+      "z": {
+        "re": "-3.356912557936753582765732062398456037044525146484375000000000",
+        "im": "-10.913438246321522484549859655089676380157470703125000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-2.20311768623663163332045783302443854375550108001633104116985577557717030788438378434e45",
+        "im": "-2.54414379062611322274145304350113089092450352528334247801789894632866841624792212573e45"
+      }
+    },
+    {
+      "input_id": "T5-erfc-024",
+      "head": "Erfc",
+      "z": {
+        "re": "-4.002499118381254383791656437097117304801940917968750000000000",
+        "im": "9.718498861438407132595784787554293870925903320312500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "5.6285719346221635245545600901570664257624288280698431210863614108133342e32",
+        "im": "2.6061686226475235819323751757885127726006182221823422376277186618045512e32"
+      }
+    },
+    {
+      "input_id": "T5-erfc-025",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.507983426931100101597849061363376677036285400390625000000000",
+        "im": "-2.001152101618387302295332119683735072612762451171875000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "14.72492292243703525017086148455975870768700081496547523026956235873449527069743",
+        "im": "-1.41179405782387766768687483568105110984240053270808831322681512264780399464922"
+      }
+    },
+    {
+      "input_id": "T5-erfc-026",
+      "head": "Erfc",
+      "z": {
+        "re": "1.198601917420066387265364937775302678346633911132812500000000",
+        "im": "-6.009978286780934375599372287979349493980407714843750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1.074698261586464135595392662423436515884180640712097788568794317068220001e14",
+        "im": "-7.2838607389814232695628850046633157124222272533242645052382449138877026e12"
+      }
+    },
+    {
+      "input_id": "T5-erfc-027",
+      "head": "Erfc",
+      "z": {
+        "re": "7.023532298792209083160287264036014676094055175781250000000000",
+        "im": "-5.280759564009443352006201166659593582153320312500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "2.6074725680837123592244211529999541305732468484164248284236416923386651408443766994019e-11",
+        "im": "-1.7102755703032398868086074965613354905016246912867474400226370565661104157385982505737e-11"
+      }
+    },
+    {
+      "input_id": "T5-erfc-028",
+      "head": "Erfc",
+      "z": {
+        "re": "0.557949278029405859591349781112512573599815368652343750000000",
+        "im": "-1.313997454291092381595262850169092416763305664062500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1.25220357767411006036351819331835702784338221106728634720579678850209589536218",
+        "im": "1.16693545022800498042911371947844553047234107560800357397170049739445571347919"
+      }
+    },
+    {
+      "input_id": "T5-erfc-029",
+      "head": "Erfc",
+      "z": {
+        "re": "1.137023096886662809623658176860772073268890380859375000000000",
+        "im": "-2.440979172234106098215988822630606591701507568359375000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "21.80082340774223894626250449891746156534623507135066253354674577772333402216573",
+        "im": "7.66387456012774845947626214630945956014683530264023234188420361929074505981175"
+      }
+    },
+    {
+      "input_id": "T5-erfc-030",
+      "head": "Erfc",
+      "z": {
+        "re": "3.412669418542553234630076985922642052173614501953125000000000",
+        "im": "1.258776111014001219956526256282813847064971923828125000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-5.64514454820310967175558273243490289411847939425634761785246788677852181e-6",
+        "im": "-3.09385330519499975852066617487658197352224266874692281719302130504974561e-6"
+      }
+    },
+    {
+      "input_id": "T5-erfi-031",
+      "head": "Erfi",
+      "z": {
+        "re": "12.014975180583336467066146724391728639602661132812500000000000",
+        "im": "-0.059540772092078537991444164845233899541199207305908203125000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "3.3587992328415440396217394736674545203477062717713749348564610136774000412919838e60",
+        "im": "-2.29975460213210723104163707917207729288310972035050590026271315511757363495341049e61"
+      }
+    },
+    {
+      "input_id": "T5-erfi-032",
+      "head": "Erfi",
+      "z": {
+        "re": "13.683455147737980439615057548508048057556152343750000000000000",
+        "im": "2.671879307315528251365321921184659004211425781250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-5.2205144791713138556953798795843231734708791574880367341648676454015036523683e76",
+        "im": "-4.1413625074175134830509158101605026985395980525583641991037151850283816549561e76"
+      }
+    },
+    {
+      "input_id": "T5-erfi-033",
+      "head": "Erfi",
+      "z": {
+        "re": "-4.996032877360039314851292147068306803703308105468750000000000",
+        "im": "-5.343728611772203151986104785464704036712646484375000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.00141150860580081992869966002142742322773194272276648351229799129690503841319",
+        "im": "-1.00157625595491279671866864630864998599781764258553268275105983735027164393385"
+      }
+    },
+    {
+      "input_id": "T5-erfi-034",
+      "head": "Erfi",
+      "z": {
+        "re": "-2.622532729431080067428183610900305211544036865234375000000000",
+        "im": "8.959689758622104704954836051911115646362304687500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.2102054115778224672788088191651995237944846e-34",
+        "im": "1.00000000000000000000000000000000079005752503181638882686985605087204962980501"
+      }
+    },
+    {
+      "input_id": "T5-erfi-035",
+      "head": "Erfi",
+      "z": {
+        "re": "1.830556820738977297224892026861198246479034423828125000000000",
+        "im": "-5.096855336223895527325566945364698767662048339843750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "2.21765628673848358681471219970791359904783979206537541516160895703e-12",
+        "im": "-0.99999999998483789141983365941848169129063365474187336857097467100152198102347"
+      }
+    },
+    {
+      "input_id": "T5-erfi-036",
+      "head": "Erfi",
+      "z": {
+        "re": "-3.827079487357384568468887664494104683399200439453125000000000",
+        "im": "0.005526881846953327764859764670291042421013116836547851562500"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-351139.51783615921764289353262735346283026265209928364798010158901366995961294927575",
+        "im": "14312.37308333584835730313272677883779517821746444652320493749704554625462220656345"
+      }
+    },
+    {
+      "input_id": "T5-erfi-037",
+      "head": "Erfi",
+      "z": {
+        "re": "1.298480039414128484054344880860298871994018554687500000000000",
+        "im": "5.998805515312856329046553582884371280670166015625000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-9.06937327043805522340369268472939028465787934204771963357394e-18",
+        "im": "1.00000000000000011502999829760947983253268619120032345932862829757821166343601"
+      }
+    },
+    {
+      "input_id": "T5-erfi-038",
+      "head": "Erfi",
+      "z": {
+        "re": "0.959526553088309031025460171804297715425491333007812500000000",
+        "im": "0.715722215272317940915058898099232465028762817382812500000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.58893740461370687668711545831312873552458495100749627014892498670159433701552",
+        "im": "1.29596544949517523074833831757054188976934592441329962208237110978336057716329"
+      }
+    },
+    {
+      "input_id": "T5-erfi-039",
+      "head": "Erfi",
+      "z": {
+        "re": "-6.565234939790749457699803315335884690284729003906250000000000",
+        "im": "6.233186865149008326625335030257701873779296875000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-3.59997008729994624316804238561719634230308145178365386057602657191826757318189",
+        "im": "-1.47502368636393252003935151473677617234769331871490530754788406764918845560532"
+      }
+    },
+    {
+      "input_id": "T5-erfi-040",
+      "head": "Erfi",
+      "z": {
+        "re": "-6.563898876608363686102620704332366585731506347656250000000000",
+        "im": "11.814076158661551474438056175131350755691528320312500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "5.178655700963634726782089143388402e-44",
+        "im": "0.99999999999999999999999999999999999999999999538970076544630417667149352023349"
+      }
+    },
+    {
+      "input_id": "T5-erfi-041",
+      "head": "Erfi",
+      "z": {
+        "re": "-12.152825770827071494295523734763264656066894531250000000000000",
+        "im": "-2.704911416238485522001155914040282368659973144531250000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "3.767694866937134393743694102060890488662142411198419584403321296021762047916887e59",
+        "im": "-1.816309877068795391984681849374563499157590793240222560182541255011322074250092e59"
+      }
+    },
+    {
+      "input_id": "T5-erfi-042",
+      "head": "Erfi",
+      "z": {
+        "re": "0.213984752554707641225562042563979048281908035278320312500000",
+        "im": "0.323707504313382354865780143882147967815399169921875000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.22008568966758326659025467310703405255248222653331647592285527770182825329446",
+        "im": "0.36828451466543416704540954286070663225599838201807203999174508676174105121971"
+      }
+    },
+    {
+      "input_id": "T5-erfi-043",
+      "head": "Erfi",
+      "z": {
+        "re": "3.568610416961227826959657249972224235534667968750000000000000",
+        "im": "4.241303401185320787192267744103446602821350097656250000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-0.0002359804038541646303875770439395786971731294553049831233676085536742277609",
+        "im": "0.99952501783541295386218405042302137655007153336465120928376870712172024660941"
+      }
+    },
+    {
+      "input_id": "T5-erfi-044",
+      "head": "Erfi",
+      "z": {
+        "re": "-11.567816975242434907045208092313259840011596679687500000000000",
+        "im": "-8.833285712212589402270168648101389408111572265625000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "5.77430470075545781458954905138954367967441588249291436237047283059863678240343236e22",
+        "im": "-3.11187931611460792970587413514320422531458729522628915311671550232309256804298952e22"
+      }
+    },
+    {
+      "input_id": "T5-erfi-045",
+      "head": "Erfi",
+      "z": {
+        "re": "-3.597194252575437012353631871519610285758972167968750000000000",
+        "im": "-10.168035490658636987859608780127018690109252929687500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "2.572711310046974247440844756974788614e-41",
+        "im": "-1.00000000000000000000000000000000000000000902123683279554729893614684681496882"
+      }
+    },
+    {
+      "input_id": "T6-erf-001",
+      "head": "Erf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erf-002",
+      "head": "Erf",
+      "z": "-0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erf-003",
+      "head": "Erf",
+      "z": "Infinity",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erf-004",
+      "head": "Erf",
+      "z": "-Infinity",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-1"
+    },
+    {
+      "input_id": "T6-erf-005",
+      "head": "Erf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erf-006",
+      "head": "Erf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erf-007",
+      "head": "Erf",
+      "z": "1.7976931348623157e+308",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erf-008",
+      "head": "Erf",
+      "z": "NaN",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "Indeterminate"
+    },
+    {
+      "input_id": "T6-erfc-009",
+      "head": "Erfc",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erfc-010",
+      "head": "Erfc",
+      "z": "-0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erfc-011",
+      "head": "Erfc",
+      "z": "Infinity",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erfc-012",
+      "head": "Erfc",
+      "z": "-Infinity",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "2"
+    },
+    {
+      "input_id": "T6-erfc-013",
+      "head": "Erfc",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erfc-014",
+      "head": "Erfc",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erfc-015",
+      "head": "Erfc",
+      "z": "1.7976931348623157e+308",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erfc-016",
+      "head": "Erfc",
+      "z": "NaN",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "Indeterminate"
+    },
+    {
+      "input_id": "T6-erfcx-017",
+      "head": "Erfcx",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erfcx-018",
+      "head": "Erfcx",
+      "z": "-0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erfcx-019",
+      "head": "Erfcx",
+      "z": "Infinity",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "Indeterminate"
+    },
+    {
+      "input_id": "T6-erfcx-020",
+      "head": "Erfcx",
+      "z": "-Infinity",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "Infinity"
+    },
+    {
+      "input_id": "T6-erfcx-021",
+      "head": "Erfcx",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erfcx-022",
+      "head": "Erfcx",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1"
+    },
+    {
+      "input_id": "T6-erfcx-023",
+      "head": "Erfcx",
+      "z": "1.7976931348623157e+308",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "Indeterminate"
+    },
+    {
+      "input_id": "T6-erfcx-024",
+      "head": "Erfcx",
+      "z": "NaN",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "Indeterminate"
+    },
+    {
+      "input_id": "T6-erfi-025",
+      "head": "Erfi",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erfi-026",
+      "head": "Erfi",
+      "z": "-0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erfi-027",
+      "head": "Erfi",
+      "z": "Infinity",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "Infinity"
+    },
+    {
+      "input_id": "T6-erfi-028",
+      "head": "Erfi",
+      "z": "-Infinity",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-Infinity"
+    },
+    {
+      "input_id": "T6-erfi-029",
+      "head": "Erfi",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erfi-030",
+      "head": "Erfi",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T6-erfi-031",
+      "head": "Erfi",
+      "z": "1.7976931348623157e+308",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "Infinity"
+    },
+    {
+      "input_id": "T6-erfi-032",
+      "head": "Erfi",
+      "z": "NaN",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "Indeterminate"
+    },
+    {
+      "input_id": "T7-erfc-001",
+      "head": "Erfc",
+      "z": {
+        "re": "1.499375078120352977606444255798123776912689208984375000000000",
+        "im": "29.962507811848986705172137590125203132629394531250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1.4842035953255101874512773397477843439613171942678727221659829232730597726408431e387",
+        "im": "4.02195411609456569299588204870373859027660322121407298889583710673213172387445e386"
+      }
+    },
+    {
+      "input_id": "T7-erfc-002",
+      "head": "Erfc",
+      "z": {
+        "re": "0.998334166468283101814051860856125131249427795410156250000000",
+        "im": "-9.950041652780257095400884281843900680541992187500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1.6474656552553653732439510598538079795884671990044403903768704603761944255728945e41",
+        "im": "1.2639859776131718629329283570293447152288400001468055064026020130025538007914868e41"
+      }
+    },
+    {
+      "input_id": "T7-erfc-003",
+      "head": "Erfc",
+      "z": {
+        "re": "0.000000000000001836970198721029983323969061283927340754161843",
+        "im": "-30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1.51911580789126404688133218067416433294286056677455977519754078902307e376",
+        "im": "1.379047205635398320143951484640223189595974330909064863445447770019264860277491398e389"
+      }
+    },
+    {
+      "input_id": "T7-erfc-004",
+      "head": "Erfc",
+      "z": {
+        "re": "0.149937507812035297760644425579812377691268920898437500000000",
+        "im": "2.996250781184898848152897699037566781044006347656250000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1158.55996744076179055687573838356581242358040078808260036250900488255270983428131",
+        "im": "-1039.46992221956221518194176394226075806914640272419967081282128161640760365039838"
+      }
+    },
+    {
+      "input_id": "T7-erfc-005",
+      "head": "Erfc",
+      "z": {
+        "re": "0.049979169270678434899846109829013585112988948822021484375000",
+        "im": "-0.998750260394966282717632566345855593681335449218750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.847464447654661338578538953306211195647315278480966169574964121769480963714",
+        "im": "1.63898005123829584197173031924019189948235295378548124854744060693222570159789"
+      }
+    },
+    {
+      "input_id": "T7-erfc-006",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.299500249940484519761696446948917582631111145019531250000000",
+        "im": "2.985012495834077128620265284553170204162597656250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1352.7482876467398759599637638353200781076763340126401651695741659191438755282907",
+        "im": "136.13530338465729137451775232695235068872972354099088911405764961131964447329106"
+      }
+    },
+    {
+      "input_id": "T7-erfc-007",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.299500249940484519761696446948917582631111145019531250000000",
+        "im": "2.985012495834077128620265284553170204162597656250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1352.7482876467398759599637638353200781076763340126401651695741659191438755282907",
+        "im": "136.13530338465729137451775232695235068872972354099088911405764961131964447329106"
+      }
+    },
+    {
+      "input_id": "T7-erfc-008",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.999583385413566172239541174349142238497734069824218750000000",
+        "im": "19.975005207899325654352651326917111873626708984375000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.63484435750926105764226775318799373805824263283099820843338874434741797554e171",
+        "im": "1.15075298966173147307452859132491226399780914342438143012701582879855149791e171"
+      }
+    },
+    {
+      "input_id": "T7-erfc-009",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.499791692706783086119770587174571119248867034912109375000000",
+        "im": "9.987502603949662827176325663458555936813354492187500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-4.4994158116329169974450953557847069949538175434617782442629599136610941989144036e41",
+        "im": "8.0807961011800357687137692631058324342052602266698027808351077092913893503369193e41"
+      }
+    },
+    {
+      "input_id": "T7-erfc-010",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.999583385413566172239541174349142238497734069824218750000000",
+        "im": "19.975005207899325654352651326917111873626708984375000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.63484435750926105764226775318799373805824263283099820843338874434741797554e171",
+        "im": "1.15075298966173147307452859132491226399780914342438143012701582879855149791e171"
+      }
+    },
+    {
+      "input_id": "T7-erfc-011",
+      "head": "Erfc",
+      "z": {
+        "re": "1.499375078120352977606444255798123776912689208984375000000000",
+        "im": "29.962507811848986705172137590125203132629394531250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1.4842035953255101874512773397477843439613171942678727221659829232730597726408431e387",
+        "im": "4.02195411609456569299588204870373859027660322121407298889583710673213172387445e386"
+      }
+    },
+    {
+      "input_id": "T7-erfc-012",
+      "head": "Erfc",
+      "z": {
+        "re": "0.299500249940484908339755065753706730902194976806640625000000",
+        "im": "-2.985012495834077128620265284553170204162597656250000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-1350.74828764673923598197265491236558524435151790970561293468889590557147988935609",
+        "im": "-136.13530338466019100439470413024332791219294965555881904607054809891334366892159"
+      }
+    },
+    {
+      "input_id": "T7-erfc-013",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.998334166468281880568724773183930665254592895507812500000000",
+        "im": "-9.950041652780257095400884281843900680541992187500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.6474656552553388477642284549126183370503832525344757585891678677547679645863756e41",
+        "im": "1.2639859776132147969580328187254115490736261776383879975647180134163699314282669e41"
+      }
+    },
+    {
+      "input_id": "T7-erfc-014",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.249895846353391543059885293587285559624433517456054687500000",
+        "im": "-4.993751301974831413588162831729277968406677246093750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "4.7063598840243565812939580736537469886386388532194382459805757034628529857980926767004e9",
+        "im": "-5.61044732878941579541395340051357371476364087911438911904877285216093133359317311261112e9"
+      }
+    },
+    {
+      "input_id": "T7-erfc-015",
+      "head": "Erfc",
+      "z": {
+        "re": "0.000000000000000183697019872102968750112960340450031135594986",
+        "im": "3.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.99999999999832039365255272710690459213013494729529816186171686632287485170861",
+        "im": "-1629.99462260156565106164795207534854673713691499901569111393780308276944571106985"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-016",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000001836970198721029983323969061283927340754161843",
+        "im": "30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.1534795563600024367376826158698251045559468426910674476749e-18",
+        "im": "-0.01881678486866072779050220596884276867112365211649494892211812085174590033476"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-017",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.499791692706783086119770587174571119248867034912109375000000",
+        "im": "-9.987502603949662827176325663458555936813354492187500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-0.00286301323624171882846909788206942279014327107441213228282445177945480907825",
+        "im": "0.05663157925236514548023987186735431540569664752363245416910940752711791677981"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-018",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.999583385413566172239541174349142238497734069824218750000000",
+        "im": "-19.975005207899325654352651326917111873626708984375000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-0.00141518880098255350255106963196055680866788478298686625179379759389768562015",
+        "im": "0.02820921947452928408318247715347969353656641111301123589830077265951568410258"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-019",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000000306161699786838314119392651442908610714681864",
+        "im": "-5.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.388795123747589586202540414153222268161784078043455658244380881127e-11",
+        "im": "0.11524596183093658848031275682613067439384311689379702489230889102753711432994"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-020",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.149937507812035297760644425579812377691268920898437500000000",
+        "im": "-2.996250781184898848152897699037566781044006347656250000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.01184265339526938784556994950792210640216266923457738742134177743532035364088",
+        "im": "0.20057465003987579081825457217751901237111312521139849170889353809084167939855"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-021",
+      "head": "Erfcx",
+      "z": {
+        "re": "2.995002499404849416464458045084029436111450195312500000000000",
+        "im": "-29.850124958340771286202652845531702041625976562500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.00188059508696911635360984256744822338666390220823095747288559396996427237379",
+        "im": "0.01872236281945612010469394109479524830415541409549382699163154329211753176283"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-022",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000000612323399573676628238785302885817221429363727",
+        "im": "-10.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "3.5078278129077983822024024450712559017460259650225375641968e-18",
+        "im": "0.05670539423288759408509059239969665227034198126042084095202692445010273256022"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-023",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.249895846353391543059885293587285559624433517456054687500000",
+        "im": "4.993751301974831413588162831729277968406677246093750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-0.00601600291282806750671493391100800297917432605221720950883400819617044846013",
+        "im": "-0.11507430925387355017609391902690369305809453446651894318437200119468951713581"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-024",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.249895846353391543059885293587285559624433517456054687500000",
+        "im": "4.993751301974831413588162831729277968406677246093750000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-0.00601600291282806750671493391100800297917432605221720950883400819617044846013",
+        "im": "-0.11507430925387355017609391902690369305809453446651894318437200119468951713581"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-025",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.998334166468283101814051860856125131249427795410156250000000",
+        "im": "9.950041652780257095400884281843900680541992187500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.00571796194622956707326839927520034270071412763819502387705607704134571986062",
+        "im": "-0.05641039072249123887231484297357810844775911743941003709014595327765912393377"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-026",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.499791692706783086119770587174571119248867034912109375000000",
+        "im": "9.987502603949662827176325663458555936813354492187500000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "-0.00286301323624171882846909788206942279014327107441213228282445177945480907825",
+        "im": "-0.05663157925236514548023987186735431540569664752363245416910940752711791677981"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-027",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.149937507812035297760644425579812377691268920898437500000000",
+        "im": "-2.996250781184898848152897699037566781044006347656250000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.01184265339526938784556994950792210640216266923457738742134177743532035364088",
+        "im": "0.20057465003987579081825457217751901237111312521139849170889353809084167939855"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-028",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000000183697019872102968750112960340450031135594986",
+        "im": "3.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.00012340980408669398160534712933226490293344680816817170115587085035636416835",
+        "im": "-0.20115731703760038652530433350750312374805619525869454910728081418783850515117"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-029",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000001836970198721029983323969061283927340754161843",
+        "im": "30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "1.1534795563600024367376826158698251045559468426910674476749e-18",
+        "im": "-0.01881678486866072779050220596884276867112365211649494892211812085174590033476"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-030",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.998334166468283101814051860856125131249427795410156250000000",
+        "im": "9.950041652780257095400884281843900680541992187500000000000000"
+      },
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": {
+        "re": "0.00571796194622956707326839927520034270071412763819502387705607704134571986062",
+        "im": "-0.05641039072249123887231484297357810844775911743941003709014595327765912393377"
+      }
+    },
+    {
+      "input_id": "T8-inverseerf-001",
+      "head": "InverseErf",
+      "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-2.32675376551352449386643369707230657644227966921601199053159629161147768312337"
+    },
+    {
+      "input_id": "T8-inverseerf-002",
+      "head": "InverseErf",
+      "z": "-0.937499999999000022121720121504040434956550598144531250000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-1.31715033498110748124844915620988344586087271871724194422491496492855569249119"
+    },
+    {
+      "input_id": "T8-inverseerf-003",
+      "head": "InverseErf",
+      "z": "-0.750000000000999977878279878495959565043449401855468750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.8134198475993360034656100047943745101459646545116188703661657434633542524175"
+    },
+    {
+      "input_id": "T8-inverseerf-004",
+      "head": "InverseErf",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.47693627620446987338141835364313055980896974905947064470388269592071581541462"
+    },
+    {
+      "input_id": "T8-inverseerf-005",
+      "head": "InverseErf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T8-inverseerf-006",
+      "head": "InverseErf",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.47693627620446987338141835364313055980896974905947064470388269592071581541462"
+    },
+    {
+      "input_id": "T8-inverseerf-007",
+      "head": "InverseErf",
+      "z": "0.750000000000999977878279878495959565043449401855468750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.8134198475993360034656100047943745101459646545116188703661657434633542524175"
+    },
+    {
+      "input_id": "T8-inverseerf-008",
+      "head": "InverseErf",
+      "z": "0.937499999999000022121720121504040434956550598144531250000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.31715033498110748124844915620988344586087271871724194422491496492855569249119"
+    },
+    {
+      "input_id": "T8-inverseerf-009",
+      "head": "InverseErf",
+      "z": "0.998999999999999999111821580299874767661094665527343750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "2.32675376551352449386643369707230657644227966921601199053159629161147768312337"
+    },
+    {
+      "input_id": "T8-inverseerf-010",
+      "head": "InverseErf",
+      "z": "-0.769213389670109992657387465442297980189323425292968750000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.84735083334416906667825510999532157573170036849439448852291890805960630615422"
+    },
+    {
+      "input_id": "T8-inverseerf-011",
+      "head": "InverseErf",
+      "z": "0.240467234119059014574304455891251564025878906250000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.21644143121992481757055585284212643589815545550070976834173158396919700921187"
+    },
+    {
+      "input_id": "T8-inverseerf-012",
+      "head": "InverseErf",
+      "z": "0.833858161104776840488739253487437963485717773437500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.97913626187472305047017689967093336072629047479051832859324484314311740074728"
+    },
+    {
+      "input_id": "T8-inverseerf-013",
+      "head": "InverseErf",
+      "z": "-0.252705311310805980085092414810787886381149291992187500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.22783586836159484128452859806726139648161772644932192087785819100597735517358"
+    },
+    {
+      "input_id": "T8-inverseerf-014",
+      "head": "InverseErf",
+      "z": "0.441917716084009759569539710355456918478012084960937500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.41414702388260966982006437621002826703993453371347736291350292422105975690781"
+    },
+    {
+      "input_id": "T8-inverseerf-015",
+      "head": "InverseErf",
+      "z": "-0.709926908761228769861872933688573539257049560546875000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.74809160171536874999626138778511291951115395725000752173922219338775321365622"
+    },
+    {
+      "input_id": "T8-inverseerf-016",
+      "head": "InverseErf",
+      "z": "0.958187186721799477595595817547291517257690429687500000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.43922986706694031710099747183349496329735134574718036624052175182273410062468"
+    },
+    {
+      "input_id": "T8-inverseerf-017",
+      "head": "InverseErf",
+      "z": "-0.146309752015541194580805495206732302904129028320312500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.13039898351896704891755281955517657868357184080591127023845816827811321995871"
+    },
+    {
+      "input_id": "T8-inverseerfc-018",
+      "head": "InverseErfc",
+      "z": "0.000000000000000000000000000000000000000000000000010000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "10.59209016952736518902166392532979911559420645541709912588406440117693024963368"
+    },
+    {
+      "input_id": "T8-inverseerfc-019",
+      "head": "InverseErfc",
+      "z": "0.000000000100000000000000003643219731549774157916554706559964",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "4.5728249673894852748466112860278821272315649559014792720247228499388568007978"
+    },
+    {
+      "input_id": "T8-inverseerfc-020",
+      "head": "InverseErfc",
+      "z": "0.062500000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.31715033498613074888392979208444879960261109497866833161061899133428432812649"
+    },
+    {
+      "input_id": "T8-inverseerfc-021",
+      "head": "InverseErfc",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "1.16308715367667406769679396719001158564006702957506364938860685634261513683225"
+    },
+    {
+      "input_id": "T8-inverseerfc-022",
+      "head": "InverseErfc",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.47693627620446987338141835364313055980896974905947064470388269592071581541454"
+    },
+    {
+      "input_id": "T8-inverseerfc-023",
+      "head": "InverseErfc",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.08885599049425766718156460616849581532046843443873332772186218737509617212483"
+    },
+    {
+      "input_id": "T8-inverseerfc-024",
+      "head": "InverseErfc",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0"
+    },
+    {
+      "input_id": "T8-inverseerfc-025",
+      "head": "InverseErfc",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.47693627620446987338141835364313055980896974905947064470388269592071581541457"
+    },
+    {
+      "input_id": "T8-inverseerfc-026",
+      "head": "InverseErfc",
+      "z": "1.937500000000000000000000000000000000000000000000000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-1.31715033498613074888392979208444879960261109497866833161061899133428432812649"
+    },
+    {
+      "input_id": "T8-inverseerfc-027",
+      "head": "InverseErfc",
+      "z": "1.999000000000000110134124042815528810024261474609375000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-2.32675376551354658058974668717873146135190533821238720081945228858540944200525"
+    },
+    {
+      "input_id": "T8-inverseerfc-028",
+      "head": "InverseErfc",
+      "z": "1.141960457811113771597888444375712424516677856445312500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.12648040355255140996321248849797140358480755178297471361511403171419081037068"
+    },
+    {
+      "input_id": "T8-inverseerfc-029",
+      "head": "InverseErfc",
+      "z": "0.793259000267488412205807435384485870599746704101562500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.18531924726166307749313245844107194338922502783831895673369915487446396924261"
+    },
+    {
+      "input_id": "T8-inverseerfc-030",
+      "head": "InverseErfc",
+      "z": "0.605201911933348490890693938126787543296813964843750000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.36552786125960408289747264433651139223293077884213123341148283617296805040167"
+    },
+    {
+      "input_id": "T8-inverseerfc-031",
+      "head": "InverseErfc",
+      "z": "1.201490934664146470467471772280987352132797241210937500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.18050818713400908713089411923851921382091514626838500842847191685145290753593"
+    },
+    {
+      "input_id": "T8-inverseerfc-032",
+      "head": "InverseErfc",
+      "z": "1.408907173014668501309643033891916275024414062500000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.37989527937579354804212669237443497680521555834295133996923296161134738980264"
+    },
+    {
+      "input_id": "T8-inverseerfc-033",
+      "head": "InverseErfc",
+      "z": "0.738148591056535297028062814206350594758987426757812500000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "0.23639010730038033973152629211612787567600615750868255478796388283660644428436"
+    },
+    {
+      "input_id": "T8-inverseerfc-034",
+      "head": "InverseErfc",
+      "z": "1.490638890015258954946375524741597473621368408203125000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-0.46657227171545240633939007810025465433719492594314359029937652839303583736692"
+    },
+    {
+      "input_id": "T8-inverseerfc-035",
+      "head": "InverseErfc",
+      "z": "1.849859926560828427000160445459187030792236328125000000000000",
+      "method": "wolfram-N-at-60-decimal",
+      "achieved_precision": 60,
+      "oracle_id": "wolfram",
+      "oracle_version": "WolframScript 1.13.0 for Linux x86 (64-bit)",
+      "oracle_kernel_version": "14.3.0 for Linux x86 (64-bit) (July 8, 2025)",
+      "elapsed_ms": 37,
+      "output": "-1.01755273740466790215511122701900789621882234083121814973511320709055119355926"
+    }
+  ]
+}

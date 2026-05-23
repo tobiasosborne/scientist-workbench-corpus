@@ -1,0 +1,22 @@
+# =============================================================================
+# erf-anchor — boost replay adapter (silver tier)
+# =============================================================================
+#
+# Grades Boost.Math's `cpp_bin_float<50>` outputs (committed snapshot
+# from the workbench's boost adapter; bead scientist-workbench-ufgd area,
+# 2026-05-16) against the gold-tier consensus.  Pre-computed-oracle
+# pattern (see wolfram/erf-anchor.toml).
+#
+# Boost refused 122/271 cases — every complex input (`erf` has no
+# std::complex specialisation in Boost 1_83) plus 17 edge cases.  All
+# refusals carry method='boost-refused' and a `note` explaining the
+# upstream Boost.Math limitation; the replay shim surfaces them as
+# tagged-refusal envelopes (NOT as candidate failures).
+
+[adapter]
+target          = "boost"
+capability_id   = "erf-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/boost/oracles/erf-anchor-replay.ts"]
+version         = "boost 1_83 cpp_bin_float<50> (snapshot 2026-05-16)"
+platform_pinned = false

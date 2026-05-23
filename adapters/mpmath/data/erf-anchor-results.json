@@ -1,0 +1,3902 @@
+{
+  "manifest_version": 1,
+  "oracle_id": "mpmath",
+  "oracle_version": "1.3.0",
+  "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+  "method": "mpmath-mpf-at-60-dps",
+  "work_dps": 60,
+  "emit_dps": 55,
+  "corpus_bead": "scientist-workbench-9sqr",
+  "corpus_adr": "0040",
+  "corpus_generated_at": "2026-05-16T00:00:00Z",
+  "generated_at": "2026-05-16T21:02:24.992Z",
+  "total_corpus_inputs": 271,
+  "total_results": 271,
+  "total_ok": 269,
+  "total_refused": 2,
+  "total_elapsed_ms": 715,
+  "results": [
+    {
+      "input_id": "T1-erf-001",
+      "head": "Erf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.052641,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T1-erf-002",
+      "head": "Erf",
+      "z": "0.001000000000000000020816681711721685132943093776702880859375",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.167556,
+      "output": "0.001128378790969236403437564139371489641823499076882565274"
+    },
+    {
+      "input_id": "T1-erf-003",
+      "head": "Erf",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.08058,
+      "output": "0.1124629160182848984047122510143040617233925185058162022"
+    },
+    {
+      "input_id": "T1-erf-004",
+      "head": "Erf",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.067726,
+      "output": "0.5204998778130465376827466538919645287364515757579637001"
+    },
+    {
+      "input_id": "T1-erf-005",
+      "head": "Erf",
+      "z": "0.839999999999999968913755310495616868138313293457031250000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.074774,
+      "output": "0.7651427114549945173420589992546276993897708426443287815"
+    },
+    {
+      "input_id": "T1-erf-006",
+      "head": "Erf",
+      "z": "0.348249030852806285007972064704517833888530731201171875000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.061533,
+      "output": "0.3776330197115557858245482984414361011888080626004732264"
+    },
+    {
+      "input_id": "T1-erf-007",
+      "head": "Erf",
+      "z": "0.248968295813057682863700392772443592548370361328125000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.051305,
+      "output": "0.2752324874190591596272515691604547819400976198156683755"
+    },
+    {
+      "input_id": "T1-erf-008",
+      "head": "Erf",
+      "z": "0.068607192108690359666489655410259729251265525817871093750000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.043785,
+      "output": "0.07729363496503425132464461727363324414887053782122861930"
+    },
+    {
+      "input_id": "T1-erf-009",
+      "head": "Erf",
+      "z": "0.457770278592486978830322641442762687802314758300781250000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.0493,
+      "output": "0.4826171573705756054387802536352148484406331156435652014"
+    },
+    {
+      "input_id": "T1-erf-010",
+      "head": "Erf",
+      "z": "0.829117937939762073007443632377544417977333068847656250000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.073327,
+      "output": "0.7590236226711347780646798561773085998554191353083164922"
+    },
+    {
+      "input_id": "T1-erf-011",
+      "head": "Erf",
+      "z": "0.551982290256760155244819543440826237201690673828125000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.049421,
+      "output": "0.5649744696374209417138542316822095833561549183139708618"
+    },
+    {
+      "input_id": "T1-erf-012",
+      "head": "Erf",
+      "z": "0.777132984072497534633328086783876642584800720214843750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.054011,
+      "output": "0.7282458942811533727686718278184057759395845930931424620"
+    },
+    {
+      "input_id": "T1-erf-013",
+      "head": "Erf",
+      "z": "0.266274163530335783445224251408944837749004364013671875000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.044411,
+      "output": "0.2935057241070127646986956265898656163351871864774515359"
+    },
+    {
+      "input_id": "T1-erf-014",
+      "head": "Erf",
+      "z": "0.480147772841224340645283064077375456690788269042968750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.045299,
+      "output": "0.5028820918665291549719971033667395132583887218771478598"
+    },
+    {
+      "input_id": "T1-erf-015",
+      "head": "Erf",
+      "z": "0.773142818740169879276891151675954461097717285156250000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.049177,
+      "output": "0.7257769851501034979493281847584402211293806552476234765"
+    },
+    {
+      "input_id": "T1-erfc-016",
+      "head": "Erfc",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.017011,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T1-erfc-017",
+      "head": "Erfc",
+      "z": "0.001000000000000000020816681711721685132943093776702880859375",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.055771,
+      "output": "0.9988716212090307635965624358606285103581765009231174347"
+    },
+    {
+      "input_id": "T1-erfc-018",
+      "head": "Erfc",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.056218,
+      "output": "0.8875370839817151015952877489856959382766074814941837978"
+    },
+    {
+      "input_id": "T1-erfc-019",
+      "head": "Erfc",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.062215,
+      "output": "0.4795001221869534623172533461080354712635484242420362999"
+    },
+    {
+      "input_id": "T1-erfc-020",
+      "head": "Erfc",
+      "z": "0.839999999999999968913755310495616868138313293457031250000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.062149,
+      "output": "0.2348572885450054826579410007453723006102291573556712185"
+    },
+    {
+      "input_id": "T1-erfc-021",
+      "head": "Erfc",
+      "z": "0.017003406741192290257957964172419451642781496047973632812500",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.044943,
+      "output": "0.9808155589233395978510269655108992855303007922723544534"
+    },
+    {
+      "input_id": "T1-erfc-022",
+      "head": "Erfc",
+      "z": "0.091446804092939384944749292571941623464226722717285156250000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.047964,
+      "output": "0.8971002446537204362907289354193817450423519340816662598"
+    },
+    {
+      "input_id": "T1-erfc-023",
+      "head": "Erfc",
+      "z": "0.028680370277110657506458579746322357095777988433837890625000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.042574,
+      "output": "0.9676465388447647851219165429884670753018102052830052711"
+    },
+    {
+      "input_id": "T1-erfc-024",
+      "head": "Erfc",
+      "z": "0.110153646408651786914312253884418169036507606506347656250000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.04546,
+      "output": "0.8762058204435476211343425483689189029402319209085162578"
+    },
+    {
+      "input_id": "T1-erfc-025",
+      "head": "Erfc",
+      "z": "0.026665792030592348760276166785843088291585445404052734375000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.039368,
+      "output": "0.9699180060464883712987011319870715913890931406439736121"
+    },
+    {
+      "input_id": "T1-erfc-026",
+      "head": "Erfc",
+      "z": "0.304447108723431392185432287078583613038063049316406250000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.049824,
+      "output": "0.6667932543924053809138860087004690031417732831878159154"
+    },
+    {
+      "input_id": "T1-erfc-027",
+      "head": "Erfc",
+      "z": "0.166385188757621316213430873176548629999160766601562500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.048967,
+      "output": "0.8139726428633025969048129305475665504424261681463790646"
+    },
+    {
+      "input_id": "T1-erfc-028",
+      "head": "Erfc",
+      "z": "0.339446519138033753204553022442269138991832733154296875000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.052394,
+      "output": "0.6311919318849747288039758738028881313729186966932443862"
+    },
+    {
+      "input_id": "T1-erfc-029",
+      "head": "Erfc",
+      "z": "0.382925312026834718803769419537275098264217376708984375000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.053613,
+      "output": "0.5881366961091498863797771694424078060334229838354557008"
+    },
+    {
+      "input_id": "T1-erfc-030",
+      "head": "Erfc",
+      "z": "0.827736847339075376694950136879924684762954711914062500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.054965,
+      "output": "0.2417609342355766473718624158081268105049482994600561502"
+    },
+    {
+      "input_id": "T2-erf-001",
+      "head": "Erf",
+      "z": "0.843750000000999977878279878495959565043449401855468750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.051887,
+      "output": "0.7672256612328953214484267633085030047954120965871695234"
+    },
+    {
+      "input_id": "T2-erf-002",
+      "head": "Erf",
+      "z": "1.250000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.058744,
+      "output": "0.9229001282564582301365234811972811404236014387022283298"
+    },
+    {
+      "input_id": "T2-erf-003",
+      "head": "Erf",
+      "z": "2.857142857142857206298458550008945167064666748046875000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.085147,
+      "output": "0.9999466876886116772057293341547359978138942955028049852"
+    },
+    {
+      "input_id": "T2-erf-004",
+      "head": "Erf",
+      "z": "4.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.095686,
+      "output": "0.9999999845827420997199811478403265131159514278547464108"
+    },
+    {
+      "input_id": "T2-erf-005",
+      "head": "Erf",
+      "z": "6.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.145781,
+      "output": "0.9999999999999999784802632875010868834066496008126153695"
+    },
+    {
+      "input_id": "T2-erf-006",
+      "head": "Erf",
+      "z": "2.347198556283115689069518339238129556179046630859375000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.074868,
+      "output": "0.9990980182475079101071059892577199768272093577174654912"
+    },
+    {
+      "input_id": "T2-erf-007",
+      "head": "Erf",
+      "z": "3.981510342276426861474192264722660183906555175781250000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.101192,
+      "output": "0.9999999820526486040404715571209287755502289781766038068"
+    },
+    {
+      "input_id": "T2-erf-008",
+      "head": "Erf",
+      "z": "2.605732025413649122214110320783220231533050537109375000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.091669,
+      "output": "0.9997713526399278549737170972682924586406769528000773152"
+    },
+    {
+      "input_id": "T2-erf-009",
+      "head": "Erf",
+      "z": "1.610598742259013782529564196011051535606384277343750000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.05955,
+      "output": "0.9772573656881844969137483039030174566687218408874399912"
+    },
+    {
+      "input_id": "T2-erf-010",
+      "head": "Erf",
+      "z": "5.131887584855727268973168975207954645156860351562500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.122837,
+      "output": "0.9999999999996059377073183246143566129204080621110766305"
+    },
+    {
+      "input_id": "T2-erf-011",
+      "head": "Erf",
+      "z": "5.705608570829783232625231903512030839920043945312500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.141184,
+      "output": "0.9999999999999992909413895116051909799261660830718372792"
+    },
+    {
+      "input_id": "T2-erf-012",
+      "head": "Erf",
+      "z": "0.911322524450403848028656739188591018319129943847656250000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.051145,
+      "output": "0.8025339992209686457598873735077828082764744686207926048"
+    },
+    {
+      "input_id": "T2-erf-013",
+      "head": "Erf",
+      "z": "1.929577745445807401836191274924203753471374511718750000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.067471,
+      "output": "0.9936441506472080101021850817633836323663767180478937334"
+    },
+    {
+      "input_id": "T2-erfc-014",
+      "head": "Erfc",
+      "z": "0.843750000000999977878279878495959565043449401855468750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.056767,
+      "output": "0.2327743387671046785515732366914969952045879034128304766"
+    },
+    {
+      "input_id": "T2-erfc-015",
+      "head": "Erfc",
+      "z": "1.250000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.067068,
+      "output": "0.07709987174354176986347651880271885957639856129777167021"
+    },
+    {
+      "input_id": "T2-erfc-016",
+      "head": "Erfc",
+      "z": "2.857142857142857206298458550008945167064666748046875000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.101878,
+      "output": "0.00005331231138832279427066584526400218610570449719501480968"
+    },
+    {
+      "input_id": "T2-erfc-017",
+      "head": "Erfc",
+      "z": "4.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.161406,
+      "output": "0.00000001541725790028001885215967348688404857214525358919116834"
+    },
+    {
+      "input_id": "T2-erfc-018",
+      "head": "Erfc",
+      "z": "6.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.257846,
+      "output": "0.00000000000000002151973671249891311659335039918738463047751406168854210"
+    },
+    {
+      "input_id": "T2-erfc-019",
+      "head": "Erfc",
+      "z": "5.127350414566393510540365241467952728271484375000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.187034,
+      "output": "0.0000000000004131912708534023495022709903115622913500717168417856833"
+    },
+    {
+      "input_id": "T2-erfc-020",
+      "head": "Erfc",
+      "z": "3.411861534366319670397160734864883124828338623046875000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.171187,
+      "output": "0.000001399324390958653056929459245419387519656385169013635292"
+    },
+    {
+      "input_id": "T2-erfc-021",
+      "head": "Erfc",
+      "z": "2.728125396616815301342739985557273030281066894531250000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.132012,
+      "output": "0.0001142476220038542635455332251324029881600236227992924516"
+    },
+    {
+      "input_id": "T2-erfc-022",
+      "head": "Erfc",
+      "z": "1.461020090291751616362603272136766463518142700195312500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.070814,
+      "output": "0.03881012490892022597845062345999827640543611167764394714"
+    },
+    {
+      "input_id": "T2-erfc-023",
+      "head": "Erfc",
+      "z": "3.660778473141034439208851836156100034713745117187500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.187968,
+      "output": "0.0000002253341911287146714994384391868984358705776332841342102"
+    },
+    {
+      "input_id": "T2-erfc-024",
+      "head": "Erfc",
+      "z": "5.717676990869304809450568427564576268196105957031250000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.215362,
+      "output": "0.0000000000000006164791659831397817096151671961429737616530643661208189"
+    },
+    {
+      "input_id": "T2-erfc-025",
+      "head": "Erfc",
+      "z": "5.546026252203633433168761257547885179519653320312500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.17382,
+      "output": "0.000000000000004389783378314546420258722209366271047659086091019118549"
+    },
+    {
+      "input_id": "T2-erfc-026",
+      "head": "Erfc",
+      "z": "1.593220121577950232349962789157871156930923461914062500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.074239,
+      "output": "0.02424947192408122870804391706789330550293432453571777331"
+    },
+    {
+      "input_id": "T2-erfcx-027",
+      "head": "Erfcx",
+      "z": "0.843750000000999977878279878495959565043449401855468750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.102484,
+      "output": "0.4743680720265813921599143386129023555053955245524875756"
+    },
+    {
+      "input_id": "T2-erfcx-028",
+      "head": "Erfcx",
+      "z": "1.250000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.094273,
+      "output": "0.3678229164523610929260111002040246824165847822557765850"
+    },
+    {
+      "input_id": "T2-erfcx-029",
+      "head": "Erfcx",
+      "z": "2.857142857142857206298458550008945167064666748046875000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.25684,
+      "output": "0.1871063767114706912487004229033853581441217461828908140"
+    },
+    {
+      "input_id": "T2-erfcx-030",
+      "head": "Erfcx",
+      "z": "4.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.147032,
+      "output": "0.1369994576250613898894451713998054823302492355480653627"
+    },
+    {
+      "input_id": "T2-erfcx-031",
+      "head": "Erfcx",
+      "z": "6.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.22286,
+      "output": "0.09277656780053835438948670532472992481448699505136245822"
+    },
+    {
+      "input_id": "T2-erfcx-032",
+      "head": "Erfcx",
+      "z": "2.168488689236570454710317790159024298191070556640625000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.111609,
+      "output": "0.2385185939258385083347040918179081588074137736521394769"
+    },
+    {
+      "input_id": "T2-erfcx-033",
+      "head": "Erfcx",
+      "z": "4.997518138493187045412469160510227084159851074218750000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.176001,
+      "output": "0.1107576076635089787638019442799538696018667564661595921"
+    },
+    {
+      "input_id": "T2-erfcx-034",
+      "head": "Erfcx",
+      "z": "5.678063204622857185199791274499148130416870117187500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.20941,
+      "output": "0.09788872890822222683331020131970961266317753025189348672"
+    },
+    {
+      "input_id": "T2-erfcx-035",
+      "head": "Erfcx",
+      "z": "2.548950349925528602312851944589056074619293212890625000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.120664,
+      "output": "0.2072258657144084963335255682863100418460981467908266846"
+    },
+    {
+      "input_id": "T2-erfcx-036",
+      "head": "Erfcx",
+      "z": "5.822341255183490105196142394561320543289184570312500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.206658,
+      "output": "0.09553058345911624032751667768226274721965638080341159295"
+    },
+    {
+      "input_id": "T2-erfcx-037",
+      "head": "Erfcx",
+      "z": "0.994728962273676353689211282471660524606704711914062500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.085014,
+      "output": "0.4290279876594151480791106609179526926347044249278614055"
+    },
+    {
+      "input_id": "T2-erfcx-038",
+      "head": "Erfcx",
+      "z": "3.241737912633333884571129601681604981422424316406250000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.131261,
+      "output": "0.1667261990806374760209259007714781067161387618151035094"
+    },
+    {
+      "input_id": "T2-erfcx-039",
+      "head": "Erfcx",
+      "z": "5.410780723677380166236616787500679492950439453125000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.194267,
+      "output": "0.1025748409099603611810218068852781937377205775921009585"
+    },
+    {
+      "input_id": "T3-erfc-001",
+      "head": "Erfc",
+      "z": "6.000001000000000139777966978726908564567565917968750000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.219421,
+      "output": "0.00000000000000002151947498394532615573283462290578875929103153405692311"
+    },
+    {
+      "input_id": "T3-erfc-002",
+      "head": "Erfc",
+      "z": "10.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.669449,
+      "output": "2.088487583762544757000786294957788611560818119321163727e-45"
+    },
+    {
+      "input_id": "T3-erfc-003",
+      "head": "Erfc",
+      "z": "11.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.784279,
+      "output": "1.440866137943694680339809702856082753964395230973580405e-54"
+    },
+    {
+      "input_id": "T3-erfc-004",
+      "head": "Erfc",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.231649,
+      "output": "5.395865611607900928934999167905345604088272670923605283e-176"
+    },
+    {
+      "input_id": "T3-erfc-005",
+      "head": "Erfc",
+      "z": "28.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.089315,
+      "output": "6.563215840328784152380910481606274774134162689948282618e-343"
+    },
+    {
+      "input_id": "T3-erfc-006",
+      "head": "Erfc",
+      "z": "28.680523864310480064432340441271662712097167968750000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.103956,
+      "output": "1.134746299183397008616944200951438703901919452822414770e-359"
+    },
+    {
+      "input_id": "T3-erfc-007",
+      "head": "Erfc",
+      "z": "9.567454131118697802094175131060183048248291015625000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.534583,
+      "output": "1.034262394906008416736375051155851521792474279913416636e-41"
+    },
+    {
+      "input_id": "T3-erfc-008",
+      "head": "Erfc",
+      "z": "10.578363230721262056022169417701661586761474609375000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.67495,
+      "output": "1.338957058557830024382318324886688284963473657715516272e-50"
+    },
+    {
+      "input_id": "T3-erfc-009",
+      "head": "Erfc",
+      "z": "16.171510146079356218251632526516914367675781250000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.114938,
+      "output": "9.249888671198037198033726730316398617691327597536520848e-116"
+    },
+    {
+      "input_id": "T3-erfc-010",
+      "head": "Erfc",
+      "z": "26.966261396634514824199868598952889442443847656250000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.093684,
+      "output": "3.238686998893210888940400723750055610379158655425199874e-318"
+    },
+    {
+      "input_id": "T3-erfc-011",
+      "head": "Erfc",
+      "z": "12.403876944633143608598402352072298526763916015625000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.009248,
+      "output": "6.879942786555221708598468975262897128603736540774973605e-69"
+    },
+    {
+      "input_id": "T3-erfc-012",
+      "head": "Erfc",
+      "z": "7.543994386468080293184357287827879190444946289062500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.29295,
+      "output": "1.424247979833470296718974270402053393463121901657424435e-26"
+    },
+    {
+      "input_id": "T3-erfc-013",
+      "head": "Erfc",
+      "z": "16.153029200692209599310444900766015052795410156250000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.107245,
+      "output": "1.682959070473030777584174875585988898374267898549198285e-115"
+    },
+    {
+      "input_id": "T3-erfc-014",
+      "head": "Erfc",
+      "z": "22.872546613622709799074073089286684989929199218750000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.089583,
+      "output": "1.545491429467420978472142843478823481886317570454953003e-229"
+    },
+    {
+      "input_id": "T3-erfc-015",
+      "head": "Erfc",
+      "z": "20.697586181898408597135130548849701881408691406250000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.084991,
+      "output": "2.440927096179373915371272455372225309768010028138237273e-188"
+    },
+    {
+      "input_id": "T3-erfcx-016",
+      "head": "Erfcx",
+      "z": "6.000001000000000139777966978726908564567565917968750000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.234065,
+      "output": "0.09277655274018727767854434159083302206965493000853907802"
+    },
+    {
+      "input_id": "T3-erfcx-017",
+      "head": "Erfcx",
+      "z": "10.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.593228,
+      "output": "0.05614099274382258585751738722046831156515725665507548352"
+    },
+    {
+      "input_id": "T3-erfcx-018",
+      "head": "Erfcx",
+      "z": "11.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.710705,
+      "output": "0.05108059475808844370998558301402977200031441462396825283"
+    },
+    {
+      "input_id": "T3-erfcx-019",
+      "head": "Erfcx",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.110864,
+      "output": "0.02817434874105131931864915453447075835251573225296480740"
+    },
+    {
+      "input_id": "T3-erfcx-020",
+      "head": "Erfcx",
+      "z": "28.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.088856,
+      "output": "0.02013680196421427677651010336272497534715104732691224345"
+    },
+    {
+      "input_id": "T3-erfcx-021",
+      "head": "Erfcx",
+      "z": "9.182586418084142110274115111678838729858398437500000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.492725,
+      "output": "0.06108321199434431055239056956605507846656911037179010648"
+    },
+    {
+      "input_id": "T3-erfcx-022",
+      "head": "Erfcx",
+      "z": "8.628987339618143792563387250993400812149047851562500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.394688,
+      "output": "0.06495256782547173704592798672267254362624316142938161729"
+    },
+    {
+      "input_id": "T3-erfcx-023",
+      "head": "Erfcx",
+      "z": "21.847870707441060744713468011468648910522460937500000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.110849,
+      "output": "0.02579658462325387494849399199875172537002123353791617228"
+    },
+    {
+      "input_id": "T3-erfcx-024",
+      "head": "Erfcx",
+      "z": "22.566918887461962839324769447557628154754638671875000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.108562,
+      "output": "0.02497626217809734010308448770239197166302802978278552789"
+    },
+    {
+      "input_id": "T3-erfcx-025",
+      "head": "Erfcx",
+      "z": "27.741616676441214650594702106900513172149658203125000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.095767,
+      "output": "0.02032411281823424127342149870956411292348495559793064643"
+    },
+    {
+      "input_id": "T3-erfcx-026",
+      "head": "Erfcx",
+      "z": "23.578588493903442468990760971792042255401611328125000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.096731,
+      "output": "0.02390658525205341696338006082116276399779378289590808795"
+    },
+    {
+      "input_id": "T3-erfcx-027",
+      "head": "Erfcx",
+      "z": "22.045189213028731245458402554504573345184326171875000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.09645,
+      "output": "0.02556616353104058730431151564485754049254540045284716914"
+    },
+    {
+      "input_id": "T3-erfcx-028",
+      "head": "Erfcx",
+      "z": "19.328502109892902183219121070578694343566894531250000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.105364,
+      "output": "0.02915060370846120374614648036266863618391059558377739722"
+    },
+    {
+      "input_id": "T3-erfcx-029",
+      "head": "Erfcx",
+      "z": "18.125346640183288116077164886519312858581542968750000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.104369,
+      "output": "0.03107994695751295203729839397820837172179880046172578218"
+    },
+    {
+      "input_id": "T3-erfcx-030",
+      "head": "Erfcx",
+      "z": "20.607668287403726026241201907396316528320312500000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.099572,
+      "output": "0.02734553222412106547762550856800369056289915095227912416"
+    },
+    {
+      "input_id": "T4-erfi-001",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "0.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.067204,
+      "output": {
+        "re": "0.0",
+        "im": "0.0"
+      }
+    },
+    {
+      "input_id": "T4-erfi-002",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "0.500000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.359339,
+      "output": {
+        "re": "0.0",
+        "im": "0.5204998778130465376827466538919645287364515757579637001"
+      }
+    },
+    {
+      "input_id": "T4-erfi-003",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "1.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.254383,
+      "output": {
+        "re": "0.0",
+        "im": "0.8427007929497148693412206350826092592960669979663029085"
+      }
+    },
+    {
+      "input_id": "T4-erfi-004",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "3.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.253868,
+      "output": {
+        "re": "0.0",
+        "im": "0.9999779095030014145586272238704176796201522929126007503"
+      }
+    },
+    {
+      "input_id": "T4-erfi-005",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "10.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.981678,
+      "output": {
+        "re": "0.0",
+        "im": "0.9999999999999999999999999999999999999999999979115124162"
+      }
+    },
+    {
+      "input_id": "T4-erfi-006",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.633687,
+      "output": {
+        "re": "0.0",
+        "im": "1.000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "input_id": "T4-erfi-007",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "8.444876581637597467988598509691655635833740234375000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.996483,
+      "output": {
+        "re": "0.0",
+        "im": "0.9999999999999999999999999999999929251199241467079733507"
+      }
+    },
+    {
+      "input_id": "T4-erfi-008",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "2.637472228443935584607515920652076601982116699218750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.239904,
+      "output": {
+        "re": "0.0",
+        "im": "0.9998084814645273927209406304047179833789679474612693246"
+      }
+    },
+    {
+      "input_id": "T4-erfi-009",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "23.421939217216305451074731536209583282470703125000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.534771,
+      "output": {
+        "re": "0.0",
+        "im": "1.000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "input_id": "T4-erfi-010",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "20.427954248351955612861274858005344867706298828125000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.514606,
+      "output": {
+        "re": "0.0",
+        "im": "1.000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "input_id": "T4-erfi-011",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "7.779522197218389223394297005143016576766967773437500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.457557,
+      "output": {
+        "re": "0.0",
+        "im": "0.9999999999999999999999999996258601078003197714252740624"
+      }
+    },
+    {
+      "input_id": "T4-erfi-012",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "15.315981928871934769631479866802692413330078125000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.576275,
+      "output": {
+        "re": "0.0",
+        "im": "1.000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "input_id": "T4-erfi-013",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "27.763688577229011400504532502964138984680175781250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.513583,
+      "output": {
+        "re": "0.0",
+        "im": "1.000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "input_id": "T4-erfi-014",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "21.011311421641757135603256756439805030822753906250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.484869,
+      "output": {
+        "re": "0.0",
+        "im": "1.000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "input_id": "T4-erfi-015",
+      "head": "Erfi",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "27.013634069363416045916892471723258495330810546875000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.460716,
+      "output": {
+        "re": "0.0",
+        "im": "1.000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    {
+      "input_id": "T4-erf-016",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "0.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.029952,
+      "output": {
+        "re": "0.0",
+        "im": "0.0"
+      }
+    },
+    {
+      "input_id": "T4-erf-017",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "0.500000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.166986,
+      "output": {
+        "re": "0.0",
+        "im": "0.6149520946965109808396811856236413930513456178954035723"
+      }
+    },
+    {
+      "input_id": "T4-erf-018",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "1.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.167971,
+      "output": {
+        "re": "0.0",
+        "im": "1.650425758797542876025337729561362443895679874874022878"
+      }
+    },
+    {
+      "input_id": "T4-erf-019",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "3.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.218562,
+      "output": {
+        "re": "0.0",
+        "im": "1629.994622601565651061647952076274162778889910915259989"
+      }
+    },
+    {
+      "input_id": "T4-erf-020",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "10.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.993264,
+      "output": {
+        "re": "0.0",
+        "im": "1524307422708669699360546614726544062463812.074698857311"
+      }
+    },
+    {
+      "input_id": "T4-erf-021",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.465227,
+      "output": {
+        "re": "0.0",
+        "im": "1.379047205635398320143951493011934592102794303811758759e+389"
+      }
+    },
+    {
+      "input_id": "T4-erf-022",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "25.130162241463622763149032834917306900024414062500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.495842,
+      "output": {
+        "re": "0.0",
+        "im": "4.163135618736184671914212730255597340714379176597919283e+272"
+      }
+    },
+    {
+      "input_id": "T4-erf-023",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "8.061557690641636853001728013623505830764770507812500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.917222,
+      "output": {
+        "re": "0.0",
+        "im": "1182097875044413190931759813.597169614757421921582456979"
+      }
+    },
+    {
+      "input_id": "T4-erf-024",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "9.451284962450753113216705969534814357757568359375000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.95787,
+      "output": {
+        "re": "0.0",
+        "im": "37370680419550380817087090804788010213.51521698492703026"
+      }
+    },
+    {
+      "input_id": "T4-erf-025",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "12.976422460273106196382286725565791130065917968750000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.222536,
+      "output": {
+        "re": "0.0",
+        "im": "5.879613222989948595242936965302654750996757021525770409e+71"
+      }
+    },
+    {
+      "input_id": "T4-erf-026",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "14.888579843048276529771101195365190505981445312500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.532226,
+      "output": {
+        "re": "0.0",
+        "im": "7.071835492540703754492431097043952483971671377756318806e+94"
+      }
+    },
+    {
+      "input_id": "T4-erf-027",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "6.637603783345596752951678354293107986450195312500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.381411,
+      "output": {
+        "re": "0.0",
+        "im": "1170963284272281890.306620696308928241961950045526185672"
+      }
+    },
+    {
+      "input_id": "T4-erf-028",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "3.772225875301391972982401057379320263862609863281250000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.255669,
+      "output": {
+        "re": "0.0",
+        "im": "235303.9483175110662230930005582391483386026276791544189"
+      }
+    },
+    {
+      "input_id": "T4-erf-029",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "19.115226673481625851991339004598557949066162109375000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.509753,
+      "output": {
+        "re": "0.0",
+        "im": "1.439871850733852215418122153493108508654416551826483724e+157"
+      }
+    },
+    {
+      "input_id": "T4-erf-030",
+      "head": "Erf",
+      "z": {
+        "re": "0.000000000000000000000000000000000000000000000000000000000000",
+        "im": "1.106755631559880104219928398379124701023101806640625000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.180287,
+      "output": {
+        "re": "0.0",
+        "im": "2.016921873458806005632770083836326157605939224918156993"
+      }
+    },
+    {
+      "input_id": "T5-erf-001",
+      "head": "Erf",
+      "z": {
+        "re": "-7.851839275436685028353167581371963024139404296875000000000000",
+        "im": "9.232550844718449667425375082530081272125244140625000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.354323,
+      "output": {
+        "re": "191473832.3483753674791903193702192188808055775596066316",
+        "im": "794895688.6760512396235676084351952437399060715835557147"
+      }
+    },
+    {
+      "input_id": "T5-erf-002",
+      "head": "Erf",
+      "z": {
+        "re": "1.275923508578724163697870608302764594554901123046875000000000",
+        "im": "-0.612304617197235723224935100006405264139175415039062500000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.323994,
+      "output": {
+        "re": "1.031848026763364196798321628525957736927445486791066624",
+        "im": "-0.09356459905184640803547398637177248214366228968619091719"
+      }
+    },
+    {
+      "input_id": "T5-erf-003",
+      "head": "Erf",
+      "z": {
+        "re": "-8.403959658884156525004982540849596261978149414062500000000000",
+        "im": "-2.173107637621093601865140954032540321350097656250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.846339,
+      "output": {
+        "re": "-0.9999999999999999999999999999990693969964811608448416232",
+        "im": "1.231764568308413201840112448786004881585017126752410542e-30"
+      }
+    },
+    {
+      "input_id": "T5-erf-004",
+      "head": "Erf",
+      "z": {
+        "re": "4.074195069381045364309557044180110096931457519531250000000000",
+        "im": "-6.143515550319897045028483262285590171813964843750000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.716265,
+      "output": {
+        "re": "-83877738.97965507143207422086634261626892367013078140403",
+        "im": "-81475935.19823328448826467884406506493592800144077265843"
+      }
+    },
+    {
+      "input_id": "T5-erf-005",
+      "head": "Erf",
+      "z": {
+        "re": "-3.055190079782074796810320549411699175834655761718750000000000",
+        "im": "-14.567855321744650254345287976320832967758178710937500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.84345,
+      "output": {
+        "re": "-3.680378899094515320720509654293266456251734356037241939e+86",
+        "im": "-3.279729822436418860022609411947609606890273897210071128e+86"
+      }
+    },
+    {
+      "input_id": "T5-erf-006",
+      "head": "Erf",
+      "z": {
+        "re": "0.506056080836508881404256499081384390592575073242187500000000",
+        "im": "1.006316682651557492533811455359682440757751464843750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.295976,
+      "output": {
+        "re": "1.225390149126702422146248984793763059428343889736660584",
+        "im": "1.020176936253046849212530863167159806048746218585354129"
+      }
+    },
+    {
+      "input_id": "T5-erf-007",
+      "head": "Erf",
+      "z": {
+        "re": "1.113920417149336428153105771343689411878585815429687500000000",
+        "im": "-0.047150007756499537348027217831258894875645637512207031250000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.285686,
+      "output": {
+        "re": "0.8856258333711639215849240715907833192759203720719316530",
+        "im": "-0.01536662903703376951278740643687803385306406670173660059"
+      }
+    },
+    {
+      "input_id": "T5-erf-008",
+      "head": "Erf",
+      "z": {
+        "re": "0.180729026979794288321201634062163066118955612182617187500000",
+        "im": "-0.072541729612063968191115748140873620286583900451660156250000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.212257,
+      "output": {
+        "re": "0.2027734655457873639074447532467971307806462729276384233",
+        "im": "-0.07935423476576508074647407758185378516950223770836260977"
+      }
+    },
+    {
+      "input_id": "T5-erf-009",
+      "head": "Erf",
+      "z": {
+        "re": "8.617799281317092052745465480256825685501098632812500000000000",
+        "im": "0.445000938914520693945320317652658559381961822509765625000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.15517,
+      "output": {
+        "re": "0.9999999999999999999999999999999999413445919829762103277",
+        "im": "4.377416395744170388258751396885208448758878906218486926e-34"
+      }
+    },
+    {
+      "input_id": "T5-erf-010",
+      "head": "Erf",
+      "z": {
+        "re": "1.159456122686420620482294907560572028160095214843750000000000",
+        "im": "-5.278341927225585372696059494046494364738464355468750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.59976,
+      "output": {
+        "re": "-18204083221.21195046689669746572548537402246620823411768",
+        "im": "-29665733090.88093437706227280766666492008335478155408717"
+      }
+    },
+    {
+      "input_id": "T5-erf-011",
+      "head": "Erf",
+      "z": {
+        "re": "-5.432131882360100583184703282313421368598937988281250000000000",
+        "im": "3.908052864480444643646706026629544794559478759765625000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.875941,
+      "output": {
+        "re": "-0.9999999661585511461627168878408450322089366102468863988",
+        "im": "-0.00000004361542472534053503308319810069602360632572116057496459"
+      }
+    },
+    {
+      "input_id": "T5-erf-012",
+      "head": "Erf",
+      "z": {
+        "re": "1.730253208574005219233526986499782651662826538085937500000000",
+        "im": "3.772281659479553184155520284548401832580566406250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.587883,
+      "output": {
+        "re": "351.4467587590051953435321288625986799207535691332417666",
+        "im": "10494.10805713762457440038007772872079578416237967794156"
+      }
+    },
+    {
+      "input_id": "T5-erf-013",
+      "head": "Erf",
+      "z": {
+        "re": "10.066871973281310559400480997283011674880981445312500000000000",
+        "im": "-9.005720313086236217259283876046538352966308593750000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.196398,
+      "output": {
+        "re": "0.9999999999331610109642570500956507660146215917464877799",
+        "im": "0.00000000001122638584961030318158509268514211388385023090610508934"
+      }
+    },
+    {
+      "input_id": "T5-erf-014",
+      "head": "Erf",
+      "z": {
+        "re": "1.733963543468865831087555307021830230951309204101562500000000",
+        "im": "0.879697056300190571853647725220071151852607727050781250000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.463283,
+      "output": {
+        "re": "1.027464069125311008249682736901443955417667191083549593",
+        "im": "-0.008565704692008553080823676719319732090379394777026749845"
+      }
+    },
+    {
+      "input_id": "T5-erf-015",
+      "head": "Erf",
+      "z": {
+        "re": "12.786024342509874074380604724865406751632690429687500000000000",
+        "im": "-6.012664493588976810656276938971132040023803710937500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.357161,
+      "output": {
+        "re": "1.000000000000000000000000000000000000000000000000000000",
+        "im": "5.068338735364004933378723784015168272590596373886715185e-58"
+      }
+    },
+    {
+      "input_id": "T5-erfc-016",
+      "head": "Erfc",
+      "z": {
+        "re": "-2.569153002386743267493329767603427171707153320312500000000000",
+        "im": "14.612352469233950813531919266097247600555419921875000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.464198,
+      "output": {
+        "re": "-1.313098580840094317577918941772867708128707033466586556e+88",
+        "im": "-2.459968628222945699374672501862480442306251513018274263e+88"
+      }
+    },
+    {
+      "input_id": "T5-erfc-017",
+      "head": "Erfc",
+      "z": {
+        "re": "-1.278772830706849994442109164083376526832580566406250000000000",
+        "im": "12.521121251750313874140374537091702222824096679687500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 3.93328,
+      "output": {
+        "re": "5.192634512424705848706821135336686841088947449046782070e+65",
+        "im": "-9.393379646737163513305319016419219556353226404511372815e+65"
+      }
+    },
+    {
+      "input_id": "T5-erfc-018",
+      "head": "Erfc",
+      "z": {
+        "re": "-1.704395908510633050880755945399869233369827270507812500000000",
+        "im": "9.695950149388867345123799168504774570465087890625000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 3.835076,
+      "output": {
+        "re": "211210079273794736745243766717217003848.9040156812981017",
+        "im": "-23553377821034282369659222587704435151.18545677461089344"
+      }
+    },
+    {
+      "input_id": "T5-erfc-019",
+      "head": "Erfc",
+      "z": {
+        "re": "-6.606905982163075563562415482010692358016967773437500000000000",
+        "im": "5.432362292504515188795721769565716385841369628906250000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.99361,
+      "output": {
+        "re": "2.000000046567221436095543463108365216065494586965227604",
+        "im": "0.000000009782971610697759463739051915148760828004023627069150427"
+      }
+    },
+    {
+      "input_id": "T5-erfc-020",
+      "head": "Erfc",
+      "z": {
+        "re": "-8.712963645000579404609197808895260095596313476562500000000000",
+        "im": "7.555280970554501429603533324552699923515319824218750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 3.772875,
+      "output": {
+        "re": "1.999999999704741434025687364771235438776731229479887252",
+        "im": "-0.0000000001323966220313716820541663909069656653456614462907248735"
+      }
+    },
+    {
+      "input_id": "T5-erfc-021",
+      "head": "Erfc",
+      "z": {
+        "re": "-3.212980125222964833398009432130493223667144775390625000000000",
+        "im": "5.360684892216101005146811075974255800247192382812500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.238484,
+      "output": {
+        "re": "5539156.670367680347480455568038735137030530308319743037",
+        "im": "7114403.967553563157325455431436535797162958847234151146"
+      }
+    },
+    {
+      "input_id": "T5-erfc-022",
+      "head": "Erfc",
+      "z": {
+        "re": "13.858718917643004786555138707626610994338989257812500000000000",
+        "im": "-2.887753170092968169058167404728010296821594238281250000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.672454,
+      "output": {
+        "re": "8.661718918908252422611747834061629330235776533921202013e-83",
+        "im": "-6.379340234427202518503544309039780608785725351424391569e-82"
+      }
+    },
+    {
+      "input_id": "T5-erfc-023",
+      "head": "Erfc",
+      "z": {
+        "re": "-3.356912557936753582765732062398456037044525146484375000000000",
+        "im": "-10.913438246321522484549859655089676380157470703125000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.439787,
+      "output": {
+        "re": "-2203117686236631633320457833024438543755501080.016331041",
+        "im": "-2544143790626113222741453043501130890924503525.283342478"
+      }
+    },
+    {
+      "input_id": "T5-erfc-024",
+      "head": "Erfc",
+      "z": {
+        "re": "-4.002499118381254383791656437097117304801940917968750000000000",
+        "im": "9.718498861438407132595784787554293870925903320312500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.291241,
+      "output": {
+        "re": "562857193462216352455456009015706.6425762428828069843121",
+        "im": "260616862264752358193237517578851.2772600618222182342238"
+      }
+    },
+    {
+      "input_id": "T5-erfc-025",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.507983426931100101597849061363376677036285400390625000000000",
+        "im": "-2.001152101618387302295332119683735072612762451171875000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.384816,
+      "output": {
+        "re": "14.72492292243703525017086148455975870768700081496547523",
+        "im": "-1.411794057823877667686874835681051109842400532708088313"
+      }
+    },
+    {
+      "input_id": "T5-erfc-026",
+      "head": "Erfc",
+      "z": {
+        "re": "1.198601917420066387265364937775302678346633911132812500000000",
+        "im": "-6.009978286780934375599372287979349493980407714843750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.673955,
+      "output": {
+        "re": "-107469826158646.4135595392662423436515884180640712097789",
+        "im": "-7283860738981.423269562885004663315712422227253324264505"
+      }
+    },
+    {
+      "input_id": "T5-erfc-027",
+      "head": "Erfc",
+      "z": {
+        "re": "7.023532298792209083160287264036014676094055175781250000000000",
+        "im": "-5.280759564009443352006201166659593582153320312500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 6.89297,
+      "output": {
+        "re": "0.00000000002607472568083712359224421152999954130573246848416424828",
+        "im": "-0.00000000001710275570303239886808607496561335490501624691286747440"
+      }
+    },
+    {
+      "input_id": "T5-erfc-028",
+      "head": "Erfc",
+      "z": {
+        "re": "0.557949278029405859591349781112512573599815368652343750000000",
+        "im": "-1.313997454291092381595262850169092416763305664062500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.372861,
+      "output": {
+        "re": "-1.252203577674110060363518193318357027843382211067286347",
+        "im": "1.166935450228004980429113719478445530472341075608003574"
+      }
+    },
+    {
+      "input_id": "T5-erfc-029",
+      "head": "Erfc",
+      "z": {
+        "re": "1.137023096886662809623658176860772073268890380859375000000000",
+        "im": "-2.440979172234106098215988822630606591701507568359375000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.409809,
+      "output": {
+        "re": "21.80082340774223894626250449891746156534623507135066253",
+        "im": "7.663874560127748459476262146309459560146835302640232342"
+      }
+    },
+    {
+      "input_id": "T5-erfc-030",
+      "head": "Erfc",
+      "z": {
+        "re": "3.412669418542553234630076985922642052173614501953125000000000",
+        "im": "1.258776111014001219956526256282813847064971923828125000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.65249,
+      "output": {
+        "re": "-0.000005645144548203109671755582732434902894118479394256347618",
+        "im": "-0.000003093853305194999758520666174876581973522242668746922817"
+      }
+    },
+    {
+      "input_id": "T5-erfi-031",
+      "head": "Erfi",
+      "z": {
+        "re": "12.014975180583336467066146724391728639602661132812500000000000",
+        "im": "-0.059540772092078537991444164845233899541199207305908203125000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.298477,
+      "output": {
+        "re": "3.358799232841544039621739473667454520347706271771374935e+60",
+        "im": "-2.299754602132107231041637079172077292883109720350505900e+61"
+      }
+    },
+    {
+      "input_id": "T5-erfi-032",
+      "head": "Erfi",
+      "z": {
+        "re": "13.683455147737980439615057548508048057556152343750000000000000",
+        "im": "2.671879307315528251365321921184659004211425781250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.935744,
+      "output": {
+        "re": "-5.220514479171313855695379879584323173470879157488036734e+76",
+        "im": "-4.141362507417513483050915810160502698539598052558364199e+76"
+      }
+    },
+    {
+      "input_id": "T5-erfi-033",
+      "head": "Erfi",
+      "z": {
+        "re": "-4.996032877360039314851292147068306803703308105468750000000000",
+        "im": "-5.343728611772203151986104785464704036712646484375000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.685363,
+      "output": {
+        "re": "0.001411508605800819928699660021427423227731942722766483512",
+        "im": "-1.001576255954912796718668646308649985997817642585532683"
+      }
+    },
+    {
+      "input_id": "T5-erfi-034",
+      "head": "Erfi",
+      "z": {
+        "re": "-2.622532729431080067428183610900305211544036865234375000000000",
+        "im": "8.959689758622104704954836051911115646362304687500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.897724,
+      "output": {
+        "re": "1.210205411577822467278808819165088003627386444709454753e-34",
+        "im": "1.000000000000000000000000000000000790057525031816388827"
+      }
+    },
+    {
+      "input_id": "T5-erfi-035",
+      "head": "Erfi",
+      "z": {
+        "re": "1.830556820738977297224892026861198246479034423828125000000000",
+        "im": "-5.096855336223895527325566945364698767662048339843750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.560042,
+      "output": {
+        "re": "0.000000000002217656286738483586814712199707913599047839792065375400",
+        "im": "-0.9999999999848378914198336594184816912906336547418733686"
+      }
+    },
+    {
+      "input_id": "T5-erfi-036",
+      "head": "Erfi",
+      "z": {
+        "re": "-3.827079487357384568468887664494104683399200439453125000000000",
+        "im": "0.005526881846953327764859764670291042421013116836547851562500"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.408651,
+      "output": {
+        "re": "-351139.5178361592176428935326273534628302626520992836480",
+        "im": "14312.37308333584835730313272677883779517821746444652320"
+      }
+    },
+    {
+      "input_id": "T5-erfi-037",
+      "head": "Erfi",
+      "z": {
+        "re": "1.298480039414128484054344880860298871994018554687500000000000",
+        "im": "5.998805515312856329046553582884371280670166015625000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.646134,
+      "output": {
+        "re": "-9.069373270438055223403692684729390284657879342046395968e-18",
+        "im": "1.000000000000000115029998297609479832532686191200323459"
+      }
+    },
+    {
+      "input_id": "T5-erfi-038",
+      "head": "Erfi",
+      "z": {
+        "re": "0.959526553088309031025460171804297715425491333007812500000000",
+        "im": "0.715722215272317940915058898099232465028762817382812500000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.291377,
+      "output": {
+        "re": "0.5889374046137068766871154583131287355245849510074962701",
+        "im": "1.295965449495175230748338317570541889769345924413299622"
+      }
+    },
+    {
+      "input_id": "T5-erfi-039",
+      "head": "Erfi",
+      "z": {
+        "re": "-6.565234939790749457699803315335884690284729003906250000000000",
+        "im": "6.233186865149008326625335030257701873779296875000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.881421,
+      "output": {
+        "re": "-3.599970087299946243168042385617196342303081451783653861",
+        "im": "-1.475023686363932520039351514736776172347693318714905308"
+      }
+    },
+    {
+      "input_id": "T5-erfi-040",
+      "head": "Erfi",
+      "z": {
+        "re": "-6.563898876608363686102620704332366585731506347656250000000000",
+        "im": "11.814076158661551474438056175131350755691528320312500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.919678,
+      "output": {
+        "re": "5.178655700963634726781398714166971737304783226128095304e-44",
+        "im": "0.9999999999999999999999999999999999999999999953897007654"
+      }
+    },
+    {
+      "input_id": "T5-erfi-041",
+      "head": "Erfi",
+      "z": {
+        "re": "-12.152825770827071494295523734763264656066894531250000000000000",
+        "im": "-2.704911416238485522001155914040282368659973144531250000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.305414,
+      "output": {
+        "re": "3.767694866937134393743694102060890488662142411198419584e+59",
+        "im": "-1.816309877068795391984681849374563499157590793240222560e+59"
+      }
+    },
+    {
+      "input_id": "T5-erfi-042",
+      "head": "Erfi",
+      "z": {
+        "re": "0.213984752554707641225562042563979048281908035278320312500000",
+        "im": "0.323707504313382354865780143882147967815399169921875000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.246723,
+      "output": {
+        "re": "0.2200856896675832665902546731070340525524822265333164759",
+        "im": "0.3682845146654341670454095428607066322559983820180720400"
+      }
+    },
+    {
+      "input_id": "T5-erfi-043",
+      "head": "Erfi",
+      "z": {
+        "re": "3.568610416961227826959657249972224235534667968750000000000000",
+        "im": "4.241303401185320787192267744103446602821350097656250000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.564709,
+      "output": {
+        "re": "-0.0002359804038541646303875770439395786971731294553049831234",
+        "im": "0.9995250178354129538621840504230213765500715333646512093"
+      }
+    },
+    {
+      "input_id": "T5-erfi-044",
+      "head": "Erfi",
+      "z": {
+        "re": "-11.567816975242434907045208092313259840011596679687500000000000",
+        "im": "-8.833285712212589402270168648101389408111572265625000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.846249,
+      "output": {
+        "re": "57743047007554578145895.49051389543679674415882492914362",
+        "im": "-31118793161146079297058.74135143204225314587295226289153"
+      }
+    },
+    {
+      "input_id": "T5-erfi-045",
+      "head": "Erfi",
+      "z": {
+        "re": "-3.597194252575437012353631871519610285758972167968750000000000",
+        "im": "-10.168035490658636987859608780127018690109252929687500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.029825,
+      "output": {
+        "re": "2.572711310046974247440844216728190746829049065451357745e-41",
+        "im": "-1.000000000000000000000000000000000000000009021236832796"
+      }
+    },
+    {
+      "input_id": "T6-erf-001",
+      "head": "Erf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.01968,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T6-erf-002",
+      "head": "Erf",
+      "z": "-0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.011369,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T6-erf-003",
+      "head": "Erf",
+      "z": "Infinity",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.004051,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erf-004",
+      "head": "Erf",
+      "z": "-Infinity",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.00662,
+      "output": "-1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erf-005",
+      "head": "Erf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.008195,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T6-erf-006",
+      "head": "Erf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.005897,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T6-erf-007",
+      "head": "Erf",
+      "z": "1.7976931348623157e+308",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.02724,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erf-008",
+      "head": "Erf",
+      "z": "NaN",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.00283,
+      "output": "NaN"
+    },
+    {
+      "input_id": "T6-erfc-009",
+      "head": "Erfc",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.008416,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erfc-010",
+      "head": "Erfc",
+      "z": "-0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.007144,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erfc-011",
+      "head": "Erfc",
+      "z": "Infinity",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.00217,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T6-erfc-012",
+      "head": "Erfc",
+      "z": "-Infinity",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.003485,
+      "output": "2.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erfc-013",
+      "head": "Erfc",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.006283,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erfc-014",
+      "head": "Erfc",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.005631,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erfc-015",
+      "head": "Erfc",
+      "z": "1.7976931348623157e+308",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.025598,
+      "failure_reason": "OverflowError: int too large to convert to float"
+    },
+    {
+      "input_id": "T6-erfc-016",
+      "head": "Erfc",
+      "z": "NaN",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.003255,
+      "output": "NaN"
+    },
+    {
+      "input_id": "T6-erfcx-017",
+      "head": "Erfcx",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.014629,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erfcx-018",
+      "head": "Erfcx",
+      "z": "-0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.010443,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erfcx-019",
+      "head": "Erfcx",
+      "z": "Infinity",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.01193,
+      "output": "NaN"
+    },
+    {
+      "input_id": "T6-erfcx-020",
+      "head": "Erfcx",
+      "z": "-Infinity",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.01068,
+      "output": "Infinity"
+    },
+    {
+      "input_id": "T6-erfcx-021",
+      "head": "Erfcx",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.010726,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erfcx-022",
+      "head": "Erfcx",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.007892,
+      "output": "1.000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "input_id": "T6-erfcx-023",
+      "head": "Erfcx",
+      "z": "1.7976931348623157e+308",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.648602,
+      "failure_reason": "OverflowError: int too large to convert to float"
+    },
+    {
+      "input_id": "T6-erfcx-024",
+      "head": "Erfcx",
+      "z": "NaN",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.008526,
+      "output": "NaN"
+    },
+    {
+      "input_id": "T6-erfi-025",
+      "head": "Erfi",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.020098,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T6-erfi-026",
+      "head": "Erfi",
+      "z": "-0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.014466,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T6-erfi-027",
+      "head": "Erfi",
+      "z": "Infinity",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.11334,
+      "output": "Infinity"
+    },
+    {
+      "input_id": "T6-erfi-028",
+      "head": "Erfi",
+      "z": "-Infinity",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.081616,
+      "output": "-Infinity"
+    },
+    {
+      "input_id": "T6-erfi-029",
+      "head": "Erfi",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.015175,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T6-erfi-030",
+      "head": "Erfi",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.011248,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T6-erfi-031",
+      "head": "Erfi",
+      "z": "1.7976931348623157e+308",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 233.513946,
+      "output": "1.381850043190635925688198254758587115707185877357193320e+14035097408404254459772908741075070667479290125146711116152773890122578887353231050640197306059060203808001120721032202528305747406713708562434333580658365889050019325341752111670971250173148141657425929610470505245684079672791608615160516936381584051957614175018894930794207926444865365143422309892088297340796489005718649327998708555281335996223408323844688261472880241477249397909542540711004009458777325020268490601611168362477284824841476525754802978911887451811743511084398066400820721326962671346058318746693296097198166848080177387570050449063564187820277666898118969500414233764696271354975053651186314216774"
+    },
+    {
+      "input_id": "T6-erfi-032",
+      "head": "Erfi",
+      "z": "NaN",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.858499,
+      "output": "NaN"
+    },
+    {
+      "input_id": "T7-erfc-001",
+      "head": "Erfc",
+      "z": {
+        "re": "1.499375078120352977606444255798123776912689208984375000000000",
+        "im": "29.962507811848986705172137590125203132629394531250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.97926,
+      "output": {
+        "re": "-1.484203595325510187451277339747784343961317194267872722e+387",
+        "im": "4.021954116094565692995882048703738590276603221214072989e+386"
+      }
+    },
+    {
+      "input_id": "T7-erfc-002",
+      "head": "Erfc",
+      "z": {
+        "re": "0.998334166468283101814051860856125131249427795410156250000000",
+        "im": "-9.950041652780257095400884281843900680541992187500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.039914,
+      "output": {
+        "re": "-164746565525536537324395105985380797958846.7199004440390",
+        "im": "126398597761317186293292835702934471522884.0000146805506"
+      }
+    },
+    {
+      "input_id": "T7-erfc-003",
+      "head": "Erfc",
+      "z": {
+        "re": "0.000000000000001836970198721029983323969061283927340754161843",
+        "im": "-30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.78545,
+      "output": {
+        "re": "-1.519115807891264046881332180674164332942860566774559775e+376",
+        "im": "1.379047205635398320143951484640223189595974330909064863e+389"
+      }
+    },
+    {
+      "input_id": "T7-erfc-004",
+      "head": "Erfc",
+      "z": {
+        "re": "0.149937507812035297760644425579812377691268920898437500000000",
+        "im": "2.996250781184898848152897699037566781044006347656250000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.44349,
+      "output": {
+        "re": "-1158.559967440761790556875738383565812423580400788082600",
+        "im": "-1039.469922219562215181941763942260758069146402724199671"
+      }
+    },
+    {
+      "input_id": "T7-erfc-005",
+      "head": "Erfc",
+      "z": {
+        "re": "0.049979169270678434899846109829013585112988948822021484375000",
+        "im": "-0.998750260394966282717632566345855593681335449218750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.298711,
+      "output": {
+        "re": "0.8474644476546613385785389533062111956473152784809661696",
+        "im": "1.638980051238295841971730319240191899482352953785481249"
+      }
+    },
+    {
+      "input_id": "T7-erfc-006",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.299500249940484519761696446948917582631111145019531250000000",
+        "im": "2.985012495834077128620265284553170204162597656250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.420908,
+      "output": {
+        "re": "1352.748287646739875959963763835320078107676334012640165",
+        "im": "136.1353033846572913745177523269523506887297235409908891"
+      }
+    },
+    {
+      "input_id": "T7-erfc-007",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.299500249940484519761696446948917582631111145019531250000000",
+        "im": "2.985012495834077128620265284553170204162597656250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.387184,
+      "output": {
+        "re": "1352.748287646739875959963763835320078107676334012640165",
+        "im": "136.1353033846572913745177523269523506887297235409908891"
+      }
+    },
+    {
+      "input_id": "T7-erfc-008",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.999583385413566172239541174349142238497734069824218750000000",
+        "im": "19.975005207899325654352651326917111873626708984375000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.818877,
+      "output": {
+        "re": "1.634844357509261057642267753187993738058242632830998208e+171",
+        "im": "1.150752989661731473074528591324912263997809143424381430e+171"
+      }
+    },
+    {
+      "input_id": "T7-erfc-009",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.499791692706783086119770587174571119248867034912109375000000",
+        "im": "9.987502603949662827176325663458555936813354492187500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.980776,
+      "output": {
+        "re": "-449941581163291699744509535578470699495381.7543461778244",
+        "im": "808079610118003576871376926310583243420526.0226669802781"
+      }
+    },
+    {
+      "input_id": "T7-erfc-010",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.999583385413566172239541174349142238497734069824218750000000",
+        "im": "19.975005207899325654352651326917111873626708984375000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.801866,
+      "output": {
+        "re": "1.634844357509261057642267753187993738058242632830998208e+171",
+        "im": "1.150752989661731473074528591324912263997809143424381430e+171"
+      }
+    },
+    {
+      "input_id": "T7-erfc-011",
+      "head": "Erfc",
+      "z": {
+        "re": "1.499375078120352977606444255798123776912689208984375000000000",
+        "im": "29.962507811848986705172137590125203132629394531250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.719724,
+      "output": {
+        "re": "-1.484203595325510187451277339747784343961317194267872722e+387",
+        "im": "4.021954116094565692995882048703738590276603221214072989e+386"
+      }
+    },
+    {
+      "input_id": "T7-erfc-012",
+      "head": "Erfc",
+      "z": {
+        "re": "0.299500249940484908339755065753706730902194976806640625000000",
+        "im": "-2.985012495834077128620265284553170204162597656250000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.427414,
+      "output": {
+        "re": "-1350.748287646739235981972654912365585244351517909705613",
+        "im": "-136.1353033846601910043947041302433279121929496555588190"
+      }
+    },
+    {
+      "input_id": "T7-erfc-013",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.998334166468281880568724773183930665254592895507812500000000",
+        "im": "-9.950041652780257095400884281843900680541992187500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.973427,
+      "output": {
+        "re": "164746565525533884776422845491261833705038.3252534475759",
+        "im": "126398597761321479695803281872541154907362.6177638387998"
+      }
+    },
+    {
+      "input_id": "T7-erfc-014",
+      "head": "Erfc",
+      "z": {
+        "re": "-0.249895846353391543059885293587285559624433517456054687500000",
+        "im": "-4.993751301974831413588162831729277968406677246093750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.584015,
+      "output": {
+        "re": "4706359884.024356581293958073653746988638638853219438246",
+        "im": "-5610447328.789415795413953400513573714763640879114389119"
+      }
+    },
+    {
+      "input_id": "T7-erfc-015",
+      "head": "Erfc",
+      "z": {
+        "re": "0.000000000000000183697019872102968750112960340450031135594986",
+        "im": "3.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.382871,
+      "output": {
+        "re": "0.9999999999983203936525527271069045921301349472952981619",
+        "im": "-1629.994622601565651061647952075348546737136914999015691"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-016",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000001836970198721029983323969061283927340754161843",
+        "im": "30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.785994,
+      "output": {
+        "re": "1.153479556360002436737682615869825104555946842691067448e-18",
+        "im": "-0.01881678486866072779050220596884276867112365211649494892"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-017",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.499791692706783086119770587174571119248867034912109375000000",
+        "im": "-9.987502603949662827176325663458555936813354492187500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.007722,
+      "output": {
+        "re": "-0.002863013236241718828469097882069422790143271074412132283",
+        "im": "0.05663157925236514548023987186735431540569664752363245417"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-018",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.999583385413566172239541174349142238497734069824218750000000",
+        "im": "-19.975005207899325654352651326917111873626708984375000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.868092,
+      "output": {
+        "re": "-0.001415188800982553502551069631960556808667884782986866252",
+        "im": "0.02820921947452928408318247715347969353656641111301123590"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-019",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000000306161699786838314119392651442908610714681864",
+        "im": "-5.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.572023,
+      "output": {
+        "re": "0.00000000001388795123747589586202540414153222268161784078043455658",
+        "im": "0.1152459618309365884803127568261306743938431168937970249"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-020",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.149937507812035297760644425579812377691268920898437500000000",
+        "im": "-2.996250781184898848152897699037566781044006347656250000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.530513,
+      "output": {
+        "re": "0.01184265339526938784556994950792210640216266923457738742",
+        "im": "0.2005746500398757908182545721775190123711131252113984917"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-021",
+      "head": "Erfcx",
+      "z": {
+        "re": "2.995002499404849416464458045084029436111450195312500000000000",
+        "im": "-29.850124958340771286202652845531702041625976562500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.538177,
+      "output": {
+        "re": "0.001880595086969116353609842567448223386663902208230957473",
+        "im": "0.01872236281945612010469394109479524830415541409549382699"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-022",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000000612323399573676628238785302885817221429363727",
+        "im": "-10.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.802663,
+      "output": {
+        "re": "3.507827812907798382202402445071255901746025965022537564e-18",
+        "im": "0.05670539423288759408509059239969665227034198126042084095"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-023",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.249895846353391543059885293587285559624433517456054687500000",
+        "im": "4.993751301974831413588162831729277968406677246093750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.691725,
+      "output": {
+        "re": "-0.006016002912828067506714933911008002979174326052217209509",
+        "im": "-0.1150743092538735501760939190269036930580945344665189432"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-024",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.249895846353391543059885293587285559624433517456054687500000",
+        "im": "4.993751301974831413588162831729277968406677246093750000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.619226,
+      "output": {
+        "re": "-0.006016002912828067506714933911008002979174326052217209509",
+        "im": "-0.1150743092538735501760939190269036930580945344665189432"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-025",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.998334166468283101814051860856125131249427795410156250000000",
+        "im": "9.950041652780257095400884281843900680541992187500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.037364,
+      "output": {
+        "re": "0.005717961946229567073268399275200342700714127638195023877",
+        "im": "-0.05641039072249123887231484297357810844775911743941003709"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-026",
+      "head": "Erfcx",
+      "z": {
+        "re": "-0.499791692706783086119770587174571119248867034912109375000000",
+        "im": "9.987502603949662827176325663458555936813354492187500000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.060549,
+      "output": {
+        "re": "-0.002863013236241718828469097882069422790143271074412132283",
+        "im": "-0.05663157925236514548023987186735431540569664752363245417"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-027",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.149937507812035297760644425579812377691268920898437500000000",
+        "im": "-2.996250781184898848152897699037566781044006347656250000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.507778,
+      "output": {
+        "re": "0.01184265339526938784556994950792210640216266923457738742",
+        "im": "0.2005746500398757908182545721775190123711131252113984917"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-028",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000000183697019872102968750112960340450031135594986",
+        "im": "3.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.446955,
+      "output": {
+        "re": "0.0001234098040866939816053471293322649029334468081681717012",
+        "im": "-0.2011573170376003865253043335075031237480561952586945491"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-029",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.000000000000001836970198721029983323969061283927340754161843",
+        "im": "30.000000000000000000000000000000000000000000000000000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.800944,
+      "output": {
+        "re": "1.153479556360002436737682615869825104555946842691067448e-18",
+        "im": "-0.01881678486866072779050220596884276867112365211649494892"
+      }
+    },
+    {
+      "input_id": "T7-erfcx-030",
+      "head": "Erfcx",
+      "z": {
+        "re": "0.998334166468283101814051860856125131249427795410156250000000",
+        "im": "9.950041652780257095400884281843900680541992187500000000000000"
+      },
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 2.058673,
+      "output": {
+        "re": "0.005717961946229567073268399275200342700714127638195023877",
+        "im": "-0.05641039072249123887231484297357810844775911743941003709"
+      }
+    },
+    {
+      "input_id": "T8-inverseerf-001",
+      "head": "InverseErf",
+      "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.593861,
+      "output": "-2.326753765513524493866433697072306576442279669216011991"
+    },
+    {
+      "input_id": "T8-inverseerf-002",
+      "head": "InverseErf",
+      "z": "-0.937499999999000022121720121504040434956550598144531250000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.229247,
+      "output": "-1.317150334981107481248449156209883445860872718717241944"
+    },
+    {
+      "input_id": "T8-inverseerf-003",
+      "head": "InverseErf",
+      "z": "-0.750000000000999977878279878495959565043449401855468750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.109198,
+      "output": "-0.8134198475993360034656100047943745101459646545116188704"
+    },
+    {
+      "input_id": "T8-inverseerf-004",
+      "head": "InverseErf",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.013466,
+      "output": "-0.4769362762044698733814183536431305598089697490594706447"
+    },
+    {
+      "input_id": "T8-inverseerf-005",
+      "head": "InverseErf",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.037956,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T8-inverseerf-006",
+      "head": "InverseErf",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.970324,
+      "output": "0.4769362762044698733814183536431305598089697490594706447"
+    },
+    {
+      "input_id": "T8-inverseerf-007",
+      "head": "InverseErf",
+      "z": "0.750000000000999977878279878495959565043449401855468750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.04382,
+      "output": "0.8134198475993360034656100047943745101459646545116188704"
+    },
+    {
+      "input_id": "T8-inverseerf-008",
+      "head": "InverseErf",
+      "z": "0.937499999999000022121720121504040434956550598144531250000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.153025,
+      "output": "1.317150334981107481248449156209883445860872718717241944"
+    },
+    {
+      "input_id": "T8-inverseerf-009",
+      "head": "InverseErf",
+      "z": "0.998999999999999999111821580299874767661094665527343750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.361172,
+      "output": "2.326753765513524493866433697072306576442279669216011991"
+    },
+    {
+      "input_id": "T8-inverseerf-010",
+      "head": "InverseErf",
+      "z": "-0.769213389670109992657387465442297980189323425292968750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.863109,
+      "output": "-0.8473508333441690666782551099953215757317003684943944885"
+    },
+    {
+      "input_id": "T8-inverseerf-011",
+      "head": "InverseErf",
+      "z": "0.240467234119059014574304455891251564025878906250000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.627216,
+      "output": "0.2164414312199248175705558528421264358981554555007097683"
+    },
+    {
+      "input_id": "T8-inverseerf-012",
+      "head": "InverseErf",
+      "z": "0.833858161104776840488739253487437963485717773437500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.815707,
+      "output": "0.9791362618747230504701768996709333607262904747905183286"
+    },
+    {
+      "input_id": "T8-inverseerf-013",
+      "head": "InverseErf",
+      "z": "-0.252705311310805980085092414810787886381149291992187500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.650768,
+      "output": "-0.2278358683615948412845285980672613964816177264493219209"
+    },
+    {
+      "input_id": "T8-inverseerf-014",
+      "head": "InverseErf",
+      "z": "0.441917716084009759569539710355456918478012084960937500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.673125,
+      "output": "0.4141470238826096698200643762100282670399345337134773629"
+    },
+    {
+      "input_id": "T8-inverseerf-015",
+      "head": "InverseErf",
+      "z": "-0.709926908761228769861872933688573539257049560546875000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.812211,
+      "output": "-0.7480916017153687499962613877851129195111539572500075217"
+    },
+    {
+      "input_id": "T8-inverseerf-016",
+      "head": "InverseErf",
+      "z": "0.958187186721799477595595817547291517257690429687500000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.113639,
+      "output": "1.439229867066940317100997471833494963297351345747180366"
+    },
+    {
+      "input_id": "T8-inverseerf-017",
+      "head": "InverseErf",
+      "z": "-0.146309752015541194580805495206732302904129028320312500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.551874,
+      "output": "-0.1303989835189670489175528195551765786835718408059112702"
+    },
+    {
+      "input_id": "T8-inverseerfc-018",
+      "head": "InverseErfc",
+      "z": "0.000000000000000000000000000000000000000000000000010000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 4.950809,
+      "output": "10.59209016952726254164868587391875793172864205641339483"
+    },
+    {
+      "input_id": "T8-inverseerfc-019",
+      "head": "InverseErfc",
+      "z": "0.000000000100000000000000003643219731549774157916554706559964",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.980484,
+      "output": "4.572824967389485274846611286027882127231564955901479231"
+    },
+    {
+      "input_id": "T8-inverseerfc-020",
+      "head": "InverseErfc",
+      "z": "0.062500000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.976772,
+      "output": "1.317150334986130748883929792084448799602611094978668332"
+    },
+    {
+      "input_id": "T8-inverseerfc-021",
+      "head": "InverseErfc",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.894936,
+      "output": "1.163087153676674067696793967190011585640067029575063649"
+    },
+    {
+      "input_id": "T8-inverseerfc-022",
+      "head": "InverseErfc",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.663307,
+      "output": "0.4769362762044698733814183536431305598089697490594706447"
+    },
+    {
+      "input_id": "T8-inverseerfc-023",
+      "head": "InverseErfc",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.596813,
+      "output": "0.08885599049425766718156460616849581532046843443873332772"
+    },
+    {
+      "input_id": "T8-inverseerfc-024",
+      "head": "InverseErfc",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.029395,
+      "output": "0.0"
+    },
+    {
+      "input_id": "T8-inverseerfc-025",
+      "head": "InverseErfc",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.689781,
+      "output": "-0.4769362762044698733814183536431305598089697490594706447"
+    },
+    {
+      "input_id": "T8-inverseerfc-026",
+      "head": "InverseErfc",
+      "z": "1.937500000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.911247,
+      "output": "-1.317150334986130748883929792084448799602611094978668332"
+    },
+    {
+      "input_id": "T8-inverseerfc-027",
+      "head": "InverseErfc",
+      "z": "1.999000000000000110134124042815528810024261474609375000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 1.24971,
+      "output": "-2.326753765513546580589746687178731461351905338212387201"
+    },
+    {
+      "input_id": "T8-inverseerfc-028",
+      "head": "InverseErfc",
+      "z": "1.141960457811113771597888444375712424516677856445312500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.554078,
+      "output": "-0.1264804035525514099632124884979714035848075517829747136"
+    },
+    {
+      "input_id": "T8-inverseerfc-029",
+      "head": "InverseErfc",
+      "z": "0.793259000267488412205807435384485870599746704101562500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.602322,
+      "output": "0.1853192472616630774931324584410719433892250278383189567"
+    },
+    {
+      "input_id": "T8-inverseerfc-030",
+      "head": "InverseErfc",
+      "z": "0.605201911933348490890693938126787543296813964843750000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.642399,
+      "output": "0.3655278612596040828974726443365113922329307788421312334"
+    },
+    {
+      "input_id": "T8-inverseerfc-031",
+      "head": "InverseErfc",
+      "z": "1.201490934664146470467471772280987352132797241210937500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.597259,
+      "output": "-0.1805081871340090871308941192385192138209151462683850084"
+    },
+    {
+      "input_id": "T8-inverseerfc-032",
+      "head": "InverseErfc",
+      "z": "1.408907173014668501309643033891916275024414062500000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.623988,
+      "output": "-0.3798952793757935480421266923744349768052155583429513400"
+    },
+    {
+      "input_id": "T8-inverseerfc-033",
+      "head": "InverseErfc",
+      "z": "0.738148591056535297028062814206350594758987426757812500000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.614791,
+      "output": "0.2363901073003803397315262921161278756760061575086825548"
+    },
+    {
+      "input_id": "T8-inverseerfc-034",
+      "head": "InverseErfc",
+      "z": "1.490638890015258954946375524741597473621368408203125000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.650781,
+      "output": "-0.4665722717154524063393900781002546543371949259431435903"
+    },
+    {
+      "input_id": "T8-inverseerfc-035",
+      "head": "InverseErfc",
+      "z": "1.849859926560828427000160445459187030792236328125000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "oracle_id": "mpmath",
+      "oracle_version": "1.3.0",
+      "python_version": "3.12.3 (main, Mar 23 2026, 19:04:32) [GCC 13.3.0]",
+      "elapsed_ms": 0.774197,
+      "output": "-1.017552737404667902155111227019007896218822340831218150"
+    }
+  ]
+}

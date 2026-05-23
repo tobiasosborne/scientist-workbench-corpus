@@ -1,0 +1,19 @@
+# =============================================================================
+# erf-anchor — mpmath replay adapter (gold tier)
+# =============================================================================
+#
+# Grades mpmath's `mpf` outputs at 60 dps (committed snapshot, bead
+# scientist-workbench-1f8r area, 2026-05-16) against the gold-tier
+# consensus.  Pre-computed-oracle pattern (see wolfram/erf-anchor.toml).
+#
+# mpmath refused 2/271 cases (T6-erfc-015, T6-erfcx-023; MAX_DOUBLE
+# overflow → OverflowError).  Verifier scopes per-oracle checks via
+# applies_when so the honest refusals don't count as candidate failures.
+
+[adapter]
+target          = "mpmath"
+capability_id   = "erf-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/mpmath/oracles/erf-anchor-replay.ts"]
+version         = "mpmath 1.3.0 / python 3.12.3 (snapshot 2026-05-16)"
+platform_pinned = false
