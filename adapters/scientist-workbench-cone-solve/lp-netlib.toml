@@ -1,0 +1,24 @@
+# Parallel target for tools/cone-solve (ADR-0030/ADR-0037) — the
+# universal cone solver, native tolerance 1e-6.  Reuses the same
+# run-candidate.ts bridge as the lp-solve adapter; the only delta is
+# env.CANDIDATE_TOOL = "cone-solve" (vs the bridge default "lp-solve").
+#
+# Tier:  universal cone solver (V3 oracle, 1e-6 native precision).
+# Expected differential vs target=scientist-workbench (lp-solve tier):
+#   lp-netlib verifier expects 1e-8 precision (specialist tier), so
+#   cone-solve grades to ~5/21 invariants passing per worklog 173.
+#   The lp-solve adapter clears ~21/21 on the same suite.  Surfacing
+#   that precision-tier gap is the whole point of running both —
+#   dashboard shows lp-solve and cone-solve side-by-side.
+
+[adapter]
+target          = "scientist-workbench-cone-solve"
+capability_id   = "lp-netlib"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "git@9efb8d7"
+platform_pinned = true
+
+[adapter.env]
+CANDIDATE_TOOL = "cone-solve"

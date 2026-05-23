@@ -1,11 +1,12 @@
+# Bridges raw JSON <-> canonical Value protocol and invokes
+# wb.run(CANDIDATE_TOOL, ...). Defaults to CANDIDATE_TOOL=lp-solve;
+# override via env to A/B against tools/cone-solve when it ships.
+
 [adapter]
-# INERT adapter — see lp-netlib.toml in this directory for the activation
-# protocol.  Same target tool (lp-solve / cone-solve); different bench
-# suite (lp-small).
 target          = "scientist-workbench"
 capability_id   = "lp-small"
 cmd             = "bun"
 args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
 cwd             = "${WORKBENCH_ROOT}"
-version         = "PENDING-tools/lp-solve"
+version         = "git@9efb8d7"
 platform_pinned = true
