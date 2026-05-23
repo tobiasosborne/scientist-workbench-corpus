@@ -18,8 +18,7 @@ ingested_by = "scripts/ingest_wolfram_v1.ts"
 [signature]
 input  = "n, z"
 output = "the modified Bessel function of the second kind Kn (z)"
-arity  = 1
-
+arity  = 2
 [description]
 md = '''
 BesselK[n, z] gives the modified Bessel function of the second kind Kn (z). Mathematical function (see Section ??). d2 y Kn (z) satisfies the differential equation z2 dz2 + z dz dy ; (z + n )y = 0. 2 2
@@ -42,3 +41,18 @@ sha256       = "4f673b7720b8eda378fbff6ed91d14c7b738ae6bd7fa1034a499038181f0ca23
 level             = 1
 method            = "manual_quote"
 last_verified_at  = "2026-05-06"
+
+[[provenance]]
+field_path   = "signature.arity"
+value        = "2; rationale: Arity corrected from 1 to true value derived from the PDF signature. Ingestor scripts/ingest_wolfram_v1.ts pre-2026-05-23 hard-coded arity=1 for every entry; see bead scientist-workbench-corpus-3pu."
+source_url   = "bead:scientist-workbench-corpus-3pu"
+source_kind  = "manual"
+retrieved_at = "2026-05-23"
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "BesselK" }
+precision_tier = "both"
+notes          = "Dispatches via --head=BesselK; ADR-0041 + worklog 163. Half-integer ν support landed in shard 171."

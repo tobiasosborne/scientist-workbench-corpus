@@ -20,7 +20,7 @@ ingested_by = "scripts/ingest_wolfram_v1.ts"
 [signature]
 input  = "f, x"
 output = "the partial derivative @@x f"
-arity  = 1
+arity  = 2
 
 [description]
 md = '''
@@ -44,3 +44,16 @@ sha256       = "fe67dc4474a0db83d251af9044a81372129e38f71b21f50e05a7f8e5a2e120d7
 level             = 1
 method            = "manual_quote"
 last_verified_at  = "2026-05-06"
+
+[[provenance]]
+field_path   = "signature.arity"
+value        = "2; rationale: Arity corrected from 1 to 2 to match the documented D[f, x] base signature (partial derivative). Variadic forms D[f, {x, n}] and D[f, x1, x2, ...] are surface variants of the same operator; the canonical base arity is 2. Ingestor scripts/ingest_wolfram_v1.ts pre-2026-05-23 hard-coded arity=1 for every entry; see bead scientist-workbench-corpus-3pu and follow-up sweep bead scientist-workbench-corpus-698."
+source_url   = "bead:scientist-workbench-corpus-5uz"
+source_kind  = "manual"
+retrieved_at = "2026-05-23"
+
+[[mapping]]
+target = "scientist-workbench"
+tool   = "cas-diff"
+status = "partial"
+notes  = "Dispatches to cas-diff for the base D[f, x] partial-derivative form. Partial coverage: Wolfram D also supports D[f, {x, n}] multi-order, multi-variable partials D[f, x1, x2, ...], and the NonConstants -> {...} option for implicit dependencies — these are not yet exercised by cas-diff. ADR-0041."

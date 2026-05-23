@@ -44,3 +44,11 @@ sha256       = "6201179a1f87ddd88a4f66a057fd666e78856e7e15008181acba772b283c1835
 level             = 1
 method            = "manual_quote"
 last_verified_at  = "2026-05-06"
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "Erf" }
+precision_tier = "both"
+notes          = "Dispatches via --head=Erf; ADR-0041 + worklog 167. Erf path stable post-shard 167."

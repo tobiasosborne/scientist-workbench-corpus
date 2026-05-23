@@ -1,0 +1,65 @@
+# =============================================================================
+# special-eval-smoke — adapter for the per-head Erf+Bessel umbrella evaluator
+# =============================================================================
+#
+# Targets `tools/special-eval` in scientist-workbench (ADR-0040 Erf prototype +
+# ADR-0041 Bessel extension; worklog shards 139 and 163).  The tool dispatches
+# across 14 heads via `--head=<HeadName>`:
+#
+#   Erf family    (6): Erf, Erfc, Erfcx, Erfi, InverseErf, InverseErfc
+#   Bessel family (8): BesselJ, BesselY, BesselI, BesselK,
+#                       HankelH1, HankelH2, SphericalBesselJ, SphericalBesselY
+#
+# plus `--precision=<int>` (≤53 ⇒ float64 lane, >53 ⇒ arb-prec lane per
+# ADR-0040 §"Decision 9").
+#
+# Adapter shape: option (A) — single multi-head adapter per benchmark suite
+# ------------------------------------------------------------------------
+# Two architecturally valid shapes existed for plumbing this tool through the
+# corpus:
+#
+#   (A) ONE adapter per suite; `run-candidate.ts` reads `input.head` per-case
+#       and forwards to `executeToolDef(specialEvalDef, ..., {head, precision})`.
+#       `tool_flags` pins suite-wide common bits (here: `precision = "53"` to
+#       lock the float64 lane).
+#
+#   (B) Per-head adapter variants — special-eval-erf.toml, ...-besselj.toml,
+#       etc. (14 adapters per suite).  Each pins `tool_flags = {head: "...",
+#       precision: "..."}`.
+#
+# We pick (A) because:
+#   * It matches how the erf-anchor / besselj-anchor mega-benches will be
+#     structured (B18 / B19) — head is per-case data, not adapter-level config.
+#   * It keeps the adapter count linear in suites, not in heads × suites.
+#   * The DuckDB-queryable `tool_flags` field still slices the lane (precision
+#     tier) — the dimension that varies *across suites*, not within one.
+#
+# Precedent set here: for head-dispatched tools, the adapter's `tool_flags`
+# pins the suite-wide lane (precision tier, method-class, etc.); the *head* is
+# always per-case data carried in the bench's `input` payload.
+#
+# Pairing
+# -------
+# Sibling bead B15 creates `benchmarks/special-eval-smoke/` (small, multi-head
+# float64 smoke).  This adapter references the not-yet-existing capability_id
+# `special-eval-smoke` — validation only complains about capability_id
+# mismatches across the corpus, not about adapters preceding their suites.
+#
+# Tier / pinning
+# --------------
+# `tool_flags.precision = "53"` ⇒ float64 lane ⇒ ADR-0015 numerical tier ⇒
+# platform_pinned = true.  When B18/B19 add arb-prec suites, those adapters
+# will carry `precision = "200"` (or similar) and `platform_pinned = false`
+# (arb-prec is bit-identical cross-platform — ADR-0020 §"Consequences").
+
+[adapter]
+target          = "scientist-workbench"
+capability_id   = "special-eval-smoke"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "git@9efb8d7"
+platform_pinned = true
+
+[adapter.tool_flags]
+precision = "53"

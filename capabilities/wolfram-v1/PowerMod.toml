@@ -18,7 +18,7 @@ ingested_by = "scripts/ingest_wolfram_v1.ts"
 [signature]
 input  = "a, b, n"
 output = "ab mod n"
-arity  = 1
+arity  = 3
 
 [description]
 md = '''
@@ -42,3 +42,16 @@ sha256       = "0a18839e8b1f0e4f3909c55831c8b8c9921518098116bbddfbbbdc3e00c32c12
 level             = 1
 method            = "manual_quote"
 last_verified_at  = "2026-05-06"
+
+[[provenance]]
+field_path   = "signature.arity"
+value        = "3; rationale: Arity corrected from 1 to 3 to match the documented PowerMod[a, b, n] signature (modular exponentiation, three integer arguments). Ingestor scripts/ingest_wolfram_v1.ts pre-2026-05-23 hard-coded arity=1 for every entry; see bead scientist-workbench-corpus-3pu and follow-up sweep bead scientist-workbench-corpus-698."
+source_url   = "bead:scientist-workbench-corpus-5uz"
+source_kind  = "manual"
+retrieved_at = "2026-05-23"
+
+[[mapping]]
+target = "scientist-workbench"
+tool   = "mod-pow"
+status = "implemented"
+notes  = "Dispatches to mod-pow for PowerMod[a, b, n] (3-arg modular exponentiation, including negative b → modular inverse). ADR-0041."
