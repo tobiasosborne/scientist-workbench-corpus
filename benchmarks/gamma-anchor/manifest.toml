@@ -1,0 +1,127 @@
+[meta]
+name        = "gamma-anchor"
+domain      = "special-functions-arbprec"
+description = """
+Multi-oracle V4 cross-system anchor for the Gamma family (19 corpus
+heads x 8 tiers x 377 cases) at arb-prec.  Ported from
+scientist-workbench/bench/gamma-anchor/ (HEAD af1baa3; ADR-0042
+Phase-1 GATE PASS).  Five oracles (wolfram + mpmath + arb gold,
+boost silver, scipy bronze) pre-computed every case once; the corpus
+is a static record of those oracle values - grading reads from
+committed results.json files and does NOT re-invoke Wolfram /
+Python / g++ / SciPy / FLINT on the host.
+
+Sibling-and-scale-up of erf-anchor (B18, 271 cases x 4 oracles) and
+besselj-anchor (B19, 1766 cases x 5 oracles).  Structural deltas
+from besselj-anchor: (1) 19 corpus heads vs 6, with richer
+discriminated-arg encoding ({kind, value} for a/b/m/n in addition
+to z); (2) per-case landmine_flags: string[] field in expected.json
+encoding L12-L18 + T7-carve-out as data-driven verifier inputs
+rather than hardcoded conditionals; (3) 4 corpus heads
+(GammaPDerivative, IncompleteBeta, InverseIncompleteGammaP,
+InverseIncompleteGammaQ; ~22 inputs) yield honest
+special-eval/unknown-head refusals from the candidate because
+tools/special-eval ADMITTED_HEADS covers only 16 Gamma heads
+(15 of which appear in the corpus).
+
+Consensus rule: 3-gold.  consensus.gold_agree = true iff at least
+two of {wolfram, mpmath, arb} produced finite values agreeing to
+>=48 decimal digits pairwise (full 3-of-3 preferred; 2-of-3 fallback
+when one gold refused).  L13 special case: InverseIncompleteGamma{P,Q}
+treats wolfram as sole authoritative gold (mpmath/arb have no native
+implementation; per G5 spec recommendation, recon bead
+scientist-workbench-corpus-bmj).  8 cases carry consensus.value=null
+(all L17 exact poles at z=0,-1,-2,-3 for Gamma and Digamma; all three
+golds refused / emitted ComplexInfinity).
+
+Per-case landmine_flags: L12 (P/Q/U/L 4-way confusion; 26 cases),
+L13 (InverseIncompleteGamma{P,Q} wolfram-sole gold; 12),
+L14 (SciPy polygamma complex TypeError; 8),
+L16 (BarnesG absent from boost & scipy; 11),
+L17 (Gamma/Digamma exact pole; 8),
+L18 (Boost digamma neg-half-integer bug; 2),
+T7-carve-out (Temme uniform-asymptotic; 40 with per-case tolerance).
+L15 (SciPy loggamma real-negative NaN) is doc-only - fixed upstream
+by passing x+0j.
+
+See DESCRIPTION.md for full tier breakdown, head taxonomy, landmine
+encoding details, and refusal accounting.
+"""
+ported_from = "scientist-workbench/bench/gamma-anchor (HEAD af1baa3; ADR-0042 Phase-1 GATE PASS; corpus bead scientist-workbench-0kq3)"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+# -- invariant 1: structural shape of the candidate envelope ------------------
+[[verifier.checks]]
+name              = "output_shape_well_formed"
+description       = "Candidate output is a JSON record with required success fields {value, method, achieved_precision, warnings}; OR a tagged-refusal envelope {kind: 'tagged', tag, payload}; OR a tool_error envelope {kind: 'tool_error', name, message}.  For complex outputs, value is {re, im} both decimal strings; for real outputs, value is a single decimal string."
+tolerance_source  = "structural -- no tolerance"
+machine_checkable = true
+
+# -- invariant 2: value is finite (or L17 pole sentinel) ----------------------
+[[verifier.checks]]
+name              = "value_finite_or_pole_sentinel"
+description       = "On the success path, value.re (and value.im for complex) parse as finite decimals.  Sentinel tokens (NaN / +-Infinity / ComplexInfinity / Indeterminate) are admissible only when landmine_flags contains 'L17' (Gamma/Digamma at exact non-positive-integer pole), where the candidate is exercising the four-oracle-pole landmine and an honest sentinel matches the gold oracles' behaviour.  Outside L17, a sentinel value fails."
+tolerance_source  = "structural -- no tolerance; L17 admits sentinels per ADR-0042 §L17"
+machine_checkable = true
+applies_when      = "candidate.kind != 'tagged' && candidate.kind != 'tool_error'"
+
+# -- invariant 3: numerical agreement with the gold consensus -----------------
+[[verifier.checks]]
+name              = "value_matches_consensus_within_tolerance"
+description       = "rel_err of candidate vs consensus.value <= consensus.tolerance_rel.  Tier ladder per ADR-0042 §Decision 8: T1-T3 = 1e-48 (non-pole), T4-T5 = 1e-46, T6 = 1e-44, T7 = per-case 1e-(48-ceil(log2(|a|))) Temme carve-out, T8 = 1e-44.  Comparison via JS BigInt scaled-decimal arithmetic at 80-digit precision (same shape as besselj-anchor)."
+tolerance_source  = "ADR-0042 §Decision 8 (tier ladder) + recon spec scientist-workbench-corpus-bmj"
+machine_checkable = true
+applies_when      = "consensus.value is not null"
+
+# -- invariant 4: precision self-report is honest -----------------------------
+[[verifier.checks]]
+name              = "claimed_precision_honest"
+description       = "0 <= achieved_precision (no upper bound -- internal substrates may legitimately over-allocate; e.g. arb-prec computes at 1.5x working precision and reports the working width).  Skipped on refusal envelopes."
+tolerance_source  = "ADR-0007 honest self-report"
+machine_checkable = true
+applies_when      = "candidate.kind != 'tagged' && candidate.kind != 'tool_error'"
+
+# -- invariant 5: method tag is from the admitted set -------------------------
+[[verifier.checks]]
+name              = "method_declared_consistent"
+description       = "method field is a non-empty string drawn from the lineage tags declared in tools/special-eval/tool.ts (FLOAT64_METHOD + FLOAT64_COMPLEX_METHOD + ARBPREC_METHOD_REAL + ARBPREC_METHOD_COMPLEX) for the Gamma heads, OR from the per-oracle native method sets (wolfram, mpmath, arb, boost, scipy) for the replay-shim candidates."
+tolerance_source  = "structural -- exact string membership"
+machine_checkable = true
+applies_when      = "candidate.kind != 'tagged' && candidate.kind != 'tool_error'"
+
+# -- invariant 6: refusal scope is honest -------------------------------------
+[[verifier.checks]]
+name              = "refusal_scope_honest"
+description       = "If the candidate emits a tagged-refusal envelope, the refusal class must be in the admitted set (special-eval/{unknown-head, non-finite-input, degenerate-shape, no-known-representation} for the main candidate; oracle/{wolfram, mpmath, arb, boost, scipy}-{refused, unsupported} for replay shims) AND the input must be in an expected-refusal region.  special-eval/unknown-head admitted UNCONDITIONALLY for the 4 corpus heads not in tools/special-eval ADMITTED_HEADS (GammaPDerivative, IncompleteBeta, InverseIncompleteGamma{P,Q}; 22 inputs total -- honest capability gaps).  L17 admits special-eval/non-finite-input on pole inputs.  Per-oracle replay refusals are inherently honest (committed snapshot)."
+tolerance_source  = "structural -- admitted-set membership + region/landmine check"
+machine_checkable = true
+applies_when      = "candidate.kind == 'tagged'"
+
+# -- invariant 7: cross-oracle consensus exists for this case -----------------
+[[verifier.checks]]
+name              = "consensus_exists"
+description       = "Emits a WARN (not a fail) when consensus.gold_agree = false on this case -- communicating oracle-side uncertainty to the grader without blocking the run.  Active on the 8 L17 pole disagreement cases."
+tolerance_source  = "ADR-0042 §Decision 8 -- 48-digit gold-gold threshold"
+machine_checkable = true
+applies_when      = "consensus.gold_agree == false"
+
+# -- invariant 8: landmine flagged behaviour is honest ------------------------
+[[verifier.checks]]
+name              = "landmine_handled_correctly"
+description       = "Data-driven landmine check (G6 / ADR-0042 §L12-L18).  Reads per-case landmine_flags and asserts that the candidate's behaviour is consistent with the documented landmine.  L17: candidate either emits Infinity/NaN/ComplexInfinity (admitted by check 2) OR an honest refusal (admitted by check 6).  L14: scipy replay shim refusals are admitted by check 6 without region restriction.  L16: BarnesG cases admit boost-unsupported / scipy-refused by check 6.  L18: graded against gold consensus, not boost.  Most landmines are passively handled by checks 2/6; this check is the explicit assertion that the per-case landmine_flags drove a consistent verdict.  Emits a WARN if landmine_flags is non-empty AND no other check has accommodated it."
+tolerance_source  = "structural -- per-case landmine_flags data field; ADR-0042 §L12-L18"
+machine_checkable = true
+applies_when      = "landmine_flags is not empty"
+
+[golden]
+inputs           = "golden/inputs.json"
+expected         = "golden/expected.json"
+n_cases          = 377
+n_heads          = 19
+n_tiers          = 8
+regenerated_at   = "2026-05-23"
+generate_cmd     = "# inputs/expected regenerated from scientist-workbench/bench/gamma-anchor/{corpus.json, oracles/*/results.json} (HEAD af1baa3) by /tmp/build-gamma-anchor-goldens.ts at bead scientist-workbench-corpus-59p (G6); per-oracle results.json files are committed id-enriched under adapters/<oracle>/data/gamma-anchor-results.json and are the static ground truth"

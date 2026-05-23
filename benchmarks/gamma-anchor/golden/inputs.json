@@ -1,0 +1,6184 @@
+{
+  "version": 1,
+  "problem": "gamma-anchor",
+  "cases": [
+    {
+      "id": "T1-gamma-001",
+      "input": {
+        "head": "Gamma",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-gamma-001"
+      },
+      "tags": [
+        "T1",
+        "head:Gamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-gamma-002",
+      "input": {
+        "head": "Gamma",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-gamma-002"
+      },
+      "tags": [
+        "T1",
+        "head:Gamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-gamma-003",
+      "input": {
+        "head": "Gamma",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-gamma-003"
+      },
+      "tags": [
+        "T1",
+        "head:Gamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-gamma-004",
+      "input": {
+        "head": "Gamma",
+        "z": "12.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-gamma-004"
+      },
+      "tags": [
+        "T1",
+        "head:Gamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-gamma-005",
+      "input": {
+        "head": "Gamma",
+        "z": "8.351527306554617169354060024488717317581176757812500000000000",
+        "id": "T1-gamma-005"
+      },
+      "tags": [
+        "T1",
+        "head:Gamma",
+        "LCG-sampled"
+      ]
+    },
+    {
+      "id": "T1-loggamma-001",
+      "input": {
+        "head": "LogGamma",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-loggamma-001"
+      },
+      "tags": [
+        "T1",
+        "head:LogGamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-loggamma-002",
+      "input": {
+        "head": "LogGamma",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-loggamma-002"
+      },
+      "tags": [
+        "T1",
+        "head:LogGamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-loggamma-003",
+      "input": {
+        "head": "LogGamma",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-loggamma-003"
+      },
+      "tags": [
+        "T1",
+        "head:LogGamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-loggamma-004",
+      "input": {
+        "head": "LogGamma",
+        "z": "12.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-loggamma-004"
+      },
+      "tags": [
+        "T1",
+        "head:LogGamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-loggamma-005",
+      "input": {
+        "head": "LogGamma",
+        "z": "11.074614698008918622917917673476040363311767578125000000000000",
+        "id": "T1-loggamma-005"
+      },
+      "tags": [
+        "T1",
+        "head:LogGamma",
+        "LCG-sampled"
+      ]
+    },
+    {
+      "id": "T1-digamma-001",
+      "input": {
+        "head": "Digamma",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-digamma-001"
+      },
+      "tags": [
+        "T1",
+        "head:Digamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-digamma-002",
+      "input": {
+        "head": "Digamma",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-digamma-002"
+      },
+      "tags": [
+        "T1",
+        "head:Digamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-digamma-003",
+      "input": {
+        "head": "Digamma",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-digamma-003"
+      },
+      "tags": [
+        "T1",
+        "head:Digamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-digamma-004",
+      "input": {
+        "head": "Digamma",
+        "z": "12.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-digamma-004"
+      },
+      "tags": [
+        "T1",
+        "head:Digamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-digamma-005",
+      "input": {
+        "head": "Digamma",
+        "z": "17.726087588596200816937198396772146224975585937500000000000000",
+        "id": "T1-digamma-005"
+      },
+      "tags": [
+        "T1",
+        "head:Digamma",
+        "LCG-sampled"
+      ]
+    },
+    {
+      "id": "T1-trigamma-001",
+      "input": {
+        "head": "Trigamma",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-trigamma-001"
+      },
+      "tags": [
+        "T1",
+        "head:Trigamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-trigamma-002",
+      "input": {
+        "head": "Trigamma",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-trigamma-002"
+      },
+      "tags": [
+        "T1",
+        "head:Trigamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-trigamma-003",
+      "input": {
+        "head": "Trigamma",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-trigamma-003"
+      },
+      "tags": [
+        "T1",
+        "head:Trigamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-trigamma-004",
+      "input": {
+        "head": "Trigamma",
+        "z": "12.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-trigamma-004"
+      },
+      "tags": [
+        "T1",
+        "head:Trigamma",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-trigamma-005",
+      "input": {
+        "head": "Trigamma",
+        "z": "4.473989127098576545904506929218769073486328125000000000000000",
+        "id": "T1-trigamma-005"
+      },
+      "tags": [
+        "T1",
+        "head:Trigamma",
+        "LCG-sampled"
+      ]
+    },
+    {
+      "id": "T1-barnesg-001",
+      "input": {
+        "head": "BarnesG",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-barnesg-001"
+      },
+      "tags": [
+        "T1",
+        "head:BarnesG",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-barnesg-002",
+      "input": {
+        "head": "BarnesG",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-barnesg-002"
+      },
+      "tags": [
+        "T1",
+        "head:BarnesG",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-barnesg-003",
+      "input": {
+        "head": "BarnesG",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-barnesg-003"
+      },
+      "tags": [
+        "T1",
+        "head:BarnesG",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-barnesg-004",
+      "input": {
+        "head": "BarnesG",
+        "z": "12.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T1-barnesg-004"
+      },
+      "tags": [
+        "T1",
+        "head:BarnesG",
+        "canonical-positive"
+      ]
+    },
+    {
+      "id": "T1-barnesg-005",
+      "input": {
+        "head": "BarnesG",
+        "z": "17.829154175440386609352572122588753700256347656250000000000000",
+        "id": "T1-barnesg-005"
+      },
+      "tags": [
+        "T1",
+        "head:BarnesG",
+        "LCG-sampled"
+      ]
+    },
+    {
+      "id": "T1-polygamma-001",
+      "input": {
+        "head": "Polygamma",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T1-polygamma-001"
+      },
+      "tags": [
+        "T1",
+        "head:Polygamma",
+        "canonical: ψ^(2)"
+      ]
+    },
+    {
+      "id": "T1-polygamma-002",
+      "input": {
+        "head": "Polygamma",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T1-polygamma-002"
+      },
+      "tags": [
+        "T1",
+        "head:Polygamma",
+        "canonical: ψ^(2)"
+      ]
+    },
+    {
+      "id": "T1-polygamma-003",
+      "input": {
+        "head": "Polygamma",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "m": {
+          "kind": "integer",
+          "value": "3"
+        },
+        "id": "T1-polygamma-003"
+      },
+      "tags": [
+        "T1",
+        "head:Polygamma",
+        "canonical: ψ^(3)"
+      ]
+    },
+    {
+      "id": "T1-polygamma-004",
+      "input": {
+        "head": "Polygamma",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "m": {
+          "kind": "integer",
+          "value": "3"
+        },
+        "id": "T1-polygamma-004"
+      },
+      "tags": [
+        "T1",
+        "head:Polygamma",
+        "canonical: ψ^(3)"
+      ]
+    },
+    {
+      "id": "T1-pochhammer-001",
+      "input": {
+        "head": "Pochhammer",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "1"
+        },
+        "id": "T1-pochhammer-001"
+      },
+      "tags": [
+        "T1",
+        "head:Pochhammer",
+        "a:half-integer",
+        "(a)_1"
+      ]
+    },
+    {
+      "id": "T1-pochhammer-002",
+      "input": {
+        "head": "Pochhammer",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T1-pochhammer-002"
+      },
+      "tags": [
+        "T1",
+        "head:Pochhammer",
+        "a:half-integer",
+        "(a)_10"
+      ]
+    },
+    {
+      "id": "T1-pochhammer-003",
+      "input": {
+        "head": "Pochhammer",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "25"
+        },
+        "id": "T1-pochhammer-003"
+      },
+      "tags": [
+        "T1",
+        "head:Pochhammer",
+        "a:half-integer",
+        "(a)_25"
+      ]
+    },
+    {
+      "id": "T1-pochhammer-004",
+      "input": {
+        "head": "Pochhammer",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "1"
+        },
+        "id": "T1-pochhammer-004"
+      },
+      "tags": [
+        "T1",
+        "head:Pochhammer",
+        "a:integer",
+        "(a)_1"
+      ]
+    },
+    {
+      "id": "T1-pochhammer-005",
+      "input": {
+        "head": "Pochhammer",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T1-pochhammer-005"
+      },
+      "tags": [
+        "T1",
+        "head:Pochhammer",
+        "a:integer",
+        "(a)_10"
+      ]
+    },
+    {
+      "id": "T1-pochhammer-006",
+      "input": {
+        "head": "Pochhammer",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "25"
+        },
+        "id": "T1-pochhammer-006"
+      },
+      "tags": [
+        "T1",
+        "head:Pochhammer",
+        "a:integer",
+        "(a)_25"
+      ]
+    },
+    {
+      "id": "T1-pochhammer-007",
+      "input": {
+        "head": "Pochhammer",
+        "z": "1.699999999999999955591079014993738383054733276367187500000000",
+        "a": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "1"
+        },
+        "id": "T1-pochhammer-007"
+      },
+      "tags": [
+        "T1",
+        "head:Pochhammer",
+        "a:decimal",
+        "(a)_1"
+      ]
+    },
+    {
+      "id": "T1-pochhammer-008",
+      "input": {
+        "head": "Pochhammer",
+        "z": "1.699999999999999955591079014993738383054733276367187500000000",
+        "a": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T1-pochhammer-008"
+      },
+      "tags": [
+        "T1",
+        "head:Pochhammer",
+        "a:decimal",
+        "(a)_10"
+      ]
+    },
+    {
+      "id": "T1-pochhammer-009",
+      "input": {
+        "head": "Pochhammer",
+        "z": "1.699999999999999955591079014993738383054733276367187500000000",
+        "a": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "25"
+        },
+        "id": "T1-pochhammer-009"
+      },
+      "tags": [
+        "T1",
+        "head:Pochhammer",
+        "a:decimal",
+        "(a)_25"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaupper-001",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-incompletegammaupper-001"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "L12: head=IncompleteGammaUpper a=1/2 z=2"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaupper-002",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T1-incompletegammaupper-002"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "L12: head=IncompleteGammaUpper a=3/2 z=1"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaupper-003",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "3.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T1-incompletegammaupper-003"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "L12: head=IncompleteGammaUpper a=2 z=3"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaupper-004",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-incompletegammaupper-004"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "L12: head=IncompleteGammaUpper a=5 z=5"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaupper-005",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "4.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "id": "T1-incompletegammaupper-005"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaUpper",
+        "a:decimal",
+        "L12: head=IncompleteGammaUpper a=1.699999999999999955591079014993738383054733276367187500000000 z=4.5"
+      ]
+    },
+    {
+      "id": "T1-incompletegammalower-001",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-incompletegammalower-001"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "L12: head=IncompleteGammaLower a=1/2 z=2"
+      ]
+    },
+    {
+      "id": "T1-incompletegammalower-002",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T1-incompletegammalower-002"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "L12: head=IncompleteGammaLower a=3/2 z=1"
+      ]
+    },
+    {
+      "id": "T1-incompletegammalower-003",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "3.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T1-incompletegammalower-003"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "L12: head=IncompleteGammaLower a=2 z=3"
+      ]
+    },
+    {
+      "id": "T1-incompletegammalower-004",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-incompletegammalower-004"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "L12: head=IncompleteGammaLower a=5 z=5"
+      ]
+    },
+    {
+      "id": "T1-incompletegammalower-005",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "4.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "id": "T1-incompletegammalower-005"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaLower",
+        "a:decimal",
+        "L12: head=IncompleteGammaLower a=1.699999999999999955591079014993738383054733276367187500000000 z=4.5"
+      ]
+    },
+    {
+      "id": "T1-incompletegammap-001",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-incompletegammap-001"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaP",
+        "a:half-integer",
+        "L12: head=IncompleteGammaP a=1/2 z=2"
+      ]
+    },
+    {
+      "id": "T1-incompletegammap-002",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T1-incompletegammap-002"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaP",
+        "a:half-integer",
+        "L12: head=IncompleteGammaP a=3/2 z=1"
+      ]
+    },
+    {
+      "id": "T1-incompletegammap-003",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "3.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T1-incompletegammap-003"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "L12: head=IncompleteGammaP a=2 z=3"
+      ]
+    },
+    {
+      "id": "T1-incompletegammap-004",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-incompletegammap-004"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "L12: head=IncompleteGammaP a=5 z=5"
+      ]
+    },
+    {
+      "id": "T1-incompletegammap-005",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "4.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "id": "T1-incompletegammap-005"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaP",
+        "a:decimal",
+        "L12: head=IncompleteGammaP a=1.699999999999999955591079014993738383054733276367187500000000 z=4.5"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaq-001",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "2.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-incompletegammaq-001"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaQ",
+        "a:half-integer",
+        "L12: head=IncompleteGammaQ a=1/2 z=2"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaq-002",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T1-incompletegammaq-002"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaQ",
+        "a:half-integer",
+        "L12: head=IncompleteGammaQ a=3/2 z=1"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaq-003",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "3.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T1-incompletegammaq-003"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "L12: head=IncompleteGammaQ a=2 z=3"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaq-004",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-incompletegammaq-004"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "L12: head=IncompleteGammaQ a=5 z=5"
+      ]
+    },
+    {
+      "id": "T1-incompletegammaq-005",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "4.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "id": "T1-incompletegammaq-005"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteGammaQ",
+        "a:decimal",
+        "L12: head=IncompleteGammaQ a=1.699999999999999955591079014993738383054733276367187500000000 z=4.5"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammap-001",
+      "input": {
+        "head": "InverseIncompleteGammaP",
+        "z": "0.100000000000000005551115123125782702118158340454101562500000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-inverseincompletegammap-001"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaP",
+        "a:half-integer",
+        "inverse: q=0.1"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammap-002",
+      "input": {
+        "head": "InverseIncompleteGammaP",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-inverseincompletegammap-002"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaP",
+        "a:half-integer",
+        "inverse: q=0.5"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammap-003",
+      "input": {
+        "head": "InverseIncompleteGammaP",
+        "z": "0.900000000000000022204460492503130808472633361816406250000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-inverseincompletegammap-003"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaP",
+        "a:half-integer",
+        "inverse: q=0.9"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammap-004",
+      "input": {
+        "head": "InverseIncompleteGammaP",
+        "z": "0.100000000000000005551115123125782702118158340454101562500000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-inverseincompletegammap-004"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaP",
+        "a:integer",
+        "inverse: q=0.1"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammap-005",
+      "input": {
+        "head": "InverseIncompleteGammaP",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-inverseincompletegammap-005"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaP",
+        "a:integer",
+        "inverse: q=0.5"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammap-006",
+      "input": {
+        "head": "InverseIncompleteGammaP",
+        "z": "0.900000000000000022204460492503130808472633361816406250000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-inverseincompletegammap-006"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaP",
+        "a:integer",
+        "inverse: q=0.9"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammaq-001",
+      "input": {
+        "head": "InverseIncompleteGammaQ",
+        "z": "0.100000000000000005551115123125782702118158340454101562500000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-inverseincompletegammaq-001"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaQ",
+        "a:half-integer",
+        "inverse: q=0.1"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammaq-002",
+      "input": {
+        "head": "InverseIncompleteGammaQ",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-inverseincompletegammaq-002"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaQ",
+        "a:half-integer",
+        "inverse: q=0.5"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammaq-003",
+      "input": {
+        "head": "InverseIncompleteGammaQ",
+        "z": "0.900000000000000022204460492503130808472633361816406250000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-inverseincompletegammaq-003"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaQ",
+        "a:half-integer",
+        "inverse: q=0.9"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammaq-004",
+      "input": {
+        "head": "InverseIncompleteGammaQ",
+        "z": "0.100000000000000005551115123125782702118158340454101562500000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-inverseincompletegammaq-004"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaQ",
+        "a:integer",
+        "inverse: q=0.1"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammaq-005",
+      "input": {
+        "head": "InverseIncompleteGammaQ",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-inverseincompletegammaq-005"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaQ",
+        "a:integer",
+        "inverse: q=0.5"
+      ]
+    },
+    {
+      "id": "T1-inverseincompletegammaq-006",
+      "input": {
+        "head": "InverseIncompleteGammaQ",
+        "z": "0.900000000000000022204460492503130808472633361816406250000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-inverseincompletegammaq-006"
+      },
+      "tags": [
+        "T1",
+        "head:InverseIncompleteGammaQ",
+        "a:integer",
+        "inverse: q=0.9"
+      ]
+    },
+    {
+      "id": "T1-beta-001",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-beta-001"
+      },
+      "tags": [
+        "T1",
+        "head:Beta",
+        "a:half-integer",
+        "b:half-integer",
+        "B(1/2, 1/2)"
+      ]
+    },
+    {
+      "id": "T1-beta-002",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "b": {
+          "kind": "integer",
+          "value": "3"
+        },
+        "id": "T1-beta-002"
+      },
+      "tags": [
+        "T1",
+        "head:Beta",
+        "a:integer",
+        "b:integer",
+        "B(2, 3)"
+      ]
+    },
+    {
+      "id": "T1-beta-003",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "b": {
+          "kind": "decimal",
+          "value": "2.299999999999999822364316059974953532218933105468750000000000"
+        },
+        "id": "T1-beta-003"
+      },
+      "tags": [
+        "T1",
+        "head:Beta",
+        "a:decimal",
+        "b:decimal",
+        "B(1.699999999999999955591079014993738383054733276367187500000000, 2.299999999999999822364316059974953532218933105468750000000000)"
+      ]
+    },
+    {
+      "id": "T1-beta-004",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "b": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T1-beta-004"
+      },
+      "tags": [
+        "T1",
+        "head:Beta",
+        "a:integer",
+        "b:integer",
+        "B(10, 2)"
+      ]
+    },
+    {
+      "id": "T1-logbeta-001",
+      "input": {
+        "head": "LogBeta",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-logbeta-001"
+      },
+      "tags": [
+        "T1",
+        "head:LogBeta",
+        "a:half-integer",
+        "b:half-integer",
+        "B(1/2, 1/2)"
+      ]
+    },
+    {
+      "id": "T1-logbeta-002",
+      "input": {
+        "head": "LogBeta",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "b": {
+          "kind": "integer",
+          "value": "3"
+        },
+        "id": "T1-logbeta-002"
+      },
+      "tags": [
+        "T1",
+        "head:LogBeta",
+        "a:integer",
+        "b:integer",
+        "B(2, 3)"
+      ]
+    },
+    {
+      "id": "T1-logbeta-003",
+      "input": {
+        "head": "LogBeta",
+        "a": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "b": {
+          "kind": "decimal",
+          "value": "2.299999999999999822364316059974953532218933105468750000000000"
+        },
+        "id": "T1-logbeta-003"
+      },
+      "tags": [
+        "T1",
+        "head:LogBeta",
+        "a:decimal",
+        "b:decimal",
+        "B(1.699999999999999955591079014993738383054733276367187500000000, 2.299999999999999822364316059974953532218933105468750000000000)"
+      ]
+    },
+    {
+      "id": "T1-logbeta-004",
+      "input": {
+        "head": "LogBeta",
+        "a": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "b": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T1-logbeta-004"
+      },
+      "tags": [
+        "T1",
+        "head:LogBeta",
+        "a:integer",
+        "b:integer",
+        "B(10, 2)"
+      ]
+    },
+    {
+      "id": "T1-gammaratio-001",
+      "input": {
+        "head": "GammaRatio",
+        "a": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "b": {
+          "kind": "integer",
+          "value": "7"
+        },
+        "id": "T1-gammaratio-001"
+      },
+      "tags": [
+        "T1",
+        "head:GammaRatio",
+        "a:integer",
+        "b:integer",
+        "Γ(10)/Γ(7)"
+      ]
+    },
+    {
+      "id": "T1-gammaratio-002",
+      "input": {
+        "head": "GammaRatio",
+        "a": {
+          "kind": "decimal",
+          "value": "5.700000000000000177635683940025046467781066894531250000000000"
+        },
+        "b": {
+          "kind": "decimal",
+          "value": "3.299999999999999822364316059974953532218933105468750000000000"
+        },
+        "id": "T1-gammaratio-002"
+      },
+      "tags": [
+        "T1",
+        "head:GammaRatio",
+        "a:decimal",
+        "b:decimal",
+        "Γ(5.700000000000000177635683940025046467781066894531250000000000)/Γ(3.299999999999999822364316059974953532218933105468750000000000)"
+      ]
+    },
+    {
+      "id": "T1-gammadeltaratio-001",
+      "input": {
+        "head": "GammaDeltaRatio",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-gammadeltaratio-001"
+      },
+      "tags": [
+        "T1",
+        "head:GammaDeltaRatio",
+        "a:integer",
+        "b:half-integer",
+        "Γ(5)/Γ(5+1/2)"
+      ]
+    },
+    {
+      "id": "T1-gammadeltaratio-002",
+      "input": {
+        "head": "GammaDeltaRatio",
+        "a": {
+          "kind": "decimal",
+          "value": "7.299999999999999822364316059974953532218933105468750000000000"
+        },
+        "b": {
+          "kind": "decimal",
+          "value": "1.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "id": "T1-gammadeltaratio-002"
+      },
+      "tags": [
+        "T1",
+        "head:GammaDeltaRatio",
+        "a:decimal",
+        "b:decimal",
+        "Γ(7.299999999999999822364316059974953532218933105468750000000000)/Γ(7.299999999999999822364316059974953532218933105468750000000000+1.699999999999999955591079014993738383054733276367187500000000)"
+      ]
+    },
+    {
+      "id": "T1-gammapderivative-001",
+      "input": {
+        "head": "GammaPDerivative",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-gammapderivative-001"
+      },
+      "tags": [
+        "T1",
+        "head:GammaPDerivative",
+        "a:half-integer",
+        "∂P/∂x"
+      ]
+    },
+    {
+      "id": "T1-gammapderivative-002",
+      "input": {
+        "head": "GammaPDerivative",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T1-gammapderivative-002"
+      },
+      "tags": [
+        "T1",
+        "head:GammaPDerivative",
+        "a:half-integer",
+        "∂P/∂x"
+      ]
+    },
+    {
+      "id": "T1-gammapderivative-003",
+      "input": {
+        "head": "GammaPDerivative",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-gammapderivative-003"
+      },
+      "tags": [
+        "T1",
+        "head:GammaPDerivative",
+        "a:integer",
+        "∂P/∂x"
+      ]
+    },
+    {
+      "id": "T1-gammapderivative-004",
+      "input": {
+        "head": "GammaPDerivative",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T1-gammapderivative-004"
+      },
+      "tags": [
+        "T1",
+        "head:GammaPDerivative",
+        "a:integer",
+        "∂P/∂x"
+      ]
+    },
+    {
+      "id": "T1-incompletebeta-001",
+      "input": {
+        "head": "IncompleteBeta",
+        "z": "0.299999999999999988897769753748434595763683319091796875000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "b": {
+          "kind": "integer",
+          "value": "3"
+        },
+        "id": "T1-incompletebeta-001"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteBeta",
+        "a:integer",
+        "b:integer",
+        "I_0.3(2, 3)"
+      ]
+    },
+    {
+      "id": "T1-incompletebeta-002",
+      "input": {
+        "head": "IncompleteBeta",
+        "z": "0.299999999999999988897769753748434595763683319091796875000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T1-incompletebeta-002"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteBeta",
+        "a:half-integer",
+        "b:half-integer",
+        "I_0.3(1/2, 3/2)"
+      ]
+    },
+    {
+      "id": "T1-incompletebeta-003",
+      "input": {
+        "head": "IncompleteBeta",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "b": {
+          "kind": "integer",
+          "value": "3"
+        },
+        "id": "T1-incompletebeta-003"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteBeta",
+        "a:integer",
+        "b:integer",
+        "I_0.5(2, 3)"
+      ]
+    },
+    {
+      "id": "T1-incompletebeta-004",
+      "input": {
+        "head": "IncompleteBeta",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T1-incompletebeta-004"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteBeta",
+        "a:half-integer",
+        "b:half-integer",
+        "I_0.5(1/2, 3/2)"
+      ]
+    },
+    {
+      "id": "T1-incompletebeta-005",
+      "input": {
+        "head": "IncompleteBeta",
+        "z": "0.900000000000000022204460492503130808472633361816406250000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "b": {
+          "kind": "integer",
+          "value": "3"
+        },
+        "id": "T1-incompletebeta-005"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteBeta",
+        "a:integer",
+        "b:integer",
+        "I_0.9(2, 3)"
+      ]
+    },
+    {
+      "id": "T1-incompletebeta-006",
+      "input": {
+        "head": "IncompleteBeta",
+        "z": "0.900000000000000022204460492503130808472633361816406250000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T1-incompletebeta-006"
+      },
+      "tags": [
+        "T1",
+        "head:IncompleteBeta",
+        "a:half-integer",
+        "b:half-integer",
+        "I_0.9(1/2, 3/2)"
+      ]
+    },
+    {
+      "id": "T2-gamma-001",
+      "input": {
+        "head": "Gamma",
+        "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+        "id": "T2-gamma-001"
+      },
+      "tags": [
+        "T2",
+        "head:Gamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-gamma-002",
+      "input": {
+        "head": "Gamma",
+        "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+        "id": "T2-gamma-002"
+      },
+      "tags": [
+        "T2",
+        "head:Gamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-gamma-003",
+      "input": {
+        "head": "Gamma",
+        "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+        "id": "T2-gamma-003"
+      },
+      "tags": [
+        "T2",
+        "head:Gamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-gamma-004",
+      "input": {
+        "head": "Gamma",
+        "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+        "id": "T2-gamma-004"
+      },
+      "tags": [
+        "T2",
+        "head:Gamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-gamma-005",
+      "input": {
+        "head": "Gamma",
+        "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T2-gamma-005"
+      },
+      "tags": [
+        "T2",
+        "head:Gamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-gamma-006",
+      "input": {
+        "head": "Gamma",
+        "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+        "id": "T2-gamma-006"
+      },
+      "tags": [
+        "T2",
+        "head:Gamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-gamma-007",
+      "input": {
+        "head": "Gamma",
+        "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+        "id": "T2-gamma-007"
+      },
+      "tags": [
+        "T2",
+        "head:Gamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-gamma-008",
+      "input": {
+        "head": "Gamma",
+        "z": "-11.629752765050973550842172699049115180969238281250000000000000",
+        "id": "T2-gamma-008"
+      },
+      "tags": [
+        "T2",
+        "head:Gamma",
+        "LCG-sampled negative"
+      ]
+    },
+    {
+      "id": "T2-loggamma-001",
+      "input": {
+        "head": "LogGamma",
+        "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+        "id": "T2-loggamma-001"
+      },
+      "tags": [
+        "T2",
+        "head:LogGamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-loggamma-002",
+      "input": {
+        "head": "LogGamma",
+        "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+        "id": "T2-loggamma-002"
+      },
+      "tags": [
+        "T2",
+        "head:LogGamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-loggamma-003",
+      "input": {
+        "head": "LogGamma",
+        "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+        "id": "T2-loggamma-003"
+      },
+      "tags": [
+        "T2",
+        "head:LogGamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-loggamma-004",
+      "input": {
+        "head": "LogGamma",
+        "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+        "id": "T2-loggamma-004"
+      },
+      "tags": [
+        "T2",
+        "head:LogGamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-loggamma-005",
+      "input": {
+        "head": "LogGamma",
+        "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T2-loggamma-005"
+      },
+      "tags": [
+        "T2",
+        "head:LogGamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-loggamma-006",
+      "input": {
+        "head": "LogGamma",
+        "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+        "id": "T2-loggamma-006"
+      },
+      "tags": [
+        "T2",
+        "head:LogGamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-loggamma-007",
+      "input": {
+        "head": "LogGamma",
+        "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+        "id": "T2-loggamma-007"
+      },
+      "tags": [
+        "T2",
+        "head:LogGamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-loggamma-008",
+      "input": {
+        "head": "LogGamma",
+        "z": "-7.385828575904400672413885331479832530021667480468750000000000",
+        "id": "T2-loggamma-008"
+      },
+      "tags": [
+        "T2",
+        "head:LogGamma",
+        "LCG-sampled negative"
+      ]
+    },
+    {
+      "id": "T2-digamma-001",
+      "input": {
+        "head": "Digamma",
+        "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+        "id": "T2-digamma-001"
+      },
+      "tags": [
+        "T2",
+        "head:Digamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-digamma-002",
+      "input": {
+        "head": "Digamma",
+        "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+        "id": "T2-digamma-002"
+      },
+      "tags": [
+        "T2",
+        "head:Digamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-digamma-003",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+        "id": "T2-digamma-003"
+      },
+      "tags": [
+        "T2",
+        "head:Digamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-digamma-004",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+        "id": "T2-digamma-004"
+      },
+      "tags": [
+        "T2",
+        "head:Digamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-digamma-005",
+      "input": {
+        "head": "Digamma",
+        "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T2-digamma-005"
+      },
+      "tags": [
+        "T2",
+        "head:Digamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-digamma-006",
+      "input": {
+        "head": "Digamma",
+        "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+        "id": "T2-digamma-006"
+      },
+      "tags": [
+        "T2",
+        "head:Digamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-digamma-007",
+      "input": {
+        "head": "Digamma",
+        "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+        "id": "T2-digamma-007"
+      },
+      "tags": [
+        "T2",
+        "head:Digamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-digamma-008",
+      "input": {
+        "head": "Digamma",
+        "z": "-9.631187481354544388523208908736705780029296875000000000000000",
+        "id": "T2-digamma-008"
+      },
+      "tags": [
+        "T2",
+        "head:Digamma",
+        "LCG-sampled negative"
+      ]
+    },
+    {
+      "id": "T2-trigamma-001",
+      "input": {
+        "head": "Trigamma",
+        "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+        "id": "T2-trigamma-001"
+      },
+      "tags": [
+        "T2",
+        "head:Trigamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-trigamma-002",
+      "input": {
+        "head": "Trigamma",
+        "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+        "id": "T2-trigamma-002"
+      },
+      "tags": [
+        "T2",
+        "head:Trigamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-trigamma-003",
+      "input": {
+        "head": "Trigamma",
+        "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+        "id": "T2-trigamma-003"
+      },
+      "tags": [
+        "T2",
+        "head:Trigamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-trigamma-004",
+      "input": {
+        "head": "Trigamma",
+        "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+        "id": "T2-trigamma-004"
+      },
+      "tags": [
+        "T2",
+        "head:Trigamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-trigamma-005",
+      "input": {
+        "head": "Trigamma",
+        "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T2-trigamma-005"
+      },
+      "tags": [
+        "T2",
+        "head:Trigamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-trigamma-006",
+      "input": {
+        "head": "Trigamma",
+        "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+        "id": "T2-trigamma-006"
+      },
+      "tags": [
+        "T2",
+        "head:Trigamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-trigamma-007",
+      "input": {
+        "head": "Trigamma",
+        "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+        "id": "T2-trigamma-007"
+      },
+      "tags": [
+        "T2",
+        "head:Trigamma",
+        "negative-non-pole (between integer poles)"
+      ]
+    },
+    {
+      "id": "T2-trigamma-008",
+      "input": {
+        "head": "Trigamma",
+        "z": "-12.750912465178831922685276367701590061187744140625000000000000",
+        "id": "T2-trigamma-008"
+      },
+      "tags": [
+        "T2",
+        "head:Trigamma",
+        "LCG-sampled negative"
+      ]
+    },
+    {
+      "id": "T2-polygamma-001",
+      "input": {
+        "head": "Polygamma",
+        "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T2-polygamma-001"
+      },
+      "tags": [
+        "T2",
+        "head:Polygamma",
+        "ψ^(2) negative-non-pole"
+      ]
+    },
+    {
+      "id": "T2-polygamma-002",
+      "input": {
+        "head": "Polygamma",
+        "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T2-polygamma-002"
+      },
+      "tags": [
+        "T2",
+        "head:Polygamma",
+        "ψ^(2) negative-non-pole"
+      ]
+    },
+    {
+      "id": "T2-polygamma-003",
+      "input": {
+        "head": "Polygamma",
+        "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T2-polygamma-003"
+      },
+      "tags": [
+        "T2",
+        "head:Polygamma",
+        "ψ^(2) negative-non-pole"
+      ]
+    },
+    {
+      "id": "T2-pochhammer-001",
+      "input": {
+        "head": "Pochhammer",
+        "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+        "a": {
+          "kind": "decimal",
+          "value": "-0.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "3"
+        },
+        "id": "T2-pochhammer-001"
+      },
+      "tags": [
+        "T2",
+        "head:Pochhammer",
+        "a:decimal",
+        "neg-a Pochhammer (L_polynew_6 stress)"
+      ]
+    },
+    {
+      "id": "T2-pochhammer-002",
+      "input": {
+        "head": "Pochhammer",
+        "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+        "a": {
+          "kind": "decimal",
+          "value": "-1.300000000000000044408920985006261616945266723632812500000000"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T2-pochhammer-002"
+      },
+      "tags": [
+        "T2",
+        "head:Pochhammer",
+        "a:decimal",
+        "neg-a Pochhammer (L_polynew_6 stress)"
+      ]
+    },
+    {
+      "id": "T2-pochhammer-003",
+      "input": {
+        "head": "Pochhammer",
+        "z": "-5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "-5"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "6"
+        },
+        "id": "T2-pochhammer-003"
+      },
+      "tags": [
+        "T2",
+        "head:Pochhammer",
+        "a:integer",
+        "neg-a Pochhammer (L_polynew_6 stress)"
+      ]
+    },
+    {
+      "id": "T2-pochhammer-004",
+      "input": {
+        "head": "Pochhammer",
+        "z": "-5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "-5"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "3"
+        },
+        "id": "T2-pochhammer-004"
+      },
+      "tags": [
+        "T2",
+        "head:Pochhammer",
+        "a:integer",
+        "neg-a Pochhammer (L_polynew_6 stress)"
+      ]
+    },
+    {
+      "id": "T2-pochhammer-005",
+      "input": {
+        "head": "Pochhammer",
+        "z": "-1.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "-3/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "4"
+        },
+        "id": "T2-pochhammer-005"
+      },
+      "tags": [
+        "T2",
+        "head:Pochhammer",
+        "a:half-integer",
+        "neg-a Pochhammer (L_polynew_6 stress)"
+      ]
+    },
+    {
+      "id": "T2-beta-001",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "decimal",
+          "value": "-0.699999999999999955591079014993738383054733276367187500000000"
+        },
+        "b": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T2-beta-001"
+      },
+      "tags": [
+        "T2",
+        "head:Beta",
+        "a:decimal",
+        "b:integer",
+        "Beta with one negative non-integer arg"
+      ]
+    },
+    {
+      "id": "T2-beta-002",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "half-integer",
+          "value": "-1/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T2-beta-002"
+      },
+      "tags": [
+        "T2",
+        "head:Beta",
+        "a:half-integer",
+        "b:half-integer",
+        "Beta with one negative non-integer arg"
+      ]
+    },
+    {
+      "id": "T2-beta-003",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "decimal",
+          "value": "-1.300000000000000044408920985006261616945266723632812500000000"
+        },
+        "b": {
+          "kind": "decimal",
+          "value": "2.700000000000000177635683940025046467781066894531250000000000"
+        },
+        "id": "T2-beta-003"
+      },
+      "tags": [
+        "T2",
+        "head:Beta",
+        "a:decimal",
+        "b:decimal",
+        "Beta with one negative non-integer arg"
+      ]
+    },
+    {
+      "id": "T3-gamma-001",
+      "input": {
+        "head": "Gamma",
+        "z": "0.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T3-gamma-001"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "L17 exact pole at z=0 (oracle behavior diverges)"
+      ]
+    },
+    {
+      "id": "T3-digamma-001",
+      "input": {
+        "head": "Digamma",
+        "z": "0.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T3-digamma-001"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "L17 exact pole at z=0 (oracle behavior diverges)"
+      ]
+    },
+    {
+      "id": "T3-gamma-002",
+      "input": {
+        "head": "Gamma",
+        "z": "0.010000000000000000208166817117216851329430937767028808593750",
+        "id": "T3-gamma-002"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole-0 δ=0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-002",
+      "input": {
+        "head": "Digamma",
+        "z": "0.010000000000000000208166817117216851329430937767028808593750",
+        "id": "T3-digamma-002"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole-0 δ=0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-003",
+      "input": {
+        "head": "Gamma",
+        "z": "0.000100000000000000004792173602385929598312941379845142364502",
+        "id": "T3-gamma-003"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole-0 δ=0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-003",
+      "input": {
+        "head": "Digamma",
+        "z": "0.000100000000000000004792173602385929598312941379845142364502",
+        "id": "T3-digamma-003"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole-0 δ=0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-004",
+      "input": {
+        "head": "Gamma",
+        "z": "-0.010000000000000000208166817117216851329430937767028808593750",
+        "id": "T3-gamma-004"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole-0 δ=-0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-004",
+      "input": {
+        "head": "Digamma",
+        "z": "-0.010000000000000000208166817117216851329430937767028808593750",
+        "id": "T3-digamma-004"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole-0 δ=-0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-005",
+      "input": {
+        "head": "Gamma",
+        "z": "-0.000100000000000000004792173602385929598312941379845142364502",
+        "id": "T3-gamma-005"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole-0 δ=-0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-005",
+      "input": {
+        "head": "Digamma",
+        "z": "-0.000100000000000000004792173602385929598312941379845142364502",
+        "id": "T3-digamma-005"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole-0 δ=-0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-006",
+      "input": {
+        "head": "Gamma",
+        "z": "-1.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T3-gamma-006"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "L17 exact pole at z=-1 (oracle behavior diverges)"
+      ]
+    },
+    {
+      "id": "T3-digamma-006",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T3-digamma-006"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "L17 exact pole at z=-1 (oracle behavior diverges)"
+      ]
+    },
+    {
+      "id": "T3-gamma-007",
+      "input": {
+        "head": "Gamma",
+        "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+        "id": "T3-gamma-007"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--1 δ=0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-007",
+      "input": {
+        "head": "Digamma",
+        "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+        "id": "T3-digamma-007"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--1 δ=0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-008",
+      "input": {
+        "head": "Gamma",
+        "z": "-0.999900000000000011013412404281552881002426147460937500000000",
+        "id": "T3-gamma-008"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--1 δ=0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-008",
+      "input": {
+        "head": "Digamma",
+        "z": "-0.999900000000000011013412404281552881002426147460937500000000",
+        "id": "T3-digamma-008"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--1 δ=0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-009",
+      "input": {
+        "head": "Gamma",
+        "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+        "id": "T3-gamma-009"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--1 δ=-0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-009",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+        "id": "T3-digamma-009"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--1 δ=-0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-010",
+      "input": {
+        "head": "Gamma",
+        "z": "-1.000099999999999988986587595718447118997573852539062500000000",
+        "id": "T3-gamma-010"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--1 δ=-0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-010",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.000099999999999988986587595718447118997573852539062500000000",
+        "id": "T3-digamma-010"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--1 δ=-0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-011",
+      "input": {
+        "head": "Gamma",
+        "z": "-2.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T3-gamma-011"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "L17 exact pole at z=-2 (oracle behavior diverges)"
+      ]
+    },
+    {
+      "id": "T3-digamma-011",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T3-digamma-011"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "L17 exact pole at z=-2 (oracle behavior diverges)"
+      ]
+    },
+    {
+      "id": "T3-gamma-012",
+      "input": {
+        "head": "Gamma",
+        "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+        "id": "T3-gamma-012"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--2 δ=0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-012",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+        "id": "T3-digamma-012"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--2 δ=0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-013",
+      "input": {
+        "head": "Gamma",
+        "z": "-1.999900000000000011013412404281552881002426147460937500000000",
+        "id": "T3-gamma-013"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--2 δ=0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-013",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.999900000000000011013412404281552881002426147460937500000000",
+        "id": "T3-digamma-013"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--2 δ=0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-014",
+      "input": {
+        "head": "Gamma",
+        "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+        "id": "T3-gamma-014"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--2 δ=-0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-014",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+        "id": "T3-digamma-014"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--2 δ=-0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-015",
+      "input": {
+        "head": "Gamma",
+        "z": "-2.000100000000000211031192520749755203723907470703125000000000",
+        "id": "T3-gamma-015"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--2 δ=-0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-015",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.000100000000000211031192520749755203723907470703125000000000",
+        "id": "T3-digamma-015"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--2 δ=-0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-016",
+      "input": {
+        "head": "Gamma",
+        "z": "-3.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T3-gamma-016"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "L17 exact pole at z=-3 (oracle behavior diverges)"
+      ]
+    },
+    {
+      "id": "T3-digamma-016",
+      "input": {
+        "head": "Digamma",
+        "z": "-3.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T3-digamma-016"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "L17 exact pole at z=-3 (oracle behavior diverges)"
+      ]
+    },
+    {
+      "id": "T3-gamma-017",
+      "input": {
+        "head": "Gamma",
+        "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+        "id": "T3-gamma-017"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--3 δ=0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-017",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+        "id": "T3-digamma-017"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--3 δ=0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-018",
+      "input": {
+        "head": "Gamma",
+        "z": "-2.999899999999999788968807479250244796276092529296875000000000",
+        "id": "T3-gamma-018"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--3 δ=0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-018",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.999899999999999788968807479250244796276092529296875000000000",
+        "id": "T3-digamma-018"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--3 δ=0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-019",
+      "input": {
+        "head": "Gamma",
+        "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+        "id": "T3-gamma-019"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--3 δ=-0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-019",
+      "input": {
+        "head": "Digamma",
+        "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+        "id": "T3-digamma-019"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--3 δ=-0.01 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-gamma-020",
+      "input": {
+        "head": "Gamma",
+        "z": "-3.000100000000000211031192520749755203723907470703125000000000",
+        "id": "T3-gamma-020"
+      },
+      "tags": [
+        "T3",
+        "head:Gamma",
+        "pole--3 δ=-0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-digamma-020",
+      "input": {
+        "head": "Digamma",
+        "z": "-3.000100000000000211031192520749755203723907470703125000000000",
+        "id": "T3-digamma-020"
+      },
+      "tags": [
+        "T3",
+        "head:Digamma",
+        "pole--3 δ=-0.0001 (cancellation stress)"
+      ]
+    },
+    {
+      "id": "T3-loggamma-001",
+      "input": {
+        "head": "LogGamma",
+        "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+        "id": "T3-loggamma-001"
+      },
+      "tags": [
+        "T3",
+        "head:LogGamma",
+        "pole--1 δ=0.001 (LogGamma)"
+      ]
+    },
+    {
+      "id": "T3-trigamma-001",
+      "input": {
+        "head": "Trigamma",
+        "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+        "id": "T3-trigamma-001"
+      },
+      "tags": [
+        "T3",
+        "head:Trigamma",
+        "pole--1 δ=0.001 (Trigamma)"
+      ]
+    },
+    {
+      "id": "T3-loggamma-002",
+      "input": {
+        "head": "LogGamma",
+        "z": "-1.000999999999999889865875957184471189975738525390625000000000",
+        "id": "T3-loggamma-002"
+      },
+      "tags": [
+        "T3",
+        "head:LogGamma",
+        "pole--1 δ=-0.001 (LogGamma)"
+      ]
+    },
+    {
+      "id": "T3-trigamma-002",
+      "input": {
+        "head": "Trigamma",
+        "z": "-1.000999999999999889865875957184471189975738525390625000000000",
+        "id": "T3-trigamma-002"
+      },
+      "tags": [
+        "T3",
+        "head:Trigamma",
+        "pole--1 δ=-0.001 (Trigamma)"
+      ]
+    },
+    {
+      "id": "T3-loggamma-003",
+      "input": {
+        "head": "LogGamma",
+        "z": "-1.999000000000000110134124042815528810024261474609375000000000",
+        "id": "T3-loggamma-003"
+      },
+      "tags": [
+        "T3",
+        "head:LogGamma",
+        "pole--2 δ=0.001 (LogGamma)"
+      ]
+    },
+    {
+      "id": "T3-trigamma-003",
+      "input": {
+        "head": "Trigamma",
+        "z": "-1.999000000000000110134124042815528810024261474609375000000000",
+        "id": "T3-trigamma-003"
+      },
+      "tags": [
+        "T3",
+        "head:Trigamma",
+        "pole--2 δ=0.001 (Trigamma)"
+      ]
+    },
+    {
+      "id": "T3-loggamma-004",
+      "input": {
+        "head": "LogGamma",
+        "z": "-2.000999999999999889865875957184471189975738525390625000000000",
+        "id": "T3-loggamma-004"
+      },
+      "tags": [
+        "T3",
+        "head:LogGamma",
+        "pole--2 δ=-0.001 (LogGamma)"
+      ]
+    },
+    {
+      "id": "T3-trigamma-004",
+      "input": {
+        "head": "Trigamma",
+        "z": "-2.000999999999999889865875957184471189975738525390625000000000",
+        "id": "T3-trigamma-004"
+      },
+      "tags": [
+        "T3",
+        "head:Trigamma",
+        "pole--2 δ=-0.001 (Trigamma)"
+      ]
+    },
+    {
+      "id": "T3-polygamma-001",
+      "input": {
+        "head": "Polygamma",
+        "z": "0.001000000000000000020816681711721685132943093776702880859375",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T3-polygamma-001"
+      },
+      "tags": [
+        "T3",
+        "head:Polygamma",
+        "Trigamma-via-Polygamma near pole z=0"
+      ]
+    },
+    {
+      "id": "T3-polygamma-002",
+      "input": {
+        "head": "Polygamma",
+        "z": "-0.001000000000000000020816681711721685132943093776702880859375",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T3-polygamma-002"
+      },
+      "tags": [
+        "T3",
+        "head:Polygamma",
+        "Trigamma-via-Polygamma near pole z=0"
+      ]
+    },
+    {
+      "id": "T3-polygamma-003",
+      "input": {
+        "head": "Polygamma",
+        "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T3-polygamma-003"
+      },
+      "tags": [
+        "T3",
+        "head:Polygamma",
+        "Trigamma-via-Polygamma near pole z=-1"
+      ]
+    },
+    {
+      "id": "T3-polygamma-004",
+      "input": {
+        "head": "Polygamma",
+        "z": "-1.000999999999999889865875957184471189975738525390625000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T3-polygamma-004"
+      },
+      "tags": [
+        "T3",
+        "head:Polygamma",
+        "Trigamma-via-Polygamma near pole z=-1"
+      ]
+    },
+    {
+      "id": "T3-polygamma-005",
+      "input": {
+        "head": "Polygamma",
+        "z": "-1.999000000000000110134124042815528810024261474609375000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T3-polygamma-005"
+      },
+      "tags": [
+        "T3",
+        "head:Polygamma",
+        "Trigamma-via-Polygamma near pole z=-2"
+      ]
+    },
+    {
+      "id": "T3-polygamma-006",
+      "input": {
+        "head": "Polygamma",
+        "z": "-2.000999999999999889865875957184471189975738525390625000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T3-polygamma-006"
+      },
+      "tags": [
+        "T3",
+        "head:Polygamma",
+        "Trigamma-via-Polygamma near pole z=-2"
+      ]
+    },
+    {
+      "id": "T4-gamma-001",
+      "input": {
+        "head": "Gamma",
+        "z": {
+          "re": "1.445436709643100448019481518713291734457015991210937500000000",
+          "im": "3.538332091558456848900959812453947961330413818359375000000000"
+        },
+        "id": "T4-gamma-001"
+      },
+      "tags": [
+        "T4",
+        "head:Gamma",
+        "Q1 |z|=3.82 arg=1.183"
+      ]
+    },
+    {
+      "id": "T4-gamma-002",
+      "input": {
+        "head": "Gamma",
+        "z": {
+          "re": "-7.229717330941595854199022141983732581138610839843750000000000",
+          "im": "6.131352193792121596516153658740222454071044921875000000000000"
+        },
+        "id": "T4-gamma-002"
+      },
+      "tags": [
+        "T4",
+        "head:Gamma",
+        "Q2 |z|=9.48 arg=2.438"
+      ]
+    },
+    {
+      "id": "T4-gamma-003",
+      "input": {
+        "head": "Gamma",
+        "z": {
+          "re": "-2.330063391757155599748330132570117712020874023437500000000000",
+          "im": "-9.504830197911783074005143134854733943939208984375000000000000"
+        },
+        "id": "T4-gamma-003"
+      },
+      "tags": [
+        "T4",
+        "head:Gamma",
+        "Q3 |z|=9.79 arg=-1.811"
+      ]
+    },
+    {
+      "id": "T4-gamma-004",
+      "input": {
+        "head": "Gamma",
+        "z": {
+          "re": "5.934421613546876805855845304904505610466003417968750000000000",
+          "im": "-8.075788221560669555287859111558645963668823242187500000000000"
+        },
+        "id": "T4-gamma-004"
+      },
+      "tags": [
+        "T4",
+        "head:Gamma",
+        "Q4 |z|=10.02 arg=-0.937"
+      ]
+    },
+    {
+      "id": "T4-loggamma-001",
+      "input": {
+        "head": "LogGamma",
+        "z": {
+          "re": "1.984183495208165615153461658337619155645370483398437500000000",
+          "im": "7.540032339319423293488853232702240347862243652343750000000000"
+        },
+        "id": "T4-loggamma-001"
+      },
+      "tags": [
+        "T4",
+        "head:LogGamma",
+        "Q1 |z|=7.80 arg=1.313"
+      ]
+    },
+    {
+      "id": "T4-loggamma-002",
+      "input": {
+        "head": "LogGamma",
+        "z": {
+          "re": "-2.524767821905170794849482263089157640933990478515625000000000",
+          "im": "0.657975926116382670016946576652117073535919189453125000000000"
+        },
+        "id": "T4-loggamma-002"
+      },
+      "tags": [
+        "T4",
+        "head:LogGamma",
+        "Q2 |z|=2.61 arg=2.887"
+      ]
+    },
+    {
+      "id": "T4-loggamma-003",
+      "input": {
+        "head": "LogGamma",
+        "z": {
+          "re": "-0.938191567967745276845903390494640916585922241210937500000000",
+          "im": "-0.238069148388762169554766501278209034353494644165039062500000"
+        },
+        "id": "T4-loggamma-003"
+      },
+      "tags": [
+        "T4",
+        "head:LogGamma",
+        "Q3 |z|=0.97 arg=-2.893"
+      ]
+    },
+    {
+      "id": "T4-loggamma-004",
+      "input": {
+        "head": "LogGamma",
+        "z": {
+          "re": "6.294432132596041284955390437971800565719604492187500000000000",
+          "im": "-2.201097800395804160444868102786131203174591064453125000000000"
+        },
+        "id": "T4-loggamma-004"
+      },
+      "tags": [
+        "T4",
+        "head:LogGamma",
+        "Q4 |z|=6.67 arg=-0.336"
+      ]
+    },
+    {
+      "id": "T4-digamma-001",
+      "input": {
+        "head": "Digamma",
+        "z": {
+          "re": "2.437682055277766934864303038921207189559936523437500000000000",
+          "im": "5.854312998662354772250182577408850193023681640625000000000000"
+        },
+        "id": "T4-digamma-001"
+      },
+      "tags": [
+        "T4",
+        "head:Digamma",
+        "Q1 |z|=6.34 arg=1.176"
+      ]
+    },
+    {
+      "id": "T4-digamma-002",
+      "input": {
+        "head": "Digamma",
+        "z": {
+          "re": "-3.983869882337653933745968970470130443572998046875000000000000",
+          "im": "5.561643490016783708540515362983569502830505371093750000000000"
+        },
+        "id": "T4-digamma-002"
+      },
+      "tags": [
+        "T4",
+        "head:Digamma",
+        "Q2 |z|=6.84 arg=2.192"
+      ]
+    },
+    {
+      "id": "T4-digamma-003",
+      "input": {
+        "head": "Digamma",
+        "z": {
+          "re": "-2.071203586722710099365940550342202186584472656250000000000000",
+          "im": "-1.415049216295746203897465420595835894346237182617187500000000"
+        },
+        "id": "T4-digamma-003"
+      },
+      "tags": [
+        "T4",
+        "head:Digamma",
+        "Q3 |z|=2.51 arg=-2.542"
+      ]
+    },
+    {
+      "id": "T4-digamma-004",
+      "input": {
+        "head": "Digamma",
+        "z": {
+          "re": "4.133934930384060457697614765493199229240417480468750000000000",
+          "im": "-4.249261486233885776186980365309864282608032226562500000000000"
+        },
+        "id": "T4-digamma-004"
+      },
+      "tags": [
+        "T4",
+        "head:Digamma",
+        "Q4 |z|=5.93 arg=-0.799"
+      ]
+    },
+    {
+      "id": "T4-trigamma-001",
+      "input": {
+        "head": "Trigamma",
+        "z": {
+          "re": "1.128506195135892120617882028454914689064025878906250000000000",
+          "im": "1.176949784048958447257859916135203093290328979492187500000000"
+        },
+        "id": "T4-trigamma-001"
+      },
+      "tags": [
+        "T4",
+        "head:Trigamma",
+        "Q1 |z|=1.63 arg=0.806"
+      ]
+    },
+    {
+      "id": "T4-trigamma-002",
+      "input": {
+        "head": "Trigamma",
+        "z": {
+          "re": "-2.732723846634971920366297126747667789459228515625000000000000",
+          "im": "3.236857739398370625849565840326249599456787109375000000000000"
+        },
+        "id": "T4-trigamma-002"
+      },
+      "tags": [
+        "T4",
+        "head:Trigamma",
+        "Q2 |z|=4.24 arg=2.272"
+      ]
+    },
+    {
+      "id": "T4-trigamma-003",
+      "input": {
+        "head": "Trigamma",
+        "z": {
+          "re": "-5.150043717890138594839299912564456462860107421875000000000000",
+          "im": "-7.037412568079380648100595863070338964462280273437500000000000"
+        },
+        "id": "T4-trigamma-003"
+      },
+      "tags": [
+        "T4",
+        "head:Trigamma",
+        "Q3 |z|=8.72 arg=-2.203"
+      ]
+    },
+    {
+      "id": "T4-trigamma-004",
+      "input": {
+        "head": "Trigamma",
+        "z": {
+          "re": "5.017120475067935458923784608487039804458618164062500000000000",
+          "im": "-8.221310916711619398711263784207403659820556640625000000000000"
+        },
+        "id": "T4-trigamma-004"
+      },
+      "tags": [
+        "T4",
+        "head:Trigamma",
+        "Q4 |z|=9.63 arg=-1.023"
+      ]
+    },
+    {
+      "id": "T4-barnesg-001",
+      "input": {
+        "head": "BarnesG",
+        "z": {
+          "re": "2.758064728498085038665976753691211342811584472656250000000000",
+          "im": "2.214631456752568006152159796329215168952941894531250000000000"
+        },
+        "id": "T4-barnesg-001"
+      },
+      "tags": [
+        "T4",
+        "head:BarnesG",
+        "Q1 |z|=3.54 arg=0.677"
+      ]
+    },
+    {
+      "id": "T4-barnesg-002",
+      "input": {
+        "head": "BarnesG",
+        "z": {
+          "re": "-3.612398771488816606733962544240057468414306640625000000000000",
+          "im": "3.952955951551536895038907459820620715618133544921875000000000"
+        },
+        "id": "T4-barnesg-002"
+      },
+      "tags": [
+        "T4",
+        "head:BarnesG",
+        "Q2 |z|=5.35 arg=2.311"
+      ]
+    },
+    {
+      "id": "T4-barnesg-003",
+      "input": {
+        "head": "BarnesG",
+        "z": {
+          "re": "-0.520052473646981261445887412264710292220115661621093750000000",
+          "im": "-5.139892431510824089002653636271134018898010253906250000000000"
+        },
+        "id": "T4-barnesg-003"
+      },
+      "tags": [
+        "T4",
+        "head:BarnesG",
+        "Q3 |z|=5.17 arg=-1.672"
+      ]
+    },
+    {
+      "id": "T4-barnesg-004",
+      "input": {
+        "head": "BarnesG",
+        "z": {
+          "re": "5.433093193047593416622476070187985897064208984375000000000000",
+          "im": "-4.023683768710017538694501126883551478385925292968750000000000"
+        },
+        "id": "T4-barnesg-004"
+      },
+      "tags": [
+        "T4",
+        "head:BarnesG",
+        "Q4 |z|=6.76 arg=-0.637"
+      ]
+    },
+    {
+      "id": "T4-polygamma-001",
+      "input": {
+        "head": "Polygamma",
+        "z": {
+          "re": "0.415336946398552009362958870042348280549049377441406250000000",
+          "im": "2.841567141924261630236969722318463027477264404296875000000000"
+        },
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-polygamma-001"
+      },
+      "tags": [
+        "T4",
+        "head:Polygamma",
+        "Q1 L14: SciPy refuses; Wolfram+mpmath voices only"
+      ]
+    },
+    {
+      "id": "T4-polygamma-002",
+      "input": {
+        "head": "Polygamma",
+        "z": {
+          "re": "-2.545609292394658051961187084089033305644989013671875000000000",
+          "im": "3.889351401453494005977518099825829267501831054687500000000000"
+        },
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-polygamma-002"
+      },
+      "tags": [
+        "T4",
+        "head:Polygamma",
+        "Q2 L14: SciPy refuses; Wolfram+mpmath voices only"
+      ]
+    },
+    {
+      "id": "T4-polygamma-003",
+      "input": {
+        "head": "Polygamma",
+        "z": {
+          "re": "-3.083331059035271159984858968527987599372863769531250000000000",
+          "im": "-0.533062217774821212046276741602923721075057983398437500000000"
+        },
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-polygamma-003"
+      },
+      "tags": [
+        "T4",
+        "head:Polygamma",
+        "Q3 L14: SciPy refuses; Wolfram+mpmath voices only"
+      ]
+    },
+    {
+      "id": "T4-polygamma-004",
+      "input": {
+        "head": "Polygamma",
+        "z": {
+          "re": "7.668703428828861135002625815104693174362182617187500000000000",
+          "im": "-1.563363651659571251784086598490830510854721069335937500000000"
+        },
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-polygamma-004"
+      },
+      "tags": [
+        "T4",
+        "head:Polygamma",
+        "Q4 L14: SciPy refuses; Wolfram+mpmath voices only"
+      ]
+    },
+    {
+      "id": "T4-incompletegammaupper-001",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": {
+          "re": "2.506920028586568260919875683612190186977386474609375000000000",
+          "im": "4.606261670912602745886488264659419655799865722656250000000000"
+        },
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T4-incompletegammaupper-001"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "Q1 L12 head=IncompleteGammaUpper a=1/2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammaupper-002",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": {
+          "re": "-0.573141287819626921162807775544933974742889404296875000000000",
+          "im": "3.450650757528078926839043560903519392013549804687500000000000"
+        },
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T4-incompletegammaupper-002"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "Q2 L12 head=IncompleteGammaUpper a=1/2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammaupper-003",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": {
+          "re": "-2.950124211260408024770640622591599822044372558593750000000000",
+          "im": "-4.044238393966241851273935026256367564201354980468750000000000"
+        },
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T4-incompletegammaupper-003"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "Q3 L12 head=IncompleteGammaUpper a=1/2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammaupper-004",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": {
+          "re": "2.731139916700853209619026529253460466861724853515625000000000",
+          "im": "-4.619341815245097571107635303633287549018859863281250000000000"
+        },
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T4-incompletegammaupper-004"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "Q4 L12 head=IncompleteGammaUpper a=1/2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammaupper-005",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": {
+          "re": "1.628126567590331807977577227575238794088363647460937500000000",
+          "im": "0.650922334042543071497277651360491290688514709472656250000000"
+        },
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-incompletegammaupper-005"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Q1 L12 head=IncompleteGammaUpper a=2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammaupper-006",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": {
+          "re": "-3.982582721173386630653112661093473434448242187500000000000000",
+          "im": "2.828605971192532209101955231744796037673950195312500000000000"
+        },
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-incompletegammaupper-006"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Q2 L12 head=IncompleteGammaUpper a=2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammaupper-007",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": {
+          "re": "-3.675516240611017337869270704686641693115234375000000000000000",
+          "im": "-0.902082543839795913953594208578579127788543701171875000000000"
+        },
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-incompletegammaupper-007"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Q3 L12 head=IncompleteGammaUpper a=2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammaupper-008",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": {
+          "re": "5.057865139108391083766491647111251950263977050781250000000000",
+          "im": "-1.519790059068339749259735071973409503698348999023437500000000"
+        },
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-incompletegammaupper-008"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Q4 L12 head=IncompleteGammaUpper a=2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammalower-001",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": {
+          "re": "3.196303577040796373154307730146683752536773681640625000000000",
+          "im": "3.331921592044421398526310440502129495143890380859375000000000"
+        },
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T4-incompletegammalower-001"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "Q1 L12 head=IncompleteGammaLower a=1/2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammalower-002",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": {
+          "re": "-6.343950043404637639810061955358833074569702148437500000000000",
+          "im": "3.962755479635980293551256181672215461730957031250000000000000"
+        },
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T4-incompletegammalower-002"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "Q2 L12 head=IncompleteGammaLower a=1/2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammalower-003",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": {
+          "re": "-3.740689731673032980552306980825960636138916015625000000000000",
+          "im": "-5.259193693535167746233582874992862343788146972656250000000000"
+        },
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T4-incompletegammalower-003"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "Q3 L12 head=IncompleteGammaLower a=1/2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammalower-004",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": {
+          "re": "0.489006105464747820033011294071911834180355072021484375000000",
+          "im": "-4.318501365117048962360968289431184530258178710937500000000000"
+        },
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T4-incompletegammalower-004"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "Q4 L12 head=IncompleteGammaLower a=1/2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammalower-005",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": {
+          "re": "0.216919651157266885066476902466092724353075027465820312500000",
+          "im": "1.590751597577175768805091138347052037715911865234375000000000"
+        },
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-incompletegammalower-005"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Q1 L12 head=IncompleteGammaLower a=2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammalower-006",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": {
+          "re": "-7.548296023015857336702083557611331343650817871093750000000000",
+          "im": "1.319034506820411456473607358930166810750961303710937500000000"
+        },
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-incompletegammalower-006"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Q2 L12 head=IncompleteGammaLower a=2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammalower-007",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": {
+          "re": "-3.161930052040388350320654353708960115909576416015625000000000",
+          "im": "-1.793168153186067703686035201826598495244979858398437500000000"
+        },
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-incompletegammalower-007"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Q3 L12 head=IncompleteGammaLower a=2"
+      ]
+    },
+    {
+      "id": "T4-incompletegammalower-008",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": {
+          "re": "6.073702658228731898759633622830733656883239746093750000000000",
+          "im": "-4.494087071053352921978785161627456545829772949218750000000000"
+        },
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T4-incompletegammalower-008"
+      },
+      "tags": [
+        "T4",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Q4 L12 head=IncompleteGammaLower a=2"
+      ]
+    },
+    {
+      "id": "T5-gamma-001",
+      "input": {
+        "head": "Gamma",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-gamma-001"
+      },
+      "tags": [
+        "T5",
+        "head:Gamma",
+        "half-integer closure Gamma(1/2)"
+      ]
+    },
+    {
+      "id": "T5-gamma-002",
+      "input": {
+        "head": "Gamma",
+        "z": "1.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-gamma-002"
+      },
+      "tags": [
+        "T5",
+        "head:Gamma",
+        "half-integer closure Gamma(3/2)"
+      ]
+    },
+    {
+      "id": "T5-gamma-003",
+      "input": {
+        "head": "Gamma",
+        "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-gamma-003"
+      },
+      "tags": [
+        "T5",
+        "head:Gamma",
+        "half-integer closure Gamma(-1/2)"
+      ]
+    },
+    {
+      "id": "T5-loggamma-001",
+      "input": {
+        "head": "LogGamma",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-loggamma-001"
+      },
+      "tags": [
+        "T5",
+        "head:LogGamma",
+        "half-integer closure LogGamma(1/2)"
+      ]
+    },
+    {
+      "id": "T5-loggamma-002",
+      "input": {
+        "head": "LogGamma",
+        "z": "1.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-loggamma-002"
+      },
+      "tags": [
+        "T5",
+        "head:LogGamma",
+        "half-integer closure LogGamma(3/2)"
+      ]
+    },
+    {
+      "id": "T5-loggamma-003",
+      "input": {
+        "head": "LogGamma",
+        "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-loggamma-003"
+      },
+      "tags": [
+        "T5",
+        "head:LogGamma",
+        "half-integer closure LogGamma(-1/2)"
+      ]
+    },
+    {
+      "id": "T5-digamma-001",
+      "input": {
+        "head": "Digamma",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-digamma-001"
+      },
+      "tags": [
+        "T5",
+        "head:Digamma",
+        "half-integer closure Digamma(1/2)"
+      ]
+    },
+    {
+      "id": "T5-digamma-002",
+      "input": {
+        "head": "Digamma",
+        "z": "1.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-digamma-002"
+      },
+      "tags": [
+        "T5",
+        "head:Digamma",
+        "half-integer closure Digamma(3/2)"
+      ]
+    },
+    {
+      "id": "T5-digamma-003",
+      "input": {
+        "head": "Digamma",
+        "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-digamma-003"
+      },
+      "tags": [
+        "T5",
+        "head:Digamma",
+        "half-integer closure Digamma(-1/2)"
+      ]
+    },
+    {
+      "id": "T5-trigamma-001",
+      "input": {
+        "head": "Trigamma",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-trigamma-001"
+      },
+      "tags": [
+        "T5",
+        "head:Trigamma",
+        "half-integer closure Trigamma(1/2)"
+      ]
+    },
+    {
+      "id": "T5-trigamma-002",
+      "input": {
+        "head": "Trigamma",
+        "z": "1.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-trigamma-002"
+      },
+      "tags": [
+        "T5",
+        "head:Trigamma",
+        "half-integer closure Trigamma(3/2)"
+      ]
+    },
+    {
+      "id": "T5-trigamma-003",
+      "input": {
+        "head": "Trigamma",
+        "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+        "id": "T5-trigamma-003"
+      },
+      "tags": [
+        "T5",
+        "head:Trigamma",
+        "half-integer closure Trigamma(-1/2)"
+      ]
+    },
+    {
+      "id": "T5-pochhammer-001",
+      "input": {
+        "head": "Pochhammer",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T5-pochhammer-001"
+      },
+      "tags": [
+        "T5",
+        "head:Pochhammer",
+        "a:half-integer",
+        "(1/2)_2 closed-form"
+      ]
+    },
+    {
+      "id": "T5-pochhammer-002",
+      "input": {
+        "head": "Pochhammer",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T5-pochhammer-002"
+      },
+      "tags": [
+        "T5",
+        "head:Pochhammer",
+        "a:half-integer",
+        "(1/2)_5 closed-form"
+      ]
+    },
+    {
+      "id": "T5-pochhammer-003",
+      "input": {
+        "head": "Pochhammer",
+        "z": "0.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T5-pochhammer-003"
+      },
+      "tags": [
+        "T5",
+        "head:Pochhammer",
+        "a:half-integer",
+        "(1/2)_10 closed-form"
+      ]
+    },
+    {
+      "id": "T5-pochhammer-004",
+      "input": {
+        "head": "Pochhammer",
+        "z": "1.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T5-pochhammer-004"
+      },
+      "tags": [
+        "T5",
+        "head:Pochhammer",
+        "a:half-integer",
+        "(3/2)_2 closed-form"
+      ]
+    },
+    {
+      "id": "T5-pochhammer-005",
+      "input": {
+        "head": "Pochhammer",
+        "z": "1.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "5"
+        },
+        "id": "T5-pochhammer-005"
+      },
+      "tags": [
+        "T5",
+        "head:Pochhammer",
+        "a:half-integer",
+        "(3/2)_5 closed-form"
+      ]
+    },
+    {
+      "id": "T5-pochhammer-006",
+      "input": {
+        "head": "Pochhammer",
+        "z": "1.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "n": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T5-pochhammer-006"
+      },
+      "tags": [
+        "T5",
+        "head:Pochhammer",
+        "a:half-integer",
+        "(3/2)_10 closed-form"
+      ]
+    },
+    {
+      "id": "T5-incompletegammaupper-001",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T5-incompletegammaupper-001"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammalower-001",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T5-incompletegammalower-001"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammap-001",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T5-incompletegammap-001"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaP",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammaq-001",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T5-incompletegammaq-001"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaQ",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammaupper-002",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T5-incompletegammaupper-002"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammalower-002",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T5-incompletegammalower-002"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammap-002",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T5-incompletegammap-002"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaP",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammaq-002",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T5-incompletegammaq-002"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaQ",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammaupper-003",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-incompletegammaupper-003"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammalower-003",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-incompletegammalower-003"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammap-003",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-incompletegammap-003"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaP",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammaq-003",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "1.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-incompletegammaq-003"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaQ",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammaupper-004",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-incompletegammaupper-004"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammalower-004",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-incompletegammalower-004"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaLower",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammap-004",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-incompletegammap-004"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaP",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-incompletegammaq-004",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "5.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-incompletegammaq-004"
+      },
+      "tags": [
+        "T5",
+        "head:IncompleteGammaQ",
+        "a:half-integer",
+        "half-integer-a (erfc closed form)"
+      ]
+    },
+    {
+      "id": "T5-beta-001",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "id": "T5-beta-001"
+      },
+      "tags": [
+        "T5",
+        "head:Beta",
+        "a:half-integer",
+        "b:half-integer",
+        "B(1/2, 1/2) half-integer closed form"
+      ]
+    },
+    {
+      "id": "T5-beta-002",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-beta-002"
+      },
+      "tags": [
+        "T5",
+        "head:Beta",
+        "a:half-integer",
+        "b:half-integer",
+        "B(1/2, 3/2) half-integer closed form"
+      ]
+    },
+    {
+      "id": "T5-beta-003",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "half-integer",
+          "value": "1/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "5/2"
+        },
+        "id": "T5-beta-003"
+      },
+      "tags": [
+        "T5",
+        "head:Beta",
+        "a:half-integer",
+        "b:half-integer",
+        "B(1/2, 5/2) half-integer closed form"
+      ]
+    },
+    {
+      "id": "T5-beta-004",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "id": "T5-beta-004"
+      },
+      "tags": [
+        "T5",
+        "head:Beta",
+        "a:half-integer",
+        "b:half-integer",
+        "B(3/2, 3/2) half-integer closed form"
+      ]
+    },
+    {
+      "id": "T5-beta-005",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "half-integer",
+          "value": "3/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "5/2"
+        },
+        "id": "T5-beta-005"
+      },
+      "tags": [
+        "T5",
+        "head:Beta",
+        "a:half-integer",
+        "b:half-integer",
+        "B(3/2, 5/2) half-integer closed form"
+      ]
+    },
+    {
+      "id": "T5-beta-006",
+      "input": {
+        "head": "Beta",
+        "a": {
+          "kind": "half-integer",
+          "value": "5/2"
+        },
+        "b": {
+          "kind": "half-integer",
+          "value": "5/2"
+        },
+        "id": "T5-beta-006"
+      },
+      "tags": [
+        "T5",
+        "head:Beta",
+        "a:half-integer",
+        "b:half-integer",
+        "B(5/2, 5/2) half-integer closed form"
+      ]
+    },
+    {
+      "id": "T6-loggamma-001",
+      "input": {
+        "head": "LogGamma",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-loggamma-001"
+      },
+      "tags": [
+        "T6",
+        "head:LogGamma",
+        "large-z asymptotic |z|=100"
+      ]
+    },
+    {
+      "id": "T6-loggamma-002",
+      "input": {
+        "head": "LogGamma",
+        "z": "300.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-loggamma-002"
+      },
+      "tags": [
+        "T6",
+        "head:LogGamma",
+        "large-z asymptotic |z|=300"
+      ]
+    },
+    {
+      "id": "T6-loggamma-003",
+      "input": {
+        "head": "LogGamma",
+        "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-loggamma-003"
+      },
+      "tags": [
+        "T6",
+        "head:LogGamma",
+        "large-z asymptotic |z|=1000"
+      ]
+    },
+    {
+      "id": "T6-loggamma-004",
+      "input": {
+        "head": "LogGamma",
+        "z": "450.176018965512525937811005860567092895507812500000000000000000",
+        "id": "T6-loggamma-004"
+      },
+      "tags": [
+        "T6",
+        "head:LogGamma",
+        "LCG-sampled large-z"
+      ]
+    },
+    {
+      "id": "T6-digamma-001",
+      "input": {
+        "head": "Digamma",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-digamma-001"
+      },
+      "tags": [
+        "T6",
+        "head:Digamma",
+        "large-z asymptotic |z|=100"
+      ]
+    },
+    {
+      "id": "T6-digamma-002",
+      "input": {
+        "head": "Digamma",
+        "z": "300.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-digamma-002"
+      },
+      "tags": [
+        "T6",
+        "head:Digamma",
+        "large-z asymptotic |z|=300"
+      ]
+    },
+    {
+      "id": "T6-digamma-003",
+      "input": {
+        "head": "Digamma",
+        "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-digamma-003"
+      },
+      "tags": [
+        "T6",
+        "head:Digamma",
+        "large-z asymptotic |z|=1000"
+      ]
+    },
+    {
+      "id": "T6-digamma-004",
+      "input": {
+        "head": "Digamma",
+        "z": "546.611484254995161791157443076372146606445312500000000000000000",
+        "id": "T6-digamma-004"
+      },
+      "tags": [
+        "T6",
+        "head:Digamma",
+        "LCG-sampled large-z"
+      ]
+    },
+    {
+      "id": "T6-trigamma-001",
+      "input": {
+        "head": "Trigamma",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-trigamma-001"
+      },
+      "tags": [
+        "T6",
+        "head:Trigamma",
+        "large-z asymptotic |z|=100"
+      ]
+    },
+    {
+      "id": "T6-trigamma-002",
+      "input": {
+        "head": "Trigamma",
+        "z": "300.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-trigamma-002"
+      },
+      "tags": [
+        "T6",
+        "head:Trigamma",
+        "large-z asymptotic |z|=300"
+      ]
+    },
+    {
+      "id": "T6-trigamma-003",
+      "input": {
+        "head": "Trigamma",
+        "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-trigamma-003"
+      },
+      "tags": [
+        "T6",
+        "head:Trigamma",
+        "large-z asymptotic |z|=1000"
+      ]
+    },
+    {
+      "id": "T6-trigamma-004",
+      "input": {
+        "head": "Trigamma",
+        "z": "782.956472869476556297740899026393890380859375000000000000000000",
+        "id": "T6-trigamma-004"
+      },
+      "tags": [
+        "T6",
+        "head:Trigamma",
+        "LCG-sampled large-z"
+      ]
+    },
+    {
+      "id": "T6-gamma-001",
+      "input": {
+        "head": "Gamma",
+        "z": "120.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-gamma-001"
+      },
+      "tags": [
+        "T6",
+        "head:Gamma",
+        "near-overflow z=120 (float64 boundary ≈ 171.6)"
+      ]
+    },
+    {
+      "id": "T6-gamma-002",
+      "input": {
+        "head": "Gamma",
+        "z": "170.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-gamma-002"
+      },
+      "tags": [
+        "T6",
+        "head:Gamma",
+        "near-overflow z=170 (float64 boundary ≈ 171.6)"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaupper-001",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T6-incompletegammaupper-001"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Poincaré path a=2 z=100"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaq-001",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T6-incompletegammaq-001"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "L12: Q(a,z) at large z → 0"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaupper-002",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "300.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T6-incompletegammaupper-002"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Poincaré path a=2 z=300"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaq-002",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "300.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T6-incompletegammaq-002"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "L12: Q(a,z) at large z → 0"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaupper-003",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T6-incompletegammaupper-003"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Poincaré path a=2 z=1000"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaq-003",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T6-incompletegammaq-003"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "L12: Q(a,z) at large z → 0"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaupper-004",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T6-incompletegammaupper-004"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Poincaré path a=10 z=100"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaq-004",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T6-incompletegammaq-004"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "L12: Q(a,z) at large z → 0"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaupper-005",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "300.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T6-incompletegammaupper-005"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Poincaré path a=10 z=300"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaq-005",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "300.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T6-incompletegammaq-005"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "L12: Q(a,z) at large z → 0"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaupper-006",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T6-incompletegammaupper-006"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Poincaré path a=10 z=1000"
+      ]
+    },
+    {
+      "id": "T6-incompletegammaq-006",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "10"
+        },
+        "id": "T6-incompletegammaq-006"
+      },
+      "tags": [
+        "T6",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "L12: Q(a,z) at large z → 0"
+      ]
+    },
+    {
+      "id": "T6-barnesg-001",
+      "input": {
+        "head": "BarnesG",
+        "z": "20.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-barnesg-001"
+      },
+      "tags": [
+        "T6",
+        "head:BarnesG",
+        "BarnesG large-z asymptotic z=20"
+      ]
+    },
+    {
+      "id": "T6-barnesg-002",
+      "input": {
+        "head": "BarnesG",
+        "z": "50.000000000000000000000000000000000000000000000000000000000000",
+        "id": "T6-barnesg-002"
+      },
+      "tags": [
+        "T6",
+        "head:BarnesG",
+        "BarnesG large-z asymptotic z=50"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-001",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "15.527864045000420389897044515237212181091308593750000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammaupper-001"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Temme saddle: a=20, z-a=-4.47 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammalower-001",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "15.527864045000420389897044515237212181091308593750000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammalower-001"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Temme saddle: a=20, z-a=-4.47 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammap-001",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "15.527864045000420389897044515237212181091308593750000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammap-001"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "Temme saddle: a=20, z-a=-4.47 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaq-001",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "15.527864045000420389897044515237212181091308593750000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammaq-001"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "Temme saddle: a=20, z-a=-4.47 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-002",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "20.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammaupper-002"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Temme saddle: a=20, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammalower-002",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "20.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammalower-002"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Temme saddle: a=20, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammap-002",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "20.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammap-002"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "Temme saddle: a=20, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaq-002",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "20.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammaq-002"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "Temme saddle: a=20, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-003",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "24.472135954999579610102955484762787818908691406250000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammaupper-003"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Temme saddle: a=20, z-a=4.47 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammalower-003",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "24.472135954999579610102955484762787818908691406250000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammalower-003"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Temme saddle: a=20, z-a=4.47 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammap-003",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "24.472135954999579610102955484762787818908691406250000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammap-003"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "Temme saddle: a=20, z-a=4.47 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaq-003",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "24.472135954999579610102955484762787818908691406250000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "20"
+        },
+        "id": "T7-incompletegammaq-003"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "Temme saddle: a=20, z-a=4.47 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-004",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "90.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammaupper-004"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Temme saddle: a=100, z-a=-10.00 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammalower-004",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "90.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammalower-004"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Temme saddle: a=100, z-a=-10.00 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammap-004",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "90.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammap-004"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "Temme saddle: a=100, z-a=-10.00 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaq-004",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "90.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammaq-004"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "Temme saddle: a=100, z-a=-10.00 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-005",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammaupper-005"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Temme saddle: a=100, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammalower-005",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammalower-005"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Temme saddle: a=100, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammap-005",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammap-005"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "Temme saddle: a=100, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaq-005",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "100.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammaq-005"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "Temme saddle: a=100, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-006",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "110.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammaupper-006"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Temme saddle: a=100, z-a=10.00 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammalower-006",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "110.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammalower-006"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Temme saddle: a=100, z-a=10.00 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammap-006",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "110.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammap-006"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "Temme saddle: a=100, z-a=10.00 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaq-006",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "110.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "100"
+        },
+        "id": "T7-incompletegammaq-006"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "Temme saddle: a=100, z-a=10.00 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-007",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "185.857864376269048989342991262674331665039062500000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammaupper-007"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Temme saddle: a=200, z-a=-14.14 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammalower-007",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "185.857864376269048989342991262674331665039062500000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammalower-007"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Temme saddle: a=200, z-a=-14.14 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammap-007",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "185.857864376269048989342991262674331665039062500000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammap-007"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "Temme saddle: a=200, z-a=-14.14 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaq-007",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "185.857864376269048989342991262674331665039062500000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammaq-007"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "Temme saddle: a=200, z-a=-14.14 (δ/√a=-1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-008",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "200.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammaupper-008"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Temme saddle: a=200, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammalower-008",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "200.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammalower-008"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Temme saddle: a=200, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammap-008",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "200.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammap-008"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "Temme saddle: a=200, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaq-008",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "200.000000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammaq-008"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "Temme saddle: a=200, z-a=0.00 (δ/√a=0); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-009",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "214.142135623730951010657008737325668334960937500000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammaupper-009"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:integer",
+        "Temme saddle: a=200, z-a=14.14 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammalower-009",
+      "input": {
+        "head": "IncompleteGammaLower",
+        "z": "214.142135623730951010657008737325668334960937500000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammalower-009"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaLower",
+        "a:integer",
+        "Temme saddle: a=200, z-a=14.14 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammap-009",
+      "input": {
+        "head": "IncompleteGammaP",
+        "z": "214.142135623730951010657008737325668334960937500000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammap-009"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaP",
+        "a:integer",
+        "Temme saddle: a=200, z-a=14.14 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaq-009",
+      "input": {
+        "head": "IncompleteGammaQ",
+        "z": "214.142135623730951010657008737325668334960937500000000000000000",
+        "a": {
+          "kind": "integer",
+          "value": "200"
+        },
+        "id": "T7-incompletegammaq-009"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaQ",
+        "a:integer",
+        "Temme saddle: a=200, z-a=14.14 (δ/√a=1); v0.1 carve-out"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-010",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "10.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "21/2"
+        },
+        "id": "T7-incompletegammaupper-010"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "Temme half-int a=21/2, δ/√a=0"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-011",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "13.740370349203930189219136082101613283157348632812500000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "21/2"
+        },
+        "id": "T7-incompletegammaupper-011"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "Temme half-int a=21/2, δ/√a=1"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-012",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "50.500000000000000000000000000000000000000000000000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "101/2"
+        },
+        "id": "T7-incompletegammaupper-012"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "Temme half-int a=101/2, δ/√a=0"
+      ]
+    },
+    {
+      "id": "T7-incompletegammaupper-013",
+      "input": {
+        "head": "IncompleteGammaUpper",
+        "z": "57.606335201775948462454834952950477600097656250000000000000000",
+        "a": {
+          "kind": "half-integer",
+          "value": "101/2"
+        },
+        "id": "T7-incompletegammaupper-013"
+      },
+      "tags": [
+        "T7",
+        "head:IncompleteGammaUpper",
+        "a:half-integer",
+        "Temme half-int a=101/2, δ/√a=1"
+      ]
+    },
+    {
+      "id": "T8-digamma-001",
+      "input": {
+        "head": "Digamma",
+        "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+        "id": "T8-digamma-001"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-1 (δ=0.01; lossBits ≈ 7)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-001",
+      "input": {
+        "head": "Trigamma",
+        "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+        "id": "T8-trigamma-001"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-1 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-001",
+      "input": {
+        "head": "Polygamma",
+        "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-001"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-1 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-002",
+      "input": {
+        "head": "Digamma",
+        "z": "-0.999998999999999971244335483788745477795600891113281250000000",
+        "id": "T8-digamma-002"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-1 (δ=0.000001; lossBits ≈ 20)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-002",
+      "input": {
+        "head": "Trigamma",
+        "z": "-0.999998999999999971244335483788745477795600891113281250000000",
+        "id": "T8-trigamma-002"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-1 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-002",
+      "input": {
+        "head": "Polygamma",
+        "z": "-0.999998999999999971244335483788745477795600891113281250000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-002"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-1 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-003",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+        "id": "T8-digamma-003"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-1 (δ=-0.01; lossBits ≈ 7)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-003",
+      "input": {
+        "head": "Trigamma",
+        "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+        "id": "T8-trigamma-003"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-1 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-003",
+      "input": {
+        "head": "Polygamma",
+        "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-003"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-1 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-004",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.000000999999999917733362053695600479841232299804687500000000",
+        "id": "T8-digamma-004"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-1 (δ=-0.000001; lossBits ≈ 20)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-004",
+      "input": {
+        "head": "Trigamma",
+        "z": "-1.000000999999999917733362053695600479841232299804687500000000",
+        "id": "T8-trigamma-004"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-1 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-004",
+      "input": {
+        "head": "Polygamma",
+        "z": "-1.000000999999999917733362053695600479841232299804687500000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-004"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-1 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-005",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+        "id": "T8-digamma-005"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-2 (δ=0.01; lossBits ≈ 7)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-005",
+      "input": {
+        "head": "Trigamma",
+        "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+        "id": "T8-trigamma-005"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-2 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-005",
+      "input": {
+        "head": "Polygamma",
+        "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-005"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-2 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-006",
+      "input": {
+        "head": "Digamma",
+        "z": "-1.999999000000000082266637946304399520158767700195312500000000",
+        "id": "T8-digamma-006"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-2 (δ=0.000001; lossBits ≈ 20)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-006",
+      "input": {
+        "head": "Trigamma",
+        "z": "-1.999999000000000082266637946304399520158767700195312500000000",
+        "id": "T8-trigamma-006"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-2 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-006",
+      "input": {
+        "head": "Polygamma",
+        "z": "-1.999999000000000082266637946304399520158767700195312500000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-006"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-2 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-007",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+        "id": "T8-digamma-007"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-2 (δ=-0.01; lossBits ≈ 7)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-007",
+      "input": {
+        "head": "Trigamma",
+        "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+        "id": "T8-trigamma-007"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-2 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-007",
+      "input": {
+        "head": "Polygamma",
+        "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-007"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-2 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-008",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.000001000000000139777966978726908564567565917968750000000000",
+        "id": "T8-digamma-008"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-2 (δ=-0.000001; lossBits ≈ 20)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-008",
+      "input": {
+        "head": "Trigamma",
+        "z": "-2.000001000000000139777966978726908564567565917968750000000000",
+        "id": "T8-trigamma-008"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-2 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-008",
+      "input": {
+        "head": "Polygamma",
+        "z": "-2.000001000000000139777966978726908564567565917968750000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-008"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-2 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-009",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+        "id": "T8-digamma-009"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-3 (δ=0.01; lossBits ≈ 7)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-009",
+      "input": {
+        "head": "Trigamma",
+        "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+        "id": "T8-trigamma-009"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-3 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-009",
+      "input": {
+        "head": "Polygamma",
+        "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-009"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-3 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-010",
+      "input": {
+        "head": "Digamma",
+        "z": "-2.999998999999999860222033021273091435432434082031250000000000",
+        "id": "T8-digamma-010"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-3 (δ=0.000001; lossBits ≈ 20)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-010",
+      "input": {
+        "head": "Trigamma",
+        "z": "-2.999998999999999860222033021273091435432434082031250000000000",
+        "id": "T8-trigamma-010"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-3 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-010",
+      "input": {
+        "head": "Polygamma",
+        "z": "-2.999998999999999860222033021273091435432434082031250000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-010"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-3 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-011",
+      "input": {
+        "head": "Digamma",
+        "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+        "id": "T8-digamma-011"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-3 (δ=-0.01; lossBits ≈ 7)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-011",
+      "input": {
+        "head": "Trigamma",
+        "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+        "id": "T8-trigamma-011"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-3 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-011",
+      "input": {
+        "head": "Polygamma",
+        "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-011"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-3 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-012",
+      "input": {
+        "head": "Digamma",
+        "z": "-3.000001000000000139777966978726908564567565917968750000000000",
+        "id": "T8-digamma-012"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole ψ at z=-3 (δ=-0.000001; lossBits ≈ 20)"
+      ]
+    },
+    {
+      "id": "T8-trigamma-012",
+      "input": {
+        "head": "Trigamma",
+        "z": "-3.000001000000000139777966978726908564567565917968750000000000",
+        "id": "T8-trigamma-012"
+      },
+      "tags": [
+        "T8",
+        "head:Trigamma",
+        "near-pole ψ' at z=-3 (higher-order)"
+      ]
+    },
+    {
+      "id": "T8-polygamma-012",
+      "input": {
+        "head": "Polygamma",
+        "z": "-3.000001000000000139777966978726908564567565917968750000000000",
+        "m": {
+          "kind": "integer",
+          "value": "2"
+        },
+        "id": "T8-polygamma-012"
+      },
+      "tags": [
+        "T8",
+        "head:Polygamma",
+        "near-pole ψ^(2) at z=-3 (3rd-order pole)"
+      ]
+    },
+    {
+      "id": "T8-digamma-013",
+      "input": {
+        "head": "Digamma",
+        "z": {
+          "re": "-0.999122417438109589049588521447731181979179382324218750000000",
+          "im": "0.000479425538604203024459216031516461953287944197654724121094"
+        },
+        "id": "T8-digamma-013"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole-complex z=-1+0.001·e^(i·0.50)"
+      ]
+    },
+    {
+      "id": "T8-digamma-014",
+      "input": {
+        "head": "Digamma",
+        "z": {
+          "re": "-1.000416146836547115483995185059029608964920043945312500000000",
+          "im": "0.000909297426825681777938503724811880601919256150722503662109"
+        },
+        "id": "T8-digamma-014"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole-complex z=-1+0.001·e^(i·2.00)"
+      ]
+    },
+    {
+      "id": "T8-digamma-015",
+      "input": {
+        "head": "Digamma",
+        "z": {
+          "re": "-1.999122417438109700071890983963385224342346191406250000000000",
+          "im": "0.000479425538604203024459216031516461953287944197654724121094"
+        },
+        "id": "T8-digamma-015"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole-complex z=-2+0.001·e^(i·0.50)"
+      ]
+    },
+    {
+      "id": "T8-digamma-016",
+      "input": {
+        "head": "Digamma",
+        "z": {
+          "re": "-2.000416146836547337528600110090337693691253662109375000000000",
+          "im": "0.000909297426825681777938503724811880601919256150722503662109"
+        },
+        "id": "T8-digamma-016"
+      },
+      "tags": [
+        "T8",
+        "head:Digamma",
+        "near-pole-complex z=-2+0.001·e^(i·2.00)"
+      ]
+    }
+  ]
+}
