@@ -1,0 +1,111 @@
+[meta]
+name        = "besselj-anchor"
+domain      = "special-functions-arbprec"
+description = """
+Multi-oracle V4 cross-system anchor for the Bessel family (6 heads × 10
+tiers × 3 ν-classes × 1766 cases) at arb-prec.  Ported from
+scientist-workbench/bench/besselj-anchor/ (workbench corpus bead
+scientist-workbench-qccc; ADR-0041; agreement-matrix.md 2026-05-17).
+Five oracles (wolfram + mpmath + arb gold, boost silver, scipy bronze)
+pre-computed every case once; the corpus is a static record of those
+oracle values — grading reads from committed results.json files and
+does NOT re-invoke Wolfram / Python / g++ / SciPy / FLINT on the host.
+
+This is the sibling-and-scale-up to erf-anchor (B18, 271 cases × 4
+oracles): same architecture, +1 gold oracle (arb / python-flint),
++2 tiers (T9 zero-crossing band, T10 large-ν integer), +ν parameter
+threaded through input wire (Bessel is arity-2 vs Erf arity-1).
+
+Consensus rule: 3-gold.  consensus.gold_agree = true iff at least two
+of {wolfram, mpmath, arb} produced finite values that agree to >=48
+decimal digits (preferring full 3-of-3 agreement; 2-of-3 fallback when
+one gold refused/limited/timed out).  21 T6 edge cases carry
+consensus.value=null (all three golds emitted sentinel-or-refusal for
+inputs at the float64 limit-of-representation), where the verifier's
+value_matches check is skipped (applies_when evaluates false) and
+consensus_exists emits a warn instead — surfacing oracle-side
+sentinel-spelling drift (Indeterminate/NaN/0/refused) without blocking
+grade.
+
+Boost refuses 188/1766 (no std::complex specialisation; all 128
+complex cases + ~60 large-ν / overflow-boundary cases).  mpmath has
+1 timeout (T7-besselk-020 at 30s limit) and 36 honest-special-tokens
+on T6.  Wolfram emits 45 'limit' (unevaluated symbolic forms).  Arb
+refuses 48 (non-finite/limit cases).  Scipy returns float64 across
+the board with 99 explicit 'limit' boundary annotations.  All
+per-oracle adapters wear the applies_when predicate to keep honest
+refusals from inflating candidate failure counts.
+
+See DESCRIPTION.md for tier breakdown, ν-class taxonomy, refusal
+accounting, and oracle disagreement table.
+"""
+ported_from = "scientist-workbench/bench/besselj-anchor (corpus bead scientist-workbench-qccc; ADR-0041; agreement-matrix.md 2026-05-17 Phase-1 GATE PASS, 0 unexplained findings)"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+# ── invariant 1: structural shape of the candidate envelope ────────────────
+[[verifier.checks]]
+name              = "output_shape_well_formed"
+description       = "Candidate output is a JSON record with required success fields {value, method, achieved_precision, warnings}; OR a tagged-refusal envelope {kind: 'tagged', tag, payload}; OR a tool_error envelope {kind: 'tool_error', name, message}.  For complex outputs, value is {re, im} both decimal strings; for real outputs, value is a single decimal string."
+tolerance_source  = "structural — no tolerance"
+machine_checkable = true
+
+# ── invariant 2: value is finite (or T6 sentinel) ──────────────────────────
+[[verifier.checks]]
+name              = "value_finite_or_t6_sentinel"
+description       = "On the success path, value.re (and value.im for complex) parse as finite decimals.  Sentinel tokens (NaN / ±Infinity / Indeterminate) are admissible only for T6 (edge tier), where the candidate is exercising float64 limits and an honest sentinel matches the gold oracles' behaviour.  Outside T6, a sentinel value fails this check."
+tolerance_source  = "structural — no tolerance"
+machine_checkable = true
+applies_when      = "candidate.kind != 'tagged' && candidate.kind != 'tool_error'"
+
+# ── invariant 3: numerical agreement with the gold consensus ───────────────
+[[verifier.checks]]
+name              = "value_matches_consensus_within_tolerance"
+description       = "rel_err of candidate vs consensus.value <= tolerance_rel.  Tier-dependent ladder (ADR-0041 §Decision 8 + recon spec): T1-T3 = 1e-48, T4-T5 = 1e-46, T6 structural-only, T7-T8 = 1e-44, T9 (zero-crossing band) = 1e-40, T10 (large-nu integer) = 1e-44.  Comparison is done via JS BigInt scaled-decimal arithmetic at 80-digit precision (sufficient to discriminate the gold tier's 48-digit threshold without depending on @workbench/bigfloat at grade time)."
+tolerance_source  = "ADR-0041 §Decision 8 (tier thresholds) + recon spec bead scientist-workbench-corpus-fpn"
+machine_checkable = true
+applies_when      = "consensus.value is not null"
+
+# ── invariant 4: precision self-report is honest ───────────────────────────
+[[verifier.checks]]
+name              = "claimed_precision_honest"
+description       = "0 <= achieved_precision (no upper bound — internal substrates may legitimately over-allocate; e.g. AMOS-rotation arb-prec computes at 1.5x working precision and reports the working width).  Skipped on refusal envelopes (no precision claim to check)."
+tolerance_source  = "ADR-0007 honest self-report"
+machine_checkable = true
+applies_when      = "candidate.kind != 'tagged' && candidate.kind != 'tool_error'"
+
+# ── invariant 5: method tag is from the admitted set ───────────────────────
+[[verifier.checks]]
+name              = "method_declared_consistent"
+description       = "method field is a non-empty string drawn from the lineage tags declared in tools/special-eval/tool.ts (FLOAT64_METHOD + ARBPREC_METHOD_REAL + ARBPREC_METHOD_COMPLEX) for the Bessel heads, OR from the per-oracle native method sets (mpmath, wolfram, arb, boost, scipy) for the replay-shim candidates.  Catches silent method-tag drift.  Skipped on refusal envelopes."
+tolerance_source  = "structural — exact string membership"
+machine_checkable = true
+applies_when      = "candidate.kind != 'tagged' && candidate.kind != 'tool_error'"
+
+# ── invariant 6: refusal scope is honest ───────────────────────────────────
+[[verifier.checks]]
+name              = "refusal_scope_honest"
+description       = "If the candidate emits a tagged-refusal envelope, the refusal class must be in the admitted set (special-eval/{unknown-head, non-finite-input, degenerate-shape, no-known-representation} for the main candidate; oracle/{wolfram, mpmath, arb, boost, scipy}-refused for replay shims) AND the input must be in an expected-refusal region (T6 non-finite, T10 overflow boundary, or complex cases for substrates without complex support).  Refusing on an in-scope case fails."
+tolerance_source  = "structural — admitted-set membership + region check"
+machine_checkable = true
+applies_when      = "candidate.kind == 'tagged'"
+
+# ── invariant 7: cross-oracle consensus exists for this case ───────────────
+[[verifier.checks]]
+name              = "consensus_exists"
+description       = "Emits a WARN (not a fail) when consensus.gold_agree = false on this case — communicating oracle-side uncertainty to the grader without blocking the run.  Active on the 21 known disagreement cases (all T6 edge; every gold oracle refused/limited).  Reports the digits_agreed metric so the grader can quantify the uncertainty."
+tolerance_source  = "ADR-0041 §Decision 8 — 48-digit gold-gold threshold"
+machine_checkable = true
+applies_when      = "consensus.gold_agree == false"
+
+[golden]
+inputs           = "golden/inputs.json"
+expected         = "golden/expected.json"
+n_cases          = 1766
+n_heads          = 6
+n_tiers          = 10
+regenerated_at   = "2026-05-23"
+generate_cmd     = "# inputs/expected regenerated from scientist-workbench/bench/besselj-anchor/{corpus.json, oracles/*/results.json} by /tmp/build-besselj-anchor-goldens.ts at bead scientist-workbench-corpus-9bz (B19); the oracles' results.json files are committed (id-enriched per case) under adapters/<oracle>/data/besselj-anchor-results.json and are the static ground truth"
