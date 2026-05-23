@@ -32,9 +32,10 @@ For the next agent (or future-self) landing in this repo. Read after
   grades the convex-cone solver side-by-side with `lp-solve`
   on both LP suites at the 1e-6 vs 1e-8 precision-tier split
   (ADR-0037).
-- **8 worklog shards.** 001 (grading tracer) · 002 (data archives) ·
+- **9 worklog shards.** 001 (grading tracer) · 002 (data archives) ·
   003 (wolfram-v2 ingestor) · 004 (LP tracer-bullet) · 005 (LP
-  Phase 0) · 006 (drift-sync, 22 beads) · 007 (gamma-sync, 9 beads).
+  Phase 0) · 006 (drift-sync, 22 beads) · 007 (gamma-sync, 9 beads) ·
+  008 (coverage-shape post-gamma analysis).
 
 Pushed to `origin/main`. Recent commits:
 - `4278a43` — worklog 007 gamma-sync shard
@@ -83,6 +84,17 @@ pick by appetite:
    and/or **fix `lp-solve`'s achieved_precision overclaim (`1av.1`).**
    Both small substrate tasks; the first is unfiled, the second is
    workbench-side.
+
+6. **Cluster cheap-wins session (recommended highest-leverage).**
+   Per worklog 008's post-gamma coverage analysis: linalg + algebra +
+   discrete + constants clusters carry ~32 high-confidence mapping
+   candidates (Inverse, LinearSolve, Det, Factor, Solve, GCD, LCM,
+   Pi, E, ...) where workbench tools exist and v2 has the canonical
+   names. Wiring these alone would lift in-scope coverage from
+   ~7% → ~26%, faster and at lower complexity than another per-head
+   epic. **Apply G3 discipline:** file a recon bead per cluster
+   confirming each candidate's v2-presence via `data/wolfram-v2/raw/contents/B.8.html`
+   before assuming any single estimate.
 
 ## What's also not done (priority order)
 
