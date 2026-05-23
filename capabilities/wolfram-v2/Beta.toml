@@ -17,8 +17,7 @@ ingested_by = "scripts/ingest_wolfram_v2.ts"
 [signature]
 input  = "x, y"
 output = "the Euler beta function B(x y)"
-arity  = 1
-
+arity  = 2
 [description]
 md = '''
 Beta[x, y] gives the Euler beta function B(x y). Beta[a, x, y] gives the incomplete Beta function Ba (x y). R 1 x;1 Ra Mathematical function (see Section ??). B(x y) = ;(x);(y) = t (1 ; t)y;1 dt. ;(x+y) Ba (x y) = tx;1 (1 ; t) ; dt. y 1 See 0 0 page 363.
@@ -41,3 +40,10 @@ sha256       = "47412ba5cca726cd2e1e1316f6e37eca3c39b3eed33fc3fd682d9f2f870f6ccd
 level             = 1
 method            = "manual_quote"
 last_verified_at  = "2026-05-06"
+
+[[provenance]]
+field_path   = "signature.arity"
+value        = "2; rationale: Beta[...] is arity-2 per Wolfram 2nd-ed; ingestor's computeArity bug fixed by sibling bead 698 sweep"
+source_url   = "bead:scientist-workbench-corpus-0gu"
+source_kind  = "manual"
+retrieved_at = "2026-05-23"

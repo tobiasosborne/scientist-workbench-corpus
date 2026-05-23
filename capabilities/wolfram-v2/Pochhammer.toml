@@ -17,8 +17,7 @@ ingested_by = "scripts/ingest_wolfram_v2.ts"
 [signature]
 input  = "a, n"
 output = "the Pochhammer symbol (a)n"
-arity  = 1
-
+arity  = 2
 [description]
 md = '''
 Pochhammer[a, n] gives the Pochhammer symbol (a)n . Mathematical function (see Section ??). (a)n = ;(a+n) . See page 364. See also: Beta, Binomial, Gamma, Factorial. ;(a)
@@ -40,3 +39,10 @@ sha256       = "517bcc5c6a537fcf412a50854a6c33978adc7d208d45f90ca3262f9241520859
 level             = 1
 method            = "manual_quote"
 last_verified_at  = "2026-05-06"
+
+[[provenance]]
+field_path   = "signature.arity"
+value        = "2; rationale: Pochhammer[...] is arity-2 per Wolfram 2nd-ed; ingestor's computeArity bug fixed by sibling bead 698 sweep"
+source_url   = "bead:scientist-workbench-corpus-0gu"
+source_kind  = "manual"
+retrieved_at = "2026-05-23"
