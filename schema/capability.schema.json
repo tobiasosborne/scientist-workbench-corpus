@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://scientist-workbench-corpus/schema/capability.schema.json",
   "title": "Capability",
-  "description": "One named operation as it appears in a *single* source system (e.g. matlab-v1's `eig`). Cross-system equivalence lives in aliases/, not here.",
+  "description": "One named operation as it appears in a *single* source system (e.g. matlab-v1's `eig`). Cross-system equivalence lives in aliases/, not here. v2 amendment 2026-05-23 (bead scientist-workbench-corpus-q4r, sibling to 3pu): adds optional signature.domain / signature.codomain, mapping[].flags / mapping[].precision_tier, and verification.method = 'arbprec_oracle' to express complex-valued domains, head-dispatched tools, precision tiers, and arb-prec multi-oracle anchors. All additions are backwards-compatible.",
   "type": "object",
   "required": ["meta", "signature", "description", "category"],
   "additionalProperties": false,
@@ -27,10 +27,21 @@
       "type": "object",
       "required": ["input", "output"],
       "additionalProperties": false,
+      "$comment": "domain/codomain added in v2 (bead q4r) to give tools/special-eval and tools/linalg-*-complex a structured real-vs-complex marker; the input/output strings remain source-faithful free-form text.",
       "properties": {
         "input":  { "type": "string", "description": "Free-form, source-faithful description of input shape." },
         "output": { "type": "string" },
-        "arity":  { "type": "integer", "minimum": 0 }
+        "arity":  { "type": "integer", "minimum": 0 },
+        "domain": {
+          "type": "string",
+          "enum": ["real", "complex", "both", "unspecified"],
+          "description": "Structured marker for the scalar domain of the input(s): 'real' for real-valued args, 'complex' for complex-valued args, 'both' when the operation is defined over both, 'unspecified' when not yet classified."
+        },
+        "codomain": {
+          "type": "string",
+          "enum": ["real", "complex", "mixed", "unspecified"],
+          "description": "Structured marker for the scalar codomain of the output: 'real', 'complex', 'mixed' when a tuple/struct output mixes real and complex components, or 'unspecified' when not yet classified."
+        }
       }
     },
     "description": {
@@ -105,7 +116,11 @@
       "additionalProperties": false,
       "properties": {
         "level":  { "type": "integer", "minimum": 0, "maximum": 4 },
-        "method": { "type": "string", "enum": ["raw", "manual_quote", "numerical", "oracle_run", "cross_system_consensus", "formal"] },
+        "method": {
+          "type": "string",
+          "enum": ["raw", "manual_quote", "numerical", "oracle_run", "cross_system_consensus", "arbprec_oracle", "formal"],
+          "description": "What produced the current verification level. 'arbprec_oracle' (added v2, bead q4r) marks an arbitrary-precision multi-oracle anchor — e.g. bench/erf-anchor and bench/besselj-anchor cross-check 5 independent oracles at high precision; sits between oracle_run and cross_system_consensus in stringency."
+        },
         "oracle":           { "type": "string" },
         "oracle_version":   { "type": "string" },
         "last_verified_at": { "type": "string" }
@@ -118,11 +133,22 @@
         "type": "object",
         "required": ["target", "tool", "status"],
         "additionalProperties": false,
+        "$comment": "flags + precision_tier added in v2 (bead q4r). flags supports head-dispatched tools like special-eval (--head=BesselJ) per the workbench's special-functions epic; precision_tier records whether the mapping exercises the float64 path, the arb-prec path, or both.",
         "properties": {
           "target": { "type": "string" },
           "tool":   { "type": "string" },
           "status": { "type": "string", "enum": ["unmapped", "planned", "implemented", "partial", "out-of-scope"] },
-          "notes":  { "type": "string" }
+          "notes":  { "type": "string" },
+          "flags": {
+            "type": "object",
+            "additionalProperties": { "type": "string" },
+            "description": "Structured key/value flags passed to the downstream tool's CLI. Lifts what used to be free-form prose in `notes` into a queryable shape; e.g. {\"head\": \"BesselJ\"} for tools/special-eval, or {\"precision\": \"53\"} to pin a precision tier."
+          },
+          "precision_tier": {
+            "type": "string",
+            "enum": ["float64", "arbprec", "both"],
+            "description": "Which numerical-precision tier this mapping exercises: 'float64' (numerical=true path), 'arbprec' (arbitrary-precision oracle path), or 'both' when the same mapping covers both tiers."
+          }
         }
       }
     }

@@ -39,6 +39,12 @@ export interface GradeRun {
   cases_passed: number;
   invariants_total: number;
   invariants_passed: number;
+  // DuckDB schema v3 (bead q4r/wr2/3u3 surfacing): JSON-serialised flag map
+  // or structured object captured at grade-invocation time (e.g.
+  // {"head":"BesselJ","precision":"53"}). Persisted JSON files written by
+  // older grade.ts have no such field; build.ts handles both shapes. Will
+  // be populated once grade.ts forwards adapter.tool_flags into the record.
+  candidate_flags?: Record<string, string> | string | null;
 }
 
 export interface GradeResult {

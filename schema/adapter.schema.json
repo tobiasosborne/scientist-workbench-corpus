@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://scientist-workbench-corpus/schema/adapter.schema.json",
   "title": "Adapter",
-  "description": "Per-implementation bridge from the tournament-protocol wire format to a candidate executable. The candidate reads one JSON object on stdin and writes one JSON value on stdout (tstournament protocol).",
+  "description": "Per-implementation bridge from the tournament-protocol wire format to a candidate executable. The candidate reads one JSON object on stdin and writes one JSON value on stdout (tstournament protocol). v2 amendment 2026-05-23 (bead 3u3): added optional `tool_flags` for queryable head/precision dispatch on tools like special-eval.",
   "type": "object",
   "required": ["adapter"],
   "additionalProperties": false,
@@ -19,7 +19,13 @@
         "cwd":             { "type": "string", "description": "Working directory for the spawned process. ${WORKBENCH_ROOT} is substituted to the SCIENTIST_WORKBENCH env var." },
         "env":             { "type": "object", "additionalProperties": { "type": "string" } },
         "version":         { "type": "string", "description": "Recorded into grade_runs.candidate_version. Not pinned by the corpus; the user updates when re-running." },
-        "platform_pinned": { "type": "boolean", "description": "If true, grade-runs record the platform fingerprint {arch, os, runtime} (ADR-0015 alignment with scientist-workbench numerical tier)." }
+        "platform_pinned": { "type": "boolean", "description": "If true, grade-runs record the platform fingerprint {arch, os, runtime} (ADR-0015 alignment with scientist-workbench numerical tier)." },
+        "tool_flags":      {
+          "type": "object",
+          "additionalProperties": { "type": "string" },
+          "description": "Structured key/value flags for head-dispatched tools (e.g. {\"head\": \"BesselJ\", \"precision\": \"53\"}); queryable from DuckDB without parsing args[].",
+          "$comment": "Added by bead 3u3 (2026-05-23) for downstream consumers B14 (special-eval adapter), B18 (erf-anchor), B19 (besselj-anchor); see ADR-0040 (special-eval umbrella). Purely additive and optional — existing 26 adapters validate unchanged."
+        }
       }
     }
   }

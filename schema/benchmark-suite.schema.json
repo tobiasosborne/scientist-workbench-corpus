@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://scientist-workbench-corpus/schema/benchmark-suite.schema.json",
   "title": "BenchmarkSuite",
-  "description": "Tournament-protocol benchmark suite manifest. The verifier is declared as a generic command, with TS-on-Bun the convention but multiple escape hatches supported (python3, wolframscript, octave, Rscript, julia, sage, gap).",
+  "description": "Tournament-protocol benchmark suite manifest. The verifier is declared as a generic command, with TS-on-Bun the convention but multiple escape hatches supported (python3, wolframscript, octave, Rscript, julia, sage, gap). v2 (2026-05-23, bead wr2): optional golden.n_heads / golden.n_tiers for multi-head, multi-tier corpora (ADR-0028 bench-to-corpus migration; ADR-0040/0041 mega-anchor structure); optional verifier.checks[].machine_checkable and verifier.checks[].applies_when for queryable check metadata.",
   "type": "object",
   "required": ["meta", "verifier", "golden"],
   "additionalProperties": false,
@@ -46,7 +46,17 @@
             "properties": {
               "name":             { "type": "string" },
               "description":      { "type": "string" },
-              "tolerance_source": { "type": "string", "description": "Citation backing the tolerance choice — e.g. 'Higham 2002 §20.6'." }
+              "tolerance_source": { "type": "string", "description": "Citation backing the tolerance choice — e.g. 'Higham 2002 §20.6'." },
+              "machine_checkable": {
+                "type": "boolean",
+                "description": "True when the check is automatically verifiable by the declared verifier command; false when the check requires manual inspection or out-of-band judgement. Semantically defaults to true when omitted.",
+                "$comment": "Added in v2 (2026-05-23, bead scientist-workbench-corpus-wr2). Mirrors workbench's InvariantEntry.machine_checkable; lets the DuckDB verifier_checks table flag automatable vs manual checks for downstream analytics."
+              },
+              "applies_when": {
+                "type": "string",
+                "description": "Free-form predicate descriptor naming the condition under which the check is applicable — e.g. \"status == 'infeasible'\". When the predicate is false the check is skipped (N/A) rather than failed.",
+                "$comment": "Added in v2 (2026-05-23, bead scientist-workbench-corpus-wr2). Currently a string descriptor — interpreted by the verifier, not parsed by the runner — making conditionality queryable from DuckDB without committing to a formal predicate language yet."
+              }
             }
           }
         }
@@ -62,6 +72,18 @@
         "expected":        { "type": "string" },
         "expected_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
         "n_cases":         { "type": "integer", "minimum": 1 },
+        "n_heads": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of independent oracle/output heads per input, for multi-head bench corpora (e.g. erf-anchor's 6 heads: erf, erfc, erfcx, erfi, w(z), Fresnel).",
+          "$comment": "Added in v2 (2026-05-23, bead scientist-workbench-corpus-wr2). Targets erf-anchor (B18) and besselj-anchor (B19) migrations per ADR-0028; structural metadata for ADR-0040/0041 mega-anchor corpora."
+        },
+        "n_tiers": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of tiers (per-precision, per-difficulty, or per-region strata) the golden inputs are partitioned into. Tier semantics are corpus-specific and documented in the suite's description.",
+          "$comment": "Added in v2 (2026-05-23, bead scientist-workbench-corpus-wr2). Targets erf-anchor's 8 tiers and besselj-anchor's 10 tiers per ADR-0028 / ADR-0040 / ADR-0041; lets DuckDB queries group cases by tier without parsing free-form descriptions."
+        },
         "regenerated_at":  { "type": "string" },
         "generate_cmd": {
           "type": "string",

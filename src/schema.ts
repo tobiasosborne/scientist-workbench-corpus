@@ -14,14 +14,24 @@ export type System =
 
 export type EvidenceKind = "manual_quote" | "oracle_run" | "both";
 export type SourceKind   = "manual" | "blog" | "scrape" | "paper" | "user" | "oracle" | "code";
+// v2 schema (bead q4r) extended verification.method with 'arbprec_oracle' —
+// arbitrary-precision multi-oracle anchor, between oracle_run and
+// cross_system_consensus in stringency.
 export type VerificationMethod =
   | "raw" | "manual_quote" | "numerical" | "oracle_run"
-  | "cross_system_consensus" | "formal";
+  | "cross_system_consensus" | "arbprec_oracle" | "formal";
 export type MappingStatus =
   | "unmapped" | "planned" | "implemented" | "partial" | "out-of-scope";
 export type VerifierKind =
   | "bun" | "python3" | "wolframscript" | "octave"
   | "Rscript" | "julia" | "sage" | "gap" | "custom";
+
+// v2 schema (bead q4r) — structured scalar-domain markers for signature.
+export type SignatureDomain   = "real" | "complex" | "both"  | "unspecified";
+export type SignatureCodomain = "real" | "complex" | "mixed" | "unspecified";
+
+// v2 schema (bead q4r) — which precision path a mapping exercises.
+export type PrecisionTier = "float64" | "arbprec" | "both";
 
 export interface Capability {
   meta: {
@@ -36,6 +46,11 @@ export interface Capability {
     input: string;
     output: string;
     arity?: number;
+    // v2 schema additions (bead q4r): structured real/complex markers.
+    // Free-form input/output strings remain source-faithful; these add a
+    // queryable shape for tools/special-eval and tools/linalg-*-complex.
+    domain?:   SignatureDomain;
+    codomain?: SignatureCodomain;
   };
   description: { md: string };
   category: { primary: string; secondary?: string[] };
@@ -77,6 +92,12 @@ export interface Capability {
     tool: string;
     status: MappingStatus;
     notes?: string;
+    // v2 schema additions (bead q4r). `flags` lifts what was previously
+    // free-form prose in `notes` into a queryable key/value shape, driving
+    // head-dispatched tools (e.g. {"head": "BesselJ"}). `precision_tier`
+    // records whether the mapping exercises float64, arbprec, or both.
+    flags?:          Record<string, string>;
+    precision_tier?: PrecisionTier;
   }>;
 }
 
@@ -96,6 +117,12 @@ export interface BenchmarkSuite {
       name: string;
       description: string;
       tolerance_source?: string;
+      // v2 schema additions (bead wr2). `machine_checkable` mirrors the
+      // workbench's InvariantEntry flag (defaults true when omitted);
+      // `applies_when` is a free-form predicate string (e.g. "status ==
+      // 'infeasible'") under which the check is applicable.
+      machine_checkable?: boolean;
+      applies_when?:      string;
     }>;
   };
   golden: {
@@ -106,6 +133,10 @@ export interface BenchmarkSuite {
     n_cases: number;
     regenerated_at?: string;
     generate_cmd?: string;
+    // v2 schema additions (bead wr2) for multi-head, multi-tier mega-anchor
+    // corpora (ADR-0040/0041). Single-head/single-tier suites omit them.
+    n_heads?: number;
+    n_tiers?: number;
   };
 }
 
@@ -119,6 +150,10 @@ export interface AdapterDoc {
     env?: Record<string, string>;
     version?: string;
     platform_pinned?: boolean;
+    // v2 schema addition (bead 3u3): structured head/precision dispatch
+    // flags (e.g. {"head": "BesselJ", "precision": "53"}) — queryable from
+    // DuckDB without parsing args[].
+    tool_flags?: Record<string, string>;
   };
 }
 

@@ -19,7 +19,15 @@ const DB_PATH    = join(BUILD_DIR, "corpus.duckdb");
 
 // 1 → 2: grade_results gains 5 reserved columns (runtime_sec, iter_count,
 // iter_{5,25,final}_residual) for the convex-cone tier (ADR-0030 §F).
-const SCHEMA_VERSION = 2;
+// 2 → 3: surface the v2 JSON-Schema additions (beads B8/B9/B10) as queryable
+// columns -- capability signature.domain/codomain, mapping[].flags +
+// precision_tier (+ denormalised dispatch_head convenience column),
+// golden.n_heads/n_tiers on benchmark suites, verifier.checks[]
+// .machine_checkable + .applies_when, adapter.tool_flags, and a
+// grade_runs.candidate_flags column for future per-run flag introspection.
+// `verification.method` stays plain VARCHAR (no CHECK constraint), so the
+// newly-allowed 'arbprec_oracle' enum value needs no DDL change here.
+const SCHEMA_VERSION = 3;
 
 const DDL = `
 CREATE TABLE _metadata (
@@ -38,11 +46,18 @@ CREATE TABLE capabilities (
   name            VARCHAR,
   signature_input VARCHAR,
   signature_output VARCHAR,
+  -- v3: optional signature.domain / signature.codomain (bead q4r) -- e.g.
+  -- R^n, C, PD(n). Nullable -- legacy capabilities omit them.
+  signature_domain   VARCHAR,
+  signature_codomain VARCHAR,
   category_primary VARCHAR,
   description_md  VARCHAR,
   manual_section  VARCHAR,
   benchmark_suite VARCHAR,
   verification_level INTEGER,
+  -- v3: 'arbprec_oracle' is now an accepted value of verification.method
+  -- (bead q4r). Column stays a plain VARCHAR — no CHECK constraint exists,
+  -- so the enum extension requires no DDL change.
   verification_method VARCHAR,
   file_path       VARCHAR
 );
@@ -59,6 +74,11 @@ CREATE TABLE benchmark_suites (
   golden_expected  VARCHAR,
   golden_expected_sha256 VARCHAR,
   n_cases          INTEGER,
+  -- v3: optional golden.n_heads / golden.n_tiers (bead wr2) for
+  -- multi-head, multi-tier mega-anchor corpora (ADR-0040/0041). Nullable
+  -- -- single-head/single-tier suites omit them.
+  n_heads          INTEGER,
+  n_tiers          INTEGER,
   file_path        VARCHAR
 );
 
@@ -67,6 +87,13 @@ CREATE TABLE verifier_checks (
   check_name        VARCHAR,
   description       VARCHAR,
   tolerance_source  VARCHAR,
+  -- v3: optional verifier.checks[].machine_checkable + .applies_when
+  -- (bead wr2). machine_checkable mirrors workbench InvariantEntry's flag.
+  -- applies_when is a free-form predicate string (real_input,
+  -- head=BesselJ, ...) -- kept as VARCHAR so DuckDB stays a queryable
+  -- view without parsing semantics.
+  machine_checkable BOOLEAN,
+  applies_when      VARCHAR,
   PRIMARY KEY (suite_name, check_name)
 );
 
@@ -79,6 +106,10 @@ CREATE TABLE adapters (
   cwd              VARCHAR,
   version          VARCHAR,
   platform_pinned  BOOLEAN,
+  -- v3: optional adapter.tool_flags (bead 3u3), JSON-serialised
+  -- object<string,string>. Drives head/precision dispatch for tools like
+  -- special-eval. Nullable -- legacy adapters omit it.
+  tool_flags       VARCHAR,
   file_path        VARCHAR
 );
 
@@ -100,7 +131,14 @@ CREATE TABLE mappings (
   target         VARCHAR,
   tool           VARCHAR,
   status         VARCHAR,
-  notes          VARCHAR
+  notes          VARCHAR,
+  -- v3: optional mapping[].flags (bead q4r), JSON-serialised
+  -- object<string,string>. dispatch_head is a denormalised convenience
+  -- column carrying flags.head when present, so queries can do
+  -- WHERE dispatch_head = BesselJ without JSON-parsing every row.
+  flags          VARCHAR,
+  precision_tier VARCHAR,
+  dispatch_head  VARCHAR
 );
 
 CREATE TABLE grade_runs (
@@ -116,7 +154,13 @@ CREATE TABLE grade_runs (
   cases_total        INTEGER,
   cases_passed       INTEGER,
   invariants_total   INTEGER,
-  invariants_passed  INTEGER
+  invariants_passed  INTEGER,
+  -- v3: JSON-serialised flag map captured at grade-invocation time
+  -- (e.g. '{"head":"BesselJ","precision":"53"}'). Null for runs that
+  -- pre-date this column. Populated once grade.ts learns to forward
+  -- adapter.tool_flags into the run record. Future-proofing for
+  -- per-run flag introspection.
+  candidate_flags    VARCHAR
 );
 
 CREATE TABLE grade_results (
@@ -170,10 +214,12 @@ export async function build(): Promise<{ db: string; counts: Record<string, numb
   for (const c of caps) {
     const cap = c.doc;
     await conn.run(
-      `INSERT INTO capabilities VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO capabilities VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         c.id, cap.meta.system, cap.meta.version, cap.meta.name,
         cap.signature.input, cap.signature.output,
+        cap.signature.domain   ?? null,
+        cap.signature.codomain ?? null,
         cap.category.primary,
         cap.description.md,
         cap.meta.section ?? null,
@@ -191,9 +237,15 @@ export async function build(): Promise<{ db: string; counts: Record<string, numb
       );
     }
     for (const m of cap.mapping ?? []) {
+      const flags = m.flags;
       await conn.run(
-        `INSERT INTO mappings VALUES (?, ?, ?, ?, ?)`,
-        [c.id, m.target, m.tool, m.status, m.notes ?? null],
+        `INSERT INTO mappings VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        [
+          c.id, m.target, m.tool, m.status, m.notes ?? null,
+          flags ? JSON.stringify(flags) : null,
+          m.precision_tier ?? null,
+          flags?.head ?? null,
+        ],
       );
     }
   }
@@ -202,43 +254,62 @@ export async function build(): Promise<{ db: string; counts: Record<string, numb
   for (const s of suites) {
     const su = s.doc;
     await conn.run(
-      `INSERT INTO benchmark_suites VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO benchmark_suites VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         su.meta.name, su.meta.domain, su.meta.description ?? null, su.meta.ported_from ?? null,
         su.verifier.kind ?? null, su.verifier.cmd,
         su.golden.inputs, su.golden.inputs_sha256 ?? null,
         su.golden.expected, su.golden.expected_sha256 ?? null,
-        su.golden.n_cases, s.rel,
+        su.golden.n_cases,
+        su.golden.n_heads ?? null,
+        su.golden.n_tiers ?? null,
+        s.rel,
       ],
     );
     for (const ck of su.verifier.checks) {
       await conn.run(
-        `INSERT INTO verifier_checks VALUES (?, ?, ?, ?)`,
-        [su.meta.name, ck.name, ck.description, ck.tolerance_source ?? null],
+        `INSERT INTO verifier_checks VALUES (?, ?, ?, ?, ?, ?)`,
+        [
+          su.meta.name, ck.name, ck.description, ck.tolerance_source ?? null,
+          ck.machine_checkable ?? null,
+          ck.applies_when ?? null,
+        ],
       );
     }
   }
 
   // adapters
   for (const a of adapters) {
+    const toolFlags = a.doc.adapter.tool_flags;
     await conn.run(
-      `INSERT INTO adapters VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO adapters VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         a.id, a.doc.adapter.target, a.doc.adapter.capability_id,
         a.doc.adapter.cmd, JSON.stringify(a.doc.adapter.args),
         a.doc.adapter.cwd ?? null, a.doc.adapter.version ?? null,
-        a.doc.adapter.platform_pinned ?? false, a.rel,
+        a.doc.adapter.platform_pinned ?? false,
+        toolFlags ? JSON.stringify(toolFlags) : null,
+        a.rel,
       ],
     );
   }
 
   // grade runs + results
   for (const r of runs) {
+    // candidate_flags arrived in schema v3 (beads q4r/wr2/3u3 → B11/B12).
+    // Persisted runs produced by older grade.ts omit the field; passing
+    // null is fine. Once grade.ts forwards adapter.tool_flags, the field
+    // will be populated as a structured object or pre-serialised string.
+    const candFlags = r.candidate_flags;
+    const candFlagsSerialised =
+      typeof candFlags === "string" ? candFlags :
+      candFlags                     ? JSON.stringify(candFlags) : null;
     await conn.run(
-      `INSERT INTO grade_runs VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO grade_runs VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [r.id, r.candidate_target, r.candidate_version, r.suite_id, r.run_at, r.runner_cmd,
        r.platform_arch, r.platform_os, r.platform_runtime,
-       r.cases_total, r.cases_passed, r.invariants_total, r.invariants_passed],
+       r.cases_total, r.cases_passed, r.invariants_total, r.invariants_passed,
+       candFlagsSerialised],
     );
   }
   for (const gr of results) {
