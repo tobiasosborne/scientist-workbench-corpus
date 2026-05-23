@@ -1,0 +1,33 @@
+# =============================================================================
+# besselj-anchor — scientist-workbench candidate adapter
+# =============================================================================
+#
+# Bridges the V4 cross-system Bessel-family anchor (B19 = bead
+# scientist-workbench-corpus-9bz) to `tools/special-eval` in
+# scientist-workbench at the arb-prec lane.  Sibling and scale-up of
+# B18's erf-anchor candidate adapter.
+#
+# Single multi-head adapter per bench (option (A) per the precedent set in
+# special-eval-smoke.toml and erf-anchor.toml) — `run-candidate.ts` reads
+# `input.head` + `input.nu` + `input.z` per-case from corpus inputs.json
+# and dispatches into `executeToolDef(specialEvalDef, ..., {precision:
+# 200n})`.  Bessel is arity-2 (vs Erf arity-1); the run-candidate's
+# encodeInput threads nu through args[0] and z through args[1].
+#
+# Lane: `tool_flags.precision = "200"` is INFORMATIONAL — `grade.ts` does
+# not yet forward `tool_flags` to run-candidate (schema-v3 follow-up).
+# The run-candidate hard-codes `precision = 200n` (decimal digits ⇒
+# arb-prec lane per special-eval's `precisionDecimal > 15` threshold).
+# Both sites name the same lane.
+
+[adapter]
+target          = "scientist-workbench"
+capability_id   = "besselj-anchor"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "git@2026-05-23-besselj-anchor-port"
+platform_pinned = true
+
+[adapter.tool_flags]
+precision = "200"
