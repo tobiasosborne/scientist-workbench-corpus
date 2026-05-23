@@ -1,0 +1,30 @@
+# =============================================================================
+# erf-anchor — scientist-workbench candidate adapter
+# =============================================================================
+#
+# Bridges the V4 cross-system Erf-family anchor (B18 = bead
+# scientist-workbench-corpus-m9t) to `tools/special-eval` in
+# scientist-workbench at the arb-prec lane.
+#
+# Single multi-head adapter per bench (option (A) from
+# special-eval-smoke.toml's note) — `run-candidate.ts` reads `input.head`
+# per-case from corpus inputs.json and dispatches into `executeToolDef(
+# specialEvalDef, ..., {precision: 200n})`.
+#
+# Lane: `tool_flags.precision = "200"` is INFORMATIONAL — `grade.ts` does
+# not yet forward `tool_flags` to run-candidate (schema-v3 follow-up).
+# The run-candidate hard-codes `precision = 200n` (decimal digits ⇒
+# arb-prec lane per special-eval's `precisionDecimal > 15` threshold).
+# Both sites name the same lane.
+
+[adapter]
+target          = "scientist-workbench"
+capability_id   = "erf-anchor"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "git@9efb8d7"
+platform_pinned = true
+
+[adapter.tool_flags]
+precision = "200"
