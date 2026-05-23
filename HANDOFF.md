@@ -2,163 +2,219 @@
 
 For the next agent (or future-self) landing in this repo. Read after
 `CLAUDE.md`. Reflects state at end of session **2026-05-23**
-(post drift-sync, worklog 006).
+(post gamma-sync, worklog 007 — same-day follow-up to 006 drift-sync).
 
 ## State
 
-- **582 capabilities, 21 benchmark suites, 38 adapters, 9 mappings;
+- **582 capabilities, 22 benchmark suites, 44 adapters, 17 mappings;
   SCHEMA_VERSION = 3.** Validate clean; DuckDB built.
-- **V4 cross-system oracle anchors landed** for the Erf and Bessel
-  families (ADR-0028 mega-bench port): `benchmarks/erf-anchor/`
-  (271 cases × 4 oracles) and `benchmarks/besselj-anchor/` (1766
-  cases × 5 oracles, including the new `arb` arbitrary-precision
-  target). Gold-tier consensus rules baked into each suite's
-  `expected.json`.
-- **special-eval lane wired end-to-end.** New `special-eval-smoke`
-  suite (10 cases, 6 Erf + 4 Bessel heads, 60/60 invariants green
-  at float64) is the first user of the v3 `tool_flags` schema.
+- **V4 cross-system oracle anchors landed for three special-function
+  families.** `benchmarks/erf-anchor/` (271 cases × 4 oracles, B18),
+  `benchmarks/besselj-anchor/` (1766 cases × 5 oracles incl. `arb`
+  arbitrary-precision, B19), and the gamma-sync addition
+  `benchmarks/gamma-anchor/` (377 cases × 5 oracles × 19 heads, G6).
+  Gold-tier consensus rules baked into each suite's `expected.json`.
+  The per-head substrate pattern (one anchor per head-family) is now
+  fully exercised on the corpus side.
+- **special-eval lane wired end-to-end.** `special-eval-smoke`
+  (10 cases, 6 Erf + 4 Bessel heads, 60/60 invariants green at
+  float64) is the first user of the v3 `tool_flags` schema. The
+  three -anchor suites use the same schema.
+- **17 mappings** now cover the Bessel family (B-, K, I, Y, J),
+  Erf, D, PowerMod, and the Gamma family (Gamma, Beta, Pochhammer,
+  PolyGamma single-head + IncompleteGammaUpper/Lower on Gamma.toml +
+  Digamma/Trigamma on PolyGamma.toml as multi-head flags).
 - **LP / SDP Phase 0 still green.** `lp-netlib` (21 cases,
   252/252 invariants), `lp-small` (29 cases, 348/348),
   `sdp-sdplib` (5/6 cases, 64/66; the one shortfall is the known
-  `hinf2` primal-feasibility miss, not drift). Phase 0 baselines
-  hold; no silent drift across 12 days of workbench HEAD movement.
+  `hinf2` primal-feasibility miss, not drift).
 - **Parallel candidate target** `scientist-workbench-cone-solve`
-  now grades the convex-cone solver side-by-side with `lp-solve`
+  grades the convex-cone solver side-by-side with `lp-solve`
   on both LP suites at the 1e-6 vs 1e-8 precision-tier split
   (ADR-0037).
-- **7 worklog shards.** 001 (grading tracer) · 002 (data archives) ·
-  003 (wolfram-v1 ingestor) · 004 (LP tracer-bullet) · 005 (LP
-  Phase 0) · 006 (drift-sync, 22 beads).
+- **8 worklog shards.** 001 (grading tracer) · 002 (data archives) ·
+  003 (wolfram-v2 ingestor) · 004 (LP tracer-bullet) · 005 (LP
+  Phase 0) · 006 (drift-sync, 22 beads) · 007 (gamma-sync, 9 beads).
 
 Pushed to `origin/main`. Recent commits:
+- `4278a43` — worklog 007 gamma-sync shard
+- `c74bcfa` / `bfe037f` / `570bd71` — gamma-anchor trio (G6)
+- `5ac4aaf` / `554cb5a` — multi-head + cheap-win mappings (G4, G2)
+- `7d3ec45` — Beta + Pochhammer arity 1 → 2 (G1)
+- `658bcd5` / `478a77c` — wolfram-v1 → wolfram-v2 honest rename (9mz)
+- `26cc1b7` — HANDOFF rewrite post drift-sync
 - `fae868c` — worklog 006 drift-sync shard
 - `15bde65` / `2dec887` / `a169a44` — besselj-anchor trio (B19)
 - `5197bff` / `20cd2f8` / `6238bd1` — erf-anchor trio (B18)
-- `135469a` — special-eval mappings + special-eval-smoke (B14-B16)
-- `2a4dc76` — schema + DuckDB v3 amendments (B8-B12)
-- `ecf7f86` — ingest_wolfram_v1 arity fix (B7) [pre-rename; script is now `ingest_wolfram_v2.ts`]
-- `20e986c` — adapter reactivations + cone-solve target (B3-B6)
 
 ## What's the next agent likely doing?
 
-Genuinely ambiguous after 22 beads of catch-up: the corpus is
-roughly current with workbench HEAD. Five plausible directions,
+Genuinely ambiguous after 31 beads across two same-day sessions: the
+corpus is current with workbench HEAD `af1baa3` (advanced from
+`9efb8d7` mid-gamma-sync per user pull). Five plausible directions,
 pick by appetite:
 
-1. **Resume workbench tool implementation.** The original
-   2026-05-11 HANDOFF pointed at the LP/cone-solver epic (`eg9j`);
-   that shipped on the workbench side (`tools/lp-solve`,
-   `tools/cone-solve`, `tools/sdp-solve` all present). The
-   *current* next workbench epic is **Gamma per-head substrate
-   (ADR-0042)**, Phase 0 only — no code yet. The corpus already
-   has the `tool_flags` schema to receive it.
+1. **FLINT integration epic (bead `jly`, P3, multi-session).** Filed
+   2026-05-23 mid-gamma-sync per user request: "compare everything
+   against FLINT as well at some point". Scope: poly-factor, mod-pow,
+   linsolve-q, groebner-basis (via msolve), special-functions (via
+   `acb_hypgeom`). Partially-done already because FLINT 3+ absorbed
+   Arb as a module and Arb is the besselj/gamma anchor arb-prec
+   oracle. Largest forward direction; deserves a dedicated session.
 
-2. **Broader wolfram-v2 arity sweep (child bead 3pu.698).** 401
-   TOMLs still carry the original ingestor's hard-coded `arity=1`.
-   Bessel + D + PowerMod were fixed in this session; the rest is a
-   single focused mechanical pass with provenance rows per row.
+2. **Resume workbench tool implementation.** The Gamma per-head
+   substrate epic (ADR-0042) shipped during gamma-sync
+   (`tools/special-eval` ADMITTED_HEADS grew 12 → 28). Next workbench
+   epic per `docs/CATALOG.md` (ADR-0043) is open; check the registry
+   first.
 
-3. **Extend special-eval bench coverage (seu.1, seu.2).** HankelH1,
-   HankelH2, SphericalBesselJ, SphericalBesselY are admitted by
-   cas-core (ADR-0041) but not yet by `tools/special-eval`'s
-   ADMITTED_HEADS. **Blocked on workbench-side admission.**
+3. **Broader wolfram-v2 arity sweep (child bead `698`).** Now ~½ done
+   piecemeal: BesselJ/Y/I/K + D + PowerMod (B7) + Beta + Pochhammer
+   (G1) — 8 fixed, ~393 TOMLs remain. A single mechanical pass with
+   provenance rows per row would close it.
 
-4. **Wire `grade.ts` to forward `adapter.tool_flags` to
-   candidates.** Today the field is informational only;
-   `run-candidate.ts` hard-codes precision (e.g. `precision = 10n`
-   for float64, `200n` for arb-prec). Removing the workaround is a
-   small, well-scoped substrate task — no bead filed yet.
+4. **Workbench-side ADMITTED_HEADS expansion** for the 4 gamma-anchor
+   heads currently yielding honest `unknown-head`: `GammaPDerivative`,
+   `IncompleteBeta`, `InverseIncompleteGammaP`,
+   `InverseIncompleteGammaQ` (22 of 377 inputs). No corpus bead
+   (Rule 8). Sister to `seu.1`/`seu.2`.
 
-5. **Investigate `lp-solve`'s achieved_precision overclaim
-   (1av.1).** Workbench-side, ~138× under-claim on NETLIB. The
-   corpus verifier behaviour is correct (Rule 8); this just needs
-   somebody on the workbench side to actually fix the tool.
+5. **Wire `grade.ts` to forward `adapter.tool_flags` to candidates**
+   and/or **fix `lp-solve`'s achieved_precision overclaim (`1av.1`).**
+   Both small substrate tasks; the first is unfiled, the second is
+   workbench-side.
 
 ## What's also not done (priority order)
 
-### Open beads (this session's deferred items)
+### Open beads at session close
 
-- **`bsk`** — final validate + build + commit + push (closes in
-  this session, after `0a4` lands).
-- **`1av.1`** (P2) — `tools/lp-solve` overclaims
-  `achieved_precision` on NETLIB by ~138×. Workbench-side.
-- **`3pu.698`** (P2) — 401 wolfram-v2 TOMLs with wrong arity from
-  the original ingestor bug.
+- **`1av.1`** (P2) — `tools/lp-solve` overclaims `achieved_precision`
+  on NETLIB by ~138×. Workbench-side.
+- **`698`** (P2) — ~393 wolfram-v2 TOMLs still hold ingestor `arity=1`.
+  8 fixed across two sessions (BesselJ/Y/I/K + D + PowerMod + Beta +
+  Pochhammer).
 - **`seu.1`** (P2) — admit HankelH1 / HankelH2 into
   `tools/special-eval`. Workbench-side.
-- **`seu.2`** (P2) — admit SphericalBesselJ / SphericalBesselY
-  into `tools/special-eval`. Workbench-side.
+- **`seu.2`** (P2) — admit SphericalBesselJ / SphericalBesselY into
+  `tools/special-eval`. Workbench-side.
+- **`jly`** (P3) — FLINT integration epic. Multi-session scope; see
+  direction (1) above.
 
-### Carried over from 2026-05-11 HANDOFF (still open)
+### Workbench-side follow-ups from gamma-sync (no corpus bead)
 
-- **matlab-v1 ingestor (MEDIUM).** ~71 functions in MATLAB v1's
-  HELP listing. Source on disk:
+The four gamma-anchor heads above (`GammaPDerivative`, `IncompleteBeta`,
+`InverseIncompleteGammaP`, `InverseIncompleteGammaQ`) are admitted via
+`refusal_scope_honest` today. Future workbench-side ADMITTED_HEADS
+expansion target; no corpus bead filed because the corpus side is
+already correct.
+
+### Out-of-corpus (noted for clarity, no action needed)
+
+8 Gamma-family head names (LogGamma, LogBeta, IncompleteGammaP/Q,
+BarnesG, Hyperfactorial, GammaRatio, GammaDeltaRatio) are
+workbench-internal naming or post-v2 functions. **Correctly absent
+from `capabilities/wolfram-v2/`** — they're not standalone Mathematica
+v2 names. If a future Mathematica edition (v3+) ingest lands, these
+may gain TOMLs organically.
+
+### Carried over from older HANDOFFs (still open)
+
+- **matlab-v1 ingestor (MEDIUM).** ~71 functions in
   `data/matlab-v1/raw/cleve-pc-matlab-v1.0.html`. Line-oriented,
-  simpler than wolfram-v2. Ship as
-  `scripts/ingest_matlab_v1.ts` mirroring the wolfram-v2 ingestor.
+  simpler than wolfram-v2. Ship as `scripts/ingest_matlab_v1.ts`.
 - **macsyma ingestor (LOWER).**
   `data/macsyma-v9/raw/MACSYMA_RefMan_V9_Dec77.pdf` (14 MB scanned
   1977 PDF). Less typeset-clean than wolfram-v2.
 - **Aliases for cross-system equivalence groups (LOW).**
-  `aliases/<concept>.toml` files (e.g. `aliases/determinant.toml`
-  listing `mathematica-1/Det`, `matlab-1.0/det`,
-  `macsyma/determinant`). Meaningful once ≥2 systems have
-  populated capabilities. Mappings table currently has 9 rows;
-  needs the matlab-v1 ingest first to be load-bearing.
-- **Mappings sweep for the remaining ~573 capabilities.** This
-  session wired 7 (Bessels + Erf + D + PowerMod) on top of the 2
-  inherited; the bulk of wolfram-v2 still has no `[[mapping]]`.
-
-### Other deferred work (older HANDOFFs)
-
+  `aliases/<concept>.toml`. Meaningful once ≥2 systems have populated
+  capabilities; needs matlab-v1 ingest first to be load-bearing.
 - **v0.2 sparse wire format for the convex-cone tier** (ADR-0030
-  §"Open questions #5"). CSR/COO for `A` in `Ax_eq_b`, schema
-  amendment, oracle/verifier updates. Unlocks the remaining 88
-  NETLIB problems (80bau3b, fit2p, ken-\*, pds-\*, osa-\*, cre-\*).
-- **`benchmarks/qp-maros-meszaros`.** Phase 0 sibling for the QP
-  specialist (`tools/qp-solve`, bead `psuw`). Same dual-witness
-  pattern as `lp-*`.
+  §"Open questions #5"). Unlocks the remaining 88 NETLIB problems.
+- **`benchmarks/qp-maros-meszaros`.** Phase 0 sibling for `tools/qp-solve`
+  (bead `psuw`).
 
 ## Quick orientation
 
 ```sh
-# Bun lives at ~/.bun/bin/bun on this device — not on PATH.
-# Use the ABSOLUTE PATH; snap-bun (if PATH-resolved) has a
-# mount-namespace bug that breaks python3-verifier benches.
-# Install via curl: curl -fsSL https://bun.sh/install | bash
+# Bun lives at ~/.bun/bin/bun — NOT on PATH. snap-bun (PATH-resolved)
+# has a mount-namespace bug that breaks python3-verifier benches.
+# Install: curl -fsSL https://bun.sh/install | bash
 BUN=~/.bun/bin/bun
 
-# Seven commands you'll run all the time:
-$BUN src/cli.ts validate                                  # JSON-Schema check every TOML
-$BUN src/cli.ts list                                      # what's in the corpus
-$BUN src/cli.ts build                                     # rebuild build/corpus.duckdb
-$BUN src/cli.ts grade <target> <suite>                    # candidate × cases × verifier
-$BUN src/cli.ts query grade-vs-corpus                     # the scoreboard
-$BUN src/cli.ts query lp-bench-overview                   # per-check LP pass rates
-$BUN src/cli.ts query-sql "SELECT ..."                    # ad-hoc SQL
+# Core commands:
+$BUN src/cli.ts validate                                  # every TOML against schema
+$BUN src/cli.ts list / build / grade <target> <suite>
+$BUN src/cli.ts query grade-vs-corpus | lp-bench-overview
+$BUN src/cli.ts query-sql "SELECT ..."
 
-# Special-function lanes (B14-B19):
+# Special-function lanes (B14-B19 + G6):
 $BUN src/cli.ts grade scientist-workbench special-eval-smoke
 $BUN src/cli.ts grade scientist-workbench erf-anchor
 $BUN src/cli.ts grade scientist-workbench besselj-anchor
-$BUN src/cli.ts grade wolfram erf-anchor                  # per-oracle replay grading
+$BUN src/cli.ts grade scientist-workbench gamma-anchor    # 22/377 expected refused
+$BUN src/cli.ts grade wolfram erf-anchor                  # per-oracle replay
 $BUN src/cli.ts grade arb besselj-anchor                  # arb-prec lane
 
 # LP / cone parallel candidates:
 $BUN src/cli.ts grade scientist-workbench lp-netlib
 $BUN src/cli.ts grade scientist-workbench-cone-solve lp-netlib
 
-# Per-suite regeneration (LP):
-python3 benchmarks/lp-netlib/golden/generate.py           # ~5 min wall, downloads 110 MPS
+# Regenerate LP goldens:
+python3 benchmarks/lp-netlib/golden/generate.py           # ~5 min, 110 MPS
 python3 benchmarks/lp-small/golden/generate.py            # ~30 sec, parametric
+
+# Mapping-head distribution (handy for the corpus dashboard):
+$BUN src/cli.ts query-sql \
+  "SELECT dispatch_head, count(*) FROM mappings GROUP BY dispatch_head ORDER BY 2 DESC"
 ```
 
-A Bessel/Erf dashboard query (per-head/per-tier pass rates
-across the per-oracle replay adapters) would be a productive
-follow-up bead — the existing `grade-vs-corpus` query lumps every
-oracle into one row.
+A per-head/per-tier dashboard query across the three anchor suites
+would be a productive follow-up bead — `grade-vs-corpus` lumps every
+oracle and head into one row.
 
 ## Where the bodies are buried
+
+### Gamma-sync session (007):
+
+- **G3 honesty-first recon overturned D2's 6-8 TOMLs projection.**
+  D2's drift catalogue estimated 6-8 of 12 "C-minus" Gamma-family
+  heads would land as new wolfram-v2 TOMLs. G3 cross-checked against
+  `data/wolfram-v2/raw/B.8.html` (the canonical 581-function v2
+  index) and found **none** of the 12 are standalone Mathematica v2
+  names. Four (IncompleteGammaUpper/Lower, Digamma, Trigamma) get
+  expressed as multi-head mapping flags on existing parent TOMLs
+  (Gamma + PolyGamma); the other 8 are out-of-corpus. **Pattern:
+  file a recon bead BEFORE any ingest bead whose scope is derived
+  from a drift catalogue.** Otherwise you risk the fundingscape
+  anti-pattern (fabricated stub TOMLs). TOML-is-truth.
+- **gamma-anchor admits 4 heads workbench does NOT yet ADMIT.**
+  `GammaPDerivative`, `IncompleteBeta`, `InverseIncompleteGammaP`,
+  `InverseIncompleteGammaQ` (22 of 377 inputs) yield honest
+  `unknown-head` refusals from the candidate. The verifier's
+  `refusal_scope_honest` admits this. **Don't be alarmed when
+  grading shows "22 cases out of 377 with unknown-head" — it's by
+  design, not a regression.**
+- **Corpus capitalisation can differ from workbench's.** `PolyGamma`
+  (corpus, mirroring Mathematica's spelling) vs `Polygamma`
+  (workbench dispatch head, lower-case `g`). G2's mapping uses the
+  workbench spelling in `flags.head`. **Pattern: capability NAMES
+  preserve source spelling; mapping FLAGS use workbench's dispatch
+  spelling.** Documented in the mapping's `notes` field rather than
+  renaming either side.
+- **Workbench `@workbench/bigfloat` import had a 6.4s → 0.07s perf
+  bug fixed in workbench shard 178 (bead `eoei`).** Any corpus
+  consumer should pin workbench >= `af1baa3` (or accept slow imports
+  on older SHAs). Surfaced under the gamma-anchor candidate smoke.
+- **`landmine_flags: string[]` in gamma-anchor `expected.json`
+  case shape.** Computed in the build script from `corpus.json`
+  notes + per-head/tier rules (L17 pole detection, L13 single-wolfram
+  fallback, L14 Polygamma/Trigamma T4, L16 BarnesG, L18 Digamma at
+  odd-negative-int half-integers). Drives data-driven verifier
+  branches rather than hardcoded tier/head checks in `verify.ts`.
+  Future per-head anchors should mirror this shape.
+- **`--case-id` is singular** in `grade.ts`, not `--case-ids`. Multi-
+  pass for several cases during smoke. Worth noting for future bench
+  smokes.
 
 ### Drift-sync session (006):
 
@@ -166,81 +222,76 @@ oracle into one row.
   Snap-confined bun (`/snap/bin/bun`, `confinement=strict`,
   `base=core22`) spawns python3 subprocesses that cannot `import
   sympy`. Workaround: install curl-bun at `~/.bun/bin/bun`
-  (v1.3.14 installed 2026-05-23) and **invoke that absolute path
-  explicitly** in every `bun src/cli.ts grade` invocation. `bun`
-  via PATH may re-resolve to snap. Surfaced by `chg.1`; mandatory
-  going forward.
+  (v1.3.14) and **invoke that absolute path explicitly** in every
+  grade invocation. PATH-resolved `bun` may re-resolve to snap.
+  Surfaced by `chg.1`; mandatory.
 - **`adapter.tool_flags` is informational only today.**
-  `src/grade.ts` does not forward the field to spawned
-  candidates. `run-candidate.ts` files hard-code the precision
-  flags they actually need (B15 friction). Removing the
-  workaround is a clean substrate task; until then, the
-  precedent is "lane decision lives in run-candidate".
-- **wolfram-v2 arity sweep is partial.** Only Bessel family +
-  D + PowerMod were fixed this session (with bead-provenance
-  rows). The other ~401 TOMLs still carry the ingestor's
-  hard-coded `arity=1`. See `3pu.698`.
+  `src/grade.ts` does not forward the field to spawned candidates;
+  `run-candidate.ts` files hard-code precision (B15 friction).
+  Until removed, the precedent is "lane decision lives in
+  run-candidate".
+- **wolfram-v2 arity sweep is partial.** BesselJ/Y/I/K + D + PowerMod
+  (B7) and Beta + Pochhammer (G1) fixed; ~393 TOMLs remain. See `698`.
 - **`tools/lp-solve` overclaims `achieved_precision` on NETLIB**
-  (~138× under-claim vs verifier-recomputed `|x^Ts|`). The corpus
-  verifier behaviour is correct per Rule 8. See `1av.1`.
+  (~138× under-claim vs verifier-recomputed `|x^Ts|`). Corpus
+  verifier is correct per Rule 8. See `1av.1`.
 - **Adapter version pin convention:** `version =
-  "git@<workbench-HEAD-SHA>"`. Bump when re-grading after
-  workbench updates. Common pin across reactivated adapters in
-  this session: `git@9efb8d7`.
+  "git@<workbench-HEAD-SHA>"`. Current pin post-gamma-sync:
+  `git@af1baa3`. Prior through drift-sync: `git@9efb8d7`.
 - **`CANDIDATE_TOOL` env override** still works on lp-netlib /
-  lp-small adapters for the `scientist-workbench` target, but the
-  cleaner pattern is the parallel target directory
-  (`adapters/scientist-workbench-cone-solve/`). Use the parallel
-  target for any new alt-candidate; the env override is legacy.
+  lp-small adapters but the cleaner pattern is the parallel target
+  directory (`adapters/scientist-workbench-cone-solve/`). The env
+  override is legacy.
 - **Validator cross-reference gotcha.** `src/validator.ts:50-55`
   requires every `adapter.capability_id` to match an existing
-  benchmark suite. New adapters cannot validate clean until the
-  matching suite lands (B14 → B15 ordering was forced by this).
+  benchmark suite — new adapters can't validate clean until the
+  matching suite lands.
 
-### Special-function anchors (B17-B19):
+### Special-function anchors (B17-B19, G5-G6):
 
 - **Gold-tier consensus rule.** `expected.json` carries
-  `consensus.value` only when ≥2 gold oracles (wolfram + mpmath,
-  plus arb for Bessel) agree to ≥48 digits. The 8 erf cases and
-  21 besselj cases that fail consensus are flagged in-band as
-  T6 edge / refusal-in-scope, not silently dropped.
-- **Per-oracle expected.json shape**:
-  `oracles.{wolfram,mpmath,boost,scipy[,arb]}.{value,
-  achieved_precision, method}` + `consensus.{gold_agree, value,
-  digits_agreed, tolerance_rel}`. Replay shims read
-  committed `data/<bench>-results.json` rather than re-running
-  python3/wolframscript/arb at grade time.
-- **Per-oracle status normaliser.** besselj-anchor's build script
-  collapses 5 divergent per-oracle status taxonomies to
+  `consensus.value` only when ≥2 (erf-anchor) or ≥3 strict / 2-of-3
+  fallback (besselj-anchor + gamma-anchor) gold oracles agree to ≥48
+  digits. Cases that fail consensus are flagged in-band as T6 edge /
+  refusal-in-scope, not silently dropped.
+- **Per-oracle expected.json shape:** `oracles.{wolfram,mpmath,boost,
+  scipy[,arb]}.{value, achieved_precision, method}` +
+  `consensus.{gold_agree, value, digits_agreed, tolerance_rel}`.
+  Replay shims read committed `data/<bench>-results.json` rather
+  than re-running python3/wolframscript/arb at grade time.
+- **L13 single-wolfram fallback** in gamma-anchor for the 12
+  `InverseIncompleteGamma{P,Q}` cases where arb + mpmath have no
+  native implementation (wolfram is definitionally authoritative).
+- **`input.id` carried per-case** in gamma-anchor so replay shims
+  look up by case-id (cleaner than composite-key reconstruction under
+  collision risk). Pattern for future anchors.
+- **Per-oracle status normaliser.** besselj/gamma anchor build
+  scripts collapse divergent taxonomies to
   `{success, refused, limit, timeout, error}` on disk.
-- **scipy bronze-tier failures are expected.** float64 scipy
-  fails T1 well-defined cases on `rel_err` (1e-19 vs 1e-48 gold
-  tolerance). Documented in the candidate adapter TOML.
+- **scipy bronze-tier failures are expected.** float64 scipy fails
+  T1 well-defined cases on `rel_err` (1e-17 vs 1e-48 gold).
+  Structural ceiling, documented in adapter TOML, applies to all three.
 
 ### Phase 0 LP-specific (still load-bearing):
 
 - **Field-absence semantics for `objective` / `achieved_precision`**:
   candidate records omit these fields entirely when `status !==
-  "optimal"`. JSON.parse rejects raw `Infinity` tokens; widening
-  `number → number | "Infinity"` widens every TS consumer. Both
-  oracle adapters, the generator, and the bridge all conform.
+  "optimal"`. JSON.parse rejects raw `Infinity`; widening
+  `number → number | "Infinity"` widens every TS consumer.
 - **`s = c − Aᵀy` formula in both oracles**: Mosek's basic solution
-  doesn't expose `snx`; Gurobi has `RC`. Computing from the
-  stationarity equation directly removes per-vendor sign-convention
-  drift and uses one formula on both sides.
-- **`basis_tol_s = 1e-9` in Mosek**: Mosek's default 1e-7 fails the
+  doesn't expose `snx`; Gurobi has `RC`. Computing from stationarity
+  directly removes per-vendor sign-convention drift.
+- **`basis_tol_s = 1e-9` in Mosek**: default 1e-7 fails the
   verifier's 1e-8 `dual_feasibility` check on multiple NETLIB
   problems. Tightened at the adapter, not the verifier.
 - **`self_reported_precision` 2× slack** in `verify.ts`: float64
-  summation-order between Python `sum()` and JS loop accumulator
-  introduces ~1.5-2× drift at the 1e-13 machine-precision floor.
-  Slack catches order-of-magnitude lies (CLAUDE.md Rule 8) while
-  tolerating bit-noise.
+  summation-order between Python `sum()` and JS loop introduces
+  ~1.5-2× drift at the 1e-13 machine-precision floor. Catches
+  order-of-magnitude lies (Rule 8) while tolerating bit-noise.
 - **DENSE_LIMIT = 100,000 entries** in `lp-netlib/golden/generate.py`:
-  21 of 109 fetchable NETLIB problems fit. Cases above are *skipped*
-  (not stored sparsely; canonical wire is dense per ADR-0030 §C).
-  Raw .mps files stay in `data/lp-netlib/raw/` (gitignored) for
-  v0.2 regeneration.
+  21 of 109 fetchable NETLIB problems fit. Cases above are skipped
+  (canonical wire is dense per ADR-0030 §C). Raw .mps files stay in
+  `data/lp-netlib/raw/` (gitignored) for v0.2 regeneration.
 
 ### Earlier bodies (still load-bearing):
 
@@ -249,52 +300,52 @@ oracle into one row.
   literal triple-quote `'''…'''` to neutralise the second class.
 - **Page-header bug**: ~half the per-function PDFs have a running
   header that pdftotext puts as the first line. The B.8 index name
-  is authoritative; never trust the PDF's first line on a fresh
-  ingest.
+  is authoritative; never trust the PDF's first line on a fresh ingest.
 - **Snap-Bun mount-namespace** (inherited from workbench ADR-0001;
-  reconfirmed and extended by chg.1 this session): `cmd === "bun"`
-  resolves via `process.execPath` in `src/grade.ts`. Don't replace
-  with raw `Bun.spawn(["bun", ...])`.
+  reconfirmed by `chg.1`): `cmd === "bun"` resolves via
+  `process.execPath` in `src/grade.ts`. Don't replace with raw
+  `Bun.spawn(["bun", ...])`.
 - **Wayback for Cleve's Corner**: `blogs.mathworks.com` 403s scripted
   clients. WebFetch and `curl` both fail; Wayback succeeds.
 - **Wolfram legacy URL is "v1" but the PDFs are 2nd-edition (1991).**
-  Renamed to `wolfram-v2` throughout the corpus (bead 9mz) so the
-  in-corpus label reflects the content's documentation edition;
-  the public URL source is still labelled `v1` and is preserved in
-  one line of `data/wolfram-v2/MANIFEST.toml` for grep-ability.
+  Renamed to `wolfram-v2` throughout the corpus (bead `9mz`); the
+  public URL source is still labelled `v1` and is preserved in one
+  line of `data/wolfram-v2/MANIFEST.toml` for grep-ability.
 
 ## Sister repos
 
 - `../scientist-workbench/` — the candidate-implementation repo.
-  As of 2026-05-23 the workbench LP epic `eg9j` has shipped
-  (`lp-solve`, `cone-solve`, `sdp-solve` all present), and the
-  v0.2 special-function arc (Erf + Bessel, partial Gamma) is
-  also in. Active workbench epic going forward is **Gamma
-  per-head substrate (ADR-0042)** — Phase 0 only at session
-  close. Workbench worklog shards 089-173 are the source of
-  drift that this session absorbed.
+  HEAD pinned to **`af1baa3`** as of 2026-05-23 (post Gamma epic
+  close + ixnv registry epic). LP epic `eg9j` shipped; the v0.2
+  special-function arc (Erf + Bessel + Gamma) is in. `docs/CATALOG.md`
+  (ADR-0043) is now the registry single-source-of-truth for tool
+  scope. Workbench worklog shards 089-182 are the source of drift
+  this corpus has absorbed across worklogs 006 + 007.
 - `../tstournament/` — origin of the brutal-and-punishing
   golden-master protocol the corpus inherits.
 
 ## Beads
 
-Beads is in use in this repo as of 2026-05-23
-(`bd init` committed at `d46e299`; tracker prefix
-`scientist-workbench-corpus-<hash>`).
+Beads in use as of 2026-05-23 (`bd init` at `d46e299`; tracker prefix
+`scientist-workbench-corpus-<hash>`). Hooks auto-call `bd prime` at
+session start.
 
-- `bd ready` — next actionable beads (no open blockers).
-- `bd list --status=open` — everything open.
-- `bd show <id>` — detail.
-- `bd remember "..."` — persistent knowledge; supersedes
-  `MEMORY.md` for new institutional facts.
-- The bd hooks committed at `d46e299` auto-call `bd prime` at
-  session start; no need to read MEMORY.md by hand any more.
+- `bd ready` / `bd list --status=open` / `bd show <id>`
+- `bd remember "..."` — persistent knowledge, supersedes `MEMORY.md`
 
-5 open beads at session close (see "What's also not done" above).
+**Closed this session (gamma-sync):** `x0y` (D1 delta catalogue),
+`e4a` (D2 coverage shape), `0qt` (G0 drift gate), `0gu` (G1 arity),
+`eak` (G2 cheap-win mappings), `4r2` (G3 recon), `0ea` (G4 multi-head),
+`bmj` (G5 port spec), `59p` (G6 gamma-anchor port), `5n0` (worklog
+007), `d80` (this HANDOFF). Plus housekeeping `9mz` (wolfram-v1 → v2
+rename).
+
+**5 open beads at session close** (see "What's also not done"):
+`1av.1`, `698`, `seu.1`, `seu.2`, `jly`.
 
 Memory at
 `~/.claude/projects/-home-tobias-Projects-scientist-workbench-corpus/memory/`
-still has the legacy shard set: `sibling_repos.md`,
-`data_layout.md`, `feedback_long_running_progress.md`,
-`env_bun_path.md`, `project_status.md`. `MEMORY.md` is the
-index; `bd remember` is the new write path.
+still has the legacy shard set (`sibling_repos.md`, `data_layout.md`,
+`feedback_long_running_progress.md`, `env_bun_path.md`,
+`project_status.md`). `MEMORY.md` is the index; `bd remember` is the
+new write path.
