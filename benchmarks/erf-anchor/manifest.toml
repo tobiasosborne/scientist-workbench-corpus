@@ -1,0 +1,99 @@
+[meta]
+name        = "erf-anchor"
+domain      = "special-functions-arbprec"
+description = """
+Multi-oracle V4 cross-system anchor for the Erf family (6 heads × 8
+tiers × 271 cases) at arb-prec.  Ported from
+scientist-workbench/bench/erf-anchor/ at workbench commit 9efb8d7
+(ADR-0040; bead scientist-workbench-9sqr).  Four oracles (wolfram +
+mpmath gold, boost silver, scipy bronze) pre-computed every case once;
+the corpus is a static record of those oracle values — grading reads
+from committed results.json files and does NOT re-invoke
+Wolfram/Python/g++/SciPy on the host.
+
+Consensus rule: gold-only.  consensus.gold_agree = true iff wolfram +
+mpmath agree to ≥48 decimal digits on a case.  7 cases (6 × T5 complex
+divergent at 7-35 digits; 1 × T8-inverseerfc-018 at 14 digits) carry
+consensus.value=null and the verifier's value_matches check is skipped
+on them (applies_when predicate evaluates false); the consensus_exists
+check emits a warn instead, surfacing the oracle-side uncertainty
+without blocking grade.
+
+Boost refuses 122/271 (no std::complex specialisation; all complex +
+17 edge cases honest-refused).  The per-oracle checks scope themselves
+via applies_when so a refused oracle is not counted as a candidate
+failure.
+
+See DESCRIPTION.md for tier breakdown, full disagreement table, and
+oracle-side adjudication notes on T8-inverseerfc-018.
+"""
+ported_from = "scientist-workbench/bench/erf-anchor@9efb8d7 (bead scientist-workbench-9sqr; ADR-0040)"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+# ── invariant 1: structural shape of the candidate envelope ────────────────
+[[verifier.checks]]
+name              = "output_shape_well_formed"
+description       = "Candidate output is a JSON record with required success fields {value, method, achieved_precision, warnings}; OR a tagged-refusal envelope {kind: 'tagged', tag, payload}; OR a tool_error envelope {kind: 'tool_error', name, message}.  For complex outputs, value is {re, im} both decimal strings; for real outputs, value is a single decimal string."
+tolerance_source  = "structural — no tolerance"
+machine_checkable = true
+
+# ── invariant 2: value is finite (or T6 sentinel) ──────────────────────────
+[[verifier.checks]]
+name              = "value_finite_or_t6_sentinel"
+description       = "On the success path, value.re (and value.im for complex) parse as finite decimals.  Sentinel tokens (NaN / ±Infinity / Indeterminate) are admissible only for T6 (edge tier), where the candidate is exercising float64 limits and an honest sentinel matches the gold oracles' behaviour.  Outside T6, a sentinel value fails this check."
+tolerance_source  = "structural — no tolerance"
+machine_checkable = true
+applies_when      = "candidate.kind != 'tagged' && candidate.kind != 'tool_error'"
+
+# ── invariant 3: numerical agreement with the gold consensus ───────────────
+[[verifier.checks]]
+name              = "value_matches_consensus_within_tolerance"
+description       = "rel_err of candidate vs consensus.value ≤ tolerance_rel (tier-dependent: 1e-48 T1-T3, 1e-46 T4-T5, 1e-44 T7-T8).  T6 uses a structural compare against the sentinel token rather than rel_err.  Comparison is done via JS BigInt scaled-decimal arithmetic at 60-digit precision (sufficient to discriminate the gold tier's 48-digit threshold without depending on @workbench/bigfloat at grade time)."
+tolerance_source  = "ADR-0040 §Decision 8 + recon spec (bead scientist-workbench-corpus-fpn) tier ladder"
+machine_checkable = true
+applies_when      = "consensus.value is not null"
+
+# ── invariant 4: precision self-report is honest ───────────────────────────
+[[verifier.checks]]
+name              = "claimed_precision_honest"
+description       = "0 ≤ achieved_precision ≤ requested_precision (200 decimal digits at the arb-prec lane).  Under-report admissible (ADR-0007 graceful degradation); over-report fails.  Skipped on refusal envelopes (no precision claim to check)."
+tolerance_source  = "ADR-0007 honest self-report"
+machine_checkable = true
+applies_when      = "candidate.kind != 'tagged' && candidate.kind != 'tool_error'"
+
+# ── invariant 5: method tag is from the admitted set ───────────────────────
+[[verifier.checks]]
+name              = "method_declared_consistent"
+description       = "method field is a non-empty string drawn from the lineage tags declared in tools/special-eval/tool.ts (FLOAT64_METHOD + ARBPREC_METHOD_REAL + ARBPREC_METHOD_COMPLEX).  Catches silent method-tag drift.  Skipped on refusal envelopes."
+tolerance_source  = "structural — exact string membership"
+machine_checkable = true
+applies_when      = "candidate.kind != 'tagged' && candidate.kind != 'tool_error'"
+
+# ── invariant 6: refusal scope is honest ───────────────────────────────────
+[[verifier.checks]]
+name              = "refusal_scope_honest"
+description       = "If the candidate emits a tagged-refusal envelope, the refusal class must be in the admitted set (special-eval/{unknown-head, non-finite-input, degenerate-shape, no-known-representation}) AND the input must be in an expected-refusal region (T6 extreme non-finite, or out-of-domain InverseErf/InverseErfc).  Refusing on an in-scope case fails."
+tolerance_source  = "structural — admitted-set membership + region check"
+machine_checkable = true
+applies_when      = "candidate.kind == 'tagged'"
+
+# ── invariant 7: cross-oracle consensus exists for this case ───────────────
+[[verifier.checks]]
+name              = "consensus_exists"
+description       = "Emits a WARN (not a fail) when consensus.gold_agree = false on this case — communicating oracle-side uncertainty to the grader without blocking the run.  Active on the 7 known disagreement cases (6 × T5 complex Erf/Erfi, 1 × T8-inverseerfc-018); inactive everywhere else.  Reports the digits_agreed metric from the gold-gold comparison so the grader can quantify the uncertainty."
+tolerance_source  = "ADR-0040 §Decision 8 — 48-digit gold-gold threshold"
+machine_checkable = true
+applies_when      = "consensus.gold_agree == false"
+
+[golden]
+inputs           = "golden/inputs.json"
+expected         = "golden/expected.json"
+n_cases          = 271
+n_heads          = 6
+n_tiers          = 8
+regenerated_at   = "2026-05-23"
+generate_cmd     = "# inputs/expected regenerated from scientist-workbench/bench/erf-anchor/{corpus.json, oracles/*/results.json} by /tmp/build-erf-anchor-goldens.ts at bead scientist-workbench-corpus-m9t (B18); regeneration is a one-shot port, not a recurring CI step — the oracles' results.json files are committed under adapters/<oracle>/data/erf-anchor-results.json and are the static ground truth"
