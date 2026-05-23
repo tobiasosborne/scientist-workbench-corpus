@@ -242,8 +242,40 @@ interface Parsed {
   description: string;
   signature_input: string;
   signature_output: string;
+  signature_arity: number | null;
   see_also: string[];
   see_page: number | null;
+}
+
+// Compute arity from a parsed `signature_input` string.
+//
+// Rules:
+//   - "(none)"   → 0   (constants, options, attributes — no arguments).
+//   - "any"      → null (signature extraction failed; arity unknown).
+//   - otherwise  → count of top-level comma-separated args, where "top-level"
+//     means commas inside {…}, […], (…) don't split.
+//
+// Var-arg signatures (`expr1, expr2, …`) collapse to the literal token count
+// (3 here). Callers/auditors who need true variadic semantics should treat
+// any signature containing "…" as variadic and use the count as a lower
+// bound. This is conservative: the corpus contract for `signature.arity` is
+// "fixed integer arity when known; omit when unknown".
+//
+// Bug history: pre-2026-05-23 the ingestor hard-coded `arity = 1` regardless
+// of signature shape. See bead scientist-workbench-corpus-3pu and the
+// follow-up survey bead for the broader fix.
+function computeArity(input: string): number | null {
+  const s = input.trim();
+  if (s === "(none)") return 0;
+  if (s === "any") return null;
+  let depth = 0;
+  let count = 1;
+  for (const ch of s) {
+    if (ch === "{" || ch === "[" || ch === "(") depth++;
+    else if (ch === "}" || ch === "]" || ch === ")") depth--;
+    else if (ch === "," && depth === 0) count++;
+  }
+  return count;
 }
 
 function parse(text: string, expectedName: string): Parsed {
@@ -337,7 +369,9 @@ function parse(text: string, expectedName: string): Parsed {
     }
   }
 
-  return { name, description, signature_input, signature_output, see_also, see_page };
+  const signature_arity = computeArity(signature_input);
+
+  return { name, description, signature_input, signature_output, signature_arity, see_also, see_page };
 }
 
 // ─── ledger lookup ───────────────────────────────────────────────────────────
@@ -484,8 +518,7 @@ ingested_by = "scripts/ingest_wolfram_v1.ts"
 
 [signature]
 input  = ${tomlString(p.signature_input)}
-output = ${tomlString(p.signature_output)}
-arity  = 1
+output = ${tomlString(p.signature_output)}${p.signature_arity !== null ? `\narity  = ${p.signature_arity}` : ""}
 
 [description]
 md = '''
