@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "problem": "special-eval-smoke",
+  "cases": [
+    {
+      "id": "erf-zero",
+      "input": { "head": "Erf", "args": [0] },
+      "tags": ["erf-family", "arbprec-via-precision-53"]
+    },
+    {
+      "id": "erfc-zero",
+      "input": { "head": "Erfc", "args": [0] },
+      "tags": ["erf-family", "arbprec-via-precision-53"]
+    },
+    {
+      "id": "erfcx-zero",
+      "input": { "head": "Erfcx", "args": [0] },
+      "tags": ["erf-family", "arbprec-via-precision-53"]
+    },
+    {
+      "id": "erfi-zero",
+      "input": { "head": "Erfi", "args": [0] },
+      "tags": ["erf-family", "arbprec-via-precision-53"]
+    },
+    {
+      "id": "inverseerf-zero",
+      "input": { "head": "InverseErf", "args": [0] },
+      "tags": ["erf-family", "float64-required"]
+    },
+    {
+      "id": "inverseerfc-one",
+      "input": { "head": "InverseErfc", "args": [1] },
+      "tags": ["erf-family", "float64-required"]
+    },
+    {
+      "id": "besselj-zero-zero",
+      "input": { "head": "BesselJ", "args": [0, 0] },
+      "tags": ["bessel-family", "arbprec-via-precision-53"]
+    },
+    {
+      "id": "bessely-one-one",
+      "input": { "head": "BesselY", "args": [1, 1] },
+      "tags": ["bessel-family", "arbprec-via-precision-53"]
+    },
+    {
+      "id": "besseli-zero-zero",
+      "input": { "head": "BesselI", "args": [0, 0] },
+      "tags": ["bessel-family", "arbprec-via-precision-53"]
+    },
+    {
+      "id": "besselk-one-one",
+      "input": { "head": "BesselK", "args": [1, 1] },
+      "tags": ["bessel-family", "arbprec-via-precision-53"]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+[meta]
+name        = "special-eval-smoke"
+domain      = "special-functions"
+description = """
+Smoke benchmark for the per-head Erf+Bessel umbrella evaluator
+(`tools/special-eval` in scientist-workbench; ADR-0040 + ADR-0041; worklog
+shards 139 and 163).  One case per admitted head, evaluated at the
+float64 lane (run-candidate.ts pins `--precision = 10`, which routes
+`special-eval`'s `dispatchReal` / `dispatchRealBessel` to the float64
+arm: per the tool's source, `--precision <= 15` decimal ⇒ float64;
+`> 15` ⇒ arb-prec).  The B14 adapter file declares
+`tool_flags.precision = "53"` as informational metadata pinning the
+"float64 lane" — `53` there is the IEEE-754 binary64 mantissa width,
+NOT the decimal-digits flag the tool itself parses; the grader does
+not forward `tool_flags` to the run-candidate today (see grade.ts
+schema-v3 comment), so the run-candidate is the authoritative site
+that picks the actual `--precision` value.  Future lift: forward
+`tool_flags` through the runner; then the adapter pins the lane
+directly and the run-candidate becomes a thin bridge.
+
+The intent of this suite is the smoke: prove the per-case `head` field
+flows from corpus inputs → adapter → tool dispatch → value-protocol
+output → verifier without dropping a byte.  This is a wire-validation,
+NOT a coverage proof or a publication-grade accuracy bench — the
+`erf-anchor` (B18) and `besselj-anchor` (B19) mega-benches will do
+that work against mpmath / Arb oracle corpora.
+
+10 cases shipped (of 14 brief-listed): one per admitted head in v0.2
+of the `special-eval` substrate.  HankelH1 / HankelH2 /
+SphericalBesselJ / SphericalBesselY are NOT admitted in the v0.2
+ADMITTED_HEADS table (ADR-0041 §"Decision 7" landed the 4 canonical
+Bessel forwards + 2 scaled variants; the Hankel + spherical heads
+are deferred); child beads track each gap separately so the smoke
+proves the wire on what exists today.  BesselIScaled / BesselKScaled
+are admitted but out-of-scope for this smoke (no Scaled case in the
+brief's 14-head menu); their float64 path is exercised in the same
+arity-2 dispatcher as BesselI / BesselK.
+
+Bead lineage: B14 (closed) created the adapter pointing at this
+capability; B15 (this) creates the suite; child beads cover Hankel +
+spherical head admission against tools/special-eval.
+"""
+ported_from = "scientist-workbench-corpus-seu (B15) — net-new, not ported"
+
+[verifier]
+kind = "bun"
+cmd  = "bun"
+args = ["run", "${SUITE_ROOT}/golden/verify.ts"]
+
+[[verifier.checks]]
+name              = "output_shape_well_formed"
+description       = "Candidate output is a JSON record with the required success fields {value, method, achieved_precision, warnings}; value parses as a bigfloat decimal string for real-axis heads (the 10 smoke cases here are all real-axis arity-1 / arity-2 calls)."
+tolerance_source  = "structural — no tolerance"
+machine_checkable = true
+
+[[verifier.checks]]
+name              = "value_finite"
+description       = "value.re (and value.im for complex outputs, none in this smoke) parses as a finite decimal — never NaN / ±Inf.  The BigFloat encoding has no representation of ±∞, so a successful fromString → finite by construction."
+tolerance_source  = "structural — no tolerance"
+machine_checkable = true
+
+[[verifier.checks]]
+name              = "value_matches_oracle_within_tolerance"
+description       = "rel_err = |candidate.value - expected_value| / max(|expected_value|, 1) ≤ 1e-12 (absolute fallback 1e-12 when expected_value = 0).  Expected values are closed-form (Erf(0)=0, BesselJ(0,0)=1, ...) or DLMF-tabulated spot-values to ≥ 16 dp.  The run-candidate.ts routes the float64 lane (--precision = 10, the unambiguous float64 dispatch per special-eval's dispatchReal()); the 1e-12 tolerance has 3-4 dp of slack from the float64 ULP at unit scale, accommodating Sun-Pro / Cephes / AMOS port-level rounding without false negatives."
+tolerance_source  = "Higham 2002 §1.2 (float64 ULP ≈ 1.1e-16) + 4 dp safety; matches LP-suite tolerance shape for float64 numerical tier."
+machine_checkable = true
+
+[[verifier.checks]]
+name              = "claimed_precision_honest"
+description       = "achieved_precision == 53 exactly at the float64 lane (special-eval wraps every float64 result in a 53-bit BigFloat per its float64ToBigFloat helper, and declares achieved_precision = 53 in realSuccess).  Catches drift in the encoding wrapper or in the lane-dispatch decision.  ADR-0007 honest-self-report: tool may under-report at arb-prec; at float64 the value is pinned."
+tolerance_source  = "ADR-0007 honest self-report + ADR-0020 bit-width discipline"
+machine_checkable = true
+applies_when      = "float64 lane (--precision <= 15)"
+
+[[verifier.checks]]
+name              = "method_declared_consistent"
+description       = "method field is a non-empty string drawn from the lineage tags declared in tools/special-eval/tool.ts (FLOAT64_METHOD / ARBPREC_METHOD_REAL).  Examples: 'erf-borel-series-or-asymptotic' (arb-prec real Erf), 'bessel-flint-0f1-or-hankel' (arb-prec real BesselJ).  Any value not in the admitted set fails — guards against silent method-tag drift."
+tolerance_source  = "structural — exact string membership"
+machine_checkable = true
+
+[[verifier.checks]]
+name              = "warnings_well_typed"
+description       = "warnings field is list[string].  Successful smoke cases (well-conditioned inputs) should have empty warnings; saturation / cancellation warnings are admissible but indicate a non-canonical case path."
+tolerance_source  = "structural — list[string] type check"
+machine_checkable = true
+
+[golden]
+inputs           = "golden/inputs.json"
+expected         = "golden/expected.json"
+n_cases          = 10
+n_heads          = 10
+n_tiers          = 1
+regenerated_at   = "2026-05-23"
+generate_cmd     = "# inputs / expected are hand-written closed-form spot-values; no oracle regeneration script (this is a wire-smoke, not a value corpus)"

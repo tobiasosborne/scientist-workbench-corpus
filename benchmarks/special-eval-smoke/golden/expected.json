@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "problem": "special-eval-smoke",
+  "tolerance_rel": "1e-12",
+  "tolerance_abs": "1e-12",
+  "cases": [
+    {
+      "id": "erf-zero",
+      "expected_value": "0.0",
+      "source": "DLMF §7.2.1: erf(0) = 0 (closed form)",
+      "head_family": "erf"
+    },
+    {
+      "id": "erfc-zero",
+      "expected_value": "1.0",
+      "source": "DLMF §7.2.2: erfc(0) = 1 (closed form; complementary error)",
+      "head_family": "erf"
+    },
+    {
+      "id": "erfcx-zero",
+      "expected_value": "1.0",
+      "source": "DLMF §7.7.2: erfcx(0) = e^{0^2}·erfc(0) = 1 (closed form)",
+      "head_family": "erf"
+    },
+    {
+      "id": "erfi-zero",
+      "expected_value": "0.0",
+      "source": "DLMF §7.2.3: erfi(0) = -i·erf(0i) = 0 (closed form)",
+      "head_family": "erf"
+    },
+    {
+      "id": "inverseerf-zero",
+      "expected_value": "0.0",
+      "source": "DLMF §7.17.2: erf^{-1}(0) = 0 (closed form; erf is odd)",
+      "head_family": "erf"
+    },
+    {
+      "id": "inverseerfc-one",
+      "expected_value": "0.0",
+      "source": "DLMF §7.17.2: erfc^{-1}(1) = 0 (closed form; erfc(0)=1)",
+      "head_family": "erf"
+    },
+    {
+      "id": "besselj-zero-zero",
+      "expected_value": "1.0",
+      "source": "DLMF §10.2.2: J_0(0) = 1 (closed form; Maclaurin first-term)",
+      "head_family": "bessel"
+    },
+    {
+      "id": "bessely-one-one",
+      "expected_value": "-0.7812128213002887",
+      "source": "DLMF §10.2.3 tabulated: Y_1(1) = -0.7812128213002887... (mpmath@30dp: -0.781212813028585734623831324112)",
+      "head_family": "bessel"
+    },
+    {
+      "id": "besseli-zero-zero",
+      "expected_value": "1.0",
+      "source": "DLMF §10.25.2: I_0(0) = 1 (closed form; modified Bessel Maclaurin)",
+      "head_family": "bessel"
+    },
+    {
+      "id": "besselk-one-one",
+      "expected_value": "0.6019072301972346",
+      "source": "DLMF §10.32 tabulated: K_1(1) = 0.6019072301972346... (mpmath@30dp: 0.601907230197234574737540001847)"
+    }
+  ]
+}
