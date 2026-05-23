@@ -1,0 +1,5320 @@
+{
+  "oracle_id": "boost",
+  "oracle_version": "Boost.Math 1_83 (header-only) / g++ 13.3.0",
+  "copied_from": "scientist-workbench/bench/gamma-anchor/oracles/boost/results.json",
+  "copied_at": "2026-05-23T12:58:09.422Z",
+  "results": [
+    {
+      "input_id": "T1-gamma-001",
+      "id": "T1-gamma-001",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.0000000000000000000000000000000000000000000000000e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gamma-002",
+      "id": "T1-gamma-002",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.0000000000000000000000000000000000000000000000000e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gamma-003",
+      "id": "T1-gamma-003",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": "2.4000000000000000000000000000000000000000000000000e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gamma-004",
+      "id": "T1-gamma-004",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": "3.9916800000000000000000000000000000000000000000000e+07",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gamma-005",
+      "id": "T1-gamma-005",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "8.351527306554617169354060024488717317581176757812500000000000",
+      "output": "1.0319753109127641649582336364682570004104787963389e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-loggamma-001",
+      "id": "T1-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.0000000000000000000000000000000000000000000000000e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-loggamma-002",
+      "id": "T1-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.0000000000000000000000000000000000000000000000000e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-loggamma-003",
+      "id": "T1-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": "3.1780538303479456196469416012970554088739909609035e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-loggamma-004",
+      "id": "T1-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.7502307845873885839287652907216199671703957598230e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-loggamma-005",
+      "id": "T1-loggamma-005",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "11.074614698008918622917917673476040363311767578125000000000000",
+      "output": "1.5280152170252170380979977970664083942192094907437e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-digamma-001",
+      "id": "T1-digamma-001",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": "-5.7721566490153286060651209008240243104215933593992e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-digamma-002",
+      "id": "T1-digamma-002",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": "4.2278433509846713939348790991759756895784066406008e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-digamma-003",
+      "id": "T1-digamma-003",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.5061176684318004727268212432509309022911739973934e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-digamma-004",
+      "id": "T1-digamma-004",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": "2.4426616799758120167383652547949424463027180089374e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-digamma-005",
+      "id": "T1-digamma-005",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "17.726087588596200816937198396772146224975585937500000000000000",
+      "output": "2.8465652879962889811613719039672744798293298659102e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-trigamma-001",
+      "id": "T1-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.6449340668482264364724151666460251892189499012068e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-trigamma-002",
+      "id": "T1-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": "6.4493406684822643647241516664602518921894990120680e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-trigamma-003",
+      "id": "T1-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": "2.2132295573711532536130405553491407810783879009569e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-trigamma-004",
+      "id": "T1-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": "8.6901872871768390750300180461774935704627122814757e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-trigamma-005",
+      "id": "T1-trigamma-005",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "4.473989127098576545904506929218769073486328125000000000000000",
+      "output": "2.5033657310250782584867356095069014359160140458666e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-barnesg-001",
+      "id": "T1-barnesg-001",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-barnesg-002",
+      "id": "T1-barnesg-002",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-barnesg-003",
+      "id": "T1-barnesg-003",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-barnesg-004",
+      "id": "T1-barnesg-004",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-barnesg-005",
+      "id": "T1-barnesg-005",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "17.829154175440386609352572122588753700256347656250000000000000",
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-polygamma-001",
+      "id": "T1-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2.4041138063191885707994763230228999815299725846810e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-polygamma-002",
+      "id": "T1-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-4.8789732245114496725402248948825907455898510606923e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-polygamma-003",
+      "id": "T1-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "m": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "6.4939394022668291490960221792470074166485057115123e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-polygamma-004",
+      "id": "T1-polygamma-004",
+      "head": "Polygamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "m": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "2.1427828192755075021948105172933342574431637438287e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-pochhammer-001",
+      "id": "T1-pochhammer-001",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-pochhammer-002",
+      "id": "T1-pochhammer-002",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-pochhammer-003",
+      "id": "T1-pochhammer-003",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "25"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-pochhammer-004",
+      "id": "T1-pochhammer-004",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-pochhammer-005",
+      "id": "T1-pochhammer-005",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-pochhammer-006",
+      "id": "T1-pochhammer-006",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "25"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-pochhammer-007",
+      "id": "T1-pochhammer-007",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "1.699999999999999955591079014993738383054733276367187500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-pochhammer-008",
+      "id": "T1-pochhammer-008",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "1.699999999999999955591079014993738383054733276367187500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-pochhammer-009",
+      "id": "T1-pochhammer-009",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "1.699999999999999955591079014993738383054733276367187500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "25"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T1-incompletegammaupper-001",
+      "id": "T1-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "8.0647117960317690788626073021305175701359292168171e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammaupper-002",
+      "id": "T1-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "5.0728223381177330984514007570018045349008617228039e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammaupper-003",
+      "id": "T1-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "3.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9914827347145577191736966260024710652679836875369e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammaupper-004",
+      "id": "T1-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "1.0571838841565097874621959975919877646444998907920e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammaupper-005",
+      "id": "T1-incompletegammaupper-005",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "4.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "3.6524406235393061061812799545924940139318900233768e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammalower-001",
+      "id": "T1-incompletegammalower-001",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.6918067329451983365095414103198400070961901639543e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammalower-002",
+      "id": "T1-incompletegammalower-002",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "3.7894469164098470380394366597039213790868855578086e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammalower-003",
+      "id": "T1-incompletegammalower-003",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "3.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "8.0085172652854422808263033739975289347320163124630e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammalower-004",
+      "id": "T1-incompletegammalower-004",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "1.3428161158434902125378040024080122353555001092080e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammalower-005",
+      "id": "T1-incompletegammalower-005",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "4.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "8.7211432661789738049975289835602675439461173344202e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammap-001",
+      "id": "T1-incompletegammap-001",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "9.5449973610364158559943472566693312505644755259664e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammap-002",
+      "id": "T1-incompletegammap-002",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "4.2759329552912016600095238564127189392715996802703e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammap-003",
+      "id": "T1-incompletegammap-003",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "3.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "8.0085172652854422808263033739975289347320163124630e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammap-004",
+      "id": "T1-incompletegammap-004",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "5.5950671493478758855741833433667176473145837883665e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammap-005",
+      "id": "T1-incompletegammap-005",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "4.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "9.5980315947934576790133582658073969608804060188444e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammaq-001",
+      "id": "T1-incompletegammaq-001",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "4.5500263896358414400565274333066874943552447403357e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammaq-002",
+      "id": "T1-incompletegammaq-002",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "5.7240670447087983399904761435872810607284003197297e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammaq-003",
+      "id": "T1-incompletegammaq-003",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "3.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9914827347145577191736966260024710652679836875369e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammaq-004",
+      "id": "T1-incompletegammaq-004",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "4.4049328506521241144258166566332823526854162116335e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletegammaq-005",
+      "id": "T1-incompletegammaq-005",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "4.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "4.0196840520654232098664173419260303911959398115560e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-001",
+      "id": "T1-inverseincompletegammap-001",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "7.8953870467156133152701471084097572396860082806261e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-002",
+      "id": "T1-inverseincompletegammap-002",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "2.2746821155978637597125832348982469815821055329511e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-003",
+      "id": "T1-inverseincompletegammap-003",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.3527717270477074605998826051707180367653367924593e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-004",
+      "id": "T1-inverseincompletegammap-004",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "2.4325910259626645447162161363176410932748126509239e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-005",
+      "id": "T1-inverseincompletegammap-005",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "4.6709088827959837203126750580751514712199855163542e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-006",
+      "id": "T1-inverseincompletegammap-006",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "7.9935895860526308241303115423946854688252673081303e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-001",
+      "id": "T1-inverseincompletegammaq-001",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.3527717270477072392706745189465372751228237238920e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-002",
+      "id": "T1-inverseincompletegammaq-002",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "2.2746821155978637597125832348982469815821055329511e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-003",
+      "id": "T1-inverseincompletegammaq-003",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "7.8953870467156089093075072278858913045095873838441e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-004",
+      "id": "T1-inverseincompletegammaq-004",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "7.9935895860526303408868998778087899353211934512528e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-005",
+      "id": "T1-inverseincompletegammaq-005",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "4.6709088827959837203126750580751514712199855163542e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-006",
+      "id": "T1-inverseincompletegammaq-006",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "2.4325910259626643280725788956089794031378967900581e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-beta-001",
+      "id": "T1-beta-001",
+      "head": "Beta",
+      "tier": "T1",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "3.1415926535897932384626433832795028841971693993751e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-beta-002",
+      "id": "T1-beta-002",
+      "head": "Beta",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "8.3333333333333333333333333333333333333333333333335e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-beta-003",
+      "id": "T1-beta-003",
+      "head": "Beta",
+      "tier": "T1",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "2.299999999999999822364316059974953532218933105468750000000000"
+      },
+      "output": "1.7668660452401748734983709734328842974809902451238e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-beta-004",
+      "id": "T1-beta-004",
+      "head": "Beta",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "9.0909090909090909090909090909090909090909090909091e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-logbeta-001",
+      "id": "T1-logbeta-001",
+      "head": "LogBeta",
+      "tier": "T1",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.1447298858494001741434273513530587116472948129153e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-logbeta-002",
+      "id": "T1-logbeta-002",
+      "head": "LogBeta",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "-2.4849066497880003102297094798388788407984908265433e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-logbeta-003",
+      "id": "T1-logbeta-003",
+      "head": "LogBeta",
+      "tier": "T1",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "2.299999999999999822364316059974953532218933105468750000000000"
+      },
+      "output": "-1.7333777116754901211851949514178010757762069841989e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-logbeta-004",
+      "id": "T1-logbeta-004",
+      "head": "LogBeta",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-4.7004803657924162280799350326494935074228083425665e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gammaratio-001",
+      "id": "T1-gammaratio-001",
+      "head": "GammaRatio",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "7"
+      },
+      "output": "5.0400000000000000000000000000000000000000000000000e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gammaratio-002",
+      "id": "T1-gammaratio-002",
+      "head": "GammaRatio",
+      "tier": "T1",
+      "a": {
+        "kind": "decimal",
+        "value": "5.700000000000000177635683940025046467781066894531250000000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "3.299999999999999822364316059974953532218933105468750000000000"
+      },
+      "output": "2.7027884089235826095510824279883061547285547341658e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gammadeltaratio-001",
+      "id": "T1-gammadeltaratio-001",
+      "head": "GammaDeltaRatio",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "4.5851597901024003002764552253827867293992686066103e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gammadeltaratio-002",
+      "id": "T1-gammadeltaratio-002",
+      "head": "GammaDeltaRatio",
+      "tier": "T1",
+      "a": {
+        "kind": "decimal",
+        "value": "7.299999999999999822364316059974953532218933105468750000000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "3.1533324247616801692665545036151521454452154730757e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gammapderivative-001",
+      "id": "T1-gammapderivative-001",
+      "head": "GammaPDerivative",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "4.8394144903828669959566038587112130965734394147485e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gammapderivative-002",
+      "id": "T1-gammapderivative-002",
+      "head": "GammaPDerivative",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.7000733205040683625671629929332476910713770926057e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gammapderivative-003",
+      "id": "T1-gammapderivative-003",
+      "head": "GammaPDerivative",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "1.5795069263349828739682279557061990975049951444979e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-gammapderivative-004",
+      "id": "T1-gammapderivative-004",
+      "head": "GammaPDerivative",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "1.7546736976785070564156376101949021481379127675404e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletebeta-001",
+      "id": "T1-incompletebeta-001",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.299999999999999988897769753748434595763683319091796875000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "3.4829999999999998041566584561223867869613428000684e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletebeta-002",
+      "id": "T1-incompletebeta-002",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.299999999999999988897769753748434595763683319091796875000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "6.6074594914354514633500927505338463357387256802179e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletebeta-003",
+      "id": "T1-incompletebeta-003",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "6.8750000000000000000000000000000000000000000000000e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletebeta-004",
+      "id": "T1-incompletebeta-004",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "8.1830988618379067153776752674502872406891929148093e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletebeta-005",
+      "id": "T1-incompletebeta-005",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "9.9630000000000000239808173319033762441621732468118e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T1-incompletebeta-006",
+      "id": "T1-incompletebeta-006",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "9.8615316701114095598539552992393008060870573718546e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-gamma-001",
+      "id": "T2-gamma-001",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "output": "-4.3268511088251927204557726564461632760326094994136e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-gamma-002",
+      "id": "T2-gamma-002",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "output": "-4.2736699824108433611185892051667961788419306035931e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-gamma-003",
+      "id": "T2-gamma-003",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "output": "3.3283470067886092808113818909780946670572590595300e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-gamma-004",
+      "id": "T2-gamma-004",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "output": "-9.3108278483896396545859593928689407058253048331748e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-gamma-005",
+      "id": "T2-gamma-005",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+      "output": "2.7008820585226910892162552127103164690248372664723e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-gamma-006",
+      "id": "T2-gamma-006",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+      "output": "9.3932062673543360930472456648925052488489380717796e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-gamma-007",
+      "id": "T2-gamma-007",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+      "output": "-5.0408177471511611296281533616164379193647387375519e-05",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-gamma-008",
+      "id": "T2-gamma-008",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-11.629752765050973550842172699049115180969238281250000000000000",
+      "output": "1.8101197373768887646426337256928060423379551532875e-08",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-loggamma-001",
+      "id": "T2-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "output": "1.4648400508576025304709303899459530752644574429935e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-loggamma-002",
+      "id": "T2-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "output": "1.4524729387568078084878011147211736394416092242100e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-loggamma-003",
+      "id": "T2-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "output": "1.2024757863901113269624671772234248510130471879566e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-loggamma-004",
+      "id": "T2-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "output": "-7.1407085315645687684030450211077296726489070550372e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-loggamma-005",
+      "id": "T2-loggamma-005",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+      "output": "-1.3090066849930420463607151520826574456845286977744e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-loggamma-006",
+      "id": "T2-loggamma-006",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+      "output": "-4.6677685885223419351920008513023314264789227425319e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-loggamma-007",
+      "id": "T2-loggamma-007",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+      "output": "-9.8953571446294078486955119810900044178624400294946e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-loggamma-008",
+      "id": "T2-loggamma-008",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-7.385828575904400672413885331479832530021667480468750000000000",
+      "output": "-8.1021137459984301920740990549077055676538448930457e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-digamma-001",
+      "id": "T2-digamma-001",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "output": "2.1133097796353988734071062028301433698493609395079e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-digamma-002",
+      "id": "T2-digamma-002",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "output": "-2.0739527936287037831020455282966570043692475334280e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-digamma-003",
+      "id": "T2-digamma-003",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "output": "2.8825405488661673037869683633044134120864761393739e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-digamma-004",
+      "id": "T2-digamma-004",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "output": "-1.1153471291406896119102029140286079489253465805442e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-digamma-005",
+      "id": "T2-digamma-005",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+      "output": "1.3888709263595289015114046193821968137592213477205e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-digamma-006",
+      "id": "T2-digamma-006",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+      "output": "-4.5687230493238278731062376443426011272594244152878e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-digamma-007",
+      "id": "T2-digamma-007",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+      "output": "4.4577892332208802258652548873198425236958454380168e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-digamma-008",
+      "id": "T2-digamma-008",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-9.631187481354544388523208908736705780029296875000000000000000",
+      "output": "9.4259800386429017545954307188956028358704009811278e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-trigamma-001",
+      "id": "T2-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "output": "1.3945160267805722488901408218127426380639732554234e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-trigamma-002",
+      "id": "T2-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "output": "1.4286180872638339626543578692203603996857250427722e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-trigamma-003",
+      "id": "T2-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "output": "1.4536876244137079640496830812932761127419016263458e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-trigamma-004",
+      "id": "T2-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "output": "1.4769375845132315018165157609471516459256128794314e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-trigamma-005",
+      "id": "T2-trigamma-005",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+      "output": "9.6208792980503482436576083117294587876114982296975e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-trigamma-006",
+      "id": "T2-trigamma-006",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+      "output": "1.4918469917911349015781019568781354670898523746426e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-trigamma-007",
+      "id": "T2-trigamma-007",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+      "output": "1.4965899076338780913040378882715337624252876052464e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-trigamma-008",
+      "id": "T2-trigamma-008",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-12.750912465178831922685276367701590061187744140625000000000000",
+      "output": "1.9777598568444667803135838904312369347077294918442e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-polygamma-001",
+      "id": "T2-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "6.7639081199883160040212559167285271850974150374415e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-polygamma-002",
+      "id": "T2-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "6.8549413471162134232114117944961902843817100931753e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-polygamma-003",
+      "id": "T2-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-6.8932939023263798760756083738268115447455533799672e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T2-pochhammer-001",
+      "id": "T2-pochhammer-001",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "-0.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T2-pochhammer-002",
+      "id": "T2-pochhammer-002",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "-1.300000000000000044408920985006261616945266723632812500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T2-pochhammer-003",
+      "id": "T2-pochhammer-003",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "-5"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "6"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T2-pochhammer-004",
+      "id": "T2-pochhammer-004",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "-5"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T2-pochhammer-005",
+      "id": "T2-pochhammer-005",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-1.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "-3/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "4"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T2-beta-001",
+      "id": "T2-beta-001",
+      "head": "Beta",
+      "tier": "T2",
+      "a": {
+        "kind": "decimal",
+        "value": "-0.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T2-beta-002",
+      "id": "T2-beta-002",
+      "head": "Beta",
+      "tier": "T2",
+      "a": {
+        "kind": "half-integer",
+        "value": "-1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T2-beta-003",
+      "id": "T2-beta-003",
+      "head": "Beta",
+      "tier": "T2",
+      "a": {
+        "kind": "decimal",
+        "value": "-1.300000000000000044408920985006261616945266723632812500000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "2.700000000000000177635683940025046467781066894531250000000000"
+      },
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T3-gamma-001",
+      "id": "T3-gamma-001",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T3-digamma-001",
+      "id": "T3-digamma-001",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T3-gamma-002",
+      "id": "T3-gamma-002",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "0.010000000000000000208166817117216851329430937767028808593750",
+      "output": "9.9432585119150601632066988697725287071044638239609e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-002",
+      "id": "T3-digamma-002",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "0.010000000000000000208166817117216851329430937767028808593750",
+      "output": "-1.0056088545786867241547530727170814297833817827909e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-003",
+      "id": "T3-gamma-003",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "0.000100000000000000004792173602385929598312941379845142364502",
+      "output": "9.9994228832316237115883819228299111058124176244109e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-003",
+      "id": "T3-digamma-003",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "0.000100000000000000004792173602385929598312941379845142364502",
+      "output": "-1.0000577051183513855632639579405725440904607280739e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-004",
+      "id": "T3-gamma-004",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-0.010000000000000000208166817117216851329430937767028808593750",
+      "output": "-1.0058719796441077711195421366833868984678088531703e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-004",
+      "id": "T3-digamma-004",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-0.010000000000000000208166817117216851329430937767028808593750",
+      "output": "9.9406213695944402773551339460731565802807345284166e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-005",
+      "id": "T3-gamma-005",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-0.000100000000000000004792173602385929598312941379845142364502",
+      "output": "-1.0000577314579576359027611690302558642200022108398e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-005",
+      "id": "T3-digamma-005",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-0.000100000000000000004792173602385929598312941379845142364502",
+      "output": "9.9994226198296696516408491141680071290340290072299e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-006",
+      "id": "T3-gamma-006",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T3-digamma-006",
+      "id": "T3-digamma-006",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T3-gamma-007",
+      "id": "T3-gamma-007",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-1.0043695466580860181452155378193772500969775499738e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-007",
+      "id": "T3-digamma-007",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-9.9550784447767575555167501192832252930601788475349e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-008",
+      "id": "T3-gamma-008",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-0.999900000000000011013412404281552881002426147460937500000000",
+      "output": "-1.0000422925525277949691462066309172351768008399093e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-008",
+      "id": "T3-digamma-008",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-0.999900000000000011013412404281552881002426147460937500000000",
+      "output": "-9.9995769511746146760195552805207259562532301336167e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-009",
+      "id": "T3-gamma-009",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "output": "9.9591285113277910396010710289381219685127665395911e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-009",
+      "id": "T3-digamma-009",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "output": "1.0039631270584530611320175858718127532424250130539e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-010",
+      "id": "T3-gamma-010",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.000099999999999988986587595718447118997573852539062500000000",
+      "output": "9.9995773568449937902249473888114881012219630608251e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-010",
+      "id": "T3-digamma-010",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.000099999999999988986587595718447118997573852539062500000000",
+      "output": "1.0000422519840770472227765709721598553083275677293e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-011",
+      "id": "T3-gamma-011",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T3-digamma-011",
+      "id": "T3-digamma-011",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T3-gamma-012",
+      "id": "T3-gamma-012",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "output": "5.0470831490356081539091752423364589813661639399904e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-012",
+      "id": "T3-digamma-012",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-9.9048271884953505201165889062582700554896552530960e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-013",
+      "id": "T3-gamma-013",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.999900000000000011013412404281552881002426147460937500000000",
+      "output": "5.0004614858369307938493512230914316154902426687345e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-013",
+      "id": "T3-digamma-013",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.999900000000000011013412404281552881002426147460937500000000",
+      "output": "-9.9990769261733646135191837527199450858732322515839e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-014",
+      "id": "T3-gamma-014",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "output": "-4.9547903041432906016159431528469845514068882806436e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-014",
+      "id": "T3-digamma-014",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "output": "1.0089382514365847247397403681726159281581003662232e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-015",
+      "id": "T3-gamma-015",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.000100000000000211031192520749755203723907470703125000000000",
+      "output": "-4.9995387014763203214775979125193518045596905662317e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-015",
+      "id": "T3-digamma-015",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.000100000000000211031192520749755203723907470703125000000000",
+      "output": "1.0000922494819815948598376985867660454466109847899e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-016",
+      "id": "T3-gamma-016",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-3.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T3-digamma-016",
+      "id": "T3-digamma-016",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-3.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "refused"
+    },
+    {
+      "input_id": "T3-gamma-017",
+      "id": "T3-gamma-017",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "output": "-1.6879876752627822057762480660004509542893825329065e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-017",
+      "id": "T3-digamma-017",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "output": "-9.8713823724420609256807582613799295752735483377107e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-018",
+      "id": "T3-gamma-018",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.999899999999999788968807479250244796276092529296875000000000",
+      "output": "-1.6668760578105366564132026789614469588263818717244e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-018",
+      "id": "T3-digamma-018",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.999899999999999788968807479250244796276092529296875000000000",
+      "output": "-9.9987435817063453251995691142852612195496006279008e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-019",
+      "id": "T3-gamma-019",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "output": "1.6461097355957777250848297741909325975907529098160e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-019",
+      "id": "T3-digamma-019",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "output": "1.0122605105727973495597344308518689947436207178806e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-gamma-020",
+      "id": "T3-gamma-020",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-3.000100000000000211031192520749755203723907470703125000000000",
+      "output": "1.6664573519137095329499402197255057690944654774271e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-digamma-020",
+      "id": "T3-digamma-020",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-3.000100000000000211031192520749755203723907470703125000000000",
+      "output": "1.0001255817042408528822255727867134138403376902449e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-loggamma-001",
+      "id": "T3-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T3",
+      "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+      "output": "6.9081793857174363282119248685745045714409270724747e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-trigamma-001",
+      "id": "T3-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T3",
+      "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+      "output": "1.0000026445361980976272002374351520187815930342705e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-loggamma-002",
+      "id": "T3-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T3",
+      "z": "-1.000999999999999889865875957184471189975738525390625000000000",
+      "output": "6.9073338171820550790069065550189018346498029152112e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-trigamma-002",
+      "id": "T3-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T3",
+      "z": "-1.000999999999999889865875957184471189975738525390625000000000",
+      "output": "1.0000026453446480502925982500948067729287103066351e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-loggamma-003",
+      "id": "T3-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T3",
+      "z": "-1.999000000000000110134124042815528810024261474609375000000000",
+      "output": "6.2155323301992842366897030966207626257742450930614e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-trigamma-003",
+      "id": "T3-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T3",
+      "z": "-1.999000000000000110134124042815528810024261474609375000000000",
+      "output": "1.0000028947866077673103131112002212837218413596394e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-loggamma-004",
+      "id": "T3-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T3",
+      "z": "-2.000999999999999889865875957184471189975738525390625000000000",
+      "output": "6.2136867615804587767151530682599856370097271931200e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-trigamma-004",
+      "id": "T3-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T3",
+      "z": "-2.000999999999999889865875957184471189975738525390625000000000",
+      "output": "1.0000028950948354253707038946949206503366517593044e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-polygamma-001",
+      "id": "T3-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "0.001000000000000000020816681711721685132943093776702880859375",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2.0000000023976321648332403150487280916082867206209e+09",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-polygamma-002",
+      "id": "T3-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-0.001000000000000000020816681711721685132943093776702880859375",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9999999975893796658682386637024719334417340301114e+09",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-polygamma-003",
+      "id": "T3-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2.0000000003916149406327703176033136680059140849390e+09",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-polygamma-004",
+      "id": "T3-polygamma-004",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-1.000999999999999889865875957184471189975738525390625000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9999999995840525755425454049435434144215584801119e+09",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-polygamma-005",
+      "id": "T3-polygamma-005",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-1.999000000000000110134124042815528810024261474609375000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2.0000000001419056991348124463044220679850168942166e+09",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T3-polygamma-006",
+      "id": "T3-polygamma-006",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-2.000999999999999889865875957184471189975738525390625000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9999999998336779502302796572081472164445688361930e+09",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T4-gamma-001",
+      "id": "T4-gamma-001",
+      "head": "Gamma",
+      "tier": "T4",
+      "z": {
+        "re": "1.445436709643100448019481518713291734457015991210937500000000",
+        "im": "3.538332091558456848900959812453947961330413818359375000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-gamma-002",
+      "id": "T4-gamma-002",
+      "head": "Gamma",
+      "tier": "T4",
+      "z": {
+        "re": "-7.229717330941595854199022141983732581138610839843750000000000",
+        "im": "6.131352193792121596516153658740222454071044921875000000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-gamma-003",
+      "id": "T4-gamma-003",
+      "head": "Gamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.330063391757155599748330132570117712020874023437500000000000",
+        "im": "-9.504830197911783074005143134854733943939208984375000000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-gamma-004",
+      "id": "T4-gamma-004",
+      "head": "Gamma",
+      "tier": "T4",
+      "z": {
+        "re": "5.934421613546876805855845304904505610466003417968750000000000",
+        "im": "-8.075788221560669555287859111558645963668823242187500000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-loggamma-001",
+      "id": "T4-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T4",
+      "z": {
+        "re": "1.984183495208165615153461658337619155645370483398437500000000",
+        "im": "7.540032339319423293488853232702240347862243652343750000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-loggamma-002",
+      "id": "T4-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.524767821905170794849482263089157640933990478515625000000000",
+        "im": "0.657975926116382670016946576652117073535919189453125000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-loggamma-003",
+      "id": "T4-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T4",
+      "z": {
+        "re": "-0.938191567967745276845903390494640916585922241210937500000000",
+        "im": "-0.238069148388762169554766501278209034353494644165039062500000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-loggamma-004",
+      "id": "T4-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T4",
+      "z": {
+        "re": "6.294432132596041284955390437971800565719604492187500000000000",
+        "im": "-2.201097800395804160444868102786131203174591064453125000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-digamma-001",
+      "id": "T4-digamma-001",
+      "head": "Digamma",
+      "tier": "T4",
+      "z": {
+        "re": "2.437682055277766934864303038921207189559936523437500000000000",
+        "im": "5.854312998662354772250182577408850193023681640625000000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-digamma-002",
+      "id": "T4-digamma-002",
+      "head": "Digamma",
+      "tier": "T4",
+      "z": {
+        "re": "-3.983869882337653933745968970470130443572998046875000000000000",
+        "im": "5.561643490016783708540515362983569502830505371093750000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-digamma-003",
+      "id": "T4-digamma-003",
+      "head": "Digamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.071203586722710099365940550342202186584472656250000000000000",
+        "im": "-1.415049216295746203897465420595835894346237182617187500000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-digamma-004",
+      "id": "T4-digamma-004",
+      "head": "Digamma",
+      "tier": "T4",
+      "z": {
+        "re": "4.133934930384060457697614765493199229240417480468750000000000",
+        "im": "-4.249261486233885776186980365309864282608032226562500000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-trigamma-001",
+      "id": "T4-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T4",
+      "z": {
+        "re": "1.128506195135892120617882028454914689064025878906250000000000",
+        "im": "1.176949784048958447257859916135203093290328979492187500000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-trigamma-002",
+      "id": "T4-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.732723846634971920366297126747667789459228515625000000000000",
+        "im": "3.236857739398370625849565840326249599456787109375000000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-trigamma-003",
+      "id": "T4-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T4",
+      "z": {
+        "re": "-5.150043717890138594839299912564456462860107421875000000000000",
+        "im": "-7.037412568079380648100595863070338964462280273437500000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-trigamma-004",
+      "id": "T4-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T4",
+      "z": {
+        "re": "5.017120475067935458923784608487039804458618164062500000000000",
+        "im": "-8.221310916711619398711263784207403659820556640625000000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-barnesg-001",
+      "id": "T4-barnesg-001",
+      "head": "BarnesG",
+      "tier": "T4",
+      "z": {
+        "re": "2.758064728498085038665976753691211342811584472656250000000000",
+        "im": "2.214631456752568006152159796329215168952941894531250000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-barnesg-002",
+      "id": "T4-barnesg-002",
+      "head": "BarnesG",
+      "tier": "T4",
+      "z": {
+        "re": "-3.612398771488816606733962544240057468414306640625000000000000",
+        "im": "3.952955951551536895038907459820620715618133544921875000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-barnesg-003",
+      "id": "T4-barnesg-003",
+      "head": "BarnesG",
+      "tier": "T4",
+      "z": {
+        "re": "-0.520052473646981261445887412264710292220115661621093750000000",
+        "im": "-5.139892431510824089002653636271134018898010253906250000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-barnesg-004",
+      "id": "T4-barnesg-004",
+      "head": "BarnesG",
+      "tier": "T4",
+      "z": {
+        "re": "5.433093193047593416622476070187985897064208984375000000000000",
+        "im": "-4.023683768710017538694501126883551478385925292968750000000000"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-polygamma-001",
+      "id": "T4-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T4",
+      "z": {
+        "re": "0.415336946398552009362958870042348280549049377441406250000000",
+        "im": "2.841567141924261630236969722318463027477264404296875000000000"
+      },
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-polygamma-002",
+      "id": "T4-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.545609292394658051961187084089033305644989013671875000000000",
+        "im": "3.889351401453494005977518099825829267501831054687500000000000"
+      },
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-polygamma-003",
+      "id": "T4-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T4",
+      "z": {
+        "re": "-3.083331059035271159984858968527987599372863769531250000000000",
+        "im": "-0.533062217774821212046276741602923721075057983398437500000000"
+      },
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-polygamma-004",
+      "id": "T4-polygamma-004",
+      "head": "Polygamma",
+      "tier": "T4",
+      "z": {
+        "re": "7.668703428828861135002625815104693174362182617187500000000000",
+        "im": "-1.563363651659571251784086598490830510854721069335937500000000"
+      },
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammaupper-001",
+      "id": "T4-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "2.506920028586568260919875683612190186977386474609375000000000",
+        "im": "4.606261670912602745886488264659419655799865722656250000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammaupper-002",
+      "id": "T4-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "-0.573141287819626921162807775544933974742889404296875000000000",
+        "im": "3.450650757528078926839043560903519392013549804687500000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammaupper-003",
+      "id": "T4-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "-2.950124211260408024770640622591599822044372558593750000000000",
+        "im": "-4.044238393966241851273935026256367564201354980468750000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammaupper-004",
+      "id": "T4-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "2.731139916700853209619026529253460466861724853515625000000000",
+        "im": "-4.619341815245097571107635303633287549018859863281250000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammaupper-005",
+      "id": "T4-incompletegammaupper-005",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "1.628126567590331807977577227575238794088363647460937500000000",
+        "im": "0.650922334042543071497277651360491290688514709472656250000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammaupper-006",
+      "id": "T4-incompletegammaupper-006",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "-3.982582721173386630653112661093473434448242187500000000000000",
+        "im": "2.828605971192532209101955231744796037673950195312500000000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammaupper-007",
+      "id": "T4-incompletegammaupper-007",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "-3.675516240611017337869270704686641693115234375000000000000000",
+        "im": "-0.902082543839795913953594208578579127788543701171875000000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammaupper-008",
+      "id": "T4-incompletegammaupper-008",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "5.057865139108391083766491647111251950263977050781250000000000",
+        "im": "-1.519790059068339749259735071973409503698348999023437500000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammalower-001",
+      "id": "T4-incompletegammalower-001",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "3.196303577040796373154307730146683752536773681640625000000000",
+        "im": "3.331921592044421398526310440502129495143890380859375000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammalower-002",
+      "id": "T4-incompletegammalower-002",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "-6.343950043404637639810061955358833074569702148437500000000000",
+        "im": "3.962755479635980293551256181672215461730957031250000000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammalower-003",
+      "id": "T4-incompletegammalower-003",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "-3.740689731673032980552306980825960636138916015625000000000000",
+        "im": "-5.259193693535167746233582874992862343788146972656250000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammalower-004",
+      "id": "T4-incompletegammalower-004",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "0.489006105464747820033011294071911834180355072021484375000000",
+        "im": "-4.318501365117048962360968289431184530258178710937500000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammalower-005",
+      "id": "T4-incompletegammalower-005",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "0.216919651157266885066476902466092724353075027465820312500000",
+        "im": "1.590751597577175768805091138347052037715911865234375000000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammalower-006",
+      "id": "T4-incompletegammalower-006",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "-7.548296023015857336702083557611331343650817871093750000000000",
+        "im": "1.319034506820411456473607358930166810750961303710937500000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammalower-007",
+      "id": "T4-incompletegammalower-007",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "-3.161930052040388350320654353708960115909576416015625000000000",
+        "im": "-1.793168153186067703686035201826598495244979858398437500000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T4-incompletegammalower-008",
+      "id": "T4-incompletegammalower-008",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "6.073702658228731898759633622830733656883239746093750000000000",
+        "im": "-4.494087071053352921978785161627456545829772949218750000000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T5-gamma-001",
+      "id": "T5-gamma-001",
+      "head": "Gamma",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "1.7724538509055160272981674833411451827975494561225e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-gamma-002",
+      "id": "T5-gamma-002",
+      "head": "Gamma",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "output": "8.8622692545275801364908374167057259139877472806125e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-gamma-003",
+      "id": "T5-gamma-003",
+      "head": "Gamma",
+      "tier": "T5",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "-3.5449077018110320545963349666822903655950989122449e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-loggamma-001",
+      "id": "T5-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "5.7236494292470008707171367567652935582364740645765e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-loggamma-002",
+      "id": "T5-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "output": "-1.2078223763524522234551844578164721225185272790253e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-loggamma-003",
+      "id": "T5-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T5",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "1.2655121234846453964889457971347059238991475408179e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-digamma-001",
+      "id": "T5-digamma-001",
+      "head": "Digamma",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "-1.9635100260214234794409763329987555671931596046604e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-digamma-002",
+      "id": "T5-digamma-002",
+      "head": "Digamma",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "output": "3.6489973978576520559023667001244432806840395339565e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-digamma-003",
+      "id": "T5-digamma-003",
+      "head": "Digamma",
+      "tier": "T5",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "-1.9635100260214234794409763329987555671931596046604e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-trigamma-001",
+      "id": "T5-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "4.9348022005446793094172454999380755676568497036204e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-trigamma-002",
+      "id": "T5-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "output": "9.3480220054467930941724549993807556765684970362040e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-trigamma-003",
+      "id": "T5-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T5",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "8.9348022005446793094172454999380755676568497036204e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-pochhammer-001",
+      "id": "T5-pochhammer-001",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T5-pochhammer-002",
+      "id": "T5-pochhammer-002",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T5-pochhammer-003",
+      "id": "T5-pochhammer-003",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T5-pochhammer-004",
+      "id": "T5-pochhammer-004",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T5-pochhammer-005",
+      "id": "T5-pochhammer-005",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T5-pochhammer-006",
+      "id": "T5-pochhammer-006",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T5-incompletegammaupper-001",
+      "id": "T5-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "2.7880558528066197649923261107743917208855008249719e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammalower-001",
+      "id": "T5-incompletegammalower-001",
+      "head": "IncompleteGammaLower",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.4936482656248540507989348722637060107089993736253e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammap-001",
+      "id": "T5-incompletegammap-001",
+      "head": "IncompleteGammaP",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "8.4270079294971486934122063508260925929606699796630e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammaq-001",
+      "id": "T5-incompletegammaq-001",
+      "head": "IncompleteGammaQ",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.5729920705028513065877936491739074070393300203370e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammaupper-002",
+      "id": "T5-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "2.7746032604128093194908357272603294120210079791439e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammalower-002",
+      "id": "T5-incompletegammalower-002",
+      "head": "IncompleteGammaLower",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.7696792476451032179786766476138848533855284481433e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammap-002",
+      "id": "T5-incompletegammap-002",
+      "head": "IncompleteGammaP",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "9.9843459774199745032250019602161409768956542531402e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammaq-002",
+      "id": "T5-incompletegammaq-002",
+      "head": "IncompleteGammaQ",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.5654022580025496774998039783859023104345746859828e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammaupper-003",
+      "id": "T5-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "5.0728223381177330984514007570018045349008617228039e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammalower-003",
+      "id": "T5-incompletegammalower-003",
+      "head": "IncompleteGammaLower",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "3.7894469164098470380394366597039213790868855578086e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammap-003",
+      "id": "T5-incompletegammap-003",
+      "head": "IncompleteGammaP",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "4.2759329552912016600095238564127189392715996802703e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammaq-003",
+      "id": "T5-incompletegammaq-003",
+      "head": "IncompleteGammaQ",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "5.7240670447087983399904761435872810607284003197297e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammaupper-004",
+      "id": "T5-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "1.6453809148952222405714478538032128684433484847048e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammalower-004",
+      "id": "T5-incompletegammalower-004",
+      "head": "IncompleteGammaLower",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "8.6977311630380579124336926313254046271434124321420e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammap-004",
+      "id": "T5-incompletegammap-004",
+      "head": "IncompleteGammaP",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "9.8143386453695676669682856609228162077885165438796e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-incompletegammaq-004",
+      "id": "T5-incompletegammaq-004",
+      "head": "IncompleteGammaQ",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "1.8566135463043233303171433907718379221148345612041e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-beta-001",
+      "id": "T5-beta-001",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "3.1415926535897932384626433832795028841971693993751e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-beta-002",
+      "id": "T5-beta-002",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "1.5707963267948966192313216916397514420985846996876e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-beta-003",
+      "id": "T5-beta-003",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "5/2"
+      },
+      "output": "1.1780972450961724644234912687298135815739385247656e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-beta-004",
+      "id": "T5-beta-004",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "3.9269908169872415480783042290993786052464617492191e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-beta-005",
+      "id": "T5-beta-005",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "5/2"
+      },
+      "output": "1.9634954084936207740391521145496893026232308746095e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T5-beta-006",
+      "id": "T5-beta-006",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "5/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "5/2"
+      },
+      "output": "7.3631077818510779026468204295613348848371157797852e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-loggamma-001",
+      "id": "T6-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "output": "3.5913420536957539877604401046028690961262171808563e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-loggamma-002",
+      "id": "T6-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.4092020674704117874873772665457379223914058349843e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-loggamma-003",
+      "id": "T6-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "output": "5.9052204232091812118260769123614407898489424097154e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-loggamma-004",
+      "id": "T6-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T6",
+      "z": "450.176018965512525937811005860567092895507812500000000000000000",
+      "output": "2.2981010944204323612656081396241212742926755703440e+03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-digamma-001",
+      "id": "T6-digamma-001",
+      "head": "Digamma",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "output": "4.6001618527380874001986055855758507268668127907686e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-digamma-002",
+      "id": "T6-digamma-002",
+      "head": "Digamma",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "output": "5.7021148820646372679796401176315535188595227134306e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-digamma-003",
+      "id": "T6-digamma-003",
+      "head": "Digamma",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "output": "6.9072551956488120520500061142514977454795198337689e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-digamma-004",
+      "id": "T6-digamma-004",
+      "head": "Digamma",
+      "tier": "T6",
+      "z": "546.611484254995161791157443076372146606445312500000000000000000",
+      "output": "6.3028232782289573031979202242999195043788674246558e+00",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-trigamma-001",
+      "id": "T6-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.0050166663333571395245668465701422535628201175535e-02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-trigamma-002",
+      "id": "T6-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "output": "3.3388950617146777494702946890986698457460310695345e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-trigamma-003",
+      "id": "T6-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.0005001666666333333571428238095995668464547131131e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-trigamma-004",
+      "id": "T6-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T6",
+      "z": "782.956472869476556297740899026393890380859375000000000000000000",
+      "output": "1.2780261887542399767847864507713127914813896393227e-03",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-gamma-001",
+      "id": "T6-gamma-001",
+      "head": "Gamma",
+      "tier": "T6",
+      "z": "120.000000000000000000000000000000000000000000000000000000000000",
+      "output": "5.5745857612076058813234317117419771556272886109514e+196",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-gamma-002",
+      "id": "T6-gamma-002",
+      "head": "Gamma",
+      "tier": "T6",
+      "z": "170.000000000000000000000000000000000000000000000000000000000000",
+      "output": "4.2690680090047052749392518888995665380688186360582e+304",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaupper-001",
+      "id": "T6-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "3.7572767357810443225892927619017495207324812153006e-42",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaq-001",
+      "id": "T6-incompletegammaq-001",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "3.7572767357810443225892927619017495207324812153006e-42",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaupper-002",
+      "id": "T6-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.5496082669460161481276134382412064304386344655584e-128",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaq-002",
+      "id": "T6-incompletegammaq-002",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.5496082669460161481276134382412064304386344655584e-128",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaupper-003",
+      "id": "T6-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "5.0810348564470062220571012890539112562249048821844e-432",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaq-003",
+      "id": "T6-incompletegammaq-003",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "5.0810348564470062220571012890539112562249048821844e-432",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaupper-004",
+      "id": "T6-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "4.0836606309106112722885921663195192530401829658375e-26",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaq-004",
+      "id": "T6-incompletegammaq-004",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "1.1253473960842733885275000458332008523589569460531e-31",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaupper-005",
+      "id": "T6-incompletegammaupper-005",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "1.0445498134780731493964726607678517520910198170289e-108",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaq-005",
+      "id": "T6-incompletegammaq-005",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "2.8784992655370181586102090519396267418734011712658e-114",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaupper-006",
+      "id": "T6-incompletegammaupper-006",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "5.1220105703780659235331636180047469959106233734546e-408",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-incompletegammaq-006",
+      "id": "T6-incompletegammaq-006",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "1.4114888035653841279577721610462816897901850125261e-413",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T6-barnesg-001",
+      "id": "T6-barnesg-001",
+      "head": "BarnesG",
+      "tier": "T6",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T6-barnesg-002",
+      "id": "T6-barnesg-002",
+      "head": "BarnesG",
+      "tier": "T6",
+      "z": "50.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-001",
+      "id": "T7-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "15.527864045000420389897044515237212181091308593750000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "1.0263753340591690940211143939530269346520869593322e+17",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammalower-001",
+      "id": "T7-incompletegammalower-001",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "15.527864045000420389897044515237212181091308593750000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "1.9007567002915090597888560604697306534791304066779e+16",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammap-001",
+      "id": "T7-incompletegammap-001",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "15.527864045000420389897044515237212181091308593750000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "1.5625427525673736744123774158565530520213863386505e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaq-001",
+      "id": "T7-incompletegammaq-001",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "15.527864045000420389897044515237212181091308593750000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "8.4374572474326263255876225841434469479786136613495e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-002",
+      "id": "T7-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "5.7204492442642251097010289345314760420903560832771e+16",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammalower-002",
+      "id": "T7-incompletegammalower-002",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "6.4440607966189748902989710654685239579096439167229e+16",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammap-002",
+      "id": "T7-incompletegammap-002",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "5.2974273316076001268780964582628191728763386571832e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaq-002",
+      "id": "T7-incompletegammaq-002",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "4.7025726683923998731219035417371808271236613428168e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-003",
+      "id": "T7-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "24.472135954999579610102955484762787818908691406250000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "1.9087828303247065436653030986911102041644430023218e+16",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammalower-003",
+      "id": "T7-incompletegammalower-003",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "24.472135954999579610102955484762787818908691406250000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "1.0255727210558493456334696901308889795835556997678e+17",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammap-003",
+      "id": "T7-incompletegammap-003",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "24.472135954999579610102955484762787818908691406250000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "8.4308592586881369918351110524382556945830020908369e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaq-003",
+      "id": "T7-incompletegammaq-003",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "24.472135954999579610102955484762787818908691406250000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "1.5691407413118630081648889475617443054169979091631e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-004",
+      "id": "T7-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "90.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "7.8560049319377412749818655310240604761025325163384e+155",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammalower-004",
+      "id": "T7-incompletegammalower-004",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "90.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "1.4766166124566739931880583546026095729690643101010e+155",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammap-004",
+      "id": "T7-incompletegammap-004",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "90.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "1.5822098918643016810496969967091053169982334574332e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaq-004",
+      "id": "T7-incompletegammaq-004",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "90.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "8.4177901081356983189503030032908946830017665425668e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-005",
+      "id": "T7-incompletegammaupper-005",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "4.5421981208626694293691470830862350396245170493423e+155",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammalower-005",
+      "id": "T7-incompletegammalower-005",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "4.7904234235317458388007768025404350094470797770956e+155",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammap-005",
+      "id": "T7-incompletegammap-005",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "5.1329879827914866485731425656402916347092514992793e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaq-005",
+      "id": "T7-incompletegammaq-005",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "4.8670120172085133514268574343597083652907485007208e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-006",
+      "id": "T7-incompletegammaupper-006",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "110.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "1.4771549262208641102274259748808809018031584312354e+155",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammalower-006",
+      "id": "T7-incompletegammalower-006",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "110.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "7.8554666181735511579424979107457891472684383952087e+155",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammap-006",
+      "id": "T7-incompletegammap-006",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "110.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "8.4172132993991290619829962098296885319335003086579e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaq-006",
+      "id": "T7-incompletegammaq-006",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "110.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "1.5827867006008709380170037901703114680664996913421e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-007",
+      "id": "T7-incompletegammaupper-007",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "185.857864376269048989342991262674331665039062500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "3.3185030981820064438254841460578328577734523875226e+372",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammalower-007",
+      "id": "T7-incompletegammalower-007",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "185.857864376269048989342991262674331665039062500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "6.2478623864194607393633192360309245370222750092986e+371",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammap-007",
+      "id": "T7-incompletegammap-007",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "185.857864376269048989342991262674331665039062500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "1.5844291029000886864705825409567493235350407380260e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaq-007",
+      "id": "T7-incompletegammaq-007",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "185.857864376269048989342991262674331665039062500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "8.4155708970999113135294174590432506764649592619740e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-008",
+      "id": "T7-incompletegammaupper-008",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "200.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "1.9345642704543429176242248276527726391060400976884e+372",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammalower-008",
+      "id": "T7-incompletegammalower-008",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "200.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "2.0087250663696096001375912420081526723696397907595e+372",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammap-008",
+      "id": "T7-incompletegammap-008",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "200.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "5.0940341800723632502782545957452704315497216859915e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaq-008",
+      "id": "T7-incompletegammaq-008",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "200.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "4.9059658199276367497217454042547295684502783140085e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-009",
+      "id": "T7-incompletegammaupper-009",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "214.142135623730951010657008737325668334960937500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "6.2486642817521149180296722418022342177334939034720e+371",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammalower-009",
+      "id": "T7-incompletegammalower-009",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "214.142135623730951010657008737325668334960937500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "3.3184229086487410259588488454807018897023304981142e+372",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammap-009",
+      "id": "T7-incompletegammap-009",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "214.142135623730951010657008737325668334960937500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "8.4153675401397294238515643225790887909614590154843e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaq-009",
+      "id": "T7-incompletegammaq-009",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "214.142135623730951010657008737325668334960937500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "1.5846324598602705761484356774209112090385409845157e-01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-010",
+      "id": "T7-incompletegammaupper-010",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "10.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "21/2"
+      },
+      "output": "5.2011155367143202341524185179028788712254923484316e+05",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-011",
+      "id": "T7-incompletegammaupper-011",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "13.740370349203930189219136082101613283157348632812500000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "21/2"
+      },
+      "output": "1.7622657208393005042531452774524946712698744408362e+05",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-012",
+      "id": "T7-incompletegammaupper-012",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "50.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "101/2"
+      },
+      "output": "2.0649356374262663624858262639218141752148652161248e+63",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T7-incompletegammaupper-013",
+      "id": "T7-incompletegammaupper-013",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "57.606335201775948462454834952950477600097656250000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "101/2"
+      },
+      "output": "6.7758872771782980683878755954908613972799078065309e+62",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-001",
+      "id": "T8-digamma-001",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-9.9550784447767575555167501192832252930601788475349e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-001",
+      "id": "T8-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "output": "1.0002641517578902537462594056806628290420680870393e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-001",
+      "id": "T8-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2.0000002791783674987118618785212502956883913424039e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-002",
+      "id": "T8-digamma-002",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-0.999998999999999971244335483788745477795600891113281250000000",
+      "output": "-9.9999957718426430315260677780648247698207603045207e+05",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-002",
+      "id": "T8-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-0.999998999999999971244335483788745477795600891113281250000000",
+      "output": "9.9999999994513360463279882275601983910503474978152e+11",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-002",
+      "id": "T8-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-0.999998999999999971244335483788745477795600891113281250000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-1.9999999998274660133167564441477537808540327779245e+18",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-003",
+      "id": "T8-digamma-003",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "output": "1.0039631270584530611320175858718127532424250130539e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-003",
+      "id": "T8-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "output": "1.0002649600150460981842359791060430117525125757692e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-003",
+      "id": "T8-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9999994708621232381992542529868789223510802753146e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-004",
+      "id": "T8-digamma-004",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-1.000000999999999917733362053695600479841232299804687500000000",
+      "output": "1.0000004228639568021515219706747912865307160732721e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-004",
+      "id": "T8-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-1.000000999999999917733362053695600479841232299804687500000000",
+      "output": "1.0000000001671782103838804778917733132247597234668e+12",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-004",
+      "id": "T8-polygamma-004",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-1.000000999999999917733362053695600479841232299804687500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "2.0000000004935998273549136935009148769730763542030e+18",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-005",
+      "id": "T8-digamma-005",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-9.9048271884953505201165889062582700554896552530960e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-005",
+      "id": "T8-trigamma-005",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "output": "1.0002894036454688502465731961475296561038904416756e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-005",
+      "id": "T8-polygamma-005",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2.0000000253905526384455259338489182585354432680407e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-006",
+      "id": "T8-digamma-006",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-1.999999000000000082266637946304399520158767700195312500000000",
+      "output": "-9.9999907729503660549637749413176571025591461865508e+05",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-006",
+      "id": "T8-trigamma-006",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-1.999999000000000082266637946304399520158767700195312500000000",
+      "output": "1.0000000001674282098256530527991492277133891265686e+12",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-006",
+      "id": "T8-polygamma-006",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-1.999999000000000082266637946304399520158767700195312500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2.0000000004935998279131409311398033152328752547133e+18",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-007",
+      "id": "T8-digamma-007",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "output": "1.0089382514365847247397403681726159281581003662232e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-007",
+      "id": "T8-trigamma-007",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "output": "1.0002897118776681660675590979911371040214290837415e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-007",
+      "id": "T8-polygamma-007",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9999997171494462924174927457160661719671309869920e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-008",
+      "id": "T8-digamma-008",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-2.000001000000000139777966978726908564567565917968750000000000",
+      "output": "1.0000009226416621973636384425340672481686123013588e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-008",
+      "id": "T8-trigamma-008",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-2.000001000000000139777966978726908564567565917968750000000000",
+      "output": "9.9999999972333900032212829026498757161102034748149e+11",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-008",
+      "id": "T8-polygamma-008",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-2.000001000000000139777966978726908564567565917968750000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9999999991613321982079664339317873319647307944719e+18",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-009",
+      "id": "T8-digamma-009",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "output": "-9.8713823724420609256807582613799295752735483377107e+01",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-009",
+      "id": "T8-trigamma-009",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "output": "1.0003005892027217915095657763333197283294683039845e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-009",
+      "id": "T8-polygamma-009",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-1.9999999505709052061321391956301015198304824986410e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-010",
+      "id": "T8-digamma-010",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-2.999998999999999860222033021273091435432434082031250000000000",
+      "output": "-9.9999874373954755610197643719779237208969465284833e+05",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-010",
+      "id": "T8-trigamma-010",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-2.999998999999999860222033021273091435432434082031250000000000",
+      "output": "9.9999999972345011119908589981607419587786958968294e+11",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-010",
+      "id": "T8-polygamma-010",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-2.999998999999999860222033021273091435432434082031250000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-1.9999999991613321984421198984221031984415927729799e+18",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-011",
+      "id": "T8-digamma-011",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "output": "1.0122605105727973495597344308518689947436207178806e+02",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-011",
+      "id": "T8-trigamma-011",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "output": "1.0003007492834363143235566744608549918052250962060e+04",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-011",
+      "id": "T8-polygamma-011",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9999997904876905990504281558544110228053319237853e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-012",
+      "id": "T8-digamma-012",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-3.000001000000000139777966978726908564567565917968750000000000",
+      "output": "1.0000012559748844196228821585727856700654320744263e+06",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-trigamma-012",
+      "id": "T8-trigamma-012",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-3.000001000000000139777966978726908564567565917968750000000000",
+      "output": "9.9999999972345011135916536432869127166061421622260e+11",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-polygamma-012",
+      "id": "T8-polygamma-012",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-3.000001000000000139777966978726908564567565917968750000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.9999999991613321982820404339318367042994356739698e+18",
+      "method": "boost-cpp_bin_float-50",
+      "achieved_precision": 50,
+      "status": "success"
+    },
+    {
+      "input_id": "T8-digamma-013",
+      "id": "T8-digamma-013",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": {
+        "re": "-0.999122417438109589049588521447731181979179382324218750000000",
+        "im": "0.000479425538604203024459216031516461953287944197654724121094"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T8-digamma-014",
+      "id": "T8-digamma-014",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": {
+        "re": "-1.000416146836547115483995185059029608964920043945312500000000",
+        "im": "0.000909297426825681777938503724811880601919256150722503662109"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T8-digamma-015",
+      "id": "T8-digamma-015",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": {
+        "re": "-1.999122417438109700071890983963385224342346191406250000000000",
+        "im": "0.000479425538604203024459216031516461953287944197654724121094"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    },
+    {
+      "input_id": "T8-digamma-016",
+      "id": "T8-digamma-016",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": {
+        "re": "-2.000416146836547337528600110090337693691253662109375000000000",
+        "im": "0.000909297426825681777938503724811880601919256150722503662109"
+      },
+      "output": null,
+      "method": "boost-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "unsupported"
+    }
+  ]
+}

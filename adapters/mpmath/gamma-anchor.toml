@@ -1,0 +1,20 @@
+# =============================================================================
+# gamma-anchor -- mpmath replay adapter (gold tier)
+# =============================================================================
+#
+# Grades mpmath's gamma-family evaluations at 60-dps (committed
+# snapshot from scientist-workbench bench, 2026-05-19) against the
+# 3-gold consensus.  Pre-computed-oracle pattern.
+#
+# mpmath: 357/377 success/complex-success.  20 refusals split:
+#   - 12 InverseIncompleteGamma{P,Q} unsupported (no native impl;
+#     L13 landmine -- documented in expected.json landmine_flags).
+#   - 8 L17 exact-pole refusals (Gamma/Digamma at z=0,-1,-2,-3).
+
+[adapter]
+target          = "mpmath"
+capability_id   = "gamma-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/mpmath/oracles/gamma-anchor-replay.ts"]
+version         = "mpmath 1.3.0 / Python 3.12.3 (snapshot 2026-05-19)"
+platform_pinned = false

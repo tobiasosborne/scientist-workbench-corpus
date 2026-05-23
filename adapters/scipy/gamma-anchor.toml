@@ -1,0 +1,24 @@
+# =============================================================================
+# gamma-anchor -- scipy replay adapter (bronze tier)
+# =============================================================================
+#
+# Grades SciPy 1.17.0's special-function evaluations at float64
+# (committed snapshot from scientist-workbench bench, 2026-05-19)
+# against the 3-gold consensus.  Pre-computed-oracle pattern.
+#
+# scipy: 342/377 success.  35 refusals split:
+#   - 16 gammainc-complex TypeError (L14-cousin; complex
+#     gammainc{,c} not supported).
+#   - 8 polygamma-complex TypeError (L14; T4 Polygamma/Trigamma).
+#   - 11 BarnesG-unsupported (L16; no native BarnesG in scipy).
+#
+# L15 (loggamma real-negative -> NaN) is fixed at adapter level
+# upstream by passing x+0j; results.json carries correct values.
+
+[adapter]
+target          = "scipy"
+capability_id   = "gamma-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/scipy/oracles/gamma-anchor-replay.ts"]
+version         = "SciPy 1.17.0 / NumPy 1.26.4 / Python 3.12.3 (snapshot 2026-05-19)"
+platform_pinned = false

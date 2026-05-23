@@ -1,0 +1,20 @@
+# =============================================================================
+# gamma-anchor -- arb replay adapter (gold tier)
+# =============================================================================
+#
+# Grades python-flint's acb gamma-family evaluations with ADR-0042
+# §Decision 3 cancellation-driven precision retry (committed snapshot
+# from scientist-workbench bench, 2026-05-19) against the 3-gold
+# consensus.  Pre-computed-oracle pattern.
+#
+# arb: 357/377 success/complex-success.  20 refusals split identical
+# to mpmath: 12 InverseIncompleteGamma{P,Q} unsupported (L13) + 8 L17
+# poles.
+
+[adapter]
+target          = "arb"
+capability_id   = "gamma-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/arb/oracles/gamma-anchor-replay.ts"]
+version         = "python-flint 0.8.0 / FLINT 3.0.1 (snapshot 2026-05-19)"
+platform_pinned = false

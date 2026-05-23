@@ -1,0 +1,5806 @@
+{
+  "oracle_id": "mpmath",
+  "oracle_version": "mpmath 1.3.0 / Python 3.12.3",
+  "copied_from": "scientist-workbench/bench/gamma-anchor/oracles/mpmath/results.json",
+  "copied_at": "2026-05-23T12:58:09.414Z",
+  "results": [
+    {
+      "input_id": "T1-gamma-001",
+      "id": "T1-gamma-001",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.00000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gamma-002",
+      "id": "T1-gamma-002",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.00000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gamma-003",
+      "id": "T1-gamma-003",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": "24.0000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gamma-004",
+      "id": "T1-gamma-004",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": "39916800.0000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gamma-005",
+      "id": "T1-gamma-005",
+      "head": "Gamma",
+      "tier": "T1",
+      "z": "8.351527306554617169354060024488717317581176757812500000000000",
+      "output": "10319.7531091276416495823363646825700041047879633876378750656",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-loggamma-001",
+      "id": "T1-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.0",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-loggamma-002",
+      "id": "T1-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.0",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-loggamma-003",
+      "id": "T1-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": "3.17805383034794561964694160129705540887399096090351521409673",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-loggamma-004",
+      "id": "T1-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": "17.5023078458738858392876529072161996717039575982293536474075",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-loggamma-005",
+      "id": "T1-loggamma-005",
+      "head": "LogGamma",
+      "tier": "T1",
+      "z": "11.074614698008918622917917673476040363311767578125000000000000",
+      "output": "15.2801521702521703809799779706640839421920949074373393454172",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-digamma-001",
+      "id": "T1-digamma-001",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": "-0.577215664901532860606512090082402431042159335939923598805767",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-digamma-002",
+      "id": "T1-digamma-002",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.422784335098467139393487909917597568957840664060076401194233",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-digamma-003",
+      "id": "T1-digamma-003",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.50611766843180047272682124325093090229117399739340973452757",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-digamma-004",
+      "id": "T1-digamma-004",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": "2.44266167997581201673836525479494244630271800893742127853911",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-digamma-005",
+      "id": "T1-digamma-005",
+      "head": "Digamma",
+      "tier": "T1",
+      "z": "17.726087588596200816937198396772146224975585937500000000000000",
+      "output": "2.84656528799628898116137190396727447982932986591017539246577",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-trigamma-001",
+      "id": "T1-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.64493406684822643647241516664602518921894990120679843773556",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-trigamma-002",
+      "id": "T1-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.644934066848226436472415166646025189218949901206798437735558",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-trigamma-003",
+      "id": "T1-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.221322955737115325361304055534914078107838790095687326624447",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-trigamma-004",
+      "id": "T1-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.0869018728717683907503001804617749357046271228147559764290277",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-trigamma-005",
+      "id": "T1-trigamma-005",
+      "head": "Trigamma",
+      "tier": "T1",
+      "z": "4.473989127098576545904506929218769073486328125000000000000000",
+      "output": "0.250336573102507825848673560950690143591601404586665054695161",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-barnesg-001",
+      "id": "T1-barnesg-001",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.00000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-barnesg-002",
+      "id": "T1-barnesg-002",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1.00000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-barnesg-003",
+      "id": "T1-barnesg-003",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "output": "12.0000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-barnesg-004",
+      "id": "T1-barnesg-004",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "12.000000000000000000000000000000000000000000000000000000000000",
+      "output": "6658606584104736522240000000.00000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-barnesg-005",
+      "id": "T1-barnesg-005",
+      "head": "BarnesG",
+      "tier": "T1",
+      "z": "17.829154175440386609352572122588753700256347656250000000000000",
+      "output": "8.21236619356956355478314010088976294610877584085254040948386e+87",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-polygamma-001",
+      "id": "T1-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2.40411380631918857079947632302289998152997258468099776358454",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-polygamma-002",
+      "id": "T1-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-0.0487897322451144967254022489488259074558985106069236895104690",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-polygamma-003",
+      "id": "T1-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "m": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "6.49393940226682914909602217924700741664850571151236144609786",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-polygamma-004",
+      "id": "T1-polygamma-004",
+      "head": "Polygamma",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "m": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "0.0214278281927550750219481051729333425744316374382873720237832",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-pochhammer-001",
+      "id": "T1-pochhammer-001",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "output": "0.500000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-pochhammer-002",
+      "id": "T1-pochhammer-002",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "639383.862304687500000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-pochhammer-003",
+      "id": "T1-pochhammer-003",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "25"
+      },
+      "output": "1741523785768368007345660.75773909687995910644531250000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-pochhammer-004",
+      "id": "T1-pochhammer-004",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "output": "2.00000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-pochhammer-005",
+      "id": "T1-pochhammer-005",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "39916800.0000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-pochhammer-006",
+      "id": "T1-pochhammer-006",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "25"
+      },
+      "output": "403291461126605635584000000.000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-pochhammer-007",
+      "id": "T1-pochhammer-007",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "1.699999999999999955591079014993738383054733276367187500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "1"
+      },
+      "output": "1.69999999999999995559107901499373838305473327636718750000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-pochhammer-008",
+      "id": "T1-pochhammer-008",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "1.699999999999999955591079014993738383054733276367187500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "21194706.9261411078220398075377299368343267349996880546174881",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-pochhammer-009",
+      "id": "T1-pochhammer-009",
+      "head": "Pochhammer",
+      "tier": "T1",
+      "z": "1.699999999999999955591079014993738383054733276367187500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "25"
+      },
+      "output": "166336087513862530699994608.292814735662744389760017274057802",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaupper-001",
+      "id": "T1-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.0806471179603176907886260730213051757013592921681669005967214",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaupper-002",
+      "id": "T1-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.507282233811773309845140075700180453490086172280355069587086",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaupper-003",
+      "id": "T1-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "3.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "0.199148273471455771917369662600247106526798368753692862270511",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaupper-004",
+      "id": "T1-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "10.5718388415650978746219599759198776464449989079201290401494",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaupper-005",
+      "id": "T1-incompletegammaupper-005",
+      "head": "IncompleteGammaUpper",
+      "tier": "T1",
+      "z": "4.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "0.0365244062353930610618127995459249401393189002337678320332292",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammalower-001",
+      "id": "T1-incompletegammalower-001",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.69180673294519833650954141031984000709619016395422022761709",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammalower-002",
+      "id": "T1-incompletegammalower-002",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.378944691640984703803943665970392137908688555780838494519818",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammalower-003",
+      "id": "T1-incompletegammalower-003",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "3.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "0.800851726528544228082630337399752893473201631246307137729489",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammalower-004",
+      "id": "T1-incompletegammalower-004",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "13.4281611584349021253780400240801223535550010920798709598506",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammalower-005",
+      "id": "T1-incompletegammalower-005",
+      "head": "IncompleteGammaLower",
+      "tier": "T1",
+      "z": "4.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "0.872114326617897380499752898356026754394611733441992427936945",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammap-001",
+      "id": "T1-incompletegammap-001",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.954499736103641585599434725666933125056447552596643132032668",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammap-002",
+      "id": "T1-incompletegammap-002",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.427593295529120166000952385641271893927159968027033389929189",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammap-003",
+      "id": "T1-incompletegammap-003",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "3.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "0.800851726528544228082630337399752893473201631246307137729489",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammap-004",
+      "id": "T1-incompletegammap-004",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "0.559506714934787588557418334336671764731458378836661289993776",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammap-005",
+      "id": "T1-incompletegammap-005",
+      "head": "IncompleteGammaP",
+      "tier": "T1",
+      "z": "4.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "0.959803159479345767901335826580739696088040601884439074539738",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaq-001",
+      "id": "T1-incompletegammaq-001",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "2.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.0455002638963584144005652743330668749435524474033568679673320",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaq-002",
+      "id": "T1-incompletegammaq-002",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.572406704470879833999047614358728106072840031972966610070811",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaq-003",
+      "id": "T1-incompletegammaq-003",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "3.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "0.199148273471455771917369662600247106526798368753692862270511",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaq-004",
+      "id": "T1-incompletegammaq-004",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "0.440493285065212411442581665663328235268541621163338710006224",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletegammaq-005",
+      "id": "T1-incompletegammaq-005",
+      "head": "IncompleteGammaQ",
+      "tier": "T1",
+      "z": "4.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "0.0401968405206542320986641734192603039119593981155609254602622",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-001",
+      "id": "T1-inverseincompletegammap-001",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-002",
+      "id": "T1-inverseincompletegammap-002",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-003",
+      "id": "T1-inverseincompletegammap-003",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-004",
+      "id": "T1-inverseincompletegammap-004",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-005",
+      "id": "T1-inverseincompletegammap-005",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammap-006",
+      "id": "T1-inverseincompletegammap-006",
+      "head": "InverseIncompleteGammaP",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-001",
+      "id": "T1-inverseincompletegammaq-001",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-002",
+      "id": "T1-inverseincompletegammaq-002",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-003",
+      "id": "T1-inverseincompletegammaq-003",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-004",
+      "id": "T1-inverseincompletegammaq-004",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.100000000000000005551115123125782702118158340454101562500000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-005",
+      "id": "T1-inverseincompletegammaq-005",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-inverseincompletegammaq-006",
+      "id": "T1-inverseincompletegammaq-006",
+      "head": "InverseIncompleteGammaQ",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": null,
+      "method": "mpmath-unsupported",
+      "achieved_precision": 0,
+      "status": "unsupported",
+      "failure_reason": "mpmath has no direct InverseIncompleteGamma{P,Q}; R5 §3.2 documents findroot workaround as non-gold-tier",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-beta-001",
+      "id": "T1-beta-001",
+      "head": "Beta",
+      "tier": "T1",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "3.14159265358979323846264338327950288419716939937510582097494",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-beta-002",
+      "id": "T1-beta-002",
+      "head": "Beta",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "0.0833333333333333333333333333333333333333333333333333333333333",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-beta-003",
+      "id": "T1-beta-003",
+      "head": "Beta",
+      "tier": "T1",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "2.299999999999999822364316059974953532218933105468750000000000"
+      },
+      "output": "0.176686604524017487349837097343288429748099024512375579788853",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-beta-004",
+      "id": "T1-beta-004",
+      "head": "Beta",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "0.00909090909090909090909090909090909090909090909090909090909091",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-logbeta-001",
+      "id": "T1-logbeta-001",
+      "head": "LogBeta",
+      "tier": "T1",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.14472988584940017414342735135305871164729481291531157151362",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-logbeta-002",
+      "id": "T1-logbeta-002",
+      "head": "LogBeta",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "-2.48490664978800031022970947983887884079849082654325995997605",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-logbeta-003",
+      "id": "T1-logbeta-003",
+      "head": "LogBeta",
+      "tier": "T1",
+      "a": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "2.299999999999999822364316059974953532218933105468750000000000"
+      },
+      "output": "-1.73337771167549012118519495141780107577620698419910775603700",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-logbeta-004",
+      "id": "T1-logbeta-004",
+      "head": "LogBeta",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-4.70048036579241622807993503264949350742280834256619015125190",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gammaratio-001",
+      "id": "T1-gammaratio-001",
+      "head": "GammaRatio",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "7"
+      },
+      "output": "504.000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gammaratio-002",
+      "id": "T1-gammaratio-002",
+      "head": "GammaRatio",
+      "tier": "T1",
+      "a": {
+        "kind": "decimal",
+        "value": "5.700000000000000177635683940025046467781066894531250000000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "3.299999999999999822364316059974953532218933105468750000000000"
+      },
+      "output": "27.0278840892358260955108242798830615472855473416562593178789",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gammadeltaratio-001",
+      "id": "T1-gammadeltaratio-001",
+      "head": "GammaDeltaRatio",
+      "tier": "T1",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.458515979010240030027645522538278672939926860661027642387574",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gammadeltaratio-002",
+      "id": "T1-gammadeltaratio-002",
+      "head": "GammaDeltaRatio",
+      "tier": "T1",
+      "a": {
+        "kind": "decimal",
+        "value": "7.299999999999999822364316059974953532218933105468750000000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "1.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "output": "0.0315333242476168016926655450361515214544521547307571982775205",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gammapderivative-001",
+      "id": "T1-gammapderivative-001",
+      "head": "GammaPDerivative",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.483941449038286699595660385871121309657343941474870050975110",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gammapderivative-002",
+      "id": "T1-gammapderivative-002",
+      "head": "GammaPDerivative",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.00170007332050406836256716299293324769107137709260574429706938",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gammapderivative-003",
+      "id": "T1-gammapderivative-003",
+      "head": "GammaPDerivative",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "0.00157950692633498287396822795570619909750499514449788269709086",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-gammapderivative-004",
+      "id": "T1-gammapderivative-004",
+      "head": "GammaPDerivative",
+      "tier": "T1",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "0.175467369767850705641563761019490214813791276754038683080873",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletebeta-001",
+      "id": "T1-incompletebeta-001",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.299999999999999988897769753748434595763683319091796875000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "0.348299999999999980415665845612238678696134280006835438849026",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletebeta-002",
+      "id": "T1-incompletebeta-002",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.299999999999999988897769753748434595763683319091796875000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.660745949143545146335009275053384633573872568021785428091653",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletebeta-003",
+      "id": "T1-incompletebeta-003",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "0.687500000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletebeta-004",
+      "id": "T1-incompletebeta-004",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.818309886183790671537767526745028724068919291480912897495335",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletebeta-005",
+      "id": "T1-incompletebeta-005",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "0.996300000000000002398081733190337624416217324681176578426947",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T1-incompletebeta-006",
+      "id": "T1-incompletebeta-006",
+      "head": "IncompleteBeta",
+      "tier": "T1",
+      "z": "0.900000000000000022204460492503130808472633361816406250000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.986153167011140955985395529923930080608705737185459591901951",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-gamma-001",
+      "id": "T2-gamma-001",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "output": "-4.32685110882519272045577265644616327603260949941314463140087",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-gamma-002",
+      "id": "T2-gamma-002",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "output": "-4.27366998241084336111858920516679617884193060359290777902382",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-gamma-003",
+      "id": "T2-gamma-003",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "output": "3.32834700678860928081138189097809466705725905952965044826945",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-gamma-004",
+      "id": "T2-gamma-004",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "output": "-0.931082784838963965458595939286894070582530483317423500234255",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-gamma-005",
+      "id": "T2-gamma-005",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+      "output": "0.270088205852269108921625521271031646902483726647220895727818",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-gamma-006",
+      "id": "T2-gamma-006",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+      "output": "0.00939320626735433609304724566489250524884893807177911391436781",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-gamma-007",
+      "id": "T2-gamma-007",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+      "output": "-0.0000504081774715116112962815336161643791936473873755139158507329",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-gamma-008",
+      "id": "T2-gamma-008",
+      "head": "Gamma",
+      "tier": "T2",
+      "z": "-11.629752765050973550842172699049115180969238281250000000000000",
+      "output": "0.0000000181011973737688876464263372569280604233795515328745027134027",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-loggamma-001",
+      "id": "T2-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "output": {
+        "re": "1.46484005085760253047093038994595307526445744299354077478387",
+        "im": "-3.14159265358979323846264338327950288419716939937510582097494"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-loggamma-002",
+      "id": "T2-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "output": {
+        "re": "1.45247293875680780848780111472117363944160922421002012284645",
+        "im": "-3.14159265358979323846264338327950288419716939937510582097494"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-loggamma-003",
+      "id": "T2-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "output": {
+        "re": "1.20247578639011132696246717722342485101304718795673631364627",
+        "im": "-6.28318530717958647692528676655900576839433879875021164194989"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-loggamma-004",
+      "id": "T2-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "output": {
+        "re": "-0.0714070853156456876840304502110772967264890705497322293862470",
+        "im": "-9.42477796076937971538793014983850865259150819812531746292483"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-loggamma-005",
+      "id": "T2-loggamma-005",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+      "output": {
+        "re": "-1.30900668499304204636071515208265744568452869777445155986720",
+        "im": "-12.5663706143591729538505735331180115367886775975004232838998"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-loggamma-006",
+      "id": "T2-loggamma-006",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+      "output": {
+        "re": "-4.66776858852234193519200085130233142647892274253186102129263",
+        "im": "-18.8495559215387594307758602996770173051830163962506349258497"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-loggamma-007",
+      "id": "T2-loggamma-007",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+      "output": {
+        "re": "-9.89535714462940784869551198109000441786244002949437553460170",
+        "im": "-28.2743338823081391461637904495155259577745245943759523887745"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-loggamma-008",
+      "id": "T2-loggamma-008",
+      "head": "LogGamma",
+      "tier": "T2",
+      "z": "-7.385828575904400672413885331479832530021667480468750000000000",
+      "output": {
+        "re": "-8.10211374599843019207409905490770556765384489304574519919274",
+        "im": "-25.1327412287183459077011470662360230735773551950008465677996"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-digamma-001",
+      "id": "T2-digamma-001",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "output": "2.11330977963539887340710620283014336984936093950791944883693",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-digamma-002",
+      "id": "T2-digamma-002",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "output": "-2.07395279362870378310204552829665700436924753342809866399568",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-digamma-003",
+      "id": "T2-digamma-003",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "output": "2.88254054886616730378696836330441341208647613937395311547749",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-digamma-004",
+      "id": "T2-digamma-004",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "output": "-1.11534712914068961191020291402860794892534658054415814154608",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-digamma-005",
+      "id": "T2-digamma-005",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+      "output": "1.38887092635952890151140461938219681375922134772051827390525",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-digamma-006",
+      "id": "T2-digamma-006",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+      "output": "-0.456872304932382787310623764434260112725942441528760057734699",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-digamma-007",
+      "id": "T2-digamma-007",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+      "output": "4.45778923322088022586525488731984252369584543801682021605357",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-digamma-008",
+      "id": "T2-digamma-008",
+      "head": "Digamma",
+      "tier": "T2",
+      "z": "-9.631187481354544388523208908736705780029296875000000000000000",
+      "output": "0.942598003864290175459543071889560283587040098112807256276215",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-trigamma-001",
+      "id": "T2-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "output": "13.9451602678057224889014082181274263806397325542340331129264",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-trigamma-002",
+      "id": "T2-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "output": "14.2861808726383396265435786922036039968572504277220211426879",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-trigamma-003",
+      "id": "T2-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "output": "14.5368762441370796404968308129327611274190162634582049992996",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-trigamma-004",
+      "id": "T2-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "output": "14.7693758451323150181651576094715164592561287943140876327426",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-trigamma-005",
+      "id": "T2-trigamma-005",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-3.500000000000000000000000000000000000000000000000000000000000",
+      "output": "9.62087929805034824365760831172945878761149822969749281887561",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-trigamma-006",
+      "id": "T2-trigamma-006",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-5.700000000000000177635683940025046467781066894531250000000000",
+      "output": "14.9184699179113490157810195687813546708985237464258100995466",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-trigamma-007",
+      "id": "T2-trigamma-007",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-8.300000000000000710542735760100185871124267578125000000000000",
+      "output": "14.9658990763387809130403788827153376242528760524640407037830",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-trigamma-008",
+      "id": "T2-trigamma-008",
+      "head": "Trigamma",
+      "tier": "T2",
+      "z": "-12.750912465178831922685276367701590061187744140625000000000000",
+      "output": "19.7775985684446678031358389043123693470772949184410705354729",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-polygamma-001",
+      "id": "T2-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T2",
+      "z": "-0.299999999999999988897769753748434595763683319091796875000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "67.6390811998831600402125591672852718509741503744142948288021",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-polygamma-002",
+      "id": "T2-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "68.5494134711621342321141179449619028438171009317543373556399",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-polygamma-003",
+      "id": "T2-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T2",
+      "z": "-2.700000000000000177635683940025046467781066894531250000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-68.9329390232637987607560837382681154474555337996731923759824",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-pochhammer-001",
+      "id": "T2-pochhammer-001",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-0.699999999999999955591079014993738383054733276367187500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "-0.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "-0.273000000000000032418512319054569205433007960975303367456708",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-pochhammer-002",
+      "id": "T2-pochhammer-002",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-1.300000000000000044408920985006261616945266723632812500000000",
+      "a": {
+        "kind": "decimal",
+        "value": "-1.300000000000000044408920985006261616945266723632812500000000"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "0.390000000000000071054273576010020559264689810342013529321413",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-pochhammer-003",
+      "id": "T2-pochhammer-003",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "-5"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "6"
+      },
+      "output": "0.0",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-pochhammer-004",
+      "id": "T2-pochhammer-004",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "-5"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "3"
+      },
+      "output": "-60.0000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-pochhammer-005",
+      "id": "T2-pochhammer-005",
+      "head": "Pochhammer",
+      "tier": "T2",
+      "z": "-1.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "-3/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "4"
+      },
+      "output": "0.562500000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-beta-001",
+      "id": "T2-beta-001",
+      "head": "Beta",
+      "tier": "T2",
+      "a": {
+        "kind": "decimal",
+        "value": "-0.699999999999999955591079014993738383054733276367187500000000"
+      },
+      "b": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-4.76190476190476150195990036275507546408972299434909831836585",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-beta-002",
+      "id": "T2-beta-002",
+      "head": "Beta",
+      "tier": "T2",
+      "a": {
+        "kind": "half-integer",
+        "value": "-1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "-3.14159265358979323846264338327950288419716939937510582097494",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T2-beta-003",
+      "id": "T2-beta-003",
+      "head": "Beta",
+      "tier": "T2",
+      "a": {
+        "kind": "decimal",
+        "value": "-1.300000000000000044408920985006261616945266723632812500000000"
+      },
+      "b": {
+        "kind": "decimal",
+        "value": "2.700000000000000177635683940025046467781066894531250000000000"
+      },
+      "output": "5.79450036172328855291027574633385769774552690429580622056075",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-001",
+      "id": "T3-gamma-001",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "mpmath-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "ValueError: gamma function pole",
+      "mpmath_returned_token": "ValueError: gamma function pole"
+    },
+    {
+      "input_id": "T3-digamma-001",
+      "id": "T3-digamma-001",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "0.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "mpmath-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "ValueError: polygamma pole",
+      "mpmath_returned_token": "ValueError: polygamma pole"
+    },
+    {
+      "input_id": "T3-gamma-002",
+      "id": "T3-gamma-002",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "0.010000000000000000208166817117216851329430937767028808593750",
+      "output": "99.4325851191506016320669886977252870710446382396037307283502",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-002",
+      "id": "T3-digamma-002",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "0.010000000000000000208166817117216851329430937767028808593750",
+      "output": "-100.560885457868672415475307271708142978338178279089145718982",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-003",
+      "id": "T3-gamma-003",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "0.000100000000000000004792173602385929598312941379845142364502",
+      "output": "9999.42288323162371158838192282991110581241762441031010642724",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-003",
+      "id": "T3-digamma-003",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "0.000100000000000000004792173602385929598312941379845142364502",
+      "output": "-10000.5770511835138556326395794057254409046072807392873986971",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-004",
+      "id": "T3-gamma-004",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-0.010000000000000000208166817117216851329430937767028808593750",
+      "output": "-100.587197964410777111954213668338689846780885317018853730844",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-004",
+      "id": "T3-digamma-004",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-0.010000000000000000208166817117216851329430937767028808593750",
+      "output": "99.4062136959444027735513394607315658028073452841662938805741",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-005",
+      "id": "T3-gamma-005",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-0.000100000000000000004792173602385929598312941379845142364502",
+      "output": "-10000.5773145795763590276116903025586422000221083973225623696",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-005",
+      "id": "T3-digamma-005",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-0.000100000000000000004792173602385929598312941379845142364502",
+      "output": "9999.42261982966965164084911416800712903402900722992710579256",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-006",
+      "id": "T3-gamma-006",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "mpmath-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "ValueError: gamma function pole",
+      "mpmath_returned_token": "ValueError: gamma function pole"
+    },
+    {
+      "input_id": "T3-digamma-006",
+      "id": "T3-digamma-006",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "mpmath-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "ValueError: polygamma pole",
+      "mpmath_returned_token": "ValueError: polygamma pole"
+    },
+    {
+      "input_id": "T3-gamma-007",
+      "id": "T3-gamma-007",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-100.436954665808601814521553781937725009697754997372653164302",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-007",
+      "id": "T3-digamma-007",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-99.5507844477675755551675011928322529306017884753485727015885",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-008",
+      "id": "T3-gamma-008",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-0.999900000000000011013412404281552881002426147460937500000000",
+      "output": "-10000.4229255252779496914620663091723517680083990926427986821",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-008",
+      "id": "T3-digamma-008",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-0.999900000000000011013412404281552881002426147460937500000000",
+      "output": "-9999.57695117461467601955528052072595625323013361672648215873",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-009",
+      "id": "T3-gamma-009",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "output": "99.5912851132779103960107102893812196851276653959033634271753",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-009",
+      "id": "T3-digamma-009",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "output": "100.396312705845306113201758587181275324242501305386659170303",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-010",
+      "id": "T3-gamma-010",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.000099999999999988986587595718447118997573852539062500000000",
+      "output": "9999.57735684499379022494738881148810122196306082424261106508",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-010",
+      "id": "T3-digamma-010",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.000099999999999988986587595718447118997573852539062500000000",
+      "output": "10000.4225198407704722277657097215985530832756772925251734473",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-011",
+      "id": "T3-gamma-011",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "mpmath-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "ValueError: gamma function pole",
+      "mpmath_returned_token": "ValueError: gamma function pole"
+    },
+    {
+      "input_id": "T3-digamma-011",
+      "id": "T3-digamma-011",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "mpmath-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "ValueError: polygamma pole",
+      "mpmath_returned_token": "ValueError: polygamma pole"
+    },
+    {
+      "input_id": "T3-gamma-012",
+      "id": "T3-gamma-012",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "output": "50.4708314903560815390917524233645898136616393999013825726488",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-012",
+      "id": "T3-digamma-012",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-99.0482718849535052011658890625827005548965525309607107803998",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-013",
+      "id": "T3-gamma-013",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-1.999900000000000011013412404281552881002426147460937500000000",
+      "output": "5000.46148583693079384935122309143161549024266873424554898701",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-013",
+      "id": "T3-digamma-013",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-1.999900000000000011013412404281552881002426147460937500000000",
+      "output": "-9999.07692617336461351918375271994508587323225158379870280029",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-014",
+      "id": "T3-gamma-014",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "output": "-49.5479030414329060161594315284698455140688828064310636363273",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-014",
+      "id": "T3-digamma-014",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "output": "100.893825143658472473974036817261592815810036622321797784021",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-015",
+      "id": "T3-gamma-015",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.000100000000000211031192520749755203723907470703125000000000",
+      "output": "-4999.53870147632032147759791251935180455969056623127816455179",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-015",
+      "id": "T3-digamma-015",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.000100000000000211031192520749755203723907470703125000000000",
+      "output": "10000.9224948198159485983769858676604544661098478994369008961",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-016",
+      "id": "T3-gamma-016",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-3.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "mpmath-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "ValueError: gamma function pole",
+      "mpmath_returned_token": "ValueError: gamma function pole"
+    },
+    {
+      "input_id": "T3-digamma-016",
+      "id": "T3-digamma-016",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-3.000000000000000000000000000000000000000000000000000000000000",
+      "output": null,
+      "method": "mpmath-refused",
+      "achieved_precision": 0,
+      "status": "refused",
+      "failure_reason": "ValueError: polygamma pole",
+      "mpmath_returned_token": "ValueError: polygamma pole"
+    },
+    {
+      "input_id": "T3-gamma-017",
+      "id": "T3-gamma-017",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "output": "-16.8798767526278220577624806600045095428938253290643993265690",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-017",
+      "id": "T3-digamma-017",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "output": "-98.7138237244206092568075826137992957527354833771067943331893",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-018",
+      "id": "T3-gamma-018",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-2.999899999999999788968807479250244796276092529296875000000000",
+      "output": "-1666.87605781053665641320267896144695882638187172428268335814",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-018",
+      "id": "T3-digamma-018",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-2.999899999999999788968807479250244796276092529296875000000000",
+      "output": "-9998.74358170634532519956911428526121954960062790090450411252",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-019",
+      "id": "T3-gamma-019",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "output": "16.4610973559577772508482977419093259759075290981586079518525",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-019",
+      "id": "T3-digamma-019",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "output": "101.226051057279734955973443085186899474362071788058715848481",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-gamma-020",
+      "id": "T3-gamma-020",
+      "head": "Gamma",
+      "tier": "T3",
+      "z": "-3.000100000000000211031192520749755203723907470703125000000000",
+      "output": "1666.45735191370953294994021972550576909446547742694246266852",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-digamma-020",
+      "id": "T3-digamma-020",
+      "head": "Digamma",
+      "tier": "T3",
+      "z": "-3.000100000000000211031192520749755203723907470703125000000000",
+      "output": "10001.2558170424085288222557278671341384033769024491269565367",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-loggamma-001",
+      "id": "T3-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T3",
+      "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+      "output": {
+        "re": "6.90817938571743632821192486857450457144092707247457339491517",
+        "im": "-3.14159265358979323846264338327950288419716939937510582097494"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-trigamma-001",
+      "id": "T3-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T3",
+      "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+      "output": "1000002.64453619809762720023743515201878159303427050917937486",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-loggamma-002",
+      "id": "T3-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T3",
+      "z": "-1.000999999999999889865875957184471189975738525390625000000000",
+      "output": {
+        "re": "6.90733381718205507900690655501890183464980291521108457503160",
+        "im": "-6.28318530717958647692528676655900576839433879875021164194989"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-trigamma-002",
+      "id": "T3-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T3",
+      "z": "-1.000999999999999889865875957184471189975738525390625000000000",
+      "output": "1000002.64534464805029259825009480677292871030663508396743491",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-loggamma-003",
+      "id": "T3-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T3",
+      "z": "-1.999000000000000110134124042815528810024261474609375000000000",
+      "output": {
+        "re": "6.21553233019928423668970309662076262577424509306138963536563",
+        "im": "-6.28318530717958647692528676655900576839433879875021164194989"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-trigamma-003",
+      "id": "T3-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T3",
+      "z": "-1.999000000000000110134124042815528810024261474609375000000000",
+      "output": "1000002.89478660776731031311120022128372184135963938325808614",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-loggamma-004",
+      "id": "T3-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T3",
+      "z": "-2.000999999999999889865875957184471189975738525390625000000000",
+      "output": {
+        "re": "6.21368676158045877671515306825998563700972719312005147980184",
+        "im": "-9.42477796076937971538793014983850865259150819812531746292483"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-trigamma-004",
+      "id": "T3-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T3",
+      "z": "-2.000999999999999889865875957184471189975738525390625000000000",
+      "output": "1000002.89509483542537070389469492065033665175930441110037470",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-polygamma-001",
+      "id": "T3-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "0.001000000000000000020816681711721685132943093776702880859375",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2000000002.39763216483324031504872809160828672062088423166111",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-polygamma-002",
+      "id": "T3-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-0.001000000000000000020816681711721685132943093776702880859375",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1999999997.58937966586823866370247193344173403011141591939069",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-polygamma-003",
+      "id": "T3-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-0.998999999999999999111821580299874767661094665527343750000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2000000000.39161494063277031760331366800591408493901687965111",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-polygamma-004",
+      "id": "T3-polygamma-004",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-1.000999999999999889865875957184471189975738525390625000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1999999999.58405257554254540494354341442155848011189569298675",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-polygamma-005",
+      "id": "T3-polygamma-005",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-1.999000000000000110134124042815528810024261474609375000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2000000000.14190569913481244630442206798501689421657558183199",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T3-polygamma-006",
+      "id": "T3-polygamma-006",
+      "head": "Polygamma",
+      "tier": "T3",
+      "z": "-2.000999999999999889865875957184471189975738525390625000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1999999999.83367795023027965720814721644456883619299589702891",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-gamma-001",
+      "id": "T4-gamma-001",
+      "head": "Gamma",
+      "tier": "T4",
+      "z": {
+        "re": "1.445436709643100448019481518713291734457015991210937500000000",
+        "im": "3.538332091558456848900959812453947961330413818359375000000000"
+      },
+      "output": {
+        "re": "-0.0215427327906438759633386096581621398440728779582069960481852",
+        "im": "0.0239096162611406286680524022485466909488630950668830803277095"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-gamma-002",
+      "id": "T4-gamma-002",
+      "head": "Gamma",
+      "tier": "T4",
+      "z": {
+        "re": "-7.229717330941595854199022141983732581138610839843750000000000",
+        "im": "6.131352193792121596516153658740222454071044921875000000000000"
+      },
+      "output": {
+        "re": "0.00000000000612126192553543981462043135087796095192882011443470932032672",
+        "im": "0.0000000000305230289488572255314496422461255540874851834171503057059969"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-gamma-003",
+      "id": "T4-gamma-003",
+      "head": "Gamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.330063391757155599748330132570117712020874023437500000000000",
+        "im": "-9.504830197911783074005143134854733943939208984375000000000000"
+      },
+      "output": {
+        "re": "0.000000000979845643724826516218553742174827537692563439541277193354946",
+        "im": "-0.000000000927993280613902554750248341605581251564566112666495556759579"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-gamma-004",
+      "id": "T4-gamma-004",
+      "head": "Gamma",
+      "tier": "T4",
+      "z": {
+        "re": "5.934421613546876805855845304904505610466003417968750000000000",
+        "im": "-8.075788221560669555287859111558645963668823242187500000000000"
+      },
+      "output": {
+        "re": "-0.944852862208737136472223489404371279545360532771549240153983",
+        "im": "-0.0807780335377483528977633464107896261889461528833883426825591"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-loggamma-001",
+      "id": "T4-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T4",
+      "z": {
+        "re": "1.984183495208165615153461658337619155645370483398437500000000",
+        "im": "7.540032339319423293488853232702240347862243652343750000000000"
+      },
+      "output": {
+        "re": "-7.91810492843142958933520964539598632874133073716401438214899",
+        "im": "9.88407027618225407111879146496719860483190377945797501636339"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-loggamma-002",
+      "id": "T4-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.524767821905170794849482263089157640933990478515625000000000",
+        "im": "0.657975926116382670016946576652117073535919189453125000000000"
+      },
+      "output": {
+        "re": "-1.40290512074697936891161989677504108557016609811389955200139",
+        "im": "-8.76394307977495846367237421049554135739425568694844081999218"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-loggamma-003",
+      "id": "T4-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T4",
+      "z": {
+        "re": "-0.938191567967745276845903390494640916585922241210937500000000",
+        "im": "-0.238069148388762169554766501278209034353494644165039062500000"
+      },
+      "output": {
+        "re": "1.36049389751189860792297337517564333934766992220361497435500",
+        "im": "4.31962708760160069784690956282683057647984575494162324397319"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-loggamma-004",
+      "id": "T4-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T4",
+      "z": {
+        "re": "6.294432132596041284955390437971800565719604492187500000000000",
+        "im": "-2.201097800395804160444868102786131203174591064453125000000000"
+      },
+      "output": {
+        "re": "4.88990608140807235719226164845344410494828582877469388819785",
+        "im": "-3.92027037363206090238337955270061812691404418837986891396846"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-digamma-001",
+      "id": "T4-digamma-001",
+      "head": "Digamma",
+      "tier": "T4",
+      "z": {
+        "re": "2.437682055277766934864303038921207189559936523437500000000000",
+        "im": "5.854312998662354772250182577408850193023681640625000000000000"
+      },
+      "output": {
+        "re": "1.81827524814309904575107315702480673145965978073470839067207",
+        "im": "1.25050335277013525774292576215407333001938655130063237795429"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-digamma-002",
+      "id": "T4-digamma-002",
+      "head": "Digamma",
+      "tier": "T4",
+      "z": {
+        "re": "-3.983869882337653933745968970470130443572998046875000000000000",
+        "im": "5.561643490016783708540515362983569502830505371093750000000000"
+      },
+      "output": {
+        "re": "1.96610448678644060598280694813982190562588218587569982394741",
+        "im": "2.25011324153968379656017897710923002006363266259625934048177"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-digamma-003",
+      "id": "T4-digamma-003",
+      "head": "Digamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.071203586722710099365940550342202186584472656250000000000000",
+        "im": "-1.415049216295746203897465420595835894346237182617187500000000"
+      },
+      "output": {
+        "re": "1.07966159054843298511211479586914580706373272615623552929193",
+        "im": "-2.64326324553002703938413139633378504100924329262852118748608"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-digamma-004",
+      "id": "T4-digamma-004",
+      "head": "Digamma",
+      "tier": "T4",
+      "z": {
+        "re": "4.133934930384060457697614765493199229240417480468750000000000",
+        "im": "-4.249261486233885776186980365309864282608032226562500000000000"
+      },
+      "output": {
+        "re": "1.72099729800480623154848569845788471298659994865001721980368",
+        "im": "-0.861976818808479699261117702784420065445518469877684709905198"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-trigamma-001",
+      "id": "T4-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T4",
+      "z": {
+        "re": "1.128506195135892120617882028454914689064025878906250000000000",
+        "im": "1.176949784048958447257859916135203093290328979492187500000000"
+      },
+      "output": {
+        "re": "0.389863957962930502666148043723397501418029768843089292943616",
+        "im": "-0.657651345276375852468364551731828235128428844248238893958345"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-trigamma-002",
+      "id": "T4-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.732723846634971920366297126747667789459228515625000000000000",
+        "im": "3.236857739398370625849565840326249599456787109375000000000000"
+      },
+      "output": {
+        "re": "-0.155076710914400316217131690507751303983016499384324933225633",
+        "im": "-0.154044038738547012790810980075397111473334183940792370176321"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-trigamma-003",
+      "id": "T4-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T4",
+      "z": {
+        "re": "-5.150043717890138594839299912564456462860107421875000000000000",
+        "im": "-7.037412568079380648100595863070338964462280273437500000000000"
+      },
+      "output": {
+        "re": "-0.0694713380630510119645499799899774259032270618373014616589018",
+        "im": "0.0863529035330171842565517824448873402638194296855802467136696"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-trigamma-004",
+      "id": "T4-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T4",
+      "z": {
+        "re": "5.017120475067935458923784608487039804458618164062500000000000",
+        "im": "-8.221310916711619398711263784207403659820556640625000000000000"
+      },
+      "output": {
+        "re": "0.0514352099852230725529046303209586306972336424108181631407162",
+        "im": "0.0934360910883796057662085685069547181520825878355747839845098"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-barnesg-001",
+      "id": "T4-barnesg-001",
+      "head": "BarnesG",
+      "tier": "T4",
+      "z": {
+        "re": "2.758064728498085038665976753691211342811584472656250000000000",
+        "im": "2.214631456752568006152159796329215168952941894531250000000000"
+      },
+      "output": {
+        "re": "0.142399109568389868059542824272018873615102110015037172857402",
+        "im": "-0.107941759529996427161778554516786949436746483807800827858523"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-barnesg-002",
+      "id": "T4-barnesg-002",
+      "head": "BarnesG",
+      "tier": "T4",
+      "z": {
+        "re": "-3.612398771488816606733962544240057468414306640625000000000000",
+        "im": "3.952955951551536895038907459820620715618133544921875000000000"
+      },
+      "output": {
+        "re": "20103161114177337.9950265428277680408626450045057480804712247",
+        "im": "-457304237962908888.693140984169454655917862667005020722778164"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-barnesg-003",
+      "id": "T4-barnesg-003",
+      "head": "BarnesG",
+      "tier": "T4",
+      "z": {
+        "re": "-0.520052473646981261445887412264710292220115661621093750000000",
+        "im": "-5.139892431510824089002653636271134018898010253906250000000000"
+      },
+      "output": {
+        "re": "39560.8593714452870516003819909394302690027197795319799922099",
+        "im": "15829.8495808852528349341940290540760165103258559365543966239"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-barnesg-004",
+      "id": "T4-barnesg-004",
+      "head": "BarnesG",
+      "tier": "T4",
+      "z": {
+        "re": "5.433093193047593416622476070187985897064208984375000000000000",
+        "im": "-4.023683768710017538694501126883551478385925292968750000000000"
+      },
+      "output": {
+        "re": "-0.000109893846164923488176232983722287637751917608339761256096523",
+        "im": "0.0000839599749226976789785663227849108756694071870409366157744629"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-polygamma-001",
+      "id": "T4-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T4",
+      "z": {
+        "re": "0.415336946398552009362958870042348280549049377441406250000000",
+        "im": "2.841567141924261630236969722318463027477264404296875000000000"
+      },
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "0.127641336120557155950478762161936563831988680724382265316136",
+        "im": "-0.00788257179346226246681357800840934732896366285398199818847284"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-polygamma-002",
+      "id": "T4-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T4",
+      "z": {
+        "re": "-2.545609292394658051961187084089033305644989013671875000000000",
+        "im": "3.889351401453494005977518099825829267501831054687500000000000"
+      },
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "0.00944803647472085501446593822639276738039644842872010670504427",
+        "im": "-0.0399710334770475305657717037929951777145376542517516830017483"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-polygamma-003",
+      "id": "T4-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T4",
+      "z": {
+        "re": "-3.083331059035271159984858968527987599372863769531250000000000",
+        "im": "-0.533062217774821212046276741602923721075057983398437500000000"
+      },
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "-5.58696487879015063539331571995745099505763801093957792895785",
+        "im": "8.17147496112015345753844949354125711297339317067751890825472"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-polygamma-004",
+      "id": "T4-polygamma-004",
+      "head": "Polygamma",
+      "tier": "T4",
+      "z": {
+        "re": "7.668703428828861135002625815104693174362182617187500000000000",
+        "im": "-1.563363651659571251784086598490830510854721069335937500000000"
+      },
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "-0.0168327178049086502432859803994551745915767881962490658411773",
+        "im": "-0.00766968422923995892011830304999794821240119771695077379429303"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammaupper-001",
+      "id": "T4-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "2.506920028586568260919875683612190186977386474609375000000000",
+        "im": "4.606261670912602745886488264659419655799865722656250000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": {
+        "re": "0.0120215096288821781709039183793928732020926965858799886052385",
+        "im": "0.0316271917202122654928000086994753667833662193595043216694606"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammaupper-002",
+      "id": "T4-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "-0.573141287819626921162807775544933974742889404296875000000000",
+        "im": "3.450650757528078926839043560903519392013549804687500000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": {
+        "re": "-0.467219530231215389443544276069250089033703151523312386877467",
+        "im": "0.805616325734202084096838238360184132645626938647427823657546"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammaupper-003",
+      "id": "T4-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "-2.950124211260408024770640622591599822044372558593750000000000",
+        "im": "-4.044238393966241851273935026256367564201354980468750000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": {
+        "re": "2.90297692785203832170125492510044137620652274980080391387139",
+        "im": "-8.39363943630069086711957227141356685381498187513802207522242"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammaupper-004",
+      "id": "T4-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "2.731139916700853209619026529253460466861724853515625000000000",
+        "im": "-4.619341815245097571107635303633287549018859863281250000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": {
+        "re": "0.00944924264249345356030111403889070688437009137432326821186300",
+        "im": "-0.0249849268137224533781290623952066640241499662867507184180626"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammaupper-005",
+      "id": "T4-incompletegammaupper-005",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "1.628126567590331807977577227575238794088363647460937500000000",
+        "im": "0.650922334042543071497277651360491290688514709472656250000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "0.487827091111806503984802581156266390019446982923188365857291",
+        "im": "-0.210942763447561680035383305687631460078258869450656575570539"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammaupper-006",
+      "id": "T4-incompletegammaupper-006",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "-3.982582721173386630653112661093473434448242187500000000000000",
+        "im": "2.828605971192532209101955231744796037673950195312500000000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "198.987383989985449111993070151964926116242058124241842523305",
+        "im": "-95.1227796523974029246725430908252898471037712030521541946412"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammaupper-007",
+      "id": "T4-incompletegammaupper-007",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "-3.675516240611017337869270704686641693115234375000000000000000",
+        "im": "-0.902082543839795913953594208578579127788543701171875000000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "-37.5337654993500836332264143499606085500843900708171821803765",
+        "im": "-104.929733364622824626226822930224764304363564421173934518794"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammaupper-008",
+      "id": "T4-incompletegammaupper-008",
+      "head": "IncompleteGammaUpper",
+      "tier": "T4",
+      "z": {
+        "re": "5.057865139108391083766491647111251950263977050781250000000000",
+        "im": "-1.519790059068339749259735071973409503698348999023437500000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "0.0116160066954929176862144219898099185503115146509665475082578",
+        "im": "0.0379798585995799408276731976993138988432633370316778343527809"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammalower-001",
+      "id": "T4-incompletegammalower-001",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "3.196303577040796373154307730146683752536773681640625000000000",
+        "im": "3.331921592044421398526310440502129495143890380859375000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": {
+        "re": "1.78770074485878450809851476298626258654360147410699822427194",
+        "im": "-0.00905820981338579978293899170305127086180216515948068238277250"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammalower-002",
+      "id": "T4-incompletegammalower-002",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "-6.343950043404637639810061955358833074569702148437500000000000",
+        "im": "3.962755479635980293551256181672215461730957031250000000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": {
+        "re": "-102.506559819338122698882875653557238909387192723731663000343",
+        "im": "-194.441852952112718600554050010781264984275777093105532827953"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammalower-003",
+      "id": "T4-incompletegammalower-003",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "-3.740689731673032980552306980825960636138916015625000000000000",
+        "im": "-5.259193693535167746233582874992862343788146972656250000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": {
+        "re": "-15.3814889163562281709004060486047504039180382439842762877486",
+        "im": "0.0854511555157016037468360981822214486260404214083051998255557"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammalower-004",
+      "id": "T4-incompletegammalower-004",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "0.489006105464747820033011294071911834180355072021484375000000",
+        "im": "-4.318501365117048962360968289431184530258178710937500000000000"
+      },
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": {
+        "re": "1.70579033901120314455118334599494266376066042218414926906751",
+        "im": "0.276242031136916394824106125321445589187564575405636043981835"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammalower-005",
+      "id": "T4-incompletegammalower-005",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "0.216919651157266885066476902466092724353075027465820312500000",
+        "im": "1.590751597577175768805091138347052037715911865234375000000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "-0.260744402978370176963357081275773455054479609248079950225455",
+        "im": "1.00497072084719086825199580749987261990537046314555284128821"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammalower-006",
+      "id": "T4-incompletegammalower-006",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "-7.548296023015857336702083557611331343650817871093750000000000",
+        "im": "1.319034506820411456473607358930166810750961303710937500000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "672.334279195249642679317908589070831089940989578131511883479",
+        "im": "-12657.2171660156456818843587008919698054261067240200329822690"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammalower-007",
+      "id": "T4-incompletegammalower-007",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "-3.161930052040388350320654353708960115909576416015625000000000",
+        "im": "-1.793168153186067703686035201826598495244979858398437500000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "-51.5651448282459814925674907094619953981325833961041388053868",
+        "im": "40.4597528079751781970584682027649095048363607479996718870164"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T4-incompletegammalower-008",
+      "id": "T4-incompletegammalower-008",
+      "head": "IncompleteGammaLower",
+      "tier": "T4",
+      "z": {
+        "re": "6.073702658228731898759633622830733656883239746093750000000000",
+        "im": "-4.494087071053352921978785161627456545829772949218750000000000"
+      },
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": {
+        "re": "1.01363018371615690377318123216654695611517168686402613942426",
+        "im": "0.0136604207752750998328030717243313410513223682617153202833428"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-gamma-001",
+      "id": "T5-gamma-001",
+      "head": "Gamma",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "1.77245385090551602729816748334114518279754945612238712821381",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-gamma-002",
+      "id": "T5-gamma-002",
+      "head": "Gamma",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "output": "0.886226925452758013649083741670572591398774728061193564106904",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-gamma-003",
+      "id": "T5-gamma-003",
+      "head": "Gamma",
+      "tier": "T5",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "-3.54490770181103205459633496668229036559509891224477425642762",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-loggamma-001",
+      "id": "T5-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "0.572364942924700087071713675676529355823647406457655785756812",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-loggamma-002",
+      "id": "T5-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "output": "-0.120782237635245222345518445781647212251852727902599468363868",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-loggamma-003",
+      "id": "T5-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T5",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "output": {
+        "re": "1.26551212348464539648894579713470592389914754081791103987749",
+        "im": "-3.14159265358979323846264338327950288419716939937510582097494"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-digamma-001",
+      "id": "T5-digamma-001",
+      "head": "Digamma",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "-1.96351002602142347944097633299875556719315960466043410704713",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-digamma-002",
+      "id": "T5-digamma-002",
+      "head": "Digamma",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "output": "0.0364899739785765205590236670012444328068403953395658929528727",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-digamma-003",
+      "id": "T5-digamma-003",
+      "head": "Digamma",
+      "tier": "T5",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "0.0364899739785765205590236670012444328068403953395658929528727",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-trigamma-001",
+      "id": "T5-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "4.93480220054467930941724549993807556765684970362039531320667",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-trigamma-002",
+      "id": "T5-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "output": "0.934802200544679309417245499938075567656849703620395313206675",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-trigamma-003",
+      "id": "T5-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T5",
+      "z": "-0.500000000000000000000000000000000000000000000000000000000000",
+      "output": "8.93480220054467930941724549993807556765684970362039531320667",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-pochhammer-001",
+      "id": "T5-pochhammer-001",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "0.750000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-pochhammer-002",
+      "id": "T5-pochhammer-002",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "29.5312500000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-pochhammer-003",
+      "id": "T5-pochhammer-003",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "0.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "639383.862304687500000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-pochhammer-004",
+      "id": "T5-pochhammer-004",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "3.75000000000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-pochhammer-005",
+      "id": "T5-pochhammer-005",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "5"
+      },
+      "output": "324.843750000000000000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-pochhammer-006",
+      "id": "T5-pochhammer-006",
+      "head": "Pochhammer",
+      "tier": "T5",
+      "z": "1.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "n": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "13427061.1083984375000000000000000000000000000000000000000000",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammaupper-001",
+      "id": "T5-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.278805585280661976499232611077439172088550082497174470158499",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammalower-001",
+      "id": "T5-incompletegammalower-001",
+      "head": "IncompleteGammaLower",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.49364826562485405079893487226370601070899937362521265805531",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammap-001",
+      "id": "T5-incompletegammap-001",
+      "head": "IncompleteGammaP",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.842700792949714869341220635082609259296066997966302908459938",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammaq-001",
+      "id": "T5-incompletegammaq-001",
+      "head": "IncompleteGammaQ",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.157299207050285130658779364917390740703933002033697091540062",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammaupper-002",
+      "id": "T5-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.00277460326041280931949083572726032941202100797914371413289361",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammalower-002",
+      "id": "T5-incompletegammalower-002",
+      "head": "IncompleteGammaLower",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "1.76967924764510321797867664761388485338552844814324341408091",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammap-002",
+      "id": "T5-incompletegammap-002",
+      "head": "IncompleteGammaP",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.998434597741997450322500196021614097689565425314017194657400",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammaq-002",
+      "id": "T5-incompletegammaq-002",
+      "head": "IncompleteGammaQ",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "0.00156540225800254967749980397838590231043457468598280534259973",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammaupper-003",
+      "id": "T5-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.507282233811773309845140075700180453490086172280355069587086",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammalower-003",
+      "id": "T5-incompletegammalower-003",
+      "head": "IncompleteGammaLower",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.378944691640984703803943665970392137908688555780838494519818",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammap-003",
+      "id": "T5-incompletegammap-003",
+      "head": "IncompleteGammaP",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.427593295529120166000952385641271893927159968027033389929189",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammaq-003",
+      "id": "T5-incompletegammaq-003",
+      "head": "IncompleteGammaQ",
+      "tier": "T5",
+      "z": "1.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.572406704470879833999047614358728106072840031972966610070811",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammaupper-004",
+      "id": "T5-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.0164538091489522224057144785380321286844334848470468835018627",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammalower-004",
+      "id": "T5-incompletegammalower-004",
+      "head": "IncompleteGammaLower",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.869773116303805791243369263132540462714341243214146680605041",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammap-004",
+      "id": "T5-incompletegammap-004",
+      "head": "IncompleteGammaP",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.981433864536956766696828566092281620778851654387959751686706",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-incompletegammaq-004",
+      "id": "T5-incompletegammaq-004",
+      "head": "IncompleteGammaQ",
+      "tier": "T5",
+      "z": "5.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.0185661354630432333031714339077183792211483456120402483132936",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-beta-001",
+      "id": "T5-beta-001",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "output": "3.14159265358979323846264338327950288419716939937510582097494",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-beta-002",
+      "id": "T5-beta-002",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "1.57079632679489661923132169163975144209858469968755291048747",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-beta-003",
+      "id": "T5-beta-003",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "1/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "5/2"
+      },
+      "output": "1.17809724509617246442349126872981358157393852476566468286560",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-beta-004",
+      "id": "T5-beta-004",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "output": "0.392699081698724154807830422909937860524646174921888227621868",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-beta-005",
+      "id": "T5-beta-005",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "3/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "5/2"
+      },
+      "output": "0.196349540849362077403915211454968930262323087460944113810934",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T5-beta-006",
+      "id": "T5-beta-006",
+      "head": "Beta",
+      "tier": "T5",
+      "a": {
+        "kind": "half-integer",
+        "value": "5/2"
+      },
+      "b": {
+        "kind": "half-integer",
+        "value": "5/2"
+      },
+      "output": "0.0736310778185107790264682042956133488483711577978540426791003",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-loggamma-001",
+      "id": "T6-loggamma-001",
+      "head": "LogGamma",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "output": "359.134205369575398776044010460286909612621718085629728775613",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-loggamma-002",
+      "id": "T6-loggamma-002",
+      "head": "LogGamma",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "output": "1409.20206747041178748737726654573792239140583498431401276284",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-loggamma-003",
+      "id": "T6-loggamma-003",
+      "head": "LogGamma",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "output": "5905.22042320918121182607691236144078984894240971543259002339",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-loggamma-004",
+      "id": "T6-loggamma-004",
+      "head": "LogGamma",
+      "tier": "T6",
+      "z": "450.176018965512525937811005860567092895507812500000000000000000",
+      "output": "2298.10109442043236126560813962412127429267557034397262965930",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-digamma-001",
+      "id": "T6-digamma-001",
+      "head": "Digamma",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "output": "4.60016185273808740019860558557585072686681279076852805437077",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-digamma-002",
+      "id": "T6-digamma-002",
+      "head": "Digamma",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "output": "5.70211488206463726797964011763155351885952271343058727058319",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-digamma-003",
+      "id": "T6-digamma-003",
+      "head": "Digamma",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "output": "6.90725519564881205205000611425149774547951983376888006696786",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-digamma-004",
+      "id": "T6-digamma-004",
+      "head": "Digamma",
+      "tier": "T6",
+      "z": "546.611484254995161791157443076372146606445312500000000000000000",
+      "output": "6.30282327822895730319792022429991950437886742465576695203590",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-trigamma-001",
+      "id": "T6-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.0100501666633335713952456684657014225356282011755346238824472",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-trigamma-002",
+      "id": "T6-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.00333889506171467774947029468909866984574603106953445678456412",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-trigamma-003",
+      "id": "T6-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "output": "0.00100050016666663333335714282380959956684645471311312101832102",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-trigamma-004",
+      "id": "T6-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T6",
+      "z": "782.956472869476556297740899026393890380859375000000000000000000",
+      "output": "0.00127802618875423997678478645077131279148138963932269952435020",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-gamma-001",
+      "id": "T6-gamma-001",
+      "head": "Gamma",
+      "tier": "T6",
+      "z": "120.000000000000000000000000000000000000000000000000000000000000",
+      "output": "5.57458576120760588132343171174197715562728861094835817524639e+196",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-gamma-002",
+      "id": "T6-gamma-002",
+      "head": "Gamma",
+      "tier": "T6",
+      "z": "170.000000000000000000000000000000000000000000000000000000000000",
+      "output": "4.26906800900470527493925188889956653806881863605673610384916e+304",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaupper-001",
+      "id": "T6-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "3.75727673578104432258929276190174952073248121530054978679182e-42",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaq-001",
+      "id": "T6-incompletegammaq-001",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "3.75727673578104432258929276190174952073248121530054978679182e-42",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaupper-002",
+      "id": "T6-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.54960826694601614812761343824120643043863446555775063452992e-128",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaq-002",
+      "id": "T6-incompletegammaq-002",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1.54960826694601614812761343824120643043863446555775063452992e-128",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaupper-003",
+      "id": "T6-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "5.08103485644700622205710128905391125622490488217573019919423e-432",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaq-003",
+      "id": "T6-incompletegammaq-003",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "5.08103485644700622205710128905391125622490488217573019919423e-432",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaupper-004",
+      "id": "T6-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "4.08366063091061127228859216631951925304018296583735091659422e-26",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaq-004",
+      "id": "T6-incompletegammaq-004",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "1.12534739608427338852750004583320085235895694605306187075458e-31",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaupper-005",
+      "id": "T6-incompletegammaupper-005",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "1.04454981347807314939647266076785175209101981702850199558717e-108",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaq-005",
+      "id": "T6-incompletegammaq-005",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "300.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "2.87849926553701815861020905193962674187340117126461087849198e-114",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaupper-006",
+      "id": "T6-incompletegammaupper-006",
+      "head": "IncompleteGammaUpper",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "5.12201057037806592353316361800474699591062337344576621110570e-408",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-incompletegammaq-006",
+      "id": "T6-incompletegammaq-006",
+      "head": "IncompleteGammaQ",
+      "tier": "T6",
+      "z": "1000.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "10"
+      },
+      "output": "1.41148880356538412795777216104628168979018501252363486858072e-413",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-barnesg-001",
+      "id": "T6-barnesg-001",
+      "head": "BarnesG",
+      "tier": "T6",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "output": "4.30619256499771538211559864037929484578612331960375516802354e+120",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T6-barnesg-002",
+      "id": "T6-barnesg-002",
+      "head": "BarnesG",
+      "tier": "T6",
+      "z": "50.000000000000000000000000000000000000000000000000000000000000",
+      "output": "2.32981075041745923878397066973471262361883792546514431947398e+1266",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-001",
+      "id": "T7-incompletegammaupper-001",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "15.527864045000420389897044515237212181091308593750000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "102637533405916909.402111439395302693465208695933221137054439",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammalower-001",
+      "id": "T7-incompletegammalower-001",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "15.527864045000420389897044515237212181091308593750000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "19007567002915090.5978885606046973065347913040667788629455609",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammap-001",
+      "id": "T7-incompletegammap-001",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "15.527864045000420389897044515237212181091308593750000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "0.156254275256737367441237741585655305202138633865055978294583",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaq-001",
+      "id": "T7-incompletegammaq-001",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "15.527864045000420389897044515237212181091308593750000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "0.843745724743262632558762258414344694797861366134944021705417",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-002",
+      "id": "T7-incompletegammaupper-002",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "57204492442642251.0970102893453147604209035608327669088264218",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammalower-002",
+      "id": "T7-incompletegammalower-002",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "64440607966189748.9029897106546852395790964391672330911735782",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammap-002",
+      "id": "T7-incompletegammap-002",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "0.529742733160760012687809645826281917287633865718349219033188",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaq-002",
+      "id": "T7-incompletegammaq-002",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "20.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "0.470257266839239987312190354173718082712366134281650780966812",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-003",
+      "id": "T7-incompletegammaupper-003",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "24.472135954999579610102955484762787818908691406250000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "19087828303247065.4366530309869111020416444300232162651872603",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammalower-003",
+      "id": "T7-incompletegammalower-003",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "24.472135954999579610102955484762787818908691406250000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "102557272105584934.563346969013088897958355569976783734812740",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammap-003",
+      "id": "T7-incompletegammap-003",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "24.472135954999579610102955484762787818908691406250000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "0.843085925868813699183511105243825569458300209083702867872453",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaq-003",
+      "id": "T7-incompletegammaq-003",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "24.472135954999579610102955484762787818908691406250000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "20"
+      },
+      "output": "0.156914074131186300816488894756174430541699790916297132127547",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-004",
+      "id": "T7-incompletegammaupper-004",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "90.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "7.85600493193774127498186553102406047610253251633679019014067e+155",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammalower-004",
+      "id": "T7-incompletegammalower-004",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "90.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "1.47661661245667399318805835460260957296906431010137195671863e+155",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammap-004",
+      "id": "T7-incompletegammap-004",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "90.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "0.158220989186430168104969699670910531699823345743347387984191",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaq-004",
+      "id": "T7-incompletegammaq-004",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "90.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "0.841779010813569831895030300329089468300176654256652612015809",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-005",
+      "id": "T7-incompletegammaupper-005",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "4.54219812086266942936914708308623503962451704934201744905836e+155",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammalower-005",
+      "id": "T7-incompletegammalower-005",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "4.79042342353174583880077680254043500944707977709614469780094e+155",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammap-005",
+      "id": "T7-incompletegammap-005",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "0.513298798279148664857314256564029163470925149927945073959628",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaq-005",
+      "id": "T7-incompletegammaq-005",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "100.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "0.486701201720851335142685743435970836529074850072054926040372",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-006",
+      "id": "T7-incompletegammaupper-006",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "110.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "1.47715492622086411022742597488088090180315843123533484581747e+155",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammalower-006",
+      "id": "T7-incompletegammalower-006",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "110.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "7.85546661817355115794249791074578914726843839520282730104182e+155",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammap-006",
+      "id": "T7-incompletegammap-006",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "110.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "0.841721329939912906198299620982968853193350030865822294556062",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaq-006",
+      "id": "T7-incompletegammaq-006",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "110.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "100"
+      },
+      "output": "0.158278670060087093801700379017031146806649969134177705443938",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-007",
+      "id": "T7-incompletegammaupper-007",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "185.857864376269048989342991262674331665039062500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "3.31850309818200644382548414605783285777345238750839973365312e+372",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammalower-007",
+      "id": "T7-incompletegammalower-007",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "185.857864376269048989342991262674331665039062500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "6.24786238641946073936331923603092453702227500927466582820596e+371",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammap-007",
+      "id": "T7-incompletegammap-007",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "185.857864376269048989342991262674331665039062500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "0.158442910290008868647058254095674932353504073802587794920558",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaq-007",
+      "id": "T7-incompletegammaq-007",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "185.857864376269048989342991262674331665039062500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "0.841557089709991131352941745904325067646495926197412205079442",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-008",
+      "id": "T7-incompletegammaupper-008",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "200.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "1.93456427045434291762422482765277263910604009768274619883548e+372",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammalower-008",
+      "id": "T7-incompletegammalower-008",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "200.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "2.00872506636960960013759124200815267236963979075312011763823e+372",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammap-008",
+      "id": "T7-incompletegammap-008",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "200.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "0.509403418007236325027825459574527043154972168599140501542389",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaq-008",
+      "id": "T7-incompletegammaq-008",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "200.000000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "0.490596581992763674972174540425472956845027831400859498457611",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-009",
+      "id": "T7-incompletegammaupper-009",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "214.142135623730951010657008737325668334960937500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "6.24866428175211491802967224180223421773349390343539891721557e+371",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammalower-009",
+      "id": "T7-incompletegammalower-009",
+      "head": "IncompleteGammaLower",
+      "tier": "T7",
+      "z": "214.142135623730951010657008737325668334960937500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "3.31842290864874102595884884548070188970233049809232642475216e+372",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammap-009",
+      "id": "T7-incompletegammap-009",
+      "head": "IncompleteGammaP",
+      "tier": "T7",
+      "z": "214.142135623730951010657008737325668334960937500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "0.841536754013972942385156432257908879096145901548442973839907",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaq-009",
+      "id": "T7-incompletegammaq-009",
+      "head": "IncompleteGammaQ",
+      "tier": "T7",
+      "z": "214.142135623730951010657008737325668334960937500000000000000000",
+      "a": {
+        "kind": "integer",
+        "value": "200"
+      },
+      "output": "0.158463245986027057614843567742091120903854098451557026160093",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-010",
+      "id": "T7-incompletegammaupper-010",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "10.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "21/2"
+      },
+      "output": "520111.553671432023415241851790287887122549234843147862934644",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-011",
+      "id": "T7-incompletegammaupper-011",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "13.740370349203930189219136082101613283157348632812500000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "21/2"
+      },
+      "output": "176226.572083930050425314527745249467126987444083607656972961",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-012",
+      "id": "T7-incompletegammaupper-012",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "50.500000000000000000000000000000000000000000000000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "101/2"
+      },
+      "output": "2.06493563742626636248582626392181417521486521612496219654342e+63",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T7-incompletegammaupper-013",
+      "id": "T7-incompletegammaupper-013",
+      "head": "IncompleteGammaUpper",
+      "tier": "T7",
+      "z": "57.606335201775948462454834952950477600097656250000000000000000",
+      "a": {
+        "kind": "half-integer",
+        "value": "101/2"
+      },
+      "output": "6.77588727717829806838787559549086139727990780653054722555922e+62",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-001",
+      "id": "T8-digamma-001",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-99.5507844477675755551675011928322529306017884753485727015885",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-001",
+      "id": "T8-trigamma-001",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "output": "10002.6415175789025374625940568066282904206808703932507258791",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-001",
+      "id": "T8-polygamma-001",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-0.989999999999999991118215802998747676610946655273437500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2000000.27917836749871186187852125029568839134240393869692643",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-002",
+      "id": "T8-digamma-002",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-0.999998999999999971244335483788745477795600891113281250000000",
+      "output": "-999999.577184264303152606777806482476982076030452071294271505",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-002",
+      "id": "T8-trigamma-002",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-0.999998999999999971244335483788745477795600891113281250000000",
+      "output": "999999999945.133604632798822756019839105034749781511186874473",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-002",
+      "id": "T8-polygamma-002",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-0.999998999999999971244335483788745477795600891113281250000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-1999999999827466013.31675644414775378085403277792445547112824",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-003",
+      "id": "T8-digamma-003",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "output": "100.396312705845306113201758587181275324242501305386659170303",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-003",
+      "id": "T8-trigamma-003",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "output": "10002.6496001504609818423597910604301175251257576924737889908",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-003",
+      "id": "T8-polygamma-003",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-1.010000000000000008881784197001252323389053344726562500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1999999.47086212323819925425298687892235108027531460093237356",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-004",
+      "id": "T8-digamma-004",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-1.000000999999999917733362053695600479841232299804687500000000",
+      "output": "1000000.42286395680215152197067479128653071607327205061097750",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-004",
+      "id": "T8-trigamma-004",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-1.000000999999999917733362053695600479841232299804687500000000",
+      "output": "1000000000167.17821038388047789177331322475972346683711021807",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-004",
+      "id": "T8-polygamma-004",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-1.000000999999999917733362053695600479841232299804687500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "2000000000493599827.35491369350091487697307635420296118961321",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-005",
+      "id": "T8-digamma-005",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "output": "-99.0482718849535052011658890625827005548965525309607107803998",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-005",
+      "id": "T8-trigamma-005",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "output": "10002.8940364546885024657319614752965610389044167563361402822",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-005",
+      "id": "T8-polygamma-005",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-1.989999999999999991118215802998747676610946655273437500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2000000.02539055263844552593384891825853544326804074133893038",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-006",
+      "id": "T8-digamma-006",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-1.999999000000000082266637946304399520158767700195312500000000",
+      "output": "-999999.077295036605496377494131765710255914618655068130708374",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-006",
+      "id": "T8-trigamma-006",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-1.999999000000000082266637946304399520158767700195312500000000",
+      "output": "1000000000167.42820982565305279914922771338912656860707922298",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-006",
+      "id": "T8-polygamma-006",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-1.999999000000000082266637946304399520158767700195312500000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-2000000000493599827.91314093113980331523287525471332830028003",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-007",
+      "id": "T8-digamma-007",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "output": "100.893825143658472473974036817261592815810036622321797784021",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-007",
+      "id": "T8-trigamma-007",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "output": "10002.8971187766816606755909799113710402142908374151682906595",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-007",
+      "id": "T8-polygamma-007",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-2.009999999999999786837179271969944238662719726562500000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1999999.71714944629241749274571606617196713098699200734263602",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-008",
+      "id": "T8-digamma-008",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-2.000001000000000139777966978726908564567565917968750000000000",
+      "output": "1000000.92264166219736363844253406724816861230135885143806053",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-008",
+      "id": "T8-trigamma-008",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-2.000001000000000139777966978726908564567565917968750000000000",
+      "output": "999999999723.339000322128290264987571611020347481484604010712",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-008",
+      "id": "T8-polygamma-008",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-2.000001000000000139777966978726908564567565917968750000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1999999999161332198.20796643393178733196473079447191658142062",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-009",
+      "id": "T8-digamma-009",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "output": "-98.7138237244206092568075826137992957527354833771067943331893",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-009",
+      "id": "T8-trigamma-009",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "output": "10003.0058920272179150956577633331972832946830398447170679770",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-009",
+      "id": "T8-polygamma-009",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-2.990000000000000213162820728030055761337280273437500000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-1999999.95057090520613213919563010151983048249864101831956118",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-010",
+      "id": "T8-digamma-010",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-2.999998999999999860222033021273091435432434082031250000000000",
+      "output": "-999998.743739547556101976437197792372089694652848326784645522",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-010",
+      "id": "T8-trigamma-010",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-2.999998999999999860222033021273091435432434082031250000000000",
+      "output": "999999999723.450111199085899816074195877869589682933103295301",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-010",
+      "id": "T8-polygamma-010",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-2.999998999999999860222033021273091435432434082031250000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "-1999999999161332198.44211989842210319844159277297992926309866",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-011",
+      "id": "T8-digamma-011",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "output": "101.226051057279734955973443085186899474362071788058715848481",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-011",
+      "id": "T8-trigamma-011",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "output": "10003.0074928343631432355667446085499180522509620601825028092",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-011",
+      "id": "T8-polygamma-011",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-3.009999999999999786837179271969944238662719726562500000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1999999.79048769059905042815585441102280533192378528324325812",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-012",
+      "id": "T8-digamma-012",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": "-3.000001000000000139777966978726908564567565917968750000000000",
+      "output": "1000001.25597488441962288215857278567006543207442628558533462",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-trigamma-012",
+      "id": "T8-trigamma-012",
+      "head": "Trigamma",
+      "tier": "T8",
+      "z": "-3.000001000000000139777966978726908564567565917968750000000000",
+      "output": "999999999723.450111359165364328691271660614216222600617093860",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-polygamma-012",
+      "id": "T8-polygamma-012",
+      "head": "Polygamma",
+      "tier": "T8",
+      "z": "-3.000001000000000139777966978726908564567565917968750000000000",
+      "m": {
+        "kind": "integer",
+        "value": "2"
+      },
+      "output": "1999999999161332198.28204043393183670429943567396982984633294",
+      "method": "mpmath-mpf-at-60-dps",
+      "achieved_precision": 55,
+      "status": "success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-013",
+      "id": "T8-digamma-013",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": {
+        "re": "-0.999122417438109589049588521447731181979179382324218750000000",
+        "im": "0.000479425538604203024459216031516461953287944197654724121094"
+      },
+      "output": {
+        "re": "-877.157456516263653881266427613452152034267004572727477713779",
+        "im": "479.426806485162464933234388821077530959796561270720796722502"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-014",
+      "id": "T8-digamma-014",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": {
+        "re": "-1.000416146836547115483995185059029608964920043945312500000000",
+        "im": "0.000909297426825681777938503724811880601919256150722503662109"
+      },
+      "output": {
+        "re": "416.568520335351006484636960776804220944268048368042303507306",
+        "im": "909.299832009778407869435837573510685494455766038567509799906"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-015",
+      "id": "T8-digamma-015",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": {
+        "re": "-1.999122417438109700071890983963385224342346191406250000000000",
+        "im": "0.000479425538604203024459216031516461953287944197654724121094"
+      },
+      "output": {
+        "re": "-876.657237053140970914423891869995811278108789764391105471794",
+        "im": "479.426926446886782992738109923793800629440308994640151371209"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    },
+    {
+      "input_id": "T8-digamma-016",
+      "id": "T8-digamma-016",
+      "head": "Digamma",
+      "tier": "T8",
+      "z": {
+        "re": "-2.000416146836547337528600110090337693691253662109375000000000",
+        "im": "0.000909297426825681777938503724811880601919256150722503662109"
+      },
+      "output": {
+        "re": "417.068416217141560577485937473134410522587382995266547619801",
+        "im": "909.300059239349325905653910581342037304641921719234751531675"
+      },
+      "method": "mpmath-mpc-at-60-dps",
+      "achieved_precision": 55,
+      "status": "complex-success",
+      "mpmath_returned_token": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# =============================================================================
+# gamma-anchor -- boost replay adapter (silver tier)
+# =============================================================================
+#
+# Grades Boost.Math 1_83 cpp_bin_float<50> Gamma-family evaluations
+# (committed snapshot from scientist-workbench bench, 2026-05-19)
+# against the 3-gold consensus.  Pre-computed-oracle pattern.
+#
+# boost: 295/377 success.  82 refusals split:
+#   - 71 unsupported (real_only = no complex Gamma support -- all
+#     T4 complex cases) + Pochhammer absence + BarnesG absence
+#     (L16 + Pochhammer-not-in-boost).
+#   - 11 refused at L17 poles / overflow boundary cases.
+#
+# L18 documented landmine: Boost digamma at negative-half-integer
+# arguments (z = -1/2) emits incorrect values.  Captured verbatim
+# in results.json; the bench grader compares the candidate (not
+# boost) against the gold consensus, so L18 is a documented
+# provenance flag without verifier behaviour.
+
+[adapter]
+target          = "boost"
+capability_id   = "gamma-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/boost/oracles/gamma-anchor-replay.ts"]
+version         = "Boost.Math 1_83 cpp_bin_float<50> / g++ 13.3.0 (snapshot 2026-05-19)"
+platform_pinned = false
