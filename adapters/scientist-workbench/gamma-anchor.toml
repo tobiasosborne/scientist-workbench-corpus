@@ -1,0 +1,39 @@
+# =============================================================================
+# gamma-anchor -- scientist-workbench candidate adapter
+# =============================================================================
+#
+# Bridges the V4 cross-system Gamma-family anchor (G6 = bead
+# scientist-workbench-corpus-59p) to tools/special-eval in
+# scientist-workbench at the arb-prec lane.  Sibling and scale-up of
+# B19's besselj-anchor and B18's erf-anchor candidate adapters.
+#
+# Single multi-head adapter per bench -- run-candidate.ts reads
+# input.head + discriminated args per-case from corpus inputs.json
+# and dispatches into executeToolDef(specialEvalDef, ..., {precision:
+# 200n}).  Gamma is mixed-arity (1 or 2); run-candidate's encodeArgs
+# routes per head.
+#
+# 4 corpus heads (GammaPDerivative, IncompleteBeta,
+# InverseIncompleteGamma{P,Q}; 22 inputs) are NOT in
+# tools/special-eval ADMITTED_HEADS.  run-candidate.ts short-circuits
+# to emit special-eval/unknown-head for these heads -- honest
+# capability gaps, admitted by the bench verifier's
+# refusal_scope_honest check without region restriction.
+#
+# Lane: tool_flags.precision = "200" is INFORMATIONAL -- grade.ts
+# does not forward tool_flags to run-candidate (schema-v3 follow-up).
+# The run-candidate hard-codes precision = 200n (decimal digits ⇒
+# arb-prec lane per special-eval's `precisionDecimal > 15` threshold).
+# Both sites name the same lane.
+
+[adapter]
+target          = "scientist-workbench"
+capability_id   = "gamma-anchor"
+cmd             = "bun"
+args            = ["run", "${SUITE_ROOT}/run-candidate.ts"]
+cwd             = "${WORKBENCH_ROOT}"
+version         = "git@af1baa3"
+platform_pinned = true
+
+[adapter.tool_flags]
+precision = "200"
