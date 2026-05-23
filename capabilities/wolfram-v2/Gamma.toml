@@ -49,3 +49,19 @@ status         = "implemented"
 flags          = { head = "Gamma" }
 precision_tier = "both"
 notes          = "Dispatches via --head=Gamma; ADR-0042 + worklog 175. Gamma epic closed all 16 ADMITTED_HEADS; v0.2 hardening (shard 178) resolved 9 followups (negative-a IncompleteGammaUpper, pole fixes)."
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "IncompleteGammaUpper" }
+precision_tier = "both"
+notes          = "Maps v2's Gamma[a,z] (2-arg incomplete) to workbench's IncompleteGammaUpper head. ADR-0042 + shard 175."
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "IncompleteGammaLower" }
+precision_tier = "both"
+notes          = "Maps v2's Gamma[a,0,z] (3-arg generalised, lower limit 0) to workbench's IncompleteGammaLower head. ADR-0042 + shard 175."

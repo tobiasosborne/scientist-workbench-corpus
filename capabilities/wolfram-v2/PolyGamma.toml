@@ -52,3 +52,19 @@ status         = "implemented"
 flags          = { head = "Polygamma" }
 precision_tier = "both"
 notes          = "Dispatches via --head=Polygamma; ADR-0042 + worklog 175. NB capitalisation: corpus TOML uses Mathematica's 'PolyGamma' but workbench's special-eval head is 'Polygamma' (lower-case g); flag must match workbench spelling for dispatch to resolve."
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "Digamma" }
+precision_tier = "both"
+notes          = "Maps v2's PolyGamma[z] (1-arg form) to workbench's Digamma head. Workbench has separate Digamma dispatch even though v2 used PolyGamma. ADR-0042."
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "Trigamma" }
+precision_tier = "both"
+notes          = "Maps v2's PolyGamma[1, z] (n=1 second derivative of LogGamma) to workbench's Trigamma head. ADR-0042."
