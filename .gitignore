@@ -23,3 +23,8 @@ data/lp-netlib/emps
 .dolt/
 *.db
 .beads-credential-key
+
+# Lean4-skills plugin staging directories (Claude Code plugin tooling,
+# not corpus content). .claude/settings.json stays tracked (bd-managed).
+.claude/docs/
+.claude/tools/
