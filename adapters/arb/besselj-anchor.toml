@@ -1,0 +1,24 @@
+# =============================================================================
+# besselj-anchor — arb replay adapter (gold tier)
+# =============================================================================
+#
+# Grades python-flint's `acb.bessel_{j,y,i,k}` outputs (committed snapshot,
+# bead area scientist-workbench-qccc, 2026-05-17) against the 3-gold
+# consensus.  This is the THIRD gold oracle (alongside wolfram + mpmath)
+# per ADR-0041 §"Decision 8" — B19 introduces it; B18's erf-anchor only
+# had 2 golds (wolfram + mpmath).
+#
+# arb succeeded on 1718/1766 cases; the 48 refusals all fall in T6 (non-
+# finite z inputs, NaN/Inf at singular points).  Refusals surface as
+# `oracle/arb-refused` tagged envelopes scoped via verifier applies_when.
+#
+# This adapter creates a new corpus-wide candidate target string `arb`
+# (DuckDB target column) — the first adapter under adapters/arb/.
+
+[adapter]
+target          = "arb"
+capability_id   = "besselj-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/arb/oracles/besselj-anchor-replay.ts"]
+version         = "python-flint 0.8.0 / FLINT 3.x / python 3.12.3 (snapshot 2026-05-17)"
+platform_pinned = false

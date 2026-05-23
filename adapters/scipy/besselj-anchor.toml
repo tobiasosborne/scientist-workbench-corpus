@@ -1,0 +1,30 @@
+# =============================================================================
+# besselj-anchor — scipy replay adapter (bronze tier, float64)
+# =============================================================================
+#
+# Grades SciPy's `scipy.special.{jv,yv,iv,kv,ive,kve}` outputs at float64
+# (committed snapshot, bead area scientist-workbench-qvnm, 2026-05-17)
+# against the 3-gold consensus.  Pre-computed-oracle pattern (see B18's
+# erf-anchor scipy adapter for the design notes).
+#
+# scipy succeeded on 1667/1766 cases; 99 cases carry "limit" annotations
+# (NaN at L5 transition-region ULP-class / L9 underflow boundaries per
+# agreement-matrix.md landmine taxonomy).  Limits normalised to
+# output=null + method=scipy.special.<head>-limit-boundary so the
+# verifier doesn't rel-err a NaN.
+#
+# At the bronze tier, scipy's float64 values will NOT meet the gold-tier
+# 1e-48 / 1e-46 / 1e-44 tolerances — this adapter is included to record
+# the bronze oracle's snapshot and future-proof a per-tier rescoring
+# layer (ADR-0041 §Decision 8 bronze tier compared via <= 13 digits OR
+# <= 256 ULP, not relative tolerance).  Expect rel_err checks to fail
+# on the well-conditioned T1-T3 tiers at the gold tolerance band; this
+# is bronze-tier-expected behaviour, not a candidate bug.
+
+[adapter]
+target          = "scipy"
+capability_id   = "besselj-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/scipy/oracles/besselj-anchor-replay.ts"]
+version         = "scipy 1.17.0 / numpy 1.26.4 / python 3.12.3 (snapshot 2026-05-17)"
+platform_pinned = false

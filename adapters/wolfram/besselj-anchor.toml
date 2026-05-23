@@ -1,0 +1,21 @@
+# =============================================================================
+# besselj-anchor — wolfram replay adapter (gold tier)
+# =============================================================================
+#
+# Grades Wolfram's `N[BesselJ[ν, z], 60]` (and BesselY/I/K/IScaled/KScaled)
+# outputs (committed snapshot, bead scientist-workbench-z9fq, 2026-05-17)
+# against the 3-gold consensus.  Pre-computed-oracle pattern (see B18's
+# erf-anchor wolfram adapter for the design notes).
+#
+# Wolfram succeeded on 1721/1766 cases; the 45 "limit" cases (unevaluated
+# symbolic forms like `BesselI[0, Infinity]`) carry output=null in the
+# committed snapshot and surface as `oracle/wolfram-refused` tagged
+# envelopes.  No hard refusals.
+
+[adapter]
+target          = "wolfram"
+capability_id   = "besselj-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/wolfram/oracles/besselj-anchor-replay.ts"]
+version         = "WolframScript 1.13.0 / Kernel 14.3.0 (snapshot 2026-05-17)"
+platform_pinned = false

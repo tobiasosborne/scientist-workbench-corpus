@@ -1,0 +1,26 @@
+# =============================================================================
+# besselj-anchor — boost replay adapter (silver tier)
+# =============================================================================
+#
+# Grades Boost.Math 1_83's `cpp_bin_float<50>` Bessel outputs (committed
+# snapshot, bead area scientist-workbench-qccc, 2026-05-17) against the
+# 3-gold consensus.  Pre-computed-oracle pattern (see B18's erf-anchor
+# boost adapter for the design notes).
+#
+# Boost succeeded on 1578/1766 cases.  188 refusals: no std::complex
+# Bessel specialisation in 1_83 (all 128 T5 complex inputs refused),
+# plus ~60 large-ν / overflow-boundary T7/T10 cases.  All refusals
+# carry method='boost-refused' + a `reason` field; the verifier surfaces
+# them as `oracle/boost-refused` tagged envelopes (NOT candidate failures).
+#
+# The boost results.json also carries `value_bronze` (float64 emit) on
+# success rows for future bronze-tier rescoring; the replay shim only
+# returns `value` (= the silver-tier cpp_bin_float<50> output).
+
+[adapter]
+target          = "boost"
+capability_id   = "besselj-anchor"
+cmd             = "bun"
+args            = ["run", "${CORPUS_ROOT}/adapters/boost/oracles/besselj-anchor-replay.ts"]
+version         = "boost 1_83 cpp_bin_float<50> / g++ 13.3.0 (snapshot 2026-05-17)"
+platform_pinned = false
