@@ -18,3 +18,8 @@ data/lp-netlib/raw/*.gz
 # emps.c is committed; each machine rebuilds emps from it via the
 # generator's bootstrap step (`gcc -o emps emps.c`).
 data/lp-netlib/emps
+
+# Beads / Dolt files (added by bd init)
+.dolt/
+*.db
+.beads-credential-key

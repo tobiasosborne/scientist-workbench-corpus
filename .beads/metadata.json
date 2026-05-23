@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "scientist_workbench_corpus",
+  "project_id": "aa284e9b-1f41-4731-8ef2-808fb29ead21"
+}
