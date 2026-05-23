@@ -46,3 +46,11 @@ value        = "2; rationale: Pochhammer[...] is arity-2 per Wolfram 2nd-ed; ing
 source_url   = "bead:scientist-workbench-corpus-0gu"
 source_kind  = "manual"
 retrieved_at = "2026-05-23"
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "Pochhammer" }
+precision_tier = "both"
+notes          = "Dispatches via --head=Pochhammer; ADR-0042 + worklog 175. (a)_n arity=2 (fixed by sibling bead G1)."

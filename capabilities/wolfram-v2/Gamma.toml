@@ -41,3 +41,11 @@ sha256       = "b339e93f8abbf94037722ce3bae1ac510625f7523daaefe251c976c18f421d87
 level             = 1
 method            = "manual_quote"
 last_verified_at  = "2026-05-06"
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "Gamma" }
+precision_tier = "both"
+notes          = "Dispatches via --head=Gamma; ADR-0042 + worklog 175. Gamma epic closed all 16 ADMITTED_HEADS; v0.2 hardening (shard 178) resolved 9 followups (negative-a IncompleteGammaUpper, pole fixes)."

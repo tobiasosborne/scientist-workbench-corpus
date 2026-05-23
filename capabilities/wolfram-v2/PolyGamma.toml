@@ -44,3 +44,11 @@ sha256       = "0b7cecf0f7079edd3742677cd0b0e871e4543620644f7e3e046fef799c5f661f
 level             = 1
 method            = "manual_quote"
 last_verified_at  = "2026-05-06"
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "Polygamma" }
+precision_tier = "both"
+notes          = "Dispatches via --head=Polygamma; ADR-0042 + worklog 175. NB capitalisation: corpus TOML uses Mathematica's 'PolyGamma' but workbench's special-eval head is 'Polygamma' (lower-case g); flag must match workbench spelling for dispatch to resolve."

@@ -47,3 +47,11 @@ value        = "2; rationale: Beta[...] is arity-2 per Wolfram 2nd-ed; ingestor'
 source_url   = "bead:scientist-workbench-corpus-0gu"
 source_kind  = "manual"
 retrieved_at = "2026-05-23"
+
+[[mapping]]
+target         = "scientist-workbench"
+tool           = "special-eval"
+status         = "implemented"
+flags          = { head = "Beta" }
+precision_tier = "both"
+notes          = "Dispatches via --head=Beta; ADR-0042 + worklog 175. B(x,y) arity=2 (fixed by sibling bead G1)."
