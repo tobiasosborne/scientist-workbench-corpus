@@ -8,7 +8,7 @@ can map manifest rows directly into capability TOMLs.
 
 | sub-directory     | system         | archive                                       | size  | items |
 |-------------------|----------------|-----------------------------------------------|-------|-------|
-| `wolfram-v1/`     | mathematica 1  | reference.wolfram.com/legacy/v1/ (HTML + PDF — 2nd ed. 1991 text) | ~50MB | 48 HTML + 915 PDF |
+| `wolfram-v2/`     | mathematica 2  | reference.wolfram.com/legacy/v1/ (HTML + PDF — 2nd ed. 1991 text) | ~50MB | 48 HTML + 915 PDF |
 | `matlab-v1/`      | matlab 1       | Cleve's Corner posts (Wayback Machine)        | <1MB  | 2 HTML |
 | `macsyma-v9/`     | macsyma 9      | bitsavers MIT Mathlab scan                    | 14MB  | 1 PDF  |
 

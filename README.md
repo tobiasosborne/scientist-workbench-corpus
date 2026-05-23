@@ -143,7 +143,7 @@ monolithic-loader anti-patterns to avoid are from
 ## Roadmap (post-tracer)
 
 - **Ingestors.** One TS module per source (`ingestors/matlab-v1.ts`,
-  `ingestors/wolfram-v1.ts`, `ingestors/macsyma-v9.ts`) emitting one TOML
+  `ingestors/wolfram-v2.ts`, `ingestors/macsyma-v9.ts`) emitting one TOML
   per discovered capability. The MATLAB v1 surface is ~71 functions —
   smallest first.
 - **Aliases.** Cross-system equivalence groups (`aliases/determinant.toml`).

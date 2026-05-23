@@ -36,7 +36,7 @@ Pushed to `origin/main`. Recent commits:
 - `5197bff` / `20cd2f8` / `6238bd1` — erf-anchor trio (B18)
 - `135469a` — special-eval mappings + special-eval-smoke (B14-B16)
 - `2a4dc76` — schema + DuckDB v3 amendments (B8-B12)
-- `ecf7f86` — ingest_wolfram_v1 arity fix (B7)
+- `ecf7f86` — ingest_wolfram_v1 arity fix (B7) [pre-rename; script is now `ingest_wolfram_v2.ts`]
 - `20e986c` — adapter reactivations + cone-solve target (B3-B6)
 
 ## What's the next agent likely doing?
@@ -53,7 +53,7 @@ pick by appetite:
    (ADR-0042)**, Phase 0 only — no code yet. The corpus already
    has the `tool_flags` schema to receive it.
 
-2. **Broader wolfram-v1 arity sweep (child bead 3pu.698).** 401
+2. **Broader wolfram-v2 arity sweep (child bead 3pu.698).** 401
    TOMLs still carry the original ingestor's hard-coded `arity=1`.
    Bessel + D + PowerMod were fixed in this session; the rest is a
    single focused mechanical pass with provenance rows per row.
@@ -82,7 +82,7 @@ pick by appetite:
   this session, after `0a4` lands).
 - **`1av.1`** (P2) — `tools/lp-solve` overclaims
   `achieved_precision` on NETLIB by ~138×. Workbench-side.
-- **`3pu.698`** (P2) — 401 wolfram-v1 TOMLs with wrong arity from
+- **`3pu.698`** (P2) — 401 wolfram-v2 TOMLs with wrong arity from
   the original ingestor bug.
 - **`seu.1`** (P2) — admit HankelH1 / HankelH2 into
   `tools/special-eval`. Workbench-side.
@@ -94,11 +94,11 @@ pick by appetite:
 - **matlab-v1 ingestor (MEDIUM).** ~71 functions in MATLAB v1's
   HELP listing. Source on disk:
   `data/matlab-v1/raw/cleve-pc-matlab-v1.0.html`. Line-oriented,
-  simpler than wolfram-v1. Ship as
-  `scripts/ingest_matlab_v1.ts` mirroring the wolfram-v1 ingestor.
+  simpler than wolfram-v2. Ship as
+  `scripts/ingest_matlab_v1.ts` mirroring the wolfram-v2 ingestor.
 - **macsyma ingestor (LOWER).**
   `data/macsyma-v9/raw/MACSYMA_RefMan_V9_Dec77.pdf` (14 MB scanned
-  1977 PDF). Less typeset-clean than wolfram-v1.
+  1977 PDF). Less typeset-clean than wolfram-v2.
 - **Aliases for cross-system equivalence groups (LOW).**
   `aliases/<concept>.toml` files (e.g. `aliases/determinant.toml`
   listing `mathematica-1/Det`, `matlab-1.0/det`,
@@ -107,7 +107,7 @@ pick by appetite:
   needs the matlab-v1 ingest first to be load-bearing.
 - **Mappings sweep for the remaining ~573 capabilities.** This
   session wired 7 (Bessels + Erf + D + PowerMod) on top of the 2
-  inherited; the bulk of wolfram-v1 still has no `[[mapping]]`.
+  inherited; the bulk of wolfram-v2 still has no `[[mapping]]`.
 
 ### Other deferred work (older HANDOFFs)
 
@@ -176,7 +176,7 @@ oracle into one row.
   flags they actually need (B15 friction). Removing the
   workaround is a clean substrate task; until then, the
   precedent is "lane decision lives in run-candidate".
-- **wolfram-v1 arity sweep is partial.** Only Bessel family +
+- **wolfram-v2 arity sweep is partial.** Only Bessel family +
   D + PowerMod were fixed this session (with bead-provenance
   rows). The other ~401 TOMLs still carry the ingestor's
   hard-coded `arity=1`. See `3pu.698`.
@@ -258,7 +258,10 @@ oracle into one row.
 - **Wayback for Cleve's Corner**: `blogs.mathworks.com` 403s scripted
   clients. WebFetch and `curl` both fail; Wayback succeeds.
 - **Wolfram legacy URL is "v1" but the PDFs are 2nd-edition (1991).**
-  Documented in `data/wolfram-v1/MANIFEST.toml` description.
+  Renamed to `wolfram-v2` throughout the corpus (bead 9mz) so the
+  in-corpus label reflects the content's documentation edition;
+  the public URL source is still labelled `v1` and is preserved in
+  one line of `data/wolfram-v2/MANIFEST.toml` for grep-ability.
 
 ## Sister repos
 
